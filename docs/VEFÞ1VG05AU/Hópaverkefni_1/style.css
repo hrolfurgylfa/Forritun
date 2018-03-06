@@ -1,0 +1,16 @@
+body {
+	background-color: aqua;
+	max-width: 75em;
+	margin: 1em auto;
+	background-image: url("http://carmarthen.welshbridgeunion.club/wp-content/uploads/2016/05/cards_PNG8480.png");
+}
+div {
+	background: yellow;
+	border: 10px ridge red;
+	padding: 0 10px 10px 10px;
+	font-family: cursive;
+	font-size: 25px;
+}
+h1, h2 {
+	text-align: center;
+}

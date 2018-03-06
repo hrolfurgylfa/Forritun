@@ -1,0 +1,268 @@
+* {
+	box-sizing: border-box;
+}
+/*Grid Area*/
+.header {
+	grid-area: header;
+}
+	/*Verkefni 1*/
+.He_1 {
+	grid-area: He_1;
+}
+.D1_1 {
+	grid-area: D1_1;
+}
+.D2_1 {
+	grid-area: D2_1;
+}
+.D3_1 {
+	grid-area: D3_1;
+}
+.V_3-1-1 {
+	grid-area: V_3-1-1;
+}
+	/*Verkefni 2*/
+.He_2 {
+	grid-area: He_2;
+}
+.D1_2 {
+	grid-area: D1_2;
+}
+.D2_2 {
+	grid-area: D2_2;
+}
+.D3_2 {
+	grid-area: D3_2;
+}
+.D4_2 {
+	grid-area: D4_2;
+}
+.V_3-1-2 {
+	grid-area: V_3-1-2;
+}
+	/*Verkefni 3*/
+.He_3 {
+	grid-area: He_3;
+}
+.D1_3 {
+	grid-area: D1_3;
+}
+.D2_3 {
+	grid-area: D2_3;
+}
+.D3_3 {
+	grid-area: D3_3;
+}
+.D4_3 {
+	grid-area: D4_3;
+}
+.V_3-1-3 {
+	grid-area: V_3-1-3;
+}
+	/*Verkefni 4*/
+.He_4 {
+	grid-area: He_4;
+}
+.D1_4 {
+	grid-area: D1_4;
+}
+.D2_4 {
+	grid-area: D2_4;
+}
+.D3_4 {
+	grid-area: D3_4;
+}
+.D4_4 {
+	grid-area: D4_4;
+}
+.V_3-1-4 {
+	grid-area: V_3-1-4;
+}
+	/*Verkefni 5*/
+.He_5 {
+	grid-area: He_5;
+}
+.D1_5 {
+	grid-area: D1_5;
+}
+.D2_5 {
+	grid-area: D2_5;
+}
+.V_3-1-5 {
+	grid-area: V_3-1-5;
+}
+/*Display Grid*/
+body {
+	display: grid;
+	grid-template-areas:
+	"header"
+	"V_3-1-1"
+	"V_3-1-2"
+	"V_3-1-3"
+	"V_3-1-4"
+	"V_3-1-5";
+}
+.V_3-1-1 {
+	grid-template-columns: 1fr 1fr 1fr;
+
+	display: grid;
+	grid-template-areas:
+	"He_1 He_1 He_1"
+	"D1_1 D2_1 D3_1";
+}
+.V_3-1-2 {
+	grid-template-columns: 1fr 1fr;
+
+	display: grid;
+	grid-template-areas: 
+	"He_2 He_2"
+	"D1_2 D2_2"
+	"D3_2 D4_2";
+}
+.V_3-1-3 {
+	grid-template-columns: 1fr 1fr;
+
+	display: grid;
+	grid-template-areas: 
+	"He_3 He_3"
+	"D1_3 D2_3"
+	"D3_3 D4_3";
+}
+.V_3-1-4 {
+	grid-template-columns: 1fr 1fr;
+
+	display: grid;
+	grid-template-areas: 
+	"He_4 He_4"
+	"D1_4 D2_4"
+	"D3_4 D4_4"
+}
+.V_3-1-5 {
+	grid-template-columns: 1fr 1fr;
+
+	display: grid;
+	grid-template-areas: 
+	"He_5 He_5"
+	"D1_5 D2_5"
+}
+/*Útlit*/
+body {
+	max-width: 60em;
+	margin: 1em auto;
+	border: 1px solid green;
+	padding: 1em;
+}
+p {
+	font-size: 1em;
+}
+.V_3-1-5 {
+
+}
+.header {
+	text-align: center;
+	background-color: cyan;
+}
+	/*Verkefni 1*/
+.D1_1 {
+	font-family: serif, "Times New Roman";
+	border: 1px solid black; border-width: 1px 0px 1px 1px;
+}
+.D2_1 {
+	font-family: sans-serif, Arial, Helvetica;
+	border: 1px solid black; border-width: 1px 0px 1px 1px;
+}
+.D3_1 {
+	font-family: monospace, courier, Lucida;
+	border: 1px solid black;
+}
+.D1_1, 
+.D2_1, 
+.D3_1 {
+	padding: 0 15px;
+}
+	/*Verkefni 2-4*/
+.D1_2,
+.D1_3,
+.D1_4 {
+	border: 1px solid black;
+}
+.D2_2,
+.D2_3,
+.D2_4 {
+	border: 1px solid black; border-width: 1px 1px 1px 0px;
+}
+.D3_2,
+.D3_3,
+.D3_4 {
+	border: 1px solid black; border-width: 0px 1px 1px 1px;
+}
+.D4_2,
+.D4_3,
+.D4_4 {
+	border: 1px solid black; border-width: 0px 1px 1px 0px;
+}
+.D1_2, 
+.D2_2, 
+.D3_2,
+.D4_2,
+.D1_3, 
+.D2_3, 
+.D3_3,
+.D4_3,
+.D1_4, 
+.D2_4, 
+.D3_4,
+.D4_4,
+.D1_5,
+.D2_5 {
+	padding: 0 15px;
+}
+	/*Verkefni 4*/
+.D1_4 {
+	background-color: #aac5aa;
+	color: #0c2254;
+}
+.D2_4 {
+	background-color: #0c2254;
+	color: #aac5aa;
+}
+.D3_4-p,
+.D4_4-p {
+	background-color: black;
+	color: white;
+}
+	/*Verkefni 5*/
+.D1_5 {
+	border: 1px solid black;
+}
+.D2_5 {
+	border: solid black; border-width: 1px 1px 1px 0px;
+}
+
+	/*Letur*/
+.Pal-Lin {
+	font-family: "Palatino Linotype";
+}
+.Georgia {
+	font-family: Georgia;
+}
+.Verdana {
+	font-family: Verdana;
+}
+.Trebuchet {
+	font-family: Trebuchet;
+}
+.Trebuchet-MS {
+	font-family: Trebuchet MS;
+}
+.Monospace {
+	font-family: monospace;
+}
+	/*Annað*/
+.Haegri {
+	text-align: right;
+}
+.cyan_bg {
+	background-color: cyan;
+	padding: 0.5em;
+}

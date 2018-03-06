@@ -1,0 +1,222 @@
+*, *:before, *:after {
+    box-sizing: border-box; 
+}
+
+/*heimild: https://gridbyexample.com/examples/example13/ */
+
+/* ====== GRID Area ====== */
+/*Body*/
+.topnav {
+  grid-area: topnav;
+}
+header {
+  grid-area: header;
+}
+.content {
+  grid-area: content;
+}
+footer {
+  grid-area: footer;
+}
+
+/*Content*/
+.midja {
+  grid-area: midja;
+}
+.haegri {
+  grid-area: haegri;
+}
+.vinstri {
+  grid-area: vinstri;
+}
+
+/* ====== GRID Template Areas ===== */
+body {
+  display: grid;
+  grid-gap: 0;
+  grid-template-areas: 
+  "header"
+  "content"
+  "footer"
+  "topnav";
+}
+.content {
+  display: grid;
+  grid-gap: 0;
+  grid-template-areas: 
+  "midja"
+  "haegri"
+  "vinstri";
+}
+
+/* ====== Base litir + padding ====== */
+
+body {
+  line-height: 1.5em;
+}
+.topnav {
+  background-color: lightblue; 
+}
+header {
+  background-color: lightblue;
+  text-align: center;
+}
+footer {
+  background-color: pink; 
+}
+.midja {
+  background-color: lightgreen; 
+}
+.vinstri, 
+.haegri {
+  background-color: yellow; 
+}
+
+header,
+footer,
+.midja,
+.vinstri, 
+.haegri {
+  padding: 1em; 
+}
+
+/* ====== leturstílar ====== */
+
+header h1 {
+  color: #fff;
+  line-height: 1.2;
+  font-weight: normal;
+}
+.midja h2 {
+  margin: .7em 0 .8em 0;
+}
+.midja h4 {
+  text-align: justify;
+  margin: .4em 0;
+}
+.midja p {
+  text-align: justify;
+}
+
+/* ========================================
+  Efnisyfirlit
+  ======================================== */
+
+.topmenu {
+  padding: 0;
+  margin: 0;
+  list-style: none; 
+}
+.topmenu li {
+  border: 0;
+  border-bottom: 1px solid blue; 
+  padding: 0;
+}
+
+.topmenu a {
+  display: block;     /* ath! */
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  padding: .4em 1em; 
+}
+
+/* ====== linkar ====== */
+
+.topmenu a:hover {
+  color: white;
+  background-color: darkblue;
+}
+.topmenu a:active {
+  color: white;
+  background-color: darkblue;
+}
+
+/* =======================================
+   Myndvinnsla  
+  ======================================== */
+
+img{
+  display: block;
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  margin: 0;
+  border: 3px ridge white;
+}
+.mynda_container {
+  width: 166px;
+}
+
+/*  ========================================
+  Viðmið - breakpoints 30em = 480px + 
+  ========================================*/
+@media screen and (min-width: 30em) {
+  .mynda_container {
+    display: grid;
+    grid-template-columns: 166px 166px;
+  }
+}
+/*  ========================================
+  Viðmið - breakpoints 37.5em = 600px + 
+  ========================================*/
+@media screen and (min-width: 37.5em) {  
+  .content {
+    grid-template-areas: 
+    "haegri midja"
+    "vinstri midja";
+    grid-template-columns: 1fr 2fr;
+  }
+}
+/* ========================================
+  Viðmið - breakpoints 48em = 760px +
+  ======================================== */
+@media screen and (min-width: 48em) {  
+  body {
+    grid-template-areas: 
+    "topnav"
+    "header"
+    "content"
+    "footer";
+  }
+  .content {
+    grid-template-areas: 
+    "haegri midja vinstri";
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+  .topmenu {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+  }
+  .topmenu li {
+  border: 1px solid blue;
+  border-width: 0px 1px; 
+  }
+}
+/* ========================================
+  Viðmið - breakpoints 60em = 960px +
+  ======================================== */
+@media screen and (min-width: 60em) {
+  body {
+    max-width: 60em;
+    margin: 0 auto;
+  }
+  .mynda_container {
+    grid-template-columns: repeat(4,83.4%);
+  }
+}
+/* ========================================
+  Viðmið - breakpoints 80em = 1600px +
+  ======================================== */
+@media screen and (min-width: 80em) {
+  body {
+    max-width: 80em;
+  }
+  .mynda_container {
+    grid-template-columns: repeat(4,166px)
+  }
+}

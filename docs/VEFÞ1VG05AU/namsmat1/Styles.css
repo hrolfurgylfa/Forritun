@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+	margin: auto auto;
+}
+body {
+	display: grid;
+
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+
+	grid-template-areas: 
+	"A B"
+	"C D";
+}
+.A {
+	grid-area: A;
+
+	background-color: #fa6d4c;
+}
+.B {
+	grid-area: B;
+	background-color: #5abea4;
+}
+.C {
+	grid-area: C;
+	background-color: #ebd350;
+}
+.D {
+	grid-area: D;
+	background-color: #405566;
+}
+.A,
+.B,
+.C,
+.D {
+	margin: 0.20em;
+	padding: 1.5em 3em;
+	font-size: 3em;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 4em;
+}

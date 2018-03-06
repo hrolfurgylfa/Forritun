@@ -1,0 +1,5 @@
+CREATE TABLE poststod
+(
+	Postnumer INTEGER PRIMARY KEY NOT NULL,
+    Sveitarfelag VARCHAR(40) NOT NULL
+)

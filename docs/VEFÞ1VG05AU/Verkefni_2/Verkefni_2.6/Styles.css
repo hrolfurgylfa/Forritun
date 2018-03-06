@@ -1,0 +1,92 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	display: grid;
+	grid-template-areas:
+	"header"
+	"nav_bar"
+	"Meginmal"
+	"footer";
+
+	max-width: 60em;
+	margin: 1em auto;
+  	grid-gap: 0;
+  	background-color: orange;
+  	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+a:link {
+	text-decoration: none;
+	color: black;
+	background-color: rgba(75, 177, 153, 0.50);
+	border: 3px ridge green;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+a:vidited {
+	color: blue;
+}
+.header {
+	grid-area: header;
+
+	text-align: center;
+	margin: 1px;
+	border: 5px ridge green;
+	background: linear-gradient(#0066ff, #00ff00);
+}
+.nav_bar {
+	grid-area: nav_bar;
+
+	display: grid;
+	grid-template-columns:
+	repeat(5, 20%);
+
+	background: linear-gradient(to right, #0066ff, #00ff00, #0066ff);
+	text-align: center;
+	align-items: center;
+	margin: 1px;
+	border: 5px ridge green;
+
+
+}
+.V_dalkur {
+	grid-area:.V_dalkur;
+
+	text-align: center;
+}
+.M_dalkur {
+	grid-area: M_dalkur;
+}
+.H_dalkur {
+	grid-area: H_dalkur;
+
+	text-align: center;
+}
+.Meginmal {
+	grid-area: Meginmal;
+}
+.footer {
+	grid-area: footer;
+
+	text-align: center;
+	padding: 1em;
+	margin: 1px;
+	border: 5px ridge green;
+	background: linear-gradient(to right, #00ff00, #0066ff, #00ff00);
+}
+.Meginmal{
+	grid-template-columns:
+  	1fr 2.5fr 1fr;
+
+	display: grid;
+	grid-template-areas:
+  	"V_dalkur M_dalkur H_dalkur";
+}
+.V_dalkur,
+.M_dalkur,
+.H_dalkur {
+	padding: 3px;
+	margin: 1px;
+	border: 5px ridge green;
+	background: linear-gradient(#0066ff, #00ff00);
+}

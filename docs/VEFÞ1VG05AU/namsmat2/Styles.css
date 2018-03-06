@@ -1,0 +1,34 @@
+body {
+	font-family: Ubuntu;
+	background-image: url("Content/5Vector-Abstract.jpg")
+}
+h1 {
+	color: white;
+}
+.info {
+	color: white;
+	text-align: right;
+}
+.vCenter {
+	max-width: 60em;
+	margin: auto;
+}
+.col-II {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	align-items: center;
+
+	background-color: rgba(255, 255, 255, .8);
+	padding: 1em;
+	border-radius: 1em;
+	line-height: 150%;
+	border: 1px solid aqua;
+}
+.Alan_Turing {
+	width: 12em;
+	border-radius: 50%;
+}
+footer {
+	text-align: center;
+	color: white;
+}

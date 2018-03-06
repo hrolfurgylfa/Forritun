@@ -1,0 +1,168 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background: linear-gradient(to left, rgb(31, 63, 92), rgb(7, 100, 207), rgb(31, 63, 92));
+	font-family: 'Roboto', sans-serif;
+	line-height: 150%
+	padding: 1px;
+}
+h1 {
+	font-weight: 100;
+}
+
+/*Header*/
+header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	color: white;
+	max-width: 60em;
+	margin: 1em auto;
+}
+nav a:link {
+	text-decoration: none;
+	color: white;
+}
+nav a:visited {
+	text-decoration: none;
+	color: white;
+}
+.nav_bar_2 a:link {
+	text-decoration: none;
+	color: white;
+	border-right: 1px solid white;
+	border-left: 1px solid white;
+	padding: 5px;
+	margin: 0px;
+}
+.nav_bar_2 a:visited {
+	text-decoration: none;
+	color: rgb(255, 220, 158);
+}
+.nav_bar_2 a:active {
+	color: black;
+	background-color: white;
+}
+.nav_bar_2 a:hover {
+	color: black;
+	background-color: white;
+}
+.He_1 {
+	padding-top: 1em;
+	padding-left: 1em;
+}
+.He_2 {
+	text-align: right;
+	padding-right: 1em;
+}
+.nav_bar {
+	text-align: right;
+	padding-right: 1em;
+}
+.nav_bar_2 {
+	background-color: rgb(13, 91, 180);
+	border-radius: 25%;
+}
+
+/*Main*/
+.main {
+	background: linear-gradient(to bottom, rgb(255, 219, 156), rgb(250, 241, 221));
+}
+.main_2 {
+	max-width: 60em;
+	margin: 0em auto;
+	padding: 1em;
+	text-align: center;
+}
+.main_2_v4-3{
+	height: 100vh;
+}
+blockquote {
+	padding: 1em;
+	background-color: rgba(255, 255, 255, .5);
+}
+
+/*Síða 2*/
+.sida2 {
+	background: linear-gradient(to bottom, #faf1dd, #668000);
+}
+.sida3 {
+	background: linear-gradient(to bottom, #668000, teal);
+}
+.sida4 {
+	background: linear-gradient(to bottom, teal, #7acff7);
+}
+.sida5 {
+	background: linear-gradient(to bottom, #7acff7, #1d1086);
+}
+.sida6 {
+	background: linear-gradient(to bottom, #1d1086, #780080);
+	color: white;
+}
+.sida7 {
+	background: linear-gradient(to bottom, #780080, maroon);
+	color: white;
+}
+.scroll_sida {
+	max-width: 60em;
+	margin: 0em auto;
+	padding: 1em;
+	height: 100vh;
+	font-size: 1.2em;
+}
+
+/*Footer*/
+footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+	color: white;
+	max-width: 60em;
+	margin: auto;
+}
+dt {
+	color: rgb(210, 170, 68);
+}
+.nav_1 {
+	text-align: left;
+	padding-left: 1em;
+}
+.nav_2 {
+	text-align: center;
+}
+.nav_3 {
+	text-align: right;
+	padding-right: 1em;
+}
+.nav_2 ul,
+.nav_3 ul {
+	list-style-type: none;
+	line-height: 200%;
+	padding: 0;
+}
+.copy {
+	color: white;
+	text-align: center;
+}
+.container {
+	max-width: 60em;
+	margin: auto;
+}
+
+/*Annað*/
+.upp {
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+	background-color: white;
+	color: blue;
+	height: 2em;
+	width: 2em;
+	text-decoration: none;
+	border-radius: 50%;
+	font-size: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- þvingar farsíma vafra til að birta gögn 1:1 og þá virka viðmið (breakpoints) í stílsíðum -->
+	<meta charset="utf-8">
+	<title>Verkefni 2</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head> 
+<body> 
+    <nav class="topnav">
+    	<input type="checkbox" id="toggle">
+    	<label for="toggle">Efnisyfirlit &#9776;</label>
+        <ul class="topmenu">
+        	<li><a href="https://tskoli.is/">Vefsíða tækniskólans</a></li>
+        	<li><a href="https://r.inna.is/innskraning">Inna</a></li>
+        	<li><a href="../../VEFÞ1VG05AU">Haustönn 2017</a></li>
+        	<li><a href="..">Vorönn 2018</a></li>
+        	<li><a href="../..">Aðalvalmynd</a></li>
+        </ul>
+    </nav>
+	<header>
+		<h1>Sveigjanleg vefhönnun - <i>Responsive Web Design</i></h1>
+		<picture>
+			<source srcset="Myndir/snowdrop_480.jpg" media="(max-width: 37.5em)">
+			<source srcset="Myndir/snowdrop_960.jpg" media="(max-width: 60em)">
+			<source srcset="Myndir/snowdrop_1600.jpg">
+			<img src="Myndir/snowdrop_960.jpg">
+		</picture>
+	</header>
+	<section class="content"> 
+		<article class="midja">
+			<h2>Aðaldálkur</h2>
+			<h4>Í verkefni 1 hafa nemendur kost á því að leysa þetta verkefni með nýja CSS grindakerfinu sem þróað hefur verið undanfarin ár og nú eru framleiðendur helstu vafra internetsins búnir að innleiða þessa lausn í nýjustu vafrana sjá: <a href="https://caniuse.com/"> Can I use </a> nema ennþá þarf forskeyti (<em>e. prefix</em>) á IE og Edge vafrana.
+			</h4>
+			<p><a href="https://gridbyexample.com/">Grid by Example</a></p>
+			<p><a href="https://tympanus.net/codrops/css_reference/grid/">CSS grid</a></p>	
+			<section class="mynda_container">
+				<figure><img src="Myndir/apple-160.jpg"></figure>
+				<figure><img src="Myndir/mushroom-160.jpg"></figure>
+				<figure><img src="Myndir/flower-160.jpg"></figure>
+				<figure><img src="Myndir/tiger-160.jpg"></figure>
+			</section>	
+			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod sodales lacus eu tempor. Maecenas eget felis vitae massa pharetra mattis non pellentesque dolor. Suspendisse potenti. Donec lorem risus, hendrerit id est id, efficitur elementum metus. Quisque hendrerit neque non ante interdum euismod. Proin ut nulla pretium, tempor sem at, gravida nisl. Suspendisse potenti. Donec lorem risus, hendrerit id est id, efficitur elementum metus. Quisque hendrerit neque non ante interdum euismod. Proin ut nulla pretium, tempor sem at, gravida nisl.
+			</p>
+		</article>
+		<aside class="vinstri">
+			<h3>Vinstri dálkur</h3>
+			<p><a href="https://www.w3schools.com/html/html_responsive.asp"> What is Responsive Web Design? </a>  Nullam in velit faucibus, sagittis ligula in, tincidunt erat. Ut turpis justo, suscipit vitae commodo ut, luctus non quam.
+			</p>
+			<p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		</aside>
+		<aside class="haegri">
+			<h3>Hægri dálkur</h3>
+			<p><strong>Litaval er frjálst!</strong> Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			<p><a href="https://www.uxpin.com/studio/blog/best-practices-examples-of-excellent-responsive-design/">Best practices of responsive web design </a>
+			</p>
+			<p>Ut turpis justo, suscipit vitae commodo ut, luctus non quam.
+			</p>
+		</aside>
+	</section>
+	<footer>
+		<h3>Fótur</h3>
+		<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Cascading Style Sheets </a>  (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+		<div class="sMedia">
+			<a href="https://www.facebook.com/">
+				<div class="facebook">
+					F
+				</div>
+			</a>
+			<a href="https://twitter.com/">
+				<div class="twitter">
+					T
+				</div>
+			</a>
+			<a href="https://www.snapchat.com/">
+				<div class="snapchat">
+					S
+				</div>
+			</a>
+			<a href="https://allo.google.com/">
+				<div class="allo">
+					A
+				</div>
+			</a>
+		</div>
+	</footer>
+</body>
+</html>

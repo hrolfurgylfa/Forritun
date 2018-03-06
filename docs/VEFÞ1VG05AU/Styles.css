@@ -1,0 +1,24 @@
+body {
+	background-color: rgba(204, 30, 177, 0.66);
+	border: 2px solid green;
+	max-width: 40em;
+	margin: 1em auto;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+a {
+	color: black;
+	text-decoration: none;
+	border: 2px solid red;
+	padding: 3px 3px;
+	background-color: yellow;
+	text-align: center;
+}
+a:hover {
+background-color: purple;
+color: white;
+}
+a:active {
+background-color: purple;
+color: white;
+}

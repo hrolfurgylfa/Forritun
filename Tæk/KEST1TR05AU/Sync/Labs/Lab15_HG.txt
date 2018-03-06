@@ -1,0 +1,110 @@
+Script started on fös  3.nóv 2017, 09:59:31 GMT
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ cd /tmp
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ mkdir priv-dir pub-dir
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ touch priv-dir/priv-file
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ touch pub-dir/pub-file
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ls -l priv-dir
+total 0
+-rw-rw-r-- 1 hrolfur hrolfur 0 nóv  3 09:59 priv-file
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ls -l pub-dir
+total 0
+-rw-rw-r-- 1 hrolfur hrolfur 0 nóv  3 09:59 pub-file
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ls -ld priv-dir/
+drwxrwxr-x 2 hrolfur hrolfur 4096 nóv  3 09:59 [0m[01;34mpriv-dir/[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ chmod o-rx priv-dir/
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ls -ld priv-dir/
+drwxrwx--- 2 hrolfur hrolfur 4096 nóv  3 09:59 [0m[01;34mpriv-dir/[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ls -ld pub-dir/
+drwxrwxr-x 2 hrolfur hrolfur 4096 nóv  3 09:59 [0m[01;34mpub-dir/[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ chmod o+w pub-dir/
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ls -ld pub-dir/
+drwxrwxrwx 2 hrolfur hrolfur 4096 nóv  3 09:59 [0m[34;42mpub-dir/[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ls -l priv-dir/priv-file
+-rw-rw-r-- 1 hrolfur hrolfur 0 nóv  3 09:59 priv-dir/priv-file
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ chmod g-rw,o-r priv-dir/priv-file
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ls -l priv-dir/priv-file
+-rw------- 1 hrolfur hrolfur 0 nóv  3 09:59 priv-dir/priv-file
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ls -l pub-dir/pub-file
+-rw-rw-r-- 1 hrolfur hrolfur 0 nóv  3 09:59 pub-dir/pub-file
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ chmod a=rw pub-dir/pub-file
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ls -l pub-dir/pub-file
+-rw-rw-rw- 1 hrolfur hrolfur 0 nóv  3 09:59 pub-dir/pub-file
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ echo "date" > test.sh
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ./test.sh
+bash: ./test.sh: Permission denied
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ls -l test.sh
+-rw-rw-r-- 1 hrolfur hrolfur 5 nóv  3 10:01 test.sh
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ chmod u+x test.sh
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ls -l test [K.sh
+-rwxrw-r-- 1 hrolfur hrolfur 5 nóv  3 10:01 [0m[01;32mtest.sh[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ./test.sh
+fös nóv  3 10:02:48 GMT 2017
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ stat test.sh
+  File: 'test.sh'
+  Size: 5         	Blocks: 8          IO Block: 4096   regular file
+Device: 808h/2056d	Inode: 1445158     Links: 1
+Access: (0764/-rwxrw-r--)  Uid: ( 1000/ hrolfur)   Gid: ( 1000/ hrolfur)
+Access: 2017-11-03 10:02:48.379535824 +0000
+Modify: 2017-11-03 10:01:30.958911543 +0000
+Change: 2017-11-03 10:02:24.243341095 +0000
+ Birth: -
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ chmod 775 test.sh
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ ls -l test.sh
+-rwxrwxr-x 1 hrolfur hrolfur 5 nóv  3 10:01 [0m[01;32mtest.sh[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ sh-ud[K[K[K[K[Ksudo -i
+[sudo] password for hrolfur: 
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# cd/[K /tem[K[Kmp
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# ls -ld pub-dir
+drwxrwxrwx 2 hrolfur hrolfur 4096 nóv  3 09:59 [0m[34;42mpub-dir[0m
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# læs [K[K[Ks[K[Kls -l pub-dir/[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls -l pub-dir/pub-file
+-rw-rw-rw- 1 hrolfur hrolfur 0 nóv  3 09:59 pub-dir/pub-file
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# chown root:root pub-dir
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# ls -ld pub-dir
+drwxrwxrwx 2 root root 4096 nóv  3 09:59 [0m[34;42mpub-dir[0m
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# chown bin pub-dir/pub-file
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# ls -l pub-dir/pub-file
+-rw-rw-rw- 1 bin hrolfur 0 nóv  3 09:59 pub-dir/pub-file
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# ls -ld priv-dir
+drwxrwx--- 2 hrolfur hrolfur 4096 nóv  3 09:59 [0m[01;34mpriv-dir[0m
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# ls -l priv-dir/priv-file
+-rw------- 1 hrolfur hrolfur 0 nóv  3 09:59 priv-dir/priv-file
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# ls -ld priv-dir
+drwxrwx--- 2 hrolfur hrolfur 4096 nóv  3 09:59 [0m[01;34mpriv-dir[0m
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# ls -l priv-dir/priv-file
+-rw------- 1 hrolfur hrolfur 0 nóv  3 09:59 priv-dir/priv-file
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# chgrp -R users priv-dir
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# ls -ld priv-dir
+drwxrwx--- 2 hrolfur users 4096 nóv  3 09:59 [0m[01;34mpriv-dir[0m
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# ls -l priv-dir/priv-file
+-rw------- 1 hrolfur users 0 nóv  3 09:59 priv-dir/priv-file
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# ls
+config-err-zyydJE
+[0m[01;34mpriv-dir[0m
+[34;42mpub-dir[0m
+[01;34msystemd-private-3e3e4c7aabe54e10bb45e13dbcc065ce-colord.service-kNMfn6[0m
+[01;34msystemd-private-3e3e4c7aabe54e10bb45e13dbcc065ce-rtkit-daemon.service-2ktbbU[0m
+[01;34msystemd-private-3e3e4c7aabe54e10bb45e13dbcc065ce-systemd-timesyncd.service-wAmSKX[0m
+[01;32mtest.sh[0m
+unity_support_test.0
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# cd pub-dur[K[Kir
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmp/pub-dirroot@hrolfur-Lenovo-Yoga-2-13:/tmp/pub-dir# ls
+pub-file
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmp/pub-dirroot@hrolfur-Lenovo-Yoga-2-13:/tmp/pub-dir# cd ..
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# rm -v[Krv priv-dir pub-dir test.sh
+removed 'priv-dir/priv-file'
+removed directory 'priv-dir'
+removed 'pub-dir/pub-file'
+removed directory 'pub-dir'
+removed 'test.sh'
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# ls
+config-err-zyydJE
+[0m[01;34msystemd-private-3e3e4c7aabe54e10bb45e13dbcc065ce-colord.service-kNMfn6[0m
+[01;34msystemd-private-3e3e4c7aabe54e10bb45e13dbcc065ce-rtkit-daemon.service-2ktbbU[0m
+[01;34msystemd-private-3e3e4c7aabe54e10bb45e13dbcc065ce-systemd-timesyncd.service-wAmSKX[0m
+unity_support_test.0
+]0;root@hrolfur-Lenovo-Yoga-2-13: /tmproot@hrolfur-Lenovo-Yoga-2-13:/tmp# exit
+logout
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /tmp[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/tmp[00m$ cd
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ exit
+
+Script done on fös  3.nóv 2017, 10:08:11 GMT

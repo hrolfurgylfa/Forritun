@@ -1,0 +1,181 @@
+Script started on þri 26.sep 2017, 14:28:35 GMT
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl[00m$ whoami
+hrolfur
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl[00m$ cd ..
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ whoami
+hrolfur
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ uname
+Linux
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ uname -n
+hrolfur-Lenovo-Yoga-2-13
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ uname - [Knodename
+uname: invalid option -- 'd'
+Try 'uname --help' for more information.
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ uname -nodename[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K^V[Kuname --nodename
+hrolfur-Lenovo-Yoga-2-13
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ pwd
+/home/hrolfur
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo Halló
+Halló
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo ¼[K¹²³¼½¬{[]}[K[K[K[K[K[K[K[K[K[K[K¼[K³[K½[K¬[K¼[K½[K #[K$path
+
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ cd Documents
+bash: cd: Documents: No such file or directory
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ cd Doc[K[K[K[K[K[Kls
+examples.desktop  [0m[01;34mMyndskeið[0m   [01;34mSkjáborð[0m  [01;34mSniðmát[0m    [01;34mTónlist[0m
+[01;34mMyndir[0m            [01;34mOpið öllum[0m  [01;34mSkjöl[0m     [01;34mSótt gögn[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ cd Skjöl
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl[00m$ cd Skjölls[Kcd Documents[2Pecho $path
+
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl[00m$ echo $path[K[K[K[KPATH
+/home/hrolfur/bin:/home/hrolfur/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl[00m$ cd ..
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ which date
+/bin/date
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo +[K*
+examples.desktop Myndir Myndskeið Opið öllum Skjáborð Skjöl Sniðmát Sótt gögn Tónlist
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo D*
+D*
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo S*
+Skjáborð Skjöl Sniðmát Sótt gögn
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echp[Ko P*
+P*
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo s*
+s*
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo k*
+k*
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo t*[K[K*s
+*s
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo *s[Kt
+Sniðmát Tónlist
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo *t[Kk
+*k
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo D*n*s
+D*n*s
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo S*t
+Sniðmát
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo ?????????????
+?????????????
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo ????[K[K[K[K?????
+Skjöl
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo D[KS******
+Skjáborð Skjöl Sniðmát Sótt gögn
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo S????[K[K[K[K???????
+Skjáborð
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ S[Kecho S???b???
+Skjáborð
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo [DP]*
+[DP]*
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo [!DP]*
+examples.desktop Myndir Myndskeið Opið öllum Skjáborð Skjöl Sniðmát Sótt gögn Tónlist
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo [D-P]*
+examples.desktop Myndir Myndskeið Opið öllum
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo [!D-P]*
+Skjáborð Skjöl Sniðmát Sótt gögn Tónlist
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo Today is `date`
+Today is þri sep 26 15:07:32 GMT 2017
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo Today is $(date)
+Today is þri sep 26 15:08:08 GMT 2017
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo This is the command '`date`'
+This is the command `date`
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo This is the command \`date\`
+This is the command `date`
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo This is the command "`date`"
+This is the command þri sep 26 15:10:17 GMT 2017
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo D*
+D*
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo "D*"
+D*
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo Hello; echo Linux; echo Student
+Hello
+Linux
+Student
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ false; echo Not; echo Conditional
+Not
+Conditional
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ 
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo Start && echo Going && echo Gone
+Start
+Going
+Gone
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo Success && false && echo Bye
+Success
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo Success && false && echo Bye[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kfalse || echo Fail Or
+Fail Or
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ true || echo Nothing to see here
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ histi-ory
+histi-ory: command not found
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ history
+    1  whoami
+    2  cd ..
+    3  whoami
+    4  uname
+    5  uname -n
+    6  uname -nodename
+    7  uname --nodename
+    8  pwd
+    9  echo Halló
+   10  echo $path
+   11  cd Documents
+   12  ls
+   13  cd Skjöl
+   14  echo $path
+   15  echo $PATH
+   16  cd ..
+   17  which date
+   18  echo *
+   19  echo D*
+   20  echo S*
+   21  echo P*
+   22  echo s*
+   23  echo k*
+   24  echo *s
+   25  echo *t
+   26  echo *k
+   27  echo D*n*s
+   28  echo S*t
+   29  echo ?????????????
+   30  echo ?????
+   31  echo S******
+   32  echo S???????
+   33  echo S???b???
+   34  echo [DP]*
+   35  echo [!DP]*
+   36  echo [D-P]*
+   37  echo [!D-P]*
+   38  echo Today is `date`
+   39  echo Today is $(date)
+   40  echo This is the command '`date`'
+   41  echo This is the command \`date\`
+   42  echo This is the command "`date`"
+   43  echo D*
+   44  echo "D*"
+   45  echo Hello; echo Linux; echo Student
+   46  false; echo Not; echo Conditional
+   47  echo Start && echo Going && echo Gone
+   48  echo Success && false && echo Bye
+   49  false || echo Fail Or
+   50  true || echo Nothing to see here
+   51  histi-ory
+   52  history
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ history 5
+   49  false || echo Fail Or
+   50  true || echo Nothing to see here
+   51  histi-ory
+   52  history
+   53  history 5
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ !94[K[K22
+echo s*
+s*
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo s*history 5[Ki-orytrue || echo Nothing to see here[11Pfalse || echo Fail Orecho Success && false && echo Byetart && echo Going && echo Gone
+Start
+Going
+Gone
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ echo Start && echo Going && echo Gones*[Khistory 5[Ki-orytrue || echo Nothing to see here[11Pfalse || echo Fail Orecho Success && false && echo Byetart && echo Going && echo Gone[4Pfalse; echo Not; echo Conditionalecho Hello; echo Linux; echo Student"D*"[K[2PD*This is the command "`date`"\`date\`'`date`'[12Poday is $(date)[1P`date`[8P[!D-P]*[1PD-P]*!DP]*[1PDP]*S???b???????[1P******[2P?????????????S*t[KD*n*s[3P*ktsk*s*P*S*D*[1P*which date
+/bin/date
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ exit
+
+Script done on þri 26.sep 2017, 15:16:17 GMT

@@ -1,0 +1,1 @@
+CREATE DATABASE Skilaverkefni_4_b;

@@ -1,0 +1,1313 @@
+Script started on þri 24.okt 2017, 14:38:20 GMT
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ echo "Hello World"
+Hello World
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ echo ![K"Hello World" > mymessage [A
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ cat mymessage
+Hello World
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ cat me[Kymessage
+Hello World
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ echo Greetings>[K > mymessage
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ cat mymessage
+Greetings
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ cat mymessage
+Greetings
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ echo "Hp[Kow are you?" > mymessag e
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ cat mymesa[Ksage
+How are you?
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ cat [K[K[K[Kfint[Kd /etc -name hosts
+find: ‘/etc/polkit-1/localauthority’: Permission denied
+find: ‘/etc/cups/ssl’: Permission denied
+/etc/hosts
+find: ‘/etc/ssl/private’: Permission denied
+/etc/avahi/hosts
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ find /etc -name hosts
+find: ‘/etc/polkit-1/localauthority’: Permission denied
+find: ‘/etc/cups/ssl’: Permission denied
+/etc/hosts
+find: ‘/etc/ssl/private’: Permission denied
+/etc/avahi/hosts
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ fint[Kd/[K /etc -name hosts 2> err.t xt[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct xt
+/etc/hosts
+/etc/avahi/hosts
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ ca [Kt err [K.txt
+find: ‘/etc/polkit-1/localauthority’: Permission denied
+find: ‘/etc/cups/ssl’: Permission denied
+find: ‘/etc/ssl/private’: Permission denied
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ find /etc -name hosts > std.ou t 2> std.err
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ cat std.err
+find: ‘/etc/polkit-1/localauthority’: Permission denied
+find: ‘/etc/cups/ssl’: Permission denied
+find: ‘/etc/ssl/private’: Permission denied
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ cat std.out
+/etc/hosts
+/etc/avahi/hosts
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ fint[Kd cat std.out7et[K[K[K[K[K[K[K[K[K[K[K[K[K[Kfint[Kd /etc -name hosts > [Kfo[Kind.ou t 2>$[K&1
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ cat find.out
+find: ‘/etc/polkit-1/localauthority’: Permission denied
+find: ‘/etc/cups/ssl’: Permission denied
+/etc/hosts
+find: ‘/etc/ssl/private’: Permission denied
+/etc/avahi/hosts
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ ls
+err.txt   lab04_HG.txt  Lab06_HG.txt  Lab08_HG.txt  mymessage  std.out
+find.out  Lab05_HG.txt  Lab07_HG.txt  Lab09_HG.txt  std.err
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ mv -t file [K[K[K[K[K[K ..[K[K../../Prufa/Prufa1 mymes sage std.out st[Ktd.err find.out err.txt
+mv: failed to access '../../Prufa/Prufa1': No such file or directory
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ mv -t ../../Prufa/Prufa1 mymesssage std.out std.err find.out err.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ ls
+lab04_HG.txt  Lab06_HG.txt  Lab08_HG.txt
+Lab05_HG.txt  Lab07_HG.txt  Lab09_HG.txt
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ lsmv -t ../../Prufa/Prufa1 mymesssage std.out std.err find.out err.txt[A]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ ls[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmv -t ../../Prufa/Prufa1 mymesssage std.out std.err find.out err.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[C[1P ../../Prufa/Prufa1[1P ../../Prufa/Prufa1[1P../../Prufa/Prufa1[1P ../../Prufa/Prufa1[1P ../../Prufa/Prufa1c ../../Prufa/Prufa1d ../../Prufa/Prufa1
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ ls
+err.txt  find.out  mymessage  std.err  std.out
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ tr a-z A_[K-Z
+this is intresting
+THIS IS INTRESTING
+how o i d     do i stop this?
+HOW DO I STOP THIS?
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ tr A-Z a-z > myfile
+WoW, I SEE NOW
+This WORKS!
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ cat myfile
+wow, i see now
+this works!
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ tr a-z Az[K-Z Z[K>[K< myfile
+WOW, I SEE NOW
+THIS WORKS!
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ ls -l /etc | more
+total 1152
+drwxr-xr-x  3 root root    4096 feb 15  2017 acpi
+-rw-r--r--  1 root root    3028 feb 15  2017 adduser.conf
+drwxr-xr-x  2 root root    4096 sep 27 07:08 alternatives
+-rw-r--r--  1 root root     401 des 28  2014 anacrontab
+-rw-r--r--  1 root root     112 jan 10  2014 apg.conf
+drwxr-xr-x  6 root root    4096 feb 15  2017 apm
+drwxr-xr-x  3 root root    4096 feb 15  2017 apparmor
+drwxr-xr-x  8 root root    4096 feb 15  2017 apparmor.d
+drwxr-xr-x  5 root root    4096 feb 15  2017 apport
+-rw-r--r--  1 root root     389 apr 18  2016 appstream.conf
+drwxr-xr-x  6 root root    4096 okt  3 13:20 apt
+drwxr-xr-x  3 root root    4096 feb 15  2017 aptdaemon
+drwxr-xr-x  2 root root    4096 feb 15  2017 at-spi2
+drwxr-xr-x  3 root root    4096 feb 15  2017 avahi
+-rw-r--r--  1 root root    2188 ágú 31  2015 bash.bashrc
+-rw-r--r--  1 root root      45 ágú 12  2015 bash_completion
+drwxr-xr-x  2 root root    4096 sep 26 14:16 bash_completion.d
+-rw-r--r--  1 root root     367 jan 27  2016 bindresvport.blacklist
+drwxr-xr-x  2 root root    4096 apr 12  2016 binfmt.d
+drwxr-xr-x  2 root root    4096 feb 15  2017 bluetooth
+-rw-r--r--  1 root root      33 feb 15  2017 brlapi.key
+drwxr-xr-x  7 root root    4096 feb 15  2017 brltty
+-rw-r--r--  1 root root   23444 apr 28  2016 brltty.conf
+drwxr-xr-x  3 root root    4096 feb 15  2017 ca-certificates
+-rw-r--r--  1 root root    7788 feb 15  2017 ca-certificates.conf
+drwxr-xr-x  2 root root    4096 feb 15  2017 calendar
+drwxr-s---  2 root dip     4096 feb 15  2017 chatscripts
+drwxr-xr-x  2 root root    4096 feb 15  2017 compizconfig
+drwxr-xr-x  2 root root    4096 feb 15  2017 console-setup
+drwxr-xr-x  2 root root    4096 feb 15  2017 cracklib
+drwxr-xr-x  2 root root    4096 feb 15  2017 cron.d
+drwxr-xr-x  2 root root    4096 okt  3 13:20 cron.daily
+drwxr-xr-x  2 root root    4096 feb 15  2017 cron.hourly
+drwxr-xr-x  2 root root    4096 feb 15  2017 cron.monthly
+-rw-r--r--  1 root root     722 apr  5  2016 crontab
+drwxr-xr-x  2 root root    4096 feb 15  2017 cron.weekly
+drwxr-xr-x  5 root lp      4096 okt 24 13:34 cups
+drwxr-xr-x  2 root root    4096 feb 15  2017 cupshelpers
+drwxr-xr-x  4 root root    4096 feb 15  2017 dbus-1
+drwxr-xr-x  4 root root    4096 feb 15  2017 dconf
+-rw-r--r--  1 root root    2969 nóv 10  2015 debconf.conf
+-rw-r--r--  1 root root      12 apr 30  2015 debian_version
+drwxr-xr-x  2 root root    4096 sep 27 07:08 default
+-rw-r--r--  1 root root     604 júl  2  2015 deluser.conf
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 depmod.d
+[7m--More--[27mdrwxr-xr-x  4 root root    4096 feb 15  2017 dhcp
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 sep 26 14:16 dictionaries-common
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 dnsmasq.d
+[7m--More--[27mdrwxr-xr-x  3 root root    4096 feb 15  2017 doc-base
+[7m--More--[27mdrwxr-xr-x  4 root root    4096 feb 15  2017 dpkg
+[7m--More--[27m-rw-r--r--  1 root root    4479 jan 26  2017 drirc
+[7m--More--[27mdrwxr-xr-x  3 root root    4096 feb 15  2017 emacs
+[7m--More--[27m-rw-r--r--  1 root root      96 feb 15  2017 environment
+[7m--More--[27mdrwxr-xr-x  3 root root    4096 feb 15  2017 firefox
+[7m--More--[27mdrwxr-xr-x  4 root root    4096 feb 15  2017 fonts
+[7m--More--[27m-rw-rw-r--  1 root root     594 sep 26 14:12 fstab
+[7m--More--[27m-rw-r--r--  1 root root     132 feb 10  2016 ftpusers
+[7m--More--[27m-rw-r--r--  1 root root     280 jún 20  2014 fuse.conf
+[7m--More--[27m-rw-r--r--  1 root root     331 ágú 17  2016 fwupd.conf
+[7m--More--[27m-rw-r--r--  1 root root    2584 feb 18  2016 gai.conf
+[7m--More--[27mdrwxr-xr-x  5 root root    4096 feb 15  2017 gconf
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 gdb
+[7m--More--[27mdrwxr-xr-x  4 root root    4096 feb 15  2017 ghostscript
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 gnome
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 gnome-app-install
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 groff
+[7m--More--[27m-rw-r--r--  1 root root     999 okt  6 08:41 group
+[7m--More--[27m-rw-------  1 root root    1010 okt  6 08:35 group-
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 grub.d
+[7m--More--[27m-rw-r-----  1 root shadow   839 okt  6 08:41 gshadow
+[7m--More--[27m-rw-------  1 root root     847 okt  6 08:35 gshadow-
+[7m--More--[27mdrwxr-xr-x  3 root root    4096 feb 15  2017 gss
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 gtk-2.0
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 gtk-3.0
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 ágú 12  2016 guest-session
+[7m--More--[27m-rw-r--r--  1 root root    4781 mar 17  2016 hdparm.conf
+[7m--More--[27m-rw-r--r--  1 root root      92 okt 22  2015 host.conf
+[7m--More--[27m-rw-r--r--  1 root root      25 sep 26 14:14 hostname
+[7m--More--[27m-rw-r--r--  1 root root     239 sep 26 14:14 hosts
+[7m--More--[27m-rw-r--r--  1 root root     411 feb 15  2017 hosts.allow
+[7m--More--[27m-rw-r--r--  1 root root     711 feb 15  2017 hosts.deny
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 hp
+[7m--More--[27mdrwxr-xr-x  3 root root    4096 feb 15  2017 ifplugd
+[7m--More--[27m-rw-rw-r--  1 root root     123 sep 26 14:14 iftab
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 ImageMagick-6
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 sep 26 14:16 init
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 okt  6 08:35 init.d
+[7m--More--[27mdrwxr-xr-x  5 root root    4096 feb 15  2017 initramfs-tools
+[7m--More--[27m-rw-r--r--  1 root root    1748 feb  4  2016 inputrc
+[7m--More--[27mdrwxr-xr-x  3 root root    4096 mar  6  2015 insserv
+[7m--More--[27m-rw-r--r--  1 root root     771 mar  6  2015 insserv.conf
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 mar  6  2015 insserv.conf.d
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 iproute2
+[7m--More--[27m-rw-r--r--  1 root root      26 feb  7  2017 issue
+[7m--More--[27m-rw-r--r--  1 root root      19 feb  7  2017 issue.net
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 kbd
+[7m--More--[27mdrwxr-xr-x  5 root root    4096 sep 26 14:15 kernel
+[7m--More--[27m-rw-r--r--  1 root root     110 sep 26 14:15 kernel-img.conf
+[7m--More--[27m-rw-r--r--  1 root root    1308 mar 10  2016 kerneloops.conf
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 ldap
+[7m--More--[27m-rw-r--r--  1 root root   87139 sep 27 07:08 ld.so.cache
+[7m--More--[27m-rw-r--r--  1 root root      34 jan 27  2016 ld.so.conf
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 ld.so.conf.d
+[7m--More--[27m-rw-r--r--  1 root root     267 okt 22  2015 legal
+[7m--More--[27m-rw-r--r--  1 root root      27 jan  8  2015 libao.conf
+[7m--More--[27m-rw-r--r--  1 root root     191 jan 18  2016 libaudit.conf
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 libnl-3
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 nóv  4  2015 libpaper.d
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 libreoffice
+[7m--More--[27mdrwxr-xr-x  3 root root    4096 feb 15  2017 lightdm
+[7m--More--[27m-rw-r--r--  1 root root    1151 apr  8  2016 lintianrc
+[7m--More--[27m-rw-r--r--  1 root root    2995 apr 14  2016 locale.alias
+[7m--More--[27m-rw-r--r--  1 root root    9149 sep 26 14:14 locale.gen
+[7m--More--[27m-rw-r--r--  1 root root    1190 sep 26 14:14 localtime
+[7m--More--[27mdrwxr-xr-x  4 root root    4096 feb 15  2017 logcheck
+[7m--More--[27m-rw-r--r--  1 root root   10551 mar 29  2016 login.defs
+[7m--More--[27m-rw-r--r--  1 root root     703 maí  6  2015 logrotate.conf
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 okt  6 08:35 logrotate.d
+[7m--More--[27m-rw-r--r--  1 root root     105 feb  7  2017 lsb-release
+[7m--More--[27m-rw-r--r--  1 root root   14867 apr 12  2016 ltrace.conf
+[7m--More--[27m-r--r--r--  1 root root      33 sep 26 14:17 machine-id
+[7m--More--[27m-rw-r--r--  1 root root     111 nóv 20  2015 magic
+[7m--More--[27m-rw-r--r--  1 root root     111 nóv 20  2015 magic.mime
+[7m--More--[27m-rw-r--r--  1 root root   50163 okt  3 13:20 mailcap
+[7m--More--[27m-rw-r--r--  1 root root     449 okt 30  2015 mailcap.order
+[7m--More--[27m-rw-r--r--  1 root root    5170 nóv  6  2015 manpath.config
+[7m--More--[27m-rw-r--r--  1 root root   24241 okt 30  2015 mime.types
+[7m--More--[27m-rw-r--r--  1 root root     967 okt 30  2015 mke2fs.conf
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 sep 26 14:15 modprobe.d
+[7m--More--[27m-rw-r--r--  1 root root     195 feb 15  2017 modules
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 modules-load.d
+[7m--More--[27mlrwxrwxrwx  1 root root      19 sep 26 14:15 mtab -> ../proc/self/mounts
+[7m--More--[27m-rw-r--r--  1 root root     624 ágú  8  2007 mtools.conf
+[7m--More--[27m-rw-r--r--  1 root root    8338 des 16  2016 nanorc
+[7m--More--[27mdrwxr-xr-x  7 root root    4096 feb 15  2017 network
+[7m--More--[27mdrwxr-xr-x  8 root root    4096 feb 15  2017 NetworkManager
+[7m--More--[27m-rw-r--r--  1 root root      91 okt 22  2015 networks
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 newt
+[7m--More--[27m-rw-r--r--  1 root root     529 feb 15  2017 nsswitch.conf
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 opt
+[7m--More--[27mlrwxrwxrwx  1 root root      21 sep 26 14:12 os-release -> ../usr/lib/os-release
+[7m--More--[27m-rw-r--r--  1 root root     552 mar 16  2016 pam.conf
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 okt  6 08:35 pam.d
+[7m--More--[27m-rw-rw-r--  1 root root       3 sep 26 14:15 papersize
+[7m--More--[27m-rw-r--r--  1 root root    2256 okt  6 08:41 passwd
+[7m--More--[27m-rw-------  1 root root    2304 okt  6 08:35 passwd-
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 pcmcia
+[7m--More--[27mdrwxr-xr-x  4 root root    4096 feb 15  2017 perl
+[7m--More--[27mdrwxr-xr-x  4 root root    4096 feb 15  2017 pki
+[7m--More--[27mdrwxr-xr-x  5 root root    4096 feb 15  2017 pm
+[7m--More--[27m-rw-r--r--  1 root root    7649 feb 15  2017 pnm2ppa.conf
+[7m--More--[27mdrwxr-xr-x  5 root root    4096 feb 15  2017 polkit-1
+[7m--More--[27m-rw-rw-r--  1 root root     350 sep 26 14:15 popularity-contest.conf
+[7m--More--[27mdrwxr-xr-x  8 root root    4096 feb 15  2017 ppp
+[7m--More--[27m-rw-r--r--  1 root root     575 okt 22  2015 profile
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 profile.d
+[7m--More--[27m-rw-r--r--  1 root root    2932 okt 25  2014 protocols
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 pulse
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 python
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 python2.7
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 python3
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 python3.5
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 okt  6 08:35 rc0.d
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 okt  6 08:35 rc1.d
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 okt  6 08:35 rc2.d
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 okt  6 08:35 rc3.d
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 okt  6 08:35 rc4.d
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 okt  6 08:35 rc5.d
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 okt  6 08:35 rc6.d
+[7m--More--[27m-rwxr-xr-x  1 root root     306 feb 15  2017 rc.local
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 sep 26 14:16 rcS.d
+[7m--More--[27mdrwxr-xr-x  5 root root    4096 feb 15  2017 resolvconf
+[7m--More--[27mlrwxrwxrwx  1 root root      29 sep 26 14:14 resolv.conf -> ../run/resolvconf/reso
+[7m--More--[27mlv.conf[K
+[7m--More--[27m-rwxr-xr-x  1 root root     268 nóv 10  2015 rmt
+[7m--More--[27m-rw-r--r--  1 root root     887 okt 25  2014 rpc
+[7m--More--[27m-rw-r--r--  1 root root    1371 jan 27  2016 rsyslog.conf
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 rsyslog.d
+[7m--More--[27mdrwxr-xr-x  3 root root    4096 feb 15  2017 sane.d
+[7m--More--[27m-rw-r--r--  1 root root    4038 mar 29  2016 securetty
+[7m--More--[27mdrwxr-xr-x  4 root root    4096 feb 15  2017 security
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 selinux
+[7m--More--[27m-rw-r--r--  1 root root   10368 okt  2  2015 sensors3.conf
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 sensors.d
+[7m--More--[27m-rw-r--r--  1 root root   19605 okt 25  2014 services
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 sgml
+[7m--More--[27m-rw-r-----  1 root shadow  1248 okt  6 08:41 shadow
+[7m--More--[27m-rw-------  1 root root    1273 okt  6 08:35 shadow-
+[7m--More--[27m-rw-r--r--  1 root root      73 feb 15  2017 shells
+[7m--More--[27m-rw-r--r--  1 root root    1803 nóv  6  2015 signond.conf
+[7m--More--[27mdrwxr-xr-x  3 root root    4096 feb 15  2017 signon-ui
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 skel
+[7m--More--[27mdrwxr-xr-x  4 root root    4096 feb 15  2017 speech-dispatcher
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 ssh
+[7m--More--[27mdrwxr-xr-x  4 root root    4096 feb 15  2017 ssl
+[7m--More--[27m-rw-r--r--  1 root root      21 sep 26 14:14 subgid
+[7m--More--[27m-rw-------  1 root root       0 feb 15  2017 subgid-
+[7m--More--[27m-rw-r--r--  1 root root      21 sep 26 14:14 subuid
+[7m--More--[27m-rw-------  1 root root       0 feb 15  2017 subuid-
+[7m--More--[27m-r--r-----  1 root root     755 jan 20  2017 sudoers
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 sudoers.d
+[7m--More--[27m-rw-r--r--  1 root root    2084 sep  6  2015 sysctl.conf
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 sysctl.d
+[7m--More--[27mdrwxr-xr-x  5 root root    4096 feb 15  2017 systemd
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 terminfo
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 thermald
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 thunderbird
+[7m--More--[27m-rw-r--r--  1 root root      19 sep 26 14:14 timezone
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 apr 12  2016 tmpfiles.d
+[7m--More--[27m-rw-r--r--  1 root root    1260 mar 16  2016 ucf.conf
+[7m--More--[27mdrwxr-xr-x  4 root root    4096 feb 15  2017 udev
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 apr  1  2016 udisks2
+[7m--More--[27mdrwxr-xr-x  3 root root    4096 feb 15  2017 ufw
+[7m--More--[27m-rw-r--r--  1 root root     338 nóv 18  2014 updatedb.conf
+[7m--More--[27mdrwxr-xr-x  3 root root    4096 feb 15  2017 update-manager
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 update-motd.d
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 des  9  2016 update-notifier
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 UPower
+[7m--More--[27m-rw-r--r--  1 root root     270 maí 19  2016 upstart-xsessions
+[7m--More--[27m-rw-r--r--  1 root root    1018 okt  5  2015 usb_modeswitch.conf
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 nóv  2  2015 usb_modeswitch.d
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 vim
+[7m--More--[27m-rw-r--r--  1 root root    5850 apr 13  2016 vsftpd.conf
+[7m--More--[27mlrwxrwxrwx  1 root root      23 sep 26 14:12 vtrgb -> /etc/alternatives/vtrgb
+[7m--More--[27m-rw-r--r--  1 root root    4942 jún 14  2016 wgetrc
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 wpa_supplicant
+[7m--More--[27mdrwxr-xr-x 11 root root    4096 sep 30 09:37 X11
+[7m--More--[27mdrwxr-xr-x  5 root root    4096 feb 15  2017 xdg
+[7m--More--[27mdrwxr-xr-x  2 root root    4096 feb 15  2017 xml
+[7m--More--[27m-rw-r--r--  1 root root     477 júl 19  2015 zsh_command_not_found
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ 
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ 
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ 
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ 
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ cut -d: -f1 /etc/passwd
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+systemd-timesync
+systemd-network
+systemd-resolve
+systemd-bus-proxy
+syslog
+_apt
+messagebus
+uuidd
+lightdm
+whoopsie
+avahi-autoipd
+avahi
+dnsmasq
+colord
+speech-dispatcher
+hplip
+kernoops
+pulse
+rtkit
+saned
+usbmux
+hrolfur
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ cut -d: -f1 /etc/passwd | s ort
+_apt
+avahi
+avahi-autoipd
+backup
+bin
+colord
+daemon
+dnsmasq
+games
+gnats
+hplip
+hrolfur
+irc
+kernoops
+lightdm
+list
+lp
+mail
+man
+messagebus
+news
+nobody
+proxy
+pulse
+root
+rtkit
+saned
+speech-dispatcher
+sync
+sys
+syslog
+systemd-bus-proxy
+systemd-network
+systemd-resolve
+systemd-timesync
+usbmux
+uucp
+uuidd
+whoopsie
+www-data
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ cut -d: -f1 /etc/passwd | s ort | more
+_apt
+avahi
+avahi-autoipd
+backup
+bin
+colord
+daemon
+dnsmasq
+games
+gnats
+hplip
+hrolfur
+irc
+kernoops
+lightdm
+list
+lp
+mail
+man
+messagebus
+news
+nobody
+proxy
+pulse
+root
+rtkit
+saned
+speech-dispatcher
+sync
+sys
+syslog
+systemd-bus-proxy
+systemd-network
+systemd-resolve
+systemd-timesync
+usbmux
+uucp
+uuidd
+whoopsie
+www-data
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ [K]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ cut -d: -f1 /etc/passwd |  sort | more
+_apt
+avahi
+avahi-autoipd
+backup
+bin
+colord
+daemon
+dnsmasq
+games
+gnats
+hplip
+hrolfur
+[7m--More--[27mirc[K
+kernoops
+lightdm
+list
+lp
+mail
+man
+messagebus
+news
+nobody
+proxy
+pulse
+[7m--More--[27mroot[K
+rtkit
+saned
+speech-dispatcher
+sync
+sys
+syslog
+systemd-bus-proxy
+systemd-network
+systemd-resolve
+systemd-timesync
+usbmux
+[7m--More--[27muucp[K
+uuidd
+whoopsie
+www-data
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ [K]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ find <directory to start se arch> -criteria <argument for criteria>
+bash: syntax error near unexpected token `newline'
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ find <directory to start seaarch> -criteria <argument for criteria>[A]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfind ~ -name "*bash*"
+/home/hrolfur/.bashrc
+/home/hrolfur/.bash_logout
+/home/hrolfur/.bash_history
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ find ~/Music -mmin -5
+find: ‘/home/hrolfur/Music’: No such file or directory
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ touch ~/Music/mysong
+touch: cannot touch '/home/hrolfur/Music/mysong': No such file or directory
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ find ~/Music -mmin -5
+find: ‘/home/hrolfur/Music’: No such file or directory
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ find ~/Music -mmin -5[1Ptouch ~/Music/mysongfind ~/Music -mmin -5[1Ptouch ~/Music/mysongfind ~/Music -mmin -5[C[1P[1P[1P[1P[1P[1@T[1@ó[1@n[1@l[1@y[1@s[1@t[1@D[1@D[1@D[1P[1P[1P[1P[1P[1P[1@i[1@s[1@t^C
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ find ~/Music -mmin -5[1Ptouch ~/Music/mysongfind ~/Music -mmin -5[1P[1P[1P[1P[1P[1@T[1@ó[1@n[1@l[1@i[1@s[1@t
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ find ~/Tónlist -mmin -5[2PMusic[C[C[C[C[C[C[C[C[C[1Ptouch ~/Music/mysong[1P/mysong[1P/mysong[1P/mysong[1P/mysong[1P/mysongT/mysongó/mysongn/mysongl/mysongi/mysongs/mysongt/mysong
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ touch ~/Tónlist/mysong[C[C[C[1P/mysongfind ~/Tónlist -mmin -5[2PMusic[C[C[C[C[C[C[C[C[C[1Ptouch ~/Music/mysongfind ~/Music -mmin -5[1Ptouch ~/Music/mysongfind ~/Music -mmin -5[2@Tónlist[C[C[C[C[C[C[C[C[C
+/home/hrolfur/Tónlist
+/home/hrolfur/Tónlist/mysong
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ find /usr -size +2M
+/usr/share/command-not-found/programs.d/amd64-universe.db
+/usr/share/example-content/Ubuntu_Free_Culture_Showcase/Nathan Haines - Ubuntu Through The Years.ogg
+/usr/share/example-content/Ubuntu_Free_Culture_Showcase/Jenyfa Duncan - Australia.ogg
+/usr/share/libtimezonemap/ui/cities15000.txt
+/usr/share/icons/ubuntu-mobile/apps/scalable/music.svg
+/usr/share/hplip/data/pcl/colorcal1_450.pcl.gz
+/usr/share/i18n/locales/C
+/usr/share/backgrounds/warty-final-ubuntu.png
+/usr/share/file/magic.mgc
+/usr/share/app-install/icons/hb-icon.svg
+/usr/share/GeoIP/GeoIPv6.dat
+/usr/share/grub/unicode.pf2
+/usr/share/mythes/th_en_US_v2.idx
+/usr/share/mythes/th_en_US_v2.dat
+/usr/share/fonts/truetype/ancient-scripts/Symbola_hint.ttf
+/usr/share/fonts/truetype/tibetan-machine/TibetanMachineUni.ttf
+/usr/share/fonts/truetype/takao-gothic/TakaoPGothic.ttf
+/usr/share/fonts/truetype/freefont/FreeSerif.ttf
+/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf
+/usr/share/fonts/truetype/nanum/NanumGothic.ttf
+/usr/share/fonts/truetype/nanum/NanumMyeongjoBold.ttf
+/usr/share/fonts/truetype/nanum/NanumBarunGothicBold.ttf
+/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf
+/usr/share/fonts/truetype/nanum/NanumMyeongjo.ttf
+/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc
+/usr/share/fonts/opentype/noto/NotoSansCJK-Light.ttc
+/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc
+/usr/share/fonts/opentype/noto/NotoSansCJK-Thin.ttc
+/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc
+/usr/share/fonts/opentype/noto/NotoSansCJK-DemiLight.ttc
+/usr/share/fonts/opentype/noto/NotoSansCJK-Medium.ttc
+/usr/share/libreoffice/share/config/images_galaxy.zip
+/usr/share/libreoffice/help/en-US/shared.jar
+/usr/bin/snapctl
+/usr/bin/x86_64-linux-gnu-dwp
+/usr/bin/python3.5m
+/usr/bin/shotwell
+/usr/bin/snap
+/usr/bin/gdb
+/usr/bin/x86_64-linux-gnu-ld.gold
+/usr/bin/python3.5
+/usr/bin/python2.7
+/usr/lib/x86_64-linux-gnu/compiz/libunityshell.so
+/usr/lib/x86_64-linux-gnu/libgs.so.9.18
+/usr/lib/x86_64-linux-gnu/samba/libsmbd-base.so.0
+/usr/lib/x86_64-linux-gnu/libMagickCore-6.Q16.so.2.0.0
+/usr/lib/x86_64-linux-gnu/libOxideQtCore.so.0
+/usr/lib/x86_64-linux-gnu/libQt5Qml.so.5.5.1
+/usr/lib/x86_64-linux-gnu/webkit2gtk-4.0/WebKitPluginProcess2
+/usr/lib/x86_64-linux-gnu/libndr-standard.so.0.0.1
+/usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.5.1
+/usr/lib/x86_64-linux-gnu/libQt5WebKit.so.5.5.1
+/usr/lib/x86_64-linux-gnu/libicui18n.so.55.1
+/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.5.1
+/usr/lib/x86_64-linux-gnu/libc.a
+/usr/lib/x86_64-linux-gnu/libgtk-3.so.0.1800.9
+/usr/lib/x86_64-linux-gnu/libgucharmap_2_90.so.7.0.0
+/usr/lib/x86_64-linux-gnu/libwebkit2gtk-4.0.so.37.14.10
+/usr/lib/x86_64-linux-gnu/libexiv2.so.14.0.0
+/usr/lib/x86_64-linux-gnu/libQt5Quick.so.5.5.1
+/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.5.1
+/usr/lib/x86_64-linux-gnu/libQtGui.so.4.8.7
+/usr/lib/x86_64-linux-gnu/libxatracker.so.2.3.0
+/usr/lib/x86_64-linux-gnu/libQtXmlPatterns.so.4.8.7
+/usr/lib/x86_64-linux-gnu/libpthread.a
+/usr/lib/x86_64-linux-gnu/perl/5.22.1/auto/Encode/KR/KR.so
+/usr/lib/x86_64-linux-gnu/perl/5.22.1/auto/Encode/JP/JP.so
+/usr/lib/x86_64-linux-gnu/libLLVM-3.8.so.1
+/usr/lib/x86_64-linux-gnu/dri/i965_dri.so
+/usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+/usr/lib/x86_64-linux-gnu/dri/nouveau_vieux_dri.so
+/usr/lib/x86_64-linux-gnu/dri/r600_dri.so
+/usr/lib/x86_64-linux-gnu/dri/i915_dri.so
+/usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so
+/usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so
+/usr/lib/x86_64-linux-gnu/dri/r200_dri.so
+/usr/lib/x86_64-linux-gnu/dri/r300_dri.so
+/usr/lib/x86_64-linux-gnu/dri/vmwgfx_dri.so
+/usr/lib/x86_64-linux-gnu/dri/virtio_gpu_dri.so
+/usr/lib/x86_64-linux-gnu/dri/kms_swrast_dri.so
+/usr/lib/x86_64-linux-gnu/dri/radeon_dri.so
+/usr/lib/x86_64-linux-gnu/libpython2.7.so.1.0
+/usr/lib/x86_64-linux-gnu/libpoppler.so.58.0.0
+/usr/lib/x86_64-linux-gnu/libpython3.5m.so.1.0
+/usr/lib/x86_64-linux-gnu/libQtScript.so.4.8.7
+/usr/lib/x86_64-linux-gnu/libm.a
+/usr/lib/x86_64-linux-gnu/libIlmImf-2_2.so.22.0.0
+/usr/lib/x86_64-linux-gnu/libfftw3f.so.3.4.4
+/usr/lib/x86_64-linux-gnu/opera/opera_autoupdate
+/usr/lib/x86_64-linux-gnu/opera/opera.pak
+/usr/lib/x86_64-linux-gnu/opera/opera
+/usr/lib/x86_64-linux-gnu/opera/swiftshader/libGLESv2.so
+/usr/lib/x86_64-linux-gnu/opera/opera_crashreporter
+/usr/lib/x86_64-linux-gnu/opera/libGLESv2.so
+/usr/lib/x86_64-linux-gnu/opera/icudtl.dat
+/usr/lib/x86_64-linux-gnu/libjavascriptcoregtk-4.0.so.18.4.10
+/usr/lib/x86_64-linux-gnu/libicudata.so.55.1
+/usr/lib/x86_64-linux-gnu/libQtDeclarative.so.4.8.7
+/usr/lib/x86_64-linux-gnu/libtelepathy-glib.so.0.84.1
+/usr/lib/x86_64-linux-gnu/libetonyek-0.1.so.1.0.6
+/usr/lib/x86_64-linux-gnu/libvpx.so.3.0.0
+/usr/lib/x86_64-linux-gnu/oxide-qt/oxide.pak
+/usr/lib/x86_64-linux-gnu/oxide-qt/icudtl.dat
+/usr/lib/x86_64-linux-gnu/libQtCore.so.4.8.7
+/usr/lib/x86_64-linux-gnu/qt5/qml/Ubuntu/Components/libUbuntuComponents.so
+/usr/lib/x86_64-linux-gnu/libmwaw-0.3.so.3.0.7
+/usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.30
+/usr/lib/x86_64-linux-gnu/libgtkmm-3.0.so.1.1.0
+/usr/lib/xorg/Xorg
+/usr/lib/snapd/snapd
+/usr/lib/snapd/snap-exec
+/usr/lib/locale/locale-archive
+/usr/lib/gcc/x86_64-linux-gnu/5/libasan.a
+/usr/lib/gcc/x86_64-linux-gnu/5/cc1plus
+/usr/lib/gcc/x86_64-linux-gnu/5/libgcc.a
+/usr/lib/gcc/x86_64-linux-gnu/5/lto1
+/usr/lib/gcc/x86_64-linux-gnu/5/libstdc++.a
+/usr/lib/gcc/x86_64-linux-gnu/5/cc1
+/usr/lib/debug/lib/x86_64-linux-gnu/libc-2.23.so
+/usr/lib/debug/lib/x86_64-linux-gnu/libm-2.23.so
+/usr/lib/thunderbird/omni.ja
+/usr/lib/thunderbird/libxul.so
+/usr/lib/firefox/omni.ja
+/usr/lib/firefox/icudt56l.dat
+/usr/lib/firefox/libxul.so
+/usr/lib/firefox/browser/omni.ja
+/usr/lib/cups/driver/openprinting-ppds
+/usr/lib/libreoffice/program/libdbalo.so
+/usr/lib/libreoffice/program/liblocaledata_others.so
+/usr/lib/libreoffice/program/libcuilo.so
+/usr/lib/libreoffice/program/liblocaledata_euro.so
+/usr/lib/libreoffice/program/libdict_zh.so
+/usr/lib/libreoffice/program/libvbaobjlo.so
+/usr/lib/libreoffice/program/libsdlo.so
+/usr/lib/libreoffice/program/libswuilo.so
+/usr/lib/libreoffice/program/libwriterfilterlo.so
+/usr/lib/libreoffice/program/libooxlo.so
+/usr/lib/libreoffice/program/libsclo.so
+/usr/lib/libreoffice/program/libchartcorelo.so
+/usr/lib/libreoffice/program/libswlo.so
+/usr/lib/libreoffice/program/libfrmlo.so
+/usr/lib/libreoffice/program/libchartcontrollerlo.so
+/usr/lib/libreoffice/program/libscfiltlo.so
+/usr/lib/libreoffice/program/libmergedlo.so
+/usr/sbin/NetworkManager
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ find /usr/share/bug -type d [A
+/usr/share/bug
+/usr/share/bug/evolution-data-server
+/usr/share/bug/libreoffice-base-core
+/usr/share/bug/transmission-common
+/usr/share/bug/xserver-xorg-input-evdev-hwe-16.04
+/usr/share/bug/xserver-xorg-input-synaptics-hwe-16.04
+/usr/share/bug/grub-pc
+/usr/share/bug/xorg
+/usr/share/bug/ure
+/usr/share/bug/libegl1-mesa
+/usr/share/bug/xserver-xorg-video-ati-hwe-16.04
+/usr/share/bug/libmagic1
+/usr/share/bug/libreoffice-gnome
+/usr/share/bug/libreoffice-style-breeze
+/usr/share/bug/transmission-gtk
+/usr/share/bug/alsa-base
+/usr/share/bug/xserver-xorg-video-vmware-hwe-16.04
+/usr/share/bug/apt
+/usr/share/bug/xserver-xorg-core-hwe-16.04
+/usr/share/bug/libreoffice-pdfimport
+/usr/share/bug/libxatracker2
+/usr/share/bug/imagemagick
+/usr/share/bug/binutils
+/usr/share/bug/libreoffice-calc
+/usr/share/bug/fonts-opensymbol
+/usr/share/bug/uno-libs3
+/usr/share/bug/xserver-xorg
+/usr/share/bug/libreoffice-avmedia-backend-gstreamer
+/usr/share/bug/procps
+/usr/share/bug/vim-tiny
+/usr/share/bug/libgbm1
+/usr/share/bug/mime-support
+/usr/share/bug/udev
+/usr/share/bug/bash-completion
+/usr/share/bug/xserver-xorg-video-qxl-hwe-16.04
+/usr/share/bug/libreoffice-writer
+/usr/share/bug/gnupg
+/usr/share/bug/locales
+/usr/share/bug/libgl1-mesa-glx
+/usr/share/bug/hplip
+/usr/share/bug/xserver-xorg-video-fbdev-hwe-16.04
+/usr/share/bug/initramfs-tools
+/usr/share/bug/grub2-common
+/usr/share/bug/libreoffice-ogltrans
+/usr/share/bug/printer-driver-hpcups
+/usr/share/bug/keyboard-configuration
+/usr/share/bug/file
+/usr/share/bug/xserver-xorg-video-vesa-hwe-16.04
+/usr/share/bug/xserver-xorg-core
+/usr/share/bug/fonts-liberation
+/usr/share/bug/xserver-xorg-video-amdgpu-hwe-16.04
+/usr/share/bug/cups
+/usr/share/bug/libreoffice-common
+/usr/share/bug/ibus
+/usr/share/bug/man-db
+/usr/share/bug/python3-uno
+/usr/share/bug/libglapi-mesa
+/usr/share/bug/grub-pc-bin
+/usr/share/bug/console-setup
+/usr/share/bug/dbus
+/usr/share/bug/logrotate
+/usr/share/bug/gedit
+/usr/share/bug/xserver-xorg-video-intel-hwe-16.04
+/usr/share/bug/libreoffice-style-galaxy
+/usr/share/bug/libreoffice-gtk
+/usr/share/bug/xserver-xorg-video-nouveau-hwe-16.04
+/usr/share/bug/cron
+/usr/share/bug/fonts-sil-padauk
+/usr/share/bug/evince
+/usr/share/bug/libgl1-mesa-dri
+/usr/share/bug/libreoffice-draw
+/usr/share/bug/console-setup-linux
+/usr/share/bug/libwayland-egl1-mesa
+/usr/share/bug/systemd
+/usr/share/bug/fonts-sil-abyssinica
+/usr/share/bug/libreoffice-impress
+/usr/share/bug/usb-modeswitch-data
+/usr/share/bug/libreoffice-math
+/usr/share/bug/xserver-xorg-video-radeon-hwe-16.04
+/usr/share/bug/grub-common
+/usr/share/bug/libreoffice-core
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ find /usr/share/bug -type d  -ls
+  1971275      4 drwxr-xr-x  82 root     root         4096 okt  6 08:41 /usr/share/bug
+   138743      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/evolution-data-server
+   138767      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-base-core
+   138791      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/transmission-common
+   138802      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xserver-xorg-input-evdev-hwe-16.04
+   138803      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xserver-xorg-input-synaptics-hwe-16.04
+   138752      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/grub-pc
+   138798      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xorg
+   138795      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/ure
+   138760      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libegl1-mesa
+   138805      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xserver-xorg-video-ati-hwe-16.04
+   138765      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libmagic1
+   138772      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-gnome
+   138778      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-style-breeze
+   138792      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/transmission-gtk
+   138732      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/alsa-base
+   138812      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xserver-xorg-video-vmware-hwe-16.04
+   138733      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/apt
+   138801      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xserver-xorg-core-hwe-16.04
+   138777      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-pdfimport
+   138782      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libxatracker2
+   138757      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/imagemagick
+   138735      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/binutils
+   138768      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-calc
+   138746      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/fonts-opensymbol
+   138794      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/uno-libs3
+   138799      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xserver-xorg
+   138766      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-avmedia-backend-gstreamer
+   138788      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/procps
+   138797      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/vim-tiny
+   138761      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libgbm1
+   138786      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/mime-support
+   138793      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/udev
+   138734      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/bash-completion
+   138809      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xserver-xorg-video-qxl-hwe-16.04
+   138780      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-writer
+   138750      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/gnupg
+   138783      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/locales
+   138763      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libgl1-mesa-glx
+   138755      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/hplip
+   138806      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xserver-xorg-video-fbdev-hwe-16.04
+   138758      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/initramfs-tools
+   138754      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/grub2-common
+   138776      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-ogltrans
+   138787      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/printer-driver-hpcups
+   138759      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/keyboard-configuration
+   138744      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/file
+   138811      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xserver-xorg-video-vesa-hwe-16.04
+   138800      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xserver-xorg-core
+   138745      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/fonts-liberation
+   138804      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xserver-xorg-video-amdgpu-hwe-16.04
+   138739      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/cups
+   138769      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-common
+   138756      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/ibus
+   138785      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/man-db
+   138789      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/python3-uno
+   138764      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libglapi-mesa
+   138753      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/grub-pc-bin
+   138736      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/console-setup
+   138740      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/dbus
+   138784      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/logrotate
+   138749      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/gedit
+   138807      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xserver-xorg-video-intel-hwe-16.04
+   138779      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-style-galaxy
+   138773      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-gtk
+   138808      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xserver-xorg-video-nouveau-hwe-16.04
+   138738      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/cron
+   138748      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/fonts-sil-padauk
+   138742      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/evince
+   138762      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libgl1-mesa-dri
+   138771      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-draw
+   138737      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/console-setup-linux
+   138781      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libwayland-egl1-mesa
+   138790      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/systemd
+   138747      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/fonts-sil-abyssinica
+   138774      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-impress
+   138796      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/usb-modeswitch-data
+   138775      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-math
+   138810      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/xserver-xorg-video-radeon-hwe-16.04
+   138751      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/grub-common
+   138770      4 drwxr-xr-x   2 root     root         4096 feb 15  2017 /usr/share/bug/libreoffice-core
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false
+systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
+syslog:x:104:108::/home/syslog:/bin/false
+_apt:x:105:65534::/nonexistent:/bin/false
+messagebus:x:106:110::/var/run/dbus:/bin/false
+uuidd:x:107:111::/run/uuidd:/bin/false
+lightdm:x:108:114:Light Display Manager:/var/lib/lightdm:/bin/false
+whoopsie:x:109:116::/nonexistent:/bin/false
+avahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+avahi:x:111:120:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+colord:x:113:123:colord colour management daemon,,,:/var/lib/colord:/bin/false
+speech-dispatcher:x:114:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/false
+hplip:x:115:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+kernoops:x:116:65534:Kernel Oops Tracking Daemon,,,:/:/bin/false
+pulse:x:117:124:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+rtkit:x:118:126:RealtimeKit,,,:/proc:/bin/false
+saned:x:119:127::/var/lib/saned:/bin/false
+usbmux:x:120:46:usbmux daemon,,,:/var/lib/usbmux:/bin/false
+hrolfur:x:1000:1000:Hrólfur Gylfason,,,:/home/hrolfur:/bin/bash
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ more  /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/fa
+lse
+systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
+syslog:x:104:108::/home/syslog:/bin/false
+_apt:x:105:65534::/nonexistent:/bin/false
+messagebus:x:106:110::/var/run/dbus:/bin/false
+uuidd:x:107:111::/run/uuidd:/bin/false
+lightdm:x:108:114:Light Display Manager:/var/lib/lightdm:/bin/false
+whoopsie:x:109:116::/nonexistent:/bin/false
+avahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+avahi:x:111:120:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+colord:x:113:123:colord colour management daemon,,,:/var/lib/colord:/bin/false
+speech-dispatcher:x:114:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/fa
+lse
+hplip:x:115:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+kernoops:x:116:65534:Kernel Oops Tracking Daemon,,,:/:/bin/false
+pulse:x:117:124:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+rtkit:x:118:126:RealtimeKit,,,:/proc:/bin/false
+saned:x:119:127::/var/lib/saned:/bin/false
+usbmux:x:120:46:usbmux daemon,,,:/var/lib/usbmux:/bin/false
+hrolfur:x:1000:1000:Hrólfur Gylfason,,,:/home/hrolfur:/bin/bash
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ [K]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ more  /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+[7m--More--(23%)[27m
+Most commands optionally preceded by integer argument k.  Defaults in brackets.
+Star (*) indicates argument becomes new default.
+-------------------------------------------------------------------------------
+<space>                 Display next k lines of text [current screen size]
+z                       Display next k lines of text [current screen size]*
+<return>                Display next k lines of text [1]*
+d or ctrl-D             Scroll k lines [current scroll size, initially 11]*
+q or Q or <interrupt>   Exit from more
+s                       Skip forward k lines of text [1]
+f                       Skip forward k screenfuls of text [1]
+b or ctrl-B             Skip backwards k screenfuls of text [1]
+'                       Go to place where previous search started
+=                       Display current line number
+/<regular expression>   Search for kth occurrence of regular expression [1]
+n                       Search for kth occurrence of last r.e [1]
+!<cmd> or :!<cmd>       Execute <cmd> in a subshell
+v                       Start up /usr/bin/vi at current line
+ctrl-L                  Redraw screen
+:n                      Go to kth next file [1]
+:p                      Go to kth previous file [1]
+:f                      Display current file name and line number
+.                       Repeat previous command
+-------------------------------------------------------------------------------
+[K[7m--More--(23%)[27mwww-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologi
+n
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/fal
+se
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/
+false
+systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+[7m--More--(49%)[27msystemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
+syslog:x:104:108::/home/syslog:/bin/false
+_apt:x:105:65534::/nonexistent:/bin/false
+messagebus:x:106:110::/var/run/dbus:/bin/false
+uuidd:x:107:111::/run/uuidd:/bin/false
+lightdm:x:108:114:Light Display Manager:/var/lib/lightdm:/bin/false
+whoopsie:x:109:116::/nonexistent:/bin/false
+avahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+avahi:x:111:120:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+colord:x:113:123:colord colour management daemon,,,:/var/lib/colord:/bin/false
+speech-dispatcher:x:114:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/
+[7m--More--(81%)[27mfalse[K
+hplip:x:115:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+kernoops:x:116:65534:Kernel Oops Tracking Daemon,,,:/:/bin/false
+pulse:x:117:124:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+rtkit:x:118:126:RealtimeKit,,,:/proc:/bin/false
+saned:x:119:127::/var/lib/saned:/bin/false
+usbmux:x:120:46:usbmux daemon,,,:/var/lib/usbmux:/bin/false
+hrolfur:x:1000:1000:Hrólfur Gylfason,,,:/home/hrolfur:/bin/bash
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ [K]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ less /etc/passwd
+[?1049h[?1h=root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/fa lse
+systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
+syslog:x:104:108::/home/syslog:/bin/false
+_apt:x:105:65534::/nonexistent:/bin/false
+messagebus:x:106:110::/var/run/dbus:/bin/false
+uuidd:x:107:111::/run/uuidd:/bin/false
+lightdm:x:108:114:Light Display Manager:/var/lib/lightdm:/bin/false
+whoopsie:x:109:116::/nonexistent:/bin/false
+avahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+avahi:x:111:120:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+colord:x:113:123:colord colour management daemon,,,:/var/lib/colord:/bin/false
+speech-dispatcher:x:114:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/fa lse
+hplip:x:115:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+kernoops:x:116:65534:Kernel Oops Tracking Daemon,,,:/:/bin/false
+pulse:x:117:124:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+rtkit:x:118:126:RealtimeKit,,,:/proc:/bin/false
+saned:x:119:127::/var/lib/saned:/bin/false
+usbmux:x:120:46:usbmux daemon,,,:/var/lib/usbmux:/bin/false
+hrolfur:x:1000:1000:Hrólfur Gylfason,,,:/home/hrolfur:/bin/bash
+[7m/etc/passwd (END)[27m[K[K/[Kbb[Kii[Knn[K...skipping...
+root:x:0:0:root:/root:/[7mbin[27m/bash
+daemon:x:1:1:daemon:/usr/s[7mbin[27m:/usr/s[7mbin[27m/nologin
+[7mbin[27m:x:2:2:[7mbin[27m:/[7mbin[27m:/usr/s[7mbin[27m/nologin
+sys:x:3:3:sys:/dev:/usr/s[7mbin[27m/nologin
+sync:x:4:65534:sync:/[7mbin[27m:/[7mbin[27m/sync
+games:x:5:60:games:/usr/games:/usr/s[7mbin[27m/nologin
+man:x:6:12:man:/var/cache/man:/usr/s[7mbin[27m/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/s[7mbin[27m/nologin
+mail:x:8:8:mail:/var/mail:/usr/s[7mbin[27m/nologin
+news:x:9:9:news:/var/spool/news:/usr/s[7mbin[27m/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/s[7mbin[27m/nologin
+proxy:x:13:13:proxy:/[7mbin[27m:/usr/s[7mbin[27m/nologin
+www-data:x:33:33:www-data:/var/www:/usr/s[7mbin[27m/nologin
+backup:x:34:34:backup:/var/backups:/usr/s[7mbin[27m/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/s[7mbin[27m/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/s[7mbin[27m/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/s[7mbin[27m/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/s[7mbin[27m/nologin
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/[7mbin[27m/false
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/[7mbin[27m/fa lse
+systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/[7mbin[27m/false
+systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/[7mbin[27m/false
+syslog:x:104:108::/home/syslog:/[7mbin[27m/false
+_apt:x:105:65534::/nonexistent:/[7mbin[27m/false
+messagebus:x:106:110::/var/run/dbus:/[7mbin[27m/false
+uuidd:x:107:111::/run/uuidd:/[7mbin[27m/false
+lightdm:x:108:114:Light Display Manager:/var/lib/lightdm:/[7mbin[27m/false
+whoopsie:x:109:116::/nonexistent:/[7mbin[27m/false
+avahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/[7mbin[27m/false
+avahi:x:111:120:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/[7mbin[27m/false
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/[7mbin[27m/false
+colord:x:113:123:colord colour management daemon,,,:/var/lib/colord:/[7mbin[27m/false
+speech-dispatcher:x:114:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/[7mbin[27m/fa lse
+hplip:x:115:7:HPLIP system user,,,:/var/run/hplip:/[7mbin[27m/false
+kernoops:x:116:65534:Kernel Oops Tracking Daemon,,,:/:/[7mbin[27m/false
+pulse:x:117:124:PulseAudio daemon,,,:/var/run/pulse:/[7mbin[27m/false
+rtkit:x:118:126:RealtimeKit,,,:/proc:/[7mbin[27m/false
+saned:x:119:127::/var/lib/saned:/[7mbin[27m/false
+usbmux:x:120:46:usbmux daemon,,,:/var/lib/usbmux:/[7mbin[27m/false
+hrolfur:x:1000:1000:Hrólfur Gylfason,,,:/home/hrolfur:/[7mbin[27m/bash
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1;1Hroot:x:0:0:root:/root:/bin/bash
+[2;1Hdaemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+[3;1Hbin:x:2:2:bin:/bin:/usr/sbin/nologin
+[4;1Hsys:x:3:3:sys:/dev:/usr/sbin/nologin
+[5;1Hsync:x:4:65534:sync:/bin:/bin/sync
+[6;1Hgames:x:5:60:games:/usr/games:/usr/sbin/nologin
+[7;1Hman:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+[8;1Hlp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+[9;1Hmail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+[10;1Hnews:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+[11;1Huucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+[12;1Hproxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+[13;1Hwww-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+[14;1Hbackup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+[15;1Hlist:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+[16;1Hirc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+[17;1Hgnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+[18;1Hnobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+[19;1Hsystemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+[20;1Hsystemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/fa [21;1Hlse
+[22;1Hsystemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+[23;1Hsystemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
+[24;1Hsyslog:x:104:108::/home/syslog:/bin/false
+[25;1H_apt:x:105:65534::/nonexistent:/bin/false
+[26;1Hmessagebus:x:106:110::/var/run/dbus:/bin/false
+[27;1Huuidd:x:107:111::/run/uuidd:/bin/false
+[28;1Hlightdm:x:108:114:Light Display Manager:/var/lib/lightdm:/bin/false
+[29;1Hwhoopsie:x:109:116::/nonexistent:/bin/false
+[30;1Havahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+[31;1Havahi:x:111:120:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+[32;1Hdnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+[33;1Hcolord:x:113:123:colord colour management daemon,,,:/var/lib/colord:/bin/false
+[34;1Hspeech-dispatcher:x:114:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/fa [35;1Hlse
+[36;1Hhplip:x:115:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+[37;1Hkernoops:x:116:65534:Kernel Oops Tracking Daemon,,,:/:/bin/false
+[38;1Hpulse:x:117:124:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+[39;1Hrtkit:x:118:126:RealtimeKit,,,:/proc:/bin/false
+[40;1Hsaned:x:119:127::/var/lib/saned:/bin/false
+[41;1Husbmux:x:120:46:usbmux daemon,,,:/var/lib/usbmux:/bin/false
+[42;1Hhrolfur:x:1000:1000:Hrólfur Gylfason,,,:/home/hrolfur:/bin/bash
+[43;1H[1m~[0m
+[46;1H[1;1Hroot:x:0:0:root:/root:/[7mbin[27m/bash
+[2;1Hdaemon:x:1:1:daemon:/usr/s[7mbin[27m:/usr/s[7mbin[27m/nologin
+[3;1H[7mbin[27m:x:2:2:[7mbin[27m:/[7mbin[27m:/usr/s[7mbin[27m/nologin
+[4;1Hsys:x:3:3:sys:/dev:/usr/s[7mbin[27m/nologin
+[5;1Hsync:x:4:65534:sync:/[7mbin[27m:/[7mbin[27m/sync
+[6;1Hgames:x:5:60:games:/usr/games:/usr/s[7mbin[27m/nologin
+[7;1Hman:x:6:12:man:/var/cache/man:/usr/s[7mbin[27m/nologin
+[8;1Hlp:x:7:7:lp:/var/spool/lpd:/usr/s[7mbin[27m/nologin
+[9;1Hmail:x:8:8:mail:/var/mail:/usr/s[7mbin[27m/nologin
+[10;1Hnews:x:9:9:news:/var/spool/news:/usr/s[7mbin[27m/nologin
+[11;1Huucp:x:10:10:uucp:/var/spool/uucp:/usr/s[7mbin[27m/nologin
+[12;1Hproxy:x:13:13:proxy:/[7mbin[27m:/usr/s[7mbin[27m/nologin
+[13;1Hwww-data:x:33:33:www-data:/var/www:/usr/s[7mbin[27m/nologin
+[14;1Hbackup:x:34:34:backup:/var/backups:/usr/s[7mbin[27m/nologin
+[15;1Hlist:x:38:38:Mailing List Manager:/var/list:/usr/s[7mbin[27m/nologin
+[16;1Hirc:x:39:39:ircd:/var/run/ircd:/usr/s[7mbin[27m/nologin
+[17;1Hgnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/s[7mbin[27m/nologin
+[18;1Hnobody:x:65534:65534:nobody:/nonexistent:/usr/s[7mbin[27m/nologin
+[19;1Hsystemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/[7mbin[27m/false
+[20;1Hsystemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/[7mbin[27m/fa [21;1Hlse
+[22;1Hsystemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/[7mbin[27m/false
+[23;1Hsystemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/[7mbin[27m/false
+[24;1Hsyslog:x:104:108::/home/syslog:/[7mbin[27m/false
+[25;1H_apt:x:105:65534::/nonexistent:/[7mbin[27m/false
+[26;1Hmessagebus:x:106:110::/var/run/dbus:/[7mbin[27m/false
+[27;1Huuidd:x:107:111::/run/uuidd:/[7mbin[27m/false
+[28;1Hlightdm:x:108:114:Light Display Manager:/var/lib/lightdm:/[7mbin[27m/false
+[29;1Hwhoopsie:x:109:116::/nonexistent:/[7mbin[27m/false
+[30;1Havahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/[7mbin[27m/false
+[31;1Havahi:x:111:120:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/[7mbin[27m/false
+[32;1Hdnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/[7mbin[27m/false
+[33;1Hcolord:x:113:123:colord colour management daemon,,,:/var/lib/colord:/[7mbin[27m/false
+[34;1Hspeech-dispatcher:x:114:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/[7mbin[27m/fa [35;1Hlse
+[36;1Hhplip:x:115:7:HPLIP system user,,,:/var/run/hplip:/[7mbin[27m/false
+[37;1Hkernoops:x:116:65534:Kernel Oops Tracking Daemon,,,:/:/[7mbin[27m/false
+[38;1Hpulse:x:117:124:PulseAudio daemon,,,:/var/run/pulse:/[7mbin[27m/false
+[39;1Hrtkit:x:118:126:RealtimeKit,,,:/proc:/[7mbin[27m/false
+[40;1Hsaned:x:119:127::/var/lib/saned:/[7mbin[27m/false
+[41;1Husbmux:x:120:46:usbmux daemon,,,:/var/lib/usbmux:/[7mbin[27m/false
+[42;1Hhrolfur:x:1000:1000:Hrólfur Gylfason,,,:/home/hrolfur:/[7mbin[27m/bash
+[43;1H[1m~[0m
+[46;1H[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K?[K[HM[7mbin[27m:x:2:2:[7mbin[27m:/[7mbin[27m:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMdaemon:x:1:1:daemon:/usr/s[7mbin[27m:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMroot:x:0:0:root:/root:/[7mbin[27m/bash
+[46;1H[K[7m(END)[27m[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[1m~[0m
+[7m(END)[27m[K[K/[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K/[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K/[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K/[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K/[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K/[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K/[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[HMusbmux:x:120:46:usbmux daemon,,,:/var/lib/usbmux:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMsaned:x:119:127::/var/lib/saned:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMrtkit:x:118:126:RealtimeKit,,,:/proc:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMpulse:x:117:124:PulseAudio daemon,,,:/var/run/pulse:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMkernoops:x:116:65534:Kernel Oops Tracking Daemon,,,:/:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMhplip:x:115:7:HPLIP system user,,,:/var/run/hplip:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMlse
+[HMspeech-dispatcher:x:114:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/[7mbin[27m/fa[46;1H[K[7m(END)[27m[K[K?[K[HMcolord:x:113:123:colord colour management daemon,,,:/var/lib/colord:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMdnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMavahi:x:111:120:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMavahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMwhoopsie:x:109:116::/nonexistent:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMlightdm:x:108:114:Light Display Manager:/var/lib/lightdm:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMuuidd:x:107:111::/run/uuidd:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMmessagebus:x:106:110::/var/run/dbus:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HM_apt:x:105:65534::/nonexistent:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMsyslog:x:104:108::/home/syslog:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMsystemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMsystemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMlse
+[HMsystemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/[7mbin[27m/fa[46;1H[K[7m(END)[27m[K[K?[K[HMsystemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/[7mbin[27m/false
+[46;1H[K[7m(END)[27m[K[K?[K[HMnobody:x:65534:65534:nobody:/nonexistent:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMgnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMirc:x:39:39:ircd:/var/run/ircd:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMlist:x:38:38:Mailing List Manager:/var/list:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMbackup:x:34:34:backup:/var/backups:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMwww-data:x:33:33:www-data:/var/www:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMproxy:x:13:13:proxy:/[7mbin[27m:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMuucp:x:10:10:uucp:/var/spool/uucp:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMnews:x:9:9:news:/var/spool/news:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMmail:x:8:8:mail:/var/mail:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMlp:x:7:7:lp:/var/spool/lpd:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMman:x:6:12:man:/var/cache/man:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMgames:x:5:60:games:/usr/games:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMsync:x:4:65534:sync:/[7mbin[27m:/[7mbin[27m/sync
+[46;1H[K[7m(END)[27m[K[K?[K[HMsys:x:3:3:sys:/dev:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HM[7mbin[27m:x:2:2:[7mbin[27m:/[7mbin[27m:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMdaemon:x:1:1:daemon:/usr/s[7mbin[27m:/usr/s[7mbin[27m/nologin
+[46;1H[K[7m(END)[27m[K[K?[K[HMroot:x:0:0:root:/root:/[7mbin[27m/bash
+[46;1H[K[7m(END)[27m[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K?[K[K[7mPattern not found  (press RETURN)[27m[46;1H[K[K/[K[1m~[0m
+[7m(END)[27m[K[K[?1l>[?1049l]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ head /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ tail /etc/passwd
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+colord:x:113:123:colord colour management daemon,,,:/var/lib/colord:/bin/false
+speech-dispatcher:x:114:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/false
+hplip:x:115:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+kernoops:x:116:65534:Kernel Oops Tracking Daemon,,,:/:/bin/false
+pulse:x:117:124:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+rtkit:x:118:126:RealtimeKit,,,:/proc:/bin/false
+saned:x:119:127::/var/lib/saned:/bin/false
+usbmux:x:120:46:usbmux daemon,,,:/var/lib/usbmux:/bin/false
+hrolfur:x:1000:1000:Hrólfur Gylfason,,,:/home/hrolfur:/bin/bash
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ tail /etc/passwd
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+colord:x:113:123:colord colour management daemon,,,:/var/lib/colord:/bin/false
+speech-dispatcher:x:114:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/false
+hplip:x:115:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+kernoops:x:116:65534:Kernel Oops Tracking Daemon,,,:/:/bin/false
+pulse:x:117:124:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+rtkit:x:118:126:RealtimeKit,,,:/proc:/bin/false
+saned:x:119:127::/var/lib/saned:/bin/false
+usbmux:x:120:46:usbmux daemon,,,:/var/lib/usbmux:/bin/false
+hrolfur:x:1000:1000:Hrólfur Gylfason,,,:/home/hrolfur:/bin/bash
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ ls /etc | tail -5 
+wpa_supplicant
+X11
+xdg
+xml
+zsh_command_not_found
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ head -n -20 /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Prufa/Prufa1[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Prufa/Prufa1[00m$ cd /etc
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /etc[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/etc[00m$ grep sshd passwd
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /etc[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/etc[00m$ grep root passwd
+[01;31m[Kroot[m[K:x:0:0:[01;31m[Kroot[m[K:/[01;31m[Kroot[m[K:/bin/bash
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /etc[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/etc[00m$ grep '^root' passwd
+[01;31m[Kroot[m[K:x:0:0:root:/root:/bin/bash
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /etc[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/etc[00m$ grep 'sync' passwd
+[01;31m[Ksync[m[K:x:4:65534:[01;31m[Ksync[m[K:/bin:/bin/[01;31m[Ksync[m[K
+systemd-time[01;31m[Ksync[m[K:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /etc[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/etc[00m$ grep 'sync$' passwd
+sync:x:4:65534:sync:/bin:/bin/[01;31m[Ksync[m[K
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /etc[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/etc[00m$ grep '.y' passwd
+[01;31m[Ksy[m[Ks:x:3:3:[01;31m[Ksy[m[Ks:/dev:/usr/sbin/nologin
+[01;31m[Ksy[m[Knc:x:4:65534:[01;31m[Ksy[m[Knc:/bin:/bin/[01;31m[Ksy[m[Knc
+pro[01;31m[Kxy[m[K:x:13:13:pro[01;31m[Kxy[m[K:/bin:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting [01;31m[KSy[m[Kstem (admin):/var/lib/gnats:/usr/sbin/nologin
+nobo[01;31m[Kdy[m[K:x:65534:65534:nobo[01;31m[Kdy[m[K:/nonexistent:/usr/sbin/nologin
+[01;31m[Ksy[m[Kstemd-time[01;31m[Ksy[m[Knc:x:100:102:[01;31m[Ksy[m[Kstemd Time [01;31m[KSy[m[Knchronization,,,:/run/[01;31m[Ksy[m[Kstemd:/bin/false
+[01;31m[Ksy[m[Kstemd-network:x:101:103:[01;31m[Ksy[m[Kstemd Network Management,,,:/run/[01;31m[Ksy[m[Kstemd/netif:/bin/false
+[01;31m[Ksy[m[Kstemd-resolve:x:102:104:[01;31m[Ksy[m[Kstemd Resolver,,,:/run/[01;31m[Ksy[m[Kstemd/resolve:/bin/false
+[01;31m[Ksy[m[Kstemd-bus-pro[01;31m[Kxy[m[K:x:103:105:[01;31m[Ksy[m[Kstemd Bus Pro[01;31m[Kxy[m[K,,,:/run/[01;31m[Ksy[m[Kstemd:/bin/false
+[01;31m[Ksy[m[Kslog:x:104:108::/home/[01;31m[Ksy[m[Kslog:/bin/false
+lightdm:x:108:114:Light Displ[01;31m[Kay[m[K Manager:/var/lib/lightdm:/bin/false
+hplip:x:115:7:HPLIP [01;31m[Ksy[m[Kstem user,,,:/var/run/hplip:/bin/false
+hrolfur:x:1000:1000:Hrólfur [01;31m[KGy[m[Klfason,,,:/home/hrolfur:/bin/bash
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /etc[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/etc[00m$ grep 'sshd|root|operator' passwd
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /etc[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/etc[00m$ grep -E 'sshd|root|operator' passwd
+[01;31m[Kroot[m[K:x:0:0:[01;31m[Kroot[m[K:/[01;31m[Kroot[m[K:/bin/bash
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /etc[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/etc[00m$ egrep 'no(b|n)' passwd
+[01;31m[Knob[m[Kody:x:65534:65534:[01;31m[Knob[m[Kody:/[01;31m[Knon[m[Kexistent:/usr/sbin/nologin
+_apt:x:105:65534::/[01;31m[Knon[m[Kexistent:/bin/false
+whoopsie:x:109:116::/[01;31m[Knon[m[Kexistent:/bin/false
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: /etc[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m/etc[00m$ head passwd | grep '[0-9]'
+root:x:[01;31m[K0[m[K:[01;31m[K0[m[K:root:/root:/bin/bash
+daemon:x:[01;31m[K1[m[K:[01;31m[K1[m[K:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:[01;31m[K2[m[K:[01;31m[K2[m[K:bin:/bin:/usr/sbin/nologin
+sys:x:[01;31m[K3[m[K:[01

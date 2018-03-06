@@ -1,0 +1,14 @@
+1. 
+	a. PWD gefur manni alla slóðina sem maður er búinn að fara í linux terminalinum, til dæmis eef maður er búinn að fara inn í möppunna home svo user og svo music þá gefur skipunin /home/user/music
+
+	b. mkdir býr til möppu í linux terminalinum
+
+	c. cd .. sendir mann eitt directory afturábak
+
+	d. git status sýnir statusinn á gittinu, til dæmis ef maður er búinn að gera git add þá sýnir það að maður sé búinn að adda og hvort maður sé á undan aðal branchinu
+
+	e. git commit gerir hálfgerðan restore point ef manni langar að fara til baka og það gerir efnið sem maður er með líka tilbúið til þess að vera pushað
+
+	I. Það er hægt að geyma og sækja gögn í Jsos, csv og txt skrám og sækja það svo í python
+	II. Skráarsniðið sem er helst notað til þess að geyma gögn í gagnasafni eru Json skrár
+	III. 

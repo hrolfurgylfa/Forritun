@@ -1,0 +1,107 @@
+Script started on fös  6.okt 2017, 09:46:29 GMT
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ cd
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ mkdir mybackups
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ ls
+examples.desktop  [0m[01;34mMyndir[0m     [01;34mOpið öllum[0m  [01;34mSkjöl[0m    [01;34mSótt gögn[0m
+[01;34mmybackups[0m         [01;34mMyndskeið[0m  [01;34mSkjáborð[0m    [01;34mSniðmát[0m  [01;34mTónlist[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ tar -cvf mybackups/udev.tar /etc/udev
+tar: Removing leading `/' from member names
+/etc/udev/
+/etc/udev/rules.d/
+/etc/udev/udev.conf
+/etc/udev/hwdb.d/
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ ls mybackups
+[0m[01;31mudev.tar[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ tar -tvf mybackups/udev,[Kþ[K.tar
+drwxr-xr-x root/root         0 2017-02-15 20:21 etc/udev/
+drwxr-xr-x root/root         0 2016-04-12 10:34 etc/udev/rules.d/
+-rw-r--r-- root/root       153 2016-04-12 10:34 etc/udev/udev.conf
+drwxr-xr-x root/root         0 2016-04-12 10:34 etc/udev/hwdb.d/
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ tar -zcvf mybackups/udev.tar.gz /etc/udev
+tar: Removing leading `/' from member names
+/etc/udev/
+/etc/udev/rules.d/
+/etc/udev/udev.conf
+/etc/udev/hwdb.d/
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ ls -lh ma[Kybackups
+total 16K
+-rw-rw-r-- 1 hrolfur hrolfur 10K okt  6 09:47 [0m[01;31mudev.tar[0m
+-rw-rw-r-- 1 hrolfur hrolfur 307 okt  6 09:49 [01;31mudev.tar.gz[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ cd mybackups
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ tar -z[Kxvf udef[Kv.tar.gz
+etc/udev/
+etc/udev/rules.d/
+etc/udev/udev.conf
+etc/udev/hwdb.d/
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ la[Ks
+[0m[01;34metc[0m  [01;31mudev.tar[0m  [01;31mudev.tar.gz[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ ls etc
+[0m[01;34mudev[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ ls u[Ketc/ udev.tar[K[K[K[K[K[K[K[K[Kudev
+[0m[01;34mhwdb.d[0m  [01;34mrules.d[0m  udev.conf
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ ls etc/udev/rules.d
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ ls etc/udev/rules.d[Kls etc/udev/rules.d[K[K[K[Kes.d/
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ tar -rvf udev.tar /etc/hosts
+tar: Removing leading `/' from member names
+/etc/hosts
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ tar –tvf udev.tar
+tar: invalid option -- '�'
+Try 'tar --help' or 'tar --usage' for more information.
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ tar –tvf udev.tar[C[1P[1@-
+drwxr-xr-x root/root         0 2017-02-15 20:21 etc/udev/
+drwxr-xr-x root/root         0 2016-04-12 10:34 etc/udev/rules.d/
+-rw-r--r-- root/root       153 2016-04-12 10:34 etc/udev/udev.conf
+drwxr-xr-x root/root         0 2016-04-12 10:34 etc/udev/hwdb.d/
+-rw-r--r-- root/root       239 2017-09-26 14:14 etc/hosts
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ cp /usr/share/dict/words .
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ ls -l words
+-rw-r--r-- 1 hrolfur hrolfur 938848 okt  6 09:54 words
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ gzip words
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ ls -l words.gz
+-rw-r--r-- 1 hrolfur hrolfur 255996 okt  6 09:54 [0m[01;31mwords.gz[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ ls -l words.gz
+-rw-r--r-- 1 hrolfur hrolfur 255996 okt  6 09:54 [0m[01;31mwords.gz[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ gun [Kzip words.t[Kgz
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ ls -l words
+-rw-r--r-- 1 hrolfur hrolfur 938848 okt  6 09:54 words
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ ls -l words
+-rw-r--r-- 1 hrolfur hrolfur 938848 okt  6 09:54 words
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ bzip2 words
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ ls -l words.bz2
+-rw-r--r-- 1 hrolfur hrolfur 335405 okt  6 09:54 [0m[01;31mwords.bz2[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ ls -l words.bz2
+-rw-r--r-- 1 hrolfur hrolfur 335405 okt  6 09:54 [0m[01;31mwords.bz2[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ bunzið[Kp2 words.bz2
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ ls -l words
+-rw-r--r-- 1 hrolfur hrolfur 938848 okt  6 09:54 words
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ zip words.zip words
+  adding: words (deflated 73%)
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ ls -l words.zip
+-rw-rw-r-- 1 hrolfur hrolfur 256132 okt  6 10:00 [0m[01;31mwords.zip[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ zip -r udev.zipð[K[Kp /etc/udev
+  adding: etc/udev/ (stored 0%)
+  adding: etc/udev/rules.d/ (stored 0%)
+  adding: etc/udev/udev.conf (deflated 24%)
+  adding: etc/udev/hwdb.d/ (stored 0%)
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ ls -l udev.zip
+-rw-rw-r-- 1 hrolfur hrolfur 771 okt  6 10:02 [0m[01;31mudev.zip[0m
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ unzip  -l udev,[K.zip
+Archive:  udev.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+        0  2017-02-15 20:21   etc/udev/
+        0  2016-04-12 10:34   etc/udev/rules.d/
+      153  2016-04-12 10:34   etc/udev/udev.conf
+        0  2016-04-12 10:34   etc/udev/hwdb.d/
+---------                     -------
+      153                     4 files
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ rm -r etc
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ unzip d[Kudev.zip
+Archive:  udev.zip
+   creating: etc/udev/
+   creating: etc/udev/rules.d/
+  inflating: etc/udev/udev.conf      
+   creating: etc/udev/hwdb.d/
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/mybackups[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/mybackups[00m$ exit
+
+Script done on fös  6.okt 2017, 10:05:48 GMT

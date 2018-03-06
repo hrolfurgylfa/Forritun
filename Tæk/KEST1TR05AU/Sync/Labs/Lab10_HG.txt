@@ -1,0 +1,566 @@
+Script started on mið 25.okt 2017, 13:24:05 GMT
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ [K]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ lscði[K[Kpu
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                4
+On-line CPU(s) list:   0-3
+Thread(s) per core:    2
+Core(s) per socket:    2
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 69
+Model name:            Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz
+Stepping:              1
+CPU MHz:               933.837
+CPU max MHz:           2700,0000
+CPU min MHz:           800,0000
+BogoMIPS:              4788.78
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              3072K
+NUMA node0 CPU(s):     0-3
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ cat /proc/cpuinfo
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz
+stepping	: 1
+microcode	: 0x1d
+cpu MHz		: 1699.951
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4788.78
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz
+stepping	: 1
+microcode	: 0x1d
+cpu MHz		: 1647.216
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4788.78
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz
+stepping	: 1
+microcode	: 0x1d
+cpu MHz		: 1598.144
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4788.78
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz
+stepping	: 1
+microcode	: 0x1d
+cpu MHz		: 1738.476
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4788.78
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ exit
+
+Script done on lau 28.okt 2017, 18:27:56 GMT
+Script started on þri 31.okt 2017, 13:47:13 GMT
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:           7911        1277        5455         371        1178        5980
+Swap:          8119           0        8119
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ free -g
+              total        used        free      shared  buff/cache   available
+Mem:              7           1           5           0           1           5
+Swap:             7           0           7
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ lspci
+00:00.0 Host bridge: Intel Corporation Haswell-ULT DRAM Controller (rev 0b)
+00:02.0 VGA compatible controller: Intel Corporation Haswell-ULT Integrated Graphics Controller (rev 0b)
+00:03.0 Audio device: Intel Corporation Haswell-ULT HD Audio Controller (rev 0b)
+00:14.0 USB controller: Intel Corporation 8 Series USB xHCI HC (rev 04)
+00:16.0 Communication controller: Intel Corporation 8 Series HECI #0 (rev 04)
+00:1b.0 Audio device: Intel Corporation 8 Series HD Audio Controller (rev 04)
+00:1c.0 PCI bridge: Intel Corporation 8 Series PCI Express Root Port 4 (rev e4)
+00:1d.0 USB controller: Intel Corporation 8 Series USB EHCI #1 (rev 04)
+00:1f.0 ISA bridge: Intel Corporation 8 Series LPC Controller (rev 04)
+00:1f.2 SATA controller: Intel Corporation 8 Series SATA Controller 1 [AHCI mode] (rev 04)
+00:1f.3 SMBus: Intel Corporation 8 Series SMBus Controller (rev 04)
+01:00.0 Network controller: Intel Corporation Wireless 7260 (rev 6b)
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ lspci -k
+00:00.0 Host bridge: Intel Corporation Haswell-ULT DRAM Controller (rev 0b)
+	Subsystem: Lenovo Haswell-ULT DRAM Controller
+	Kernel driver in use: hsw_uncore
+00:02.0 VGA compatible controller: Intel Corporation Haswell-ULT Integrated Graphics Controller (rev 0b)
+	Subsystem: Lenovo Haswell-ULT Integrated Graphics Controller
+	Kernel driver in use: i915
+	Kernel modules: i915
+00:03.0 Audio device: Intel Corporation Haswell-ULT HD Audio Controller (rev 0b)
+	Subsystem: Lenovo Haswell-ULT HD Audio Controller
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel
+00:14.0 USB controller: Intel Corporation 8 Series USB xHCI HC (rev 04)
+	Subsystem: Lenovo 8 Series USB xHCI HC
+	Kernel driver in use: xhci_hcd
+00:16.0 Communication controller: Intel Corporation 8 Series HECI #0 (rev 04)
+	Subsystem: Lenovo 8 Series HECI
+	Kernel driver in use: mei_me
+	Kernel modules: mei_me
+00:1b.0 Audio device: Intel Corporation 8 Series HD Audio Controller (rev 04)
+	Subsystem: Lenovo 8 Series HD Audio Controller
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel
+00:1c.0 PCI bridge: Intel Corporation 8 Series PCI Express Root Port 4 (rev e4)
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+00:1d.0 USB controller: Intel Corporation 8 Series USB EHCI #1 (rev 04)
+	Subsystem: Lenovo 8 Series USB EHCI
+	Kernel driver in use: ehci-pci
+00:1f.0 ISA bridge: Intel Corporation 8 Series LPC Controller (rev 04)
+	Subsystem: Lenovo 8 Series LPC Controller
+	Kernel driver in use: lpc_ich
+	Kernel modules: lpc_ich
+00:1f.2 SATA controller: Intel Corporation 8 Series SATA Controller 1 [AHCI mode] (rev 04)
+	Subsystem: Lenovo 8 Series SATA Controller 1 [AHCI mode]
+	Kernel driver in use: ahci
+	Kernel modules: ahci
+00:1f.3 SMBus: Intel Corporation 8 Series SMBus Controller (rev 04)
+	Subsystem: Lenovo 8 Series SMBus Controller
+	Kernel modules: i2c_i801
+01:00.0 Network controller: Intel Corporation Wireless 7260 (rev 6b)
+	Subsystem: Intel Corporation Wireless-N 7260
+	Kernel driver in use: iwlwifi
+	Kernel modules: iwlwifi
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ lsusb
+Bus 001 Device 002: ID 8087:8000 Intel Corp. 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 002: ID 0781:5591 SanDisk Corp. 
+Bus 003 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 007: ID 048d:8350 Integrated Technology Express, Inc. 
+Bus 002 Device 006: ID 8087:07dc Intel Corp. 
+Bus 002 Device 005: ID 04f2:b40f Chicony Electronics Co., Ltd 
+Bus 002 Device 004: ID 04f3:0303 Elan Microelectronics Corp. 
+Bus 002 Device 003: ID 0bda:0129 Realtek Semiconductor Corp. RTS5129 Card Reader Controller
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ lsmod
+Module                  Size  Used by
+nls_iso8859_1          16384  1
+rfcomm                 77824  0
+bnep                   20480  2
+intel_rapl             20480  0
+hid_sensor_rotation    16384  0
+x86_pkg_temp_thermal    16384  0
+coretemp               16384  0
+rtsx_usb_ms            20480  0
+memstick               20480  1 rtsx_usb_ms
+hid_sensor_accel_3d    16384  0
+kvm_intel             192512  0
+hid_sensor_incl_3d     16384  0
+hid_sensor_magn_3d     16384  0
+hid_sensor_als         16384  0
+arc4                   16384  2
+hid_sensor_gyro_3d     16384  0
+hid_sensor_custom      20480  0
+hid_sensor_trigger     16384  12 hid_sensor_incl_3d,hid_sensor_als,hid_sensor_accel_3d,hid_sensor_magn_3d,hid_sensor_gyro_3d,hid_sensor_rotation
+industrialio_triggered_buffer    16384  6 hid_sensor_incl_3d,hid_sensor_als,hid_sensor_accel_3d,hid_sensor_magn_3d,hid_sensor_gyro_3d,hid_sensor_rotation
+iwlmvm                360448  0
+kfifo_buf              16384  1 industrialio_triggered_buffer
+industrialio           65536  9 hid_sensor_incl_3d,hid_sensor_als,hid_sensor_accel_3d,hid_sensor_trigger,hid_sensor_magn_3d,hid_sensor_gyro_3d,hid_sensor_rotation,industrialio_triggered_buffer,kfifo_buf
+kvm                   598016  1 kvm_intel
+mac80211              761856  1 iwlmvm
+uvcvideo               90112  0
+hid_sensor_iio_common    16384  7 hid_sensor_incl_3d,hid_sensor_als,hid_sensor_accel_3d,hid_sensor_trigger,hid_sensor_magn_3d,hid_sensor_gyro_3d,hid_sensor_rotation
+irqbypass              16384  1 kvm
+videobuf2_vmalloc      16384  1 uvcvideo
+videobuf2_memops       16384  1 videobuf2_vmalloc
+crct10dif_pclmul       16384  0
+crc32_pclmul           16384  0
+snd_hda_codec_hdmi     45056  1
+videobuf2_v4l2         24576  1 uvcvideo
+videobuf2_core         40960  2 uvcvideo,videobuf2_v4l2
+ghash_clmulni_intel    16384  0
+videodev              180224  3 uvcvideo,videobuf2_core,videobuf2_v4l2
+iwlwifi               229376  1 iwlmvm
+media                  40960  2 uvcvideo,videodev
+hid_multitouch         20480  0
+hid_sensor_hub         20480  9 hid_sensor_incl_3d,hid_sensor_als,hid_sensor_accel_3d,hid_sensor_iio_common,hid_sensor_trigger,hid_sensor_magn_3d,hid_sensor_gyro_3d,hid_sensor_rotation,hid_sensor_custom
+btusb                  45056  0
+aesni_intel           167936  0
+btrtl                  16384  1 btusb
+aes_x86_64             20480  1 aesni_intel
+btbcm                  16384  1 btusb
+lrw                    16384  1 aesni_intel
+glue_helper            16384  1 aesni_intel
+btintel                16384  1 btusb
+ablk_helper            16384  1 aesni_intel
+snd_hda_codec_realtek    86016  1
+cryptd                 24576  3 ablk_helper,ghash_clmulni_intel,aesni_intel
+snd_hda_codec_generic    73728  1 snd_hda_codec_realtek
+snd_hda_intel          36864  5
+snd_hda_codec         135168  4 snd_hda_intel,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_hda_codec_realtek
+cfg80211              581632  3 iwlmvm,iwlwifi,mac80211
+bluetooth             557056  31 btrtl,btintel,bnep,btbcm,rfcomm,btusb
+snd_soc_rt5640        118784  0
+intel_cstate           16384  0
+snd_soc_rl6231         16384  1 snd_soc_rt5640
+snd_soc_core          233472  1 snd_soc_rt5640
+snd_hda_core           86016  5 snd_hda_intel,snd_hda_codec,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_hda_codec_realtek
+snd_compress           20480  1 snd_soc_core
+snd_hwdep              16384  1 snd_hda_codec
+ac97_bus               16384  1 snd_soc_core
+snd_pcm_dmaengine      16384  1 snd_soc_core
+snd_pcm               110592  7 snd_hda_intel,snd_hda_codec,snd_pcm_dmaengine,snd_hda_core,snd_soc_rt5640,snd_hda_codec_hdmi,snd_soc_core
+snd_seq_midi           16384  0
+intel_rapl_perf        16384  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+snd_rawmidi            32768  1 snd_seq_midi
+snd_seq                69632  2 snd_seq_midi_event,snd_seq_midi
+ideapad_laptop         24576  0
+snd_seq_device         16384  3 snd_seq,snd_rawmidi,snd_seq_midi
+sparse_keymap          16384  1 ideapad_laptop
+input_leds             16384  0
+joydev                 20480  0
+snd_timer              32768  2 snd_seq,snd_pcm
+mei_me                 40960  0
+wmi                    16384  1 ideapad_laptop
+mei                   102400  1 mei_me
+serio_raw              16384  0
+snd                    86016  23 snd_compress,snd_hda_intel,snd_hwdep,snd_seq,snd_hda_codec,snd_timer,snd_rawmidi,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_seq_device,snd_hda_codec_realtek,snd_soc_core,snd_pcm
+soundcore              16384  1 snd
+snd_soc_sst_acpi       16384  0
+lpc_ich                24576  0
+8250_dw                16384  0
+snd_soc_sst_match      16384  1 snd_soc_sst_acpi
+shpchp                 36864  0
+elan_i2c               36864  0
+i2c_designware_platform    16384  0
+soc_button_array       16384  0
+dw_dmac                16384  0
+spi_pxa2xx_platform    24576  0
+i2c_designware_core    20480  1 i2c_designware_platform
+dw_dmac_core           24576  1 dw_dmac
+mac_hid                16384  0
+parport_pc             32768  0
+ppdev                  20480  0
+lp                     20480  0
+parport                49152  3 lp,parport_pc,ppdev
+autofs4                40960  2
+usbhid                 53248  0
+uas                    24576  0
+usb_storage            73728  2 uas
+rtsx_usb_sdmmc         28672  0
+rtsx_usb               24576  2 rtsx_usb_sdmmc,rtsx_usb_ms
+i915                 1310720  111
+i2c_algo_bit           16384  1 i915
+drm_kms_helper        167936  1 i915
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            16384  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+fb_sys_fops            16384  1 drm_kms_helper
+psmouse               139264  0
+ahci                   36864  2
+drm                   368640  7 i915,drm_kms_helper
+libahci                32768  1 ahci
+video                  40960  2 i915,ideapad_laptop
+i2c_hid                20480  0
+hid                   122880  4 hid_sensor_hub,i2c_hid,usbhid,hid_multitouch
+sdhci_acpi             16384  0
+sdhci                  45056  1 sdhci_acpi
+fjes                   28672  0
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ fdisk
+
+Usage:
+ fdisk [options] <disk>      change partition table
+ fdisk [options] -l [<disk>] list partition table(s)
+
+Display or manipulate a disk partition table.
+
+Options:
+ -b, --sector-size <size>      physical and logical sector size
+ -B, --protect-boot            don't erase bootbits when create a new label
+ -c, --compatibility[=<mode>]  mode is 'dos' or 'nondos' (default)
+ -L, --color[=<when>]          colorize output (auto, always or never)
+                                 colors are enabled by default
+ -l, --list                    display partitions end exit
+ -o, --output <list>           output columns
+ -t, --type <type>             recognize specified partition table type only
+ -u, --units[=<unit>]          display units: 'cylinders' or 'sectors' (default)
+ -s, --getsz                   display device size in 512-byte sectors [DEPRECATED]
+     --bytes                   print SIZE in bytes rather than in human readable format
+
+ -C, --cylinders <number>      specify the number of cylinders
+ -H, --heads <number>          specify the number of heads
+ -S, --sectors <number>        specify the number of sectors per track
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+Available columns (for -o):
+ gpt: Device Start End Sectors Size Type Type-UUID Attrs Name UUID
+ dos: Device Start End Sectors Cylinders Size Type Id Attrs Boot End-C/H/S
+      Start-C/H/S
+ bsd: Slice Start End Sectors Cylinders Size Type Bsize Cpg Fsize
+ sgi: Device Start End Sectors Cylinders Size Type Id Attrs
+ sun: Device Start End Sectors Cylinders Size Type Id Flags
+
+For more details see fdisk(8).
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ fdisk -l
+fdisk: cannot open /dev/ram0: Permission denied
+fdisk: cannot open /dev/ram1: Permission denied
+fdisk: cannot open /dev/ram2: Permission denied
+fdisk: cannot open /dev/ram3: Permission denied
+fdisk: cannot open /dev/ram4: Permission denied
+fdisk: cannot open /dev/ram5: Permission denied
+fdisk: cannot open /dev/ram6: Permission denied
+fdisk: cannot open /dev/ram7: Permission denied
+fdisk: cannot open /dev/ram8: Permission denied
+fdisk: cannot open /dev/ram9: Permission denied
+fdisk: cannot open /dev/ram10: Permission denied
+fdisk: cannot open /dev/ram11: Permission denied
+fdisk: cannot open /dev/ram12: Permission denied
+fdisk: cannot open /dev/ram13: Permission denied
+fdisk: cannot open /dev/ram14: Permission denied
+fdisk: cannot open /dev/ram15: Permission denied
+fdisk: cannot open /dev/sda: Permission denied
+fdisk: cannot open /dev/sdb: Permission denied
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ sudo fdisk -l
+[sudo] password for hrolfur: 
+[1mDisk /dev/ram0: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram1: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram2: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram3: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram4: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram5: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram6: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram7: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram8: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram9: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram10: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram11: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram12: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram13: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram14: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/ram15: 64 MiB, 67108864 bytes, 131072 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+
+
+[1mDisk /dev/sda: 465,8 GiB, 500107862016 bytes, 976773168 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: BC3EB814-60C6-4DE9-814D-AF89938E39C1
+
+[1mDevice[0m     [1m    Start[0m [1m      End[0m [1m  Sectors[0m [1m  Size[0m [1mType[0m
+/dev/sda1       2048   2050047   2048000  1000M Windows recovery environment
+/dev/sda2    2050048   2582527    532480   260M EFI System
+/dev/sda3    2582528   4630527   2048000  1000M Lenovo boot partition
+/dev/sda4    4630528   4892671    262144   128M Microsoft reserved
+/dev/sda5    4892672 861511679 856619008 408,5G Microsoft basic data
+/dev/sda6  947529728 976773119  29243392    14G Windows recovery environment
+/dev/sda7  861511680 861513727      2048     1M BIOS boot
+/dev/sda8  861513728 930899967  69386240  33,1G Linux filesystem
+/dev/sda9  930899968 947529727  16629760     8G Linux swap
+
+Partition table entries are not in disk order.
+
+
+[1mDisk /dev/sdb: 57,9 GiB, 62109253632 bytes, 121307136 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x000949ee
+
+[1mDevice[0m     [1mBoot[0m [1mStart[0m [1m      End[0m [1m  Sectors[0m [1m Size[0m [1mId[0m [1mType[0m
+/dev/sdb1  *     2048 121307135 121305088 57,9G  c W95 FAT32 (LBA)
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ fdisk -cul
+fdisk: unknown compatibility mode 'ul'
+
+Usage:
+ fdisk [options] <disk>      change partition table
+ fdisk [options] -l [<disk>] list partition table(s)
+
+Display or manipulate a disk partition table.
+
+Options:
+ -b, --sector-size <size>      physical and logical sector size
+ -B, --protect-boot            don't erase bootbits when create a new label
+ -c, --compatibility[=<mode>]  mode is 'dos' or 'nondos' (default)
+ -L, --color[=<when>]          colorize output (auto, always or never)
+                                 colors are enabled by default
+ -l, --list                    display partitions end exit
+ -o, --output <list>           output columns
+ -t, --type <type>             recognize specified partition table type only
+ -u, --units[=<unit>]          display units: 'cylinders' or 'sectors' (default)
+ -s, --getsz                   display device size in 512-byte sectors [DEPRECATED]
+     --bytes                   print SIZE in bytes rather than in human readable format
+
+ -C, --cylinders <number>      specify the number of cylinders
+ -H, --heads <number>          specify the number of heads
+ -S, --sectors <number>        specify the number of sectors per track
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+Available columns (for -o):
+ gpt: Device Start End Sectors Size Type Type-UUID Attrs Name UUID
+ dos: Device Start End Sectors Cylinders Size Type Id Attrs Boot End-C/H/S
+      Start-C/H/S
+ bsd: Slice Start End Sectors Cylinders Size Type Bsize Cpg Fsize
+ sgi: Device Start End Sectors Cylinders Size Type Id Attrs
+ sun: Device Start End Sectors Cylinders Size Type Id Flags
+
+For more details see fdisk(8).
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~/Skjöl/Sync/Labs[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~/Skjöl/Sync/Labs[00m$ exit
+
+Script done on þri 31.okt 2017, 13:54:07 GMT

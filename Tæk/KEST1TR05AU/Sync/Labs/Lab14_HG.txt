@@ -1,0 +1,64 @@
+Script started on fös  3.nóv 2017, 09:00:43 GMT
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ sudo ö[K-i
+[sudo] password for hrolfur: 
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# groupadd -r research
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# getent group research
+research:x:999:
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# usermod -aG rea[Ksearch sysadmin
+usermod: user 'sysadmin' does not exist
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# groups sysadmn[Kin
+groups: ‘sysadmin’: no such user
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# groups sysadmin
+groups: ‘sysadmin’: no such user
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# usermod -aG research sysadmin
+usermod: user 'sysadmin' does not exist
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# usermod -aG research sysadmin[K[K[K[K[K[K[K[Kuser
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# groups user
+user : user research
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# id sysadmin
+id: ‘sysadmin’: no such user
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# id user
+uid=1001(user) gid=1001(user) groups=1001(user),999(research)
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# getent groups rese[Kearfh[K[Kch
+Unknown database: groups
+Try `getent --help' or `getent --usage' for more information.
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# getent groups research[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgetent group research
+research:x:999:user
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# getent group research
+research:x:999:user
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# useradd -G research -c *[K'Linux Student?[K' -m student
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# getent group research
+research:x:999:user,student
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# getent group student
+student:x:1002:
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# getent passwd student
+student:x:1002:1002:Linux Student:/home/student:
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# getent shadow student
+student:!:17473:0:99999:7:::
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# passwd student
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# lst[K[K[Klast
+hrolfur  pts/17       127.0.0.1        Fri Nov  3 08:21   still logged in
+hrolfur  tty7         :0               Tue Oct 31 14:44    gone - no logout
+reboot   system boot  4.8.0-36-generic Tue Oct 31 14:43   still running
+hrolfur  tty7         :0               Tue Oct 31 13:24 - down   (01:18)
+reboot   system boot  4.8.0-36-generic Tue Oct 31 13:23 - 14:42  (01:18)
+hrolfur  tty7         :0               Tue Oct 31 13:17 - crash  (00:06)
+reboot   system boot  4.8.0-36-generic Tue Oct 31 13:16 - 14:42  (01:25)
+hrolfur  tty7         :0               Tue Oct 24 13:21 - crash (6+23:55)
+reboot   system boot  4.8.0-36-generic Tue Oct 24 13:20 - 14:42 (7+01:21)
+
+wtmp begins Tue Oct 24 13:20:33 2017
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# last student
+
+wtmp begins Tue Oct 24 13:20:33 2017
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# userdel -r student
+userdel: student mail spool (/var/mail/student) not found
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# userdel -r student
+userdel: user 'student' does not exist
+]0;root@hrolfur-Lenovo-Yoga-2-13: ~root@hrolfur-Lenovo-Yoga-2-13:~# logout
+]0;hrolfur@hrolfur-Lenovo-Yoga-2-13: ~[01;32mhrolfur@hrolfur-Lenovo-Yoga-2-13[00m:[01;34m~[00m$ exit
+
+Script done on fös  3.nóv 2017, 09:11:51 GMT

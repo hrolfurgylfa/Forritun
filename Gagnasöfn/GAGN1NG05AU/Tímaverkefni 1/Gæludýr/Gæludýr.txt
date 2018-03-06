@@ -1,0 +1,8 @@
+Aðalberg|Sprettur|Hamstur
+Aðalborg|Kúli|Hundur
+Andri|Lína|Hundur
+Matti|Páfi|Páfagaukur
+Marey|Kattsi|Köttur
+Kamilla|Blakkur|Hestur
+Kasper|Bingó|Hundur
+Kaja|Lubbi|Hundur
