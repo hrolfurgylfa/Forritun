@@ -1,0 +1,5 @@
+DELETE
+FROM
+teams
+WHERE
+id = 63

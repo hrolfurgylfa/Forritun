@@ -109,6 +109,10 @@ def simaskra_leit(nafn,dict):
     if afram == True:
         print("Þetta nafn er ekki til í skránni")
 
+def bekkurAllur(dict1):
+    for tel in range(len(dict1)):
+        print(dict1[x])
+
 valmynd = ""
 
 while valmynd != "4":
@@ -180,7 +184,9 @@ while valmynd != "4":
         simaskra_leit(nafn,simaskra)
 
     elif valmynd == "3":#Liður 3
-        pass
+        bekkur = {"Helgi":17,"Jóhann":19,"Elín":17,"Bjarni":19,"Sveinn":20,"Birgir":17,"Björn":19,"Guðrún":20,"Steinunn":19,"María":19,"Jóhannes":16,"Ingibjörg":20,"Þórunn"18:,"Auður":18}
+
+        bekkurAllur(bekkur)
 
     elif valmynd == "4":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 4" þegar maður er að hætta í forritinu
         pass
