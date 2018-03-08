@@ -97,10 +97,10 @@ def finnaNN(tup1,tup2):
     
     return nn_Listi
 
-def simaskra_leit(nafn,dict):
-    afram = True
-    for x in simaskra:
-        if x == nafn:
+def simaskra_leit(nafn_leita,dict):
+    afram = True#Hérna hef ég True til þess að geta stoppað lúppuna hvenær sem ég vill
+    for nafn in simaskra:
+        if nafn == nafn_leita:#Þetta gerist ef lúpppan hefur fundið nafnið
             print("Símanúmer þessarar persónu er:",simaskra[x])
             return simaskra[x]#Þetta er ekki notað núna en þetta er ef ég vildi nota þetta í framtíðinni
             afram = False
@@ -110,8 +110,48 @@ def simaskra_leit(nafn,dict):
         print("Þetta nafn er ekki til í skránni")
 
 def bekkurAllur(dict1):
-    for tel in range(len(dict1)):
-        print(dict1[x])
+    for nafn in dict1:
+        print(nafn,"---\t---\t---",dict1[nafn])
+
+def sjalfradaLeitari(dict1):
+    sjalfradaTeljari = 0
+
+    print("Hérna eru allir sem eru yfir 18:\n")
+    for nafn in dict1:
+        if dict1[nafn] >= 18:
+            sjalfradaTeljari += 1
+            print(nafn)
+    print("\nÞað eru samtals",sjalfradaTeljari,"í þessum bekk sem eru yfir 18")
+
+def medalaldurDict(dict1):
+    aldur = []
+
+    for nafn in dict1:
+        aldur.append(dict1[nafn])
+    
+    return round(sum(aldur)/len(aldur),2)
+
+def heildaraldurDict(dict1):
+    aldur = []
+
+    for nafn in dict1:
+        aldur.append(dict1[nafn])
+
+    return sum(aldur)
+
+def leitaDict(dict1):
+    dict_temp = dict1.copy()
+    eyda = []
+    leitaStafur = input("Sláðu inn staf sem þér langar að í byrjun nafna nemendana í bekknum: ").upper()
+
+    for nafn in dict_temp:
+        if nafn[0] != leitaStafur:
+            eyda.append(nafn)
+
+    for nafn in eyda:
+        del dict_temp[nafn]
+    
+    return dict_temp
 
 valmynd = ""
 
@@ -131,7 +171,7 @@ while valmynd != "4":
         print("-",end="")
     print()#Þetta er til þess að gera enter
 
-    if valmynd == "1":#Liður 1
+    if valmynd == "1":#Dæmi 1
         dansHerrar = ("Jón","Jonni","Unnbjörn","Daníel","Bent","Þorgeir")
         dansDomur = ("Ingdís","Valey","Hallvör","Ýma","Gerður","Ögmunda")
 
@@ -175,18 +215,68 @@ while valmynd != "4":
             print(nafn,end=", ")
         print()
 
-    elif valmynd == "2":#Liður 2
-        simaskra = {"Magnús":8405385,"Kristján":8648096,"Stefán":6535365,"Jóhann":6805310,"Björn":6690398,"Elín":6037527,"Guðbjörg":6084992,"Ásta":7702612,"Katrín":7311023,"Ragnheiður":8784670}
+    elif valmynd == "2":#Dæmi 2
+        simaskra = {"Magnús":8405385,"Kristján":8648096,"Stefán":6535365,"Jóhann":6805310,"Björn":6690398,"Elín":6037527,"Guðbjörg":6084992,"Ásta":7702612,"Katrín":7311023,"Ragnheiður":8784670}#Hérna bý ég til dictionary-ið simaskra
         
         nafn = input("Sláðu inn nafn til þess að leita að í símaskránni: ")
-        print()
+        print()#Print er ég að nota til þess að gera enter og það er til þess að gera þetta snirtilegra
         
-        simaskra_leit(nafn,simaskra)
+        simaskra_leit(nafn,simaskra)#Hérna kalla ég á fallið simaskra_leit til þess að leita að nafninu sem notandinn sló inn í dictionary-inu simaskra
 
-    elif valmynd == "3":#Liður 3
-        bekkur = {"Helgi":17,"Jóhann":19,"Elín":17,"Bjarni":19,"Sveinn":20,"Birgir":17,"Björn":19,"Guðrún":20,"Steinunn":19,"María":19,"Jóhannes":16,"Ingibjörg":20,"Þórunn"18:,"Auður":18}
+    elif valmynd == "3":#Dæmi 3
+        bekkur = {"Helgi":17,"Jóhann":19,"Elín":17,"Bjarni":19,"Sveinn":20,"Birgir":17,"Björn":19,"Guðrún":20,"Steinunn":19,"María":19,"Jóhannes":16,"Ingibjörg":20,"Þórunn":18,"Auður":18}
+        val_D3 = ""
 
-        bekkurAllur(bekkur)
+        while val_D3 != "6":
+            for tel in range(30):#Þessi for lúppa gerir línu sem er auðvelt að stjórna stærðinni á
+                print("-",end="")
+            print("\n")#Þetta er til þess að gera tvö enter
+
+            print("Ýttu á 1 til þess að prennta allan bekkinn")
+            print("Ýttu á 2 til þess að prennta alla yfir 18")
+            print("Ýttu á 3 til þess að fá meðalaldur bekjarins")
+            print("Ýttu á 4 til þess að fá heildaraldur bekjarins")
+            print("Ýttu á 5 til þess að prennta alla með eitthverjum upphafsstaf")
+            print("Ýttu á 6 til þess að hætta")
+            val_D3 = input("-------------------->>> ")#Hérna velur notandinn hvaða lið hann ætlar að fara í
+
+            print()#Þetta er til þess að gera enter
+            for tel in range(30):#Þessi for lúppa gerir línu sem er auðvelt að stjórna stærðinni á
+                print("-",end="")
+            print()#Þetta er til þess að gera enter  
+
+            if val_D3 == "1":#Liður 1
+                bekkurAllur(bekkur)
+
+            elif val_D3 == "2":#Liður 2
+                sjalfradaLeitari(bekkur)
+
+            elif val_D3 == "3":#Liður 3
+                print("Meðalaldur bekkjarins er:",medalaldurDict(bekkur))
+
+            elif val_D3 == "4":#Liður 4
+                print("Heildaraldur bekkjarins er:",heildaraldurDict(bekkur))
+
+            elif val_D3 == "5":#Liður 5
+                akvedin_stafur = leitaDict(bekkur)
+
+                if len(akvedin_stafur) == 0:
+                    print("Það er enginn sem byrjar á þessum staf")
+
+                else:
+                    medalaldur = medalaldurDict(akvedin_stafur)
+
+                    for nafn in akvedin_stafur:
+                        print(nafn,"---\t---\t---",akvedin_stafur[nafn])
+                    print()
+
+                    print("Meðalaldurinn í þessum hópi er:",medalaldur)
+
+            elif val_D3 == "6":#Þetta er til þess að það komi ekki ERROR þegar maður er að fara
+                pass
+            
+            else:
+                print("ERROR\tSláðu inn tölu á milli 1 og 6")
 
     elif valmynd == "4":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 4" þegar maður er að hætta í forritinu
         pass
