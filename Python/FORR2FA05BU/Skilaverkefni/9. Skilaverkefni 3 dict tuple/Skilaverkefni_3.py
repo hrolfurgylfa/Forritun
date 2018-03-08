@@ -103,17 +103,17 @@ def simaskra_leit(nafn_leita,dict):
         if nafn == nafn_leita:#Þetta gerist ef lúpppan hefur fundið nafnið
             print("Símanúmer þessarar persónu er:",simaskra[x])
             return simaskra[x]#Þetta er ekki notað núna en þetta er ef ég vildi nota þetta í framtíðinni
-            afram = False
+            afram = False#Hérna er ég búinn að finna símanúmer persónunnar sem var verið að leita að svo að þá þarf bara að stoppa
             break
 
-    if afram == True:
+    if afram == True:#Hérna fer notandinn ef hann sló inn rangt nafn til þess að leita að
         print("Þetta nafn er ekki til í skránni")
 
-def bekkurAllur(dict1):
+def bekkurAllur(dict1):#Þetta fall tekur inn eitt dictionary og prentar það
     for nafn in dict1:
         print(nafn,"---\t---\t---",dict1[nafn])
 
-def sjalfradaLeitari(dict1):
+def sjalfradaLeitari(dict1):#Þetta fall tekur inn dictionary, prentar alla sem eru yfir 18 og gefur svo upp hversu margir það eru
     sjalfradaTeljari = 0
 
     print("Hérna eru allir sem eru yfir 18:\n")
@@ -123,7 +123,7 @@ def sjalfradaLeitari(dict1):
             print(nafn)
     print("\nÞað eru samtals",sjalfradaTeljari,"í þessum bekk sem eru yfir 18")
 
-def medalaldurDict(dict1):
+def medalaldurDict(dict1):#Þetta fall tekur inn eitt dictionary og skilar svo meðalaldrinum á því dictionary(svo lengi sem aldurinn er sem value á dictionary-inu)
     aldur = []
 
     for nafn in dict1:
@@ -131,7 +131,7 @@ def medalaldurDict(dict1):
     
     return round(sum(aldur)/len(aldur),2)
 
-def heildaraldurDict(dict1):
+def heildaraldurDict(dict1):#Þetta fall tekur inn eitt dictionary og skilar svo heildaraldrinum á því dictionary(svo lengi sem aldurinn er sem value á dictionary-inu)
     aldur = []
 
     for nafn in dict1:
@@ -139,7 +139,7 @@ def heildaraldurDict(dict1):
 
     return sum(aldur)
 
-def leitaDict(dict1):
+def leitaDict(dict1):#Þetta fall tekur inn dictionary, býr til copy af því sem dict_temp og eyðir svo öllu útaf því sem byrjar ekki á stafnum sem notandinn valdi
     dict_temp = dict1.copy()
     eyda = []
     leitaStafur = input("Sláðu inn staf sem þér langar að í byrjun nafna nemendana í bekknum: ").upper()
@@ -246,31 +246,31 @@ while valmynd != "4":
             print()#Þetta er til þess að gera enter  
 
             if val_D3 == "1":#Liður 1
-                bekkurAllur(bekkur)
+                bekkurAllur(bekkur)#Hérna kalla ég í fallið bekkurAllur
 
             elif val_D3 == "2":#Liður 2
-                sjalfradaLeitari(bekkur)
+                sjalfradaLeitari(bekkur)#Hérna kalla ég í fallið sjalfradaLeitari
 
             elif val_D3 == "3":#Liður 3
-                print("Meðalaldur bekkjarins er:",medalaldurDict(bekkur))
+                print("Meðalaldur bekkjarins er:",medalaldurDict(bekkur))#Hérna kalla ég á fall sem reiknar meðalaldur dictionary-s(ef dictionary-ið er með aldur sem value)
 
             elif val_D3 == "4":#Liður 4
-                print("Heildaraldur bekkjarins er:",heildaraldurDict(bekkur))
+                print("Heildaraldur bekkjarins er:",heildaraldurDict(bekkur))#Hérna er fall sem reiknar heildaraldurinn í dictionary(ef dictionary-ið er með aldur sem value)
 
             elif val_D3 == "5":#Liður 5
-                akvedin_stafur = leitaDict(bekkur)
+                akvedin_stafur = leitaDict(bekkur)#Hérna seti ég return-ið úr fallinu leitaDict í breytuna akvedin_stafur til þess að geta unnið oftar en einu sinni með niðurstöðunna án þess að þurfa að kalla oft á sama fallið
 
-                if len(akvedin_stafur) == 0:
+                if len(akvedin_stafur) == 0:#Þetta er til þess að forritið chrash-i ekki ef það finnur engann
                     print("Það er enginn sem byrjar á þessum staf")
 
-                else:
-                    medalaldur = medalaldurDict(akvedin_stafur)
+                else:#Hingað fer forritið ef það var eitthver fundinn
+                    medalaldur = medalaldurDict(akvedin_stafur)#Hérna gat ég notað fall aftur sem ég bjó til áðan fyrir annan lið og seti útkamuna úr því falli í breytuna medalaldur
 
-                    for nafn in akvedin_stafur:
+                    for nafn in akvedin_stafur:#Hérna prennta ég alla sem fundust
                         print(nafn,"---\t---\t---",akvedin_stafur[nafn])
                     print()
 
-                    print("Meðalaldurinn í þessum hópi er:",medalaldur)
+                    print("Meðalaldurinn í þessum hópi er:",medalaldur)#Hérna prennta ég meðalaldurinn á öllum sem fundust
 
             elif val_D3 == "6":#Þetta er til þess að það komi ekki ERROR þegar maður er að fara
                 pass
