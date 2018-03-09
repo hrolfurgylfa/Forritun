@@ -223,12 +223,18 @@ header h1 {
 }
 
 /* ====== linkar ====== */
-
+.midja article a:hover {
+  color: white;
+  background-color: darkblue;
+}
+.midja article a:active {
+  color: white;
+  background-color: darkblue;
+}
 .topmenu a:hover {
   color: white;
   background-color: darkblue;
 }
-
 .topmenu a:active {
   color: white;
   background-color: darkblue;
