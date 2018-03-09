@@ -3,6 +3,40 @@ Skilaverkefni 4 Skráarvinnsla
 Hrólfur Gylfason
 9/3/2018
 '''
+def buaTilListaSlettarTolur(byrja,enda):
+    slettar_tolur_undir_1000 = []
+
+    for tala in range(1,1001):
+        if tala % 2 == 0:
+            slettar_tolur_undir_1000.append(tala)
+
+    return slettar_tolur_undir_1000
+
+def buaTilSkraUrLista(skraarnafn,listi):
+    strengur = ""
+
+    skra = open(str(skraarnafn)+".txt","w")
+    for tala in listi:
+        strengur += str(tala)+"|"
+
+    skra.write(strengur)
+    skra.close()
+
+def lesaSkraEinLinaTolur(skraarnafn):
+    skra = open(str(skraarnafn)+".txt","r")
+
+    for line in skra:
+        lina = line.split("|")
+
+    tolu_listi = lina
+    tolu_listi.pop()
+    tolu_listi = list(map(int,tolu_listi))
+
+    return tolu_listi
+
+def medaltalLista(listi):
+    return sum(listi)/len(listi)
+
 valmynd = ""
 
 while valmynd != "5":
@@ -24,7 +58,20 @@ while valmynd != "5":
     print()#Þetta er til þess að gera enter
 
     if valmynd == "1":#Liður 1
-        pass
+        buaTilSkraUrLista("Slettartolur",buaTilListaSlettarTolur(1,1001))
+
+        slettar_tolur_listi = lesaSkraEinLinaTolur("Slettartolur")
+
+        print("A. Prennta út allan listann:")
+        print(slettar_tolur_listi)
+        print()
+
+        print("B. Meðaltal listans með tveimur aukastöfum:")
+        print(medaltalLista(slettar_tolur_listi))
+        print()
+
+        print("C. Prennta út listann með tölum sem ganga upp í átta:")
+        ganga_uppi_8 = 
 
     elif valmynd == "2":#Liður 2
         pass
