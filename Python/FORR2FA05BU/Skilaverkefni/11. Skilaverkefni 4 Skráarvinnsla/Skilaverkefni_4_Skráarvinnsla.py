@@ -15,7 +15,7 @@ def buaTilListaSlettarTolur(byrja,enda):
 def buaTilSkraUrLista(skraarnafn,listi):
     strengur = ""
 
-    skra = open(str(skraarnafn)+".txt","w")
+    skra = open(skraarnafn,"w")
     for tala in listi:
         strengur += str(tala)+"|"
 
@@ -23,7 +23,7 @@ def buaTilSkraUrLista(skraarnafn,listi):
     skra.close()
 
 def lesaSkraEinLinaTolur(skraarnafn):
-    skra = open(str(skraarnafn)+".txt","r")
+    skra = open(skraarnafn,"r")
 
     for line in skra:
         lina = line.split("|")
@@ -36,6 +36,71 @@ def lesaSkraEinLinaTolur(skraarnafn):
 
 def medaltalLista(listi):
     return sum(listi)/len(listi)
+
+def gangaUppI8(listi):
+    gangaUppI8_listi = []
+
+    for tala in listi:
+        if tala % 8 == 0:
+            gangaUppI8_listi.append(tala)
+
+    return gangaUppI8_listi
+
+def skraarPrentari(skraarnafn):
+    skra = open(skraarnafn,"r")
+    skraar_listi = []
+    tel = 0
+
+    for line in skra:
+        lina = line.split("|")
+        lina.pop()
+        for hlutur in lina:
+            skraar_listi.append(hlutur)
+
+    for hlutur in skraar_listi:
+        tel += 1
+        if tel == 11:
+            print("\n")
+            tel = 1
+        print(hlutur,end=" ")
+    print()
+
+def frumToluLeitari(byrjun,endir):
+    frum_tolu_listi = []
+
+    for tala in range(byrjun,endir + 1):
+        if tala > 1:
+            for tala2 in range(2,tala):
+                if tala % tala2 == 0:
+                    break
+            else:
+                frum_tolu_listi.append(tala)
+    return frum_tolu_listi
+
+def listaPrentari(listi):
+    teljari = 0
+    for hlutur in listi:
+        teljari += 1
+        if teljari == len(listi):
+            print(hlutur)
+        else:
+            print(hlutur,end=", ")
+
+def sjouPrentari_int(listi):
+    listi = list(map(str,listi))
+
+    for hlutur in listi:
+        if "7" in hlutur:
+            print(hlutur,end=" ")
+    print()
+
+def fjordaHver(listi):
+    fjorda_hver_listi = []
+    tel = 0
+
+    for hlutur in listi:
+        tel += 1
+        
 
 valmynd = ""
 
@@ -58,23 +123,46 @@ while valmynd != "5":
     print()#Þetta er til þess að gera enter
 
     if valmynd == "1":#Liður 1
-        buaTilSkraUrLista("Slettartolur",buaTilListaSlettarTolur(1,1001))
+        buaTilSkraUrLista("Slettartolur.txt",buaTilListaSlettarTolur(1,1001))
 
-        slettar_tolur_listi = lesaSkraEinLinaTolur("Slettartolur")
+        slettar_tolur_listi = lesaSkraEinLinaTolur("Slettartolur.txt")
 
         print("A. Prennta út allan listann:")
         print(slettar_tolur_listi)
         print()
 
         print("B. Meðaltal listans með tveimur aukastöfum:")
-        print(medaltalLista(slettar_tolur_listi))
+        print(round(medaltalLista(slettar_tolur_listi),2))
         print()
 
         print("C. Prennta út listann með tölum sem ganga upp í átta:")
-        ganga_uppi_8 = 
+        ganga_upp_i_8 = gangaUppI8(slettar_tolur_listi)
+        print(ganga_upp_i_8)
+        print()
+
+        print("D. Listi úr C skrifaður í skjal")
+        buaTilSkraUrLista("sumarslettartolur.txt",ganga_upp_i_8)
+        print()
+
+        print("E. Prenta út skránna með bil milli talnana og 10 tölum í línu")
+        skraarPrentari("sumarslettartolur.txt")
 
     elif valmynd == "2":#Liður 2
-        pass
+        buaTilSkraUrLista("frumtolur.txt",frumToluLeitari(1,100))
+
+        print("A. Lesa skránna og skila lista")
+        frumtolur = lesaSkraEinLinaTolur("frumtolur.txt")
+        print()
+
+        print("B. Prenta út listann")
+        listaPrentari(frumtolur)
+        print()
+
+        print("C. Prennta út allar tölurnar sem eru með 7 í þeim")
+        sjouPrentari_int(frumtolur)
+        print()
+
+
         
     elif valmynd == "3":#Liður 3
         pass
