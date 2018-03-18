@@ -1,4 +1,4 @@
-//Þetta forrit virkar ekki
+/*Þetta forrit virkar ekki
 int switchPin = 8;
 int ledPin = 13;
 boolean lastButton = LOW;
@@ -29,4 +29,4 @@ void loop() {
   }
   lastButton = digitalRead(switchPin);
   digitalWrite(ledPin, ledOn);
-}
+}*/
