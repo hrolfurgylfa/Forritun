@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+// VARIABLES () //
+
+$baseColor: rgb(50,100,175);                // RGB color value
+$myColor1: red;                             // named color value
+$myColor2: #0a0;                            // hex color value
+$myStringVar: " þetta er textastrengur æöð";    // string variable 
+$myFontSize: 1.5em;                         // numeric value
+$thinBorder: 2px solid $myColor2;           // multi-value variable
+$paddingVar: 1em 2em;           			      // multi-value variable
+$fontfamily: serif;
+
+body {
+	font-family: $fontfamily;
+}
+
+h1, h2 {
+    color: $myColor1;
+}
+//Mixin & functions
+header {
+  background-color: lighten($baseColor, 70%);
+  border: 1px solid darken($baseColor, 20%);
+  h1 {
+  	  color: $baseColor;
+  	  text-align: center;
+  	}
+}
+
+.mypara {
+    font-size: $myFontSize;
+    border: $thinBorder;
+    padding: $paddingVar;
+}
+
+.mypara:after {
+    content: $myStringVar;
+}
