@@ -1,0 +1,1 @@
+{Konni:1,Snorri:2,Kalli:3,Palli:4}

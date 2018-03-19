@@ -109,6 +109,28 @@ def fjordaHver(listi):
 def nyTuple():
     return ("123456","password","12345678","qwerty","12345","123456789","letmein","1234567","football","iloveyou")
 
+def buaTilDictUrLista(skraarnafn,dict_1):
+    skra = open(skraarnafn,"w")
+
+    strengur = "{"
+    for key in dict_1:
+        strengur += str(key)+":"+str(dict_1[key])+","
+    strengur = strengur[:-1]
+    strengur += "}"
+
+    skra.write(strengur)
+    skra.close()
+
+def buaTilDictUrSkjali(skraarnafn):
+    skra = open(skraarnafn,"r")
+
+    for line in skra:
+        line = line[1:-1]
+        lina = line.split(",")
+        print(lina)
+
+    return lina
+
 valmynd = ""
 
 while valmynd != "5":
@@ -199,8 +221,14 @@ while valmynd != "5":
         print(medaltalLista(tuple_1))
 
     elif valmynd == "4":#Liður 4
-        print("GIT test")#TEST
-        TEST = "TEST"
+        dict_1 = {"Konni":1,"Snorri":2,"Kalli":3,"Palli":4}
+
+        print("A. Búa til skrá og setja dictionary-ið í hana")
+        buaTilDictUrLista("dictionary.txt",dict_1)
+        print()
+
+        print("B. ")
+        buaTilDictUrSkjali("dictionary.txt")
 
     elif valmynd == "5":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 5" þegar maður er að hætta í forritinu
         pass
