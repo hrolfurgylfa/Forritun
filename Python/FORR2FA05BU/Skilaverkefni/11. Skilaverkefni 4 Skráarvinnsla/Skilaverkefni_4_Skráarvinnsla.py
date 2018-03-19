@@ -198,9 +198,9 @@ while valmynd != "5":
         print("C. Finna meðaltal fyrstu tuplunar")
         print(medaltalLista(tuple_1))
 
-
     elif valmynd == "4":#Liður 4
-        pass
+        print("GIT test")#TEST
+        TEST = "TEST"
 
     elif valmynd == "5":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 5" þegar maður er að hætta í forritinu
         pass
