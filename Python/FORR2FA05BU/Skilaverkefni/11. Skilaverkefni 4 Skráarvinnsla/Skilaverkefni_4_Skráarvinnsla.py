@@ -106,6 +106,9 @@ def fjordaHver(listi):
 
     return fjorda_hver_listi
 
+def nyTuple():
+    return ("123456","password","12345678","qwerty","12345","123456789","letmein","1234567","football","iloveyou")
+
 valmynd = ""
 
 while valmynd != "5":
@@ -177,7 +180,24 @@ while valmynd != "5":
         print()
         
     elif valmynd == "3":#Liður 3
-        pass
+        tuple_1 = (1,2,3,4,5,6,7,8,9)
+        tuple_2 = ("a","b","c","d","e","f","g","h")
+        tuple_3 = ("konni",123,"sponni",234)
+
+        print("A. Prenta út tuplein")
+        listaPrentari(tuple_1)
+        listaPrentari(tuple_2)
+        listaPrentari(tuple_3)
+        print()
+
+        print("B. Bæta við nýrri tuple að eigin vali")
+        tuple_4 = nyTuple()
+        print(tuple_4)
+        print()
+
+        print("C. Finna meðaltal fyrstu tuplunar")
+        print(medaltalLista(tuple_1))
+
 
     elif valmynd == "4":#Liður 4
         pass
