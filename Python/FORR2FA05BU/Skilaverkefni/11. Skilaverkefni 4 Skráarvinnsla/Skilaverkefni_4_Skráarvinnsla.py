@@ -100,7 +100,11 @@ def fjordaHver(listi):
 
     for hlutur in listi:
         tel += 1
-        
+        if tel == 4:
+            fjorda_hver_listi.append(hlutur)
+            tel = 0
+
+    return fjorda_hver_listi
 
 valmynd = ""
 
@@ -162,7 +166,15 @@ while valmynd != "5":
         sjouPrentari_int(frumtolur)
         print()
 
+        print("D. Taka listann úr A, prennta út fjórðu hverja tölu og setja svo inn í aðra skrá")
+        fjordaHverFrumtala_listi = fjordaHver(frumtolur)
+        listaPrentari(fjordaHverFrumtala_listi)
+        buaTilSkraUrLista("fjordaHverFrumtala.txt",fjordaHverFrumtala_listi)
+        print()
 
+        print("E. Prenta út skránna í D")
+        skraarPrentari("fjordaHverFrumtala.txt")
+        print()
         
     elif valmynd == "3":#Liður 3
         pass
