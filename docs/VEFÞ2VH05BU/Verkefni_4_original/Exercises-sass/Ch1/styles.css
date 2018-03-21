@@ -1,0 +1,23 @@
+@charset "UTF-8";
+body {
+  font-family: serif; }
+
+h1, h2 {
+  color: red; }
+
+header {
+  background-color: white;
+  border: 1px solid #1b3760; }
+  header h1 {
+    color: #3264af;
+    text-align: center; }
+
+.mypara {
+  font-size: 1.5em;
+  border: 2px solid #0a0;
+  padding: 1em 2em; }
+
+.mypara:after {
+  content: " þetta er textastrengur æöð"; }
+
+/*# sourceMappingURL=styles.css.map */

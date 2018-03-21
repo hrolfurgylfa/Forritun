@@ -1,0 +1,8 @@
+/*
+ * SASS mixins are declared with the @mixin directive
+ * and used with the @include directive
+ */
+
+ @mixin background($Color) {
+    background-image: radial-gradient(lighten( $Color,20% ), $Color, darken( $Color,7% ));
+ }
