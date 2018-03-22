@@ -1,1 +1,3 @@
 {Konni:1,Snorri:2,Kalli:3,Palli:4}
+{Elín:4,Kristín:3,Ragnheiður:2,Elísabet:1}
+{Óskar:2,Björn:4,Sólveig:1,Hildur:3}

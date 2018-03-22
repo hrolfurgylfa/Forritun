@@ -109,7 +109,7 @@ def fjordaHver(listi):
 def nyTuple():
     return ("123456","password","12345678","qwerty","12345","123456789","letmein","1234567","football","iloveyou")
 
-def buaTilDictUrLista(skraarnafn,dict_1):
+def buaTilSkjalUrDict(skraarnafn,dict_1):
     skra = open(skraarnafn,"w")
 
     strengur = "{"
@@ -121,15 +121,37 @@ def buaTilDictUrLista(skraarnafn,dict_1):
     skra.write(strengur)
     skra.close()
 
+def baetaViðDictUrLista(skraarnafn,dict_1):
+    skra = open(skraarnafn,"a")
+
+    strengur = "\n{"
+    for key in dict_1:
+        strengur += str(key)+":"+str(dict_1[key])+","
+    strengur = strengur[:-1]
+    strengur += "}"
+
+    skra.write(strengur)
+    skra.close()
+
 def buaTilDictUrSkjali(skraarnafn):
     skra = open(skraarnafn,"r")
+    dict_1 = {}
+    linur = []
+    teljari = 0
 
     for line in skra:
         line = line[1:-1]
         lina = line.split(",")
-        print(lina)
+        linur.append(lina)
+        print(lina)#TEST
+    
+    for lina in linur:
+        for hlutur in lina:
+            key_og_value = hlutur.split(":")
+            dict_1.update({key_og_value[0]:key_og_value[1]})
 
-    return lina
+    skra.close()
+    return dict_1
 
 valmynd = ""
 
@@ -222,13 +244,27 @@ while valmynd != "5":
 
     elif valmynd == "4":#Liður 4
         dict_1 = {"Konni":1,"Snorri":2,"Kalli":3,"Palli":4}
+        dict_2 = {"Elín":4,"Kristín":3,"Ragnheiður":2,"Elísabet":1}
+        dict_3 = {"Óskar":2,"Björn":4,"Sólveig":1,"Hildur":3}
 
         print("A. Búa til skrá og setja dictionary-ið í hana")
-        buaTilDictUrLista("dictionary.txt",dict_1)
+        buaTilSkjalUrDict("dictionary.txt",dict_1)
         print()
 
-        print("B. ")
-        buaTilDictUrSkjali("dictionary.txt")
+        print("B. Skrifa út dictionary-ið")
+        print(buaTilDictUrSkjali("dictionary.txt"))
+        print()
+
+        print("C. Bæta við tveimur dictionary-s")
+        baetaViðDictUrLista("dictionary.txt",dict_2)
+        baetaViðDictUrLista("dictionary.txt",dict_3)
+        print()
+
+        print("D. ")
+        dicts = buaTilDictUrSkjali("dictionary.txt")
+
+        for tel in dicts:
+            print(tel,"\t,",dicts[tel])
 
     elif valmynd == "5":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 5" þegar maður er að hætta í forritinu
         pass
