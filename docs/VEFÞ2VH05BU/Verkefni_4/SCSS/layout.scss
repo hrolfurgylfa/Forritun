@@ -67,14 +67,14 @@ header {
   text-align: center;
 }
 footer {
-  background-color: pink; 
+  background-image: linear-gradient(to top,$Base-color,lighten($Base-color,10%),$Base-color); 
 }
 .midja {
-  background-image: linear-gradient(to top,$Base-color,lighten($Base-color,20%),$Base-color)
+  background-image: linear-gradient(to top,$Base-color,lighten($Base-color,20%),$Base-color);
 }
 .vinstri, 
 .haegri {
-  background-image: linear-gradient(to top,$Base-color,lighten($Base-color,20%),$Base-color) 
+  background-image: linear-gradient(to top,$Base-color,lighten($Base-color,20%),$Base-color);
 }
 
 header,
