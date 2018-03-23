@@ -24,17 +24,6 @@ footer {
   grid-area: footer;
 }
 
-/*Content*/
-.midja {
-  grid-area: midja;
-}
-.haegri {
-  grid-area: haegri;
-}
-.vinstri {
-  grid-area: vinstri;
-}
-
 /* ====== GRID Template Areas ===== */
 body {
   display: grid;
@@ -44,14 +33,6 @@ body {
   "content"
   "footer"
   "topnav";
-}
-.content {
-  display: grid;
-  grid-gap: 0;
-  grid-template-areas: 
-  "midja"
-  "haegri"
-  "vinstri";
 }
 
 /* ====== Base litir + padding ====== */
@@ -263,21 +244,11 @@ figure {
   Viðmið - breakpoints 30em = 480px + 
   ========================================*/
 @media screen and (min-width: 30em) {
-  .mynda_container {
-    display: grid;
-    grid-template-columns: 166px 166px;
-  }
 }
 /*  ========================================
   Viðmið - breakpoints 37.5em = 600px + 
   ========================================*/
-@media screen and (min-width: 37.5em) {  
-  .content {
-    grid-template-areas: 
-    "haegri midja"
-    "vinstri midja";
-    grid-template-columns: 1fr 2fr;
-  }
+@media screen and (min-width: 37.5em) {
 }
 /* ========================================
   Viðmið - breakpoints 48em = 760px +
@@ -289,11 +260,6 @@ figure {
     "header"
     "content"
     "footer";
-  }
-  .content {
-    grid-template-areas: 
-    "vinstri midja haegri";
-    grid-template-columns: 1fr 3fr 1fr;
   }
   .topnav label {
     display: none;
@@ -321,9 +287,6 @@ figure {
     max-width: 58em;
     margin: 0 auto;
   }
-  .mynda_container {
-    grid-template-columns: repeat(4,83.4%);
-  }
   .sMedia {
     display: flex;
     flex-flow: column;
@@ -344,9 +307,6 @@ figure {
 @media screen and (min-width: 80em) {
   body {
     max-width: 78em;
-  }
-  .mynda_container {
-    grid-template-columns: repeat(4,166px)
   }
   .linux-morges {
     margin-bottom: -2.03em;
