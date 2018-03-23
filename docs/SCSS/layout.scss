@@ -123,28 +123,6 @@ header h1 {
 .allo {
   transition: all 1s ease;
 }
-/*Effects*/
-
-.facebook:hover,
-.facebook:active {
-  transition: all 1s ease;
-  width: 4em;
-}
-.twitter:hover,
-.twitter:active {
-  transition: all 1s ease;
-  width: 4em;
-}
-.snapchat:hover,
-.snapchat:active {
-  transition: all 1s ease;
-  width: 4em;
-}
-.allo:hover,
-.allo:active {
-  transition: all 1s ease;
-  width: 4em;
-}
 
 /* ========================================
   Efnisyfirlit
@@ -230,9 +208,6 @@ figure {
   margin: 0;
   border: 3px ridge white;
 }
-.mynda_container {
-  width: 166px;
-}
 .linux-morges {
   width: 2.5em;
   height: auto;
@@ -299,6 +274,25 @@ figure {
   .linux-morges {
     margin-bottom: -2.03em;
     margin-left: 0em;
+  }
+
+  /*Social Media tenglar*/
+
+  .facebook:hover {
+    transition: all 1s ease;
+    width: 4em;
+  }
+  .twitter:hover {
+    transition: all 1s ease;
+    width: 4em;
+  }
+  .snapchat:hover {
+    transition: all 1s ease;
+    width: 4em;
+  }
+  .allo:hover {
+    transition: all 1s ease;
+    width: 4em;
   }
 }
 /* ========================================
