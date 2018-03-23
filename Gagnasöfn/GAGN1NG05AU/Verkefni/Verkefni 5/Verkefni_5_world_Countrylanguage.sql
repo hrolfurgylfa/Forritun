@@ -28,7 +28,4 @@ SELECT * FROM skilaverkefni_5.CountryLanguage;
 -- SELECT Language, Count(CountryCode) AS "Fjöldi landa sem tala þetta mál" FROM skilaverkefni_5.CountryLanguage GROUP BY Language;
 
 -- 10.
-SELECT Language FROM skilaverkefni_5.CountryLanguage WHERE Count(CountryCode) > 5;
-
-
-
+-- SELECT Language, COUNT(CountryCode) FROM skilaverkefni_5.CountryLanguage  GROUP BY Language HAVING COUNT(CountryCode) > 5;
