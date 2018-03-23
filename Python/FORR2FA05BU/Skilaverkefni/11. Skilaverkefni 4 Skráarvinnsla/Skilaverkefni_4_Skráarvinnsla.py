@@ -116,7 +116,7 @@ def buaTilSkjalUrDict(skraarnafn,dict_1):
     for key in dict_1:
         strengur += str(key)+":"+str(dict_1[key])+","
     strengur = strengur[:-1]
-    strengur += "}"
+    strengur += "}\n"
 
     skra.write(strengur)
     skra.close()
@@ -124,11 +124,11 @@ def buaTilSkjalUrDict(skraarnafn,dict_1):
 def baetaViðDictUrLista(skraarnafn,dict_1):
     skra = open(skraarnafn,"a")
 
-    strengur = "\n{"
+    strengur = "{"
     for key in dict_1:
         strengur += str(key)+":"+str(dict_1[key])+","
     strengur = strengur[:-1]
-    strengur += "}"
+    strengur += "}\n"
 
     skra.write(strengur)
     skra.close()
@@ -140,10 +140,9 @@ def buaTilDictUrSkjali(skraarnafn):
     teljari = 0
 
     for line in skra:
-        line = line[1:-1]
+        line = line[1:-2]
         lina = line.split(",")
         linur.append(lina)
-        print(lina)#TEST
     
     for lina in linur:
         for hlutur in lina:
@@ -152,6 +151,13 @@ def buaTilDictUrSkjali(skraarnafn):
 
     skra.close()
     return dict_1
+
+def dictPrentari(dict_1):
+    for tel in dict_1:
+        if len(tel) >= 7:
+            print(tel,"\t",dict_1[tel])
+        else:
+            print(tel,"\t\t",dict_1[tel])
 
 valmynd = ""
 
@@ -261,10 +267,7 @@ while valmynd != "5":
         print()
 
         print("D. ")
-        dicts = buaTilDictUrSkjali("dictionary.txt")
-
-        for tel in dicts:
-            print(tel,"\t,",dicts[tel])
+        dictPrentari(buaTilDictUrSkjali("dictionary.txt"))
 
     elif valmynd == "5":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 5" þegar maður er að hætta í forritinu
         pass
