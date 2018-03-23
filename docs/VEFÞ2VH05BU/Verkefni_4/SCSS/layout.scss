@@ -255,8 +255,8 @@ figure {
 .linux-morges {
   width: 2.5em;
   height: auto;
-  margin-bottom: -2.03em;
-  margin-left: 5em;
+  margin: 0 auto;
+  margin-bottom: 0em;
 }
 
 /*  ========================================
@@ -333,6 +333,10 @@ figure {
     height: 12em;
     width: 3em;
   }
+  .linux-morges {
+    margin-bottom: -2.03em;
+    margin-left: 0em;
+  }
 }
 /* ========================================
   Viðmið - breakpoints 80em = 1600px +
@@ -343,5 +347,9 @@ figure {
   }
   .mynda_container {
     grid-template-columns: repeat(4,166px)
+  }
+  .linux-morges {
+    margin-bottom: -2.03em;
+    margin-left: 5em;
   }
 }
