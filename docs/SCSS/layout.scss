@@ -4,6 +4,11 @@
 
 /*heimild: https://gridbyexample.com/examples/example13/ */
 
+/* ====== Breytur ====== */
+/*Base-color*/
+$Base-color: lightblue;
+$Base-color_dokkur: darkblue;
+
 /* ====== GRID Area ====== */
 /*Body*/
 .topnav {
@@ -55,21 +60,21 @@ body {
   line-height: 1.5em;
 }
 .topnav {
-  background-color: lightblue; 
+  background-color: $Base-color; 
 }
 header {
-  background-color: lightblue;
+  background-color: $Base-color;
   text-align: center;
 }
 footer {
-  background-color: pink; 
+  background-image: linear-gradient(to top,$Base-color,lighten($Base-color,10%),$Base-color); 
 }
 .midja {
-  background-color: lightgreen; 
+  background-image: linear-gradient(to top,$Base-color,lighten($Base-color,20%),$Base-color);
 }
 .vinstri, 
 .haegri {
-  background-color: yellow; 
+  background-image: linear-gradient(to top,$Base-color,lighten($Base-color,20%),$Base-color);
 }
 
 header,
@@ -125,20 +130,16 @@ header h1 {
   font-size: 1.1em;
 }
 .facebook {
-  background: #4267B2;
   transition: all 1s ease;
 }
 .twitter {
-  background: #1DA1F2;
   transition: all 1s ease;
 }
 .snapchat {
   color: black;
-  background: #FFFC00;
   transition: all 1s ease;
 }
 .allo {
-  background: #F5BA13;
   transition: all 1s ease;
 }
 /*Effects*/
@@ -181,7 +182,7 @@ header h1 {
   font-size: 1.2em;
   text-align: center;
   padding: .2em .4em;
-  background-color: #b8ebff;
+  background-color: $Base-color;
 }
 .topnav input:checked ~ .topmenu {
   position: fixed;
@@ -204,12 +205,12 @@ header h1 {
   padding: 0;
   margin: 0;
   list-style: none;
-  background-color: #b8ebff;
+  background-color: darken($Base-color,10%);
   transition: all .5s ease;
 }
 .topmenu li {
   border: 0;
-  border-bottom: 1px solid blue; 
+  border-bottom: 1px solid black; 
   padding: 0;
 }
 
@@ -225,12 +226,12 @@ header h1 {
 
 .topmenu a:hover {
   color: white;
-  background-color: darkblue;
+  background-color: $Base-color_dokkur
 }
 
 .topmenu a:active {
   color: white;
-  background-color: darkblue;
+  background-color: $Base-color_dokkur
 }
 
 /* =======================================
@@ -250,6 +251,12 @@ figure {
 }
 .mynda_container {
   width: 166px;
+}
+.linux-morges {
+  width: 2.5em;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 0em;
 }
 
 /*  ========================================
@@ -326,6 +333,10 @@ figure {
     height: 12em;
     width: 3em;
   }
+  .linux-morges {
+    margin-bottom: -2.03em;
+    margin-left: 0em;
+  }
 }
 /* ========================================
   Viðmið - breakpoints 80em = 1600px +
@@ -336,5 +347,9 @@ figure {
   }
   .mynda_container {
     grid-template-columns: repeat(4,166px)
+  }
+  .linux-morges {
+    margin-bottom: -2.03em;
+    margin-left: 5em;
   }
 }
