@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.env.linux": {
+        "PATH": "/home/Hrolfur/.platformio/penv/bin:/home/Hrolfur/.platformio/penv:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/Hrolfur/.local/bin:/home/Hrolfur/bin:/home/Hrolfur/.local/bin:/home/Hrolfur/bin",
+        "PLATFORMIO_CALLER": "vscode"
+    }
+}
