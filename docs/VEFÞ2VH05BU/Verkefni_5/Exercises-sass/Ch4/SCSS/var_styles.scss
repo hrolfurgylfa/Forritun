@@ -1,0 +1,35 @@
+/* 
+ * SASS Variables are defined with a $ character
+ * and can have different kinds of data types: color, string, boolean, multi-value
+ */
+
+$Base-color: rgb(27, 180, 207);
+$Padding-top-bottom: 1em;
+
+body {
+    background-color: darken($Base-color,7%);
+    margin: 0 auto;
+}
+.header {
+    text-align: center;
+    @include background($Base-color);
+    padding: $Padding-top-bottom 0;
+}
+main {
+    @include background($Base-color);
+    padding: $Padding-top-bottom 0;
+}
+.footer {
+    text-align: center;
+    @include background($Base-color);
+    padding: $Padding-top-bottom 0;
+}
+.header2,
+.main2,
+.footer2 {
+    max-width: 30em;
+    margin: auto;
+}
+.titill {
+    margin-top: 0;
+}

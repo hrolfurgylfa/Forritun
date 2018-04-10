@@ -1,0 +1,192 @@
+/* ========================================
+  General
+  ======================================== */
+
+#auglysing {
+	width: 15em;
+	height: 40em;
+	float: left;
+	margin: 40px auto 0;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0px 0px 6px #000;
+}
+
+/* ========================================
+  Geimur
+  ======================================== */
+
+#geimur {
+	position: absolute;
+	top: 0px;
+	z-index: 1;
+	animation: scroll_V_animation 30s infinite linear;
+	width: 15em;
+	left: 0em;
+}
+#geimur_1 {
+	width: 15em;
+	height: 600px;
+	background-image: url(Animation/2186.svg);
+	position: absolute;
+	top: 600px;
+	right: 0;
+	z-index: 1;
+}
+#geimur_2 {
+	width: 15em;
+	height: 600px;
+	background-image: url(Animation/2186.svg);
+	position: absolute;
+	top: 0px;
+	right: 0;
+	z-index: 1;
+}
+#geimur_3 {
+	width: 15em;
+	height: 600px;
+	background-image: url(Animation/2186.svg);
+	position: absolute;
+	top: -600px;
+	right: 0;
+	z-index: 1;
+}
+
+/* ========================================
+  Geimflaug
+  ======================================== */
+
+#geimskip img,
+#eldur img {
+	width: 60%;
+}
+#geimskip {
+	bottom: 18em;
+	left: 5em;
+	z-index: 4;
+	position: absolute;
+}
+#eldur {
+	bottom: 9.5em;
+	left: 4.3em;
+	z-index: 2;
+	position: absolute;
+	animation: hristingur_animation .1s infinite ease-in-out;
+}
+
+/* ========================================
+  Texti
+  ======================================== */
+
+#auglysinga_texti_1 {
+	top: 0;
+	text-align: center;
+	padding: 0 .5em;
+	z-index: 5;
+	color: white;
+	position: absolute;
+}
+#auglysinga_texti_2 {
+	bottom: 3em;
+	text-align: center;
+	padding: 0 .5em;
+	z-index: 5;
+	color: white;
+	position: absolute;
+}
+#Kaupa_ferd_id {
+	bottom: 0.7em;
+	position: absolute;
+	z-index: 6;
+	width: 13em;
+	margin: 0 1em;
+	background-color: white;
+}
+/* ========================================
+  Popup
+  ======================================== */
+.modal > label:hover {
+  transform: scale(0.97);
+}
+.modal__overlay {
+  background: #000000;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+	text-align: center;
+  text-shadow: none;
+  z-index: 600;
+}
+.modal__wrap {
+  margin: 0 auto;
+  padding: 1em 0;
+  max-width: 500px;
+	width: 90%;
+	left: 50%;
+	top: 50%;
+  transform: translateY(+100%);
+}
+.modal__wrap label {
+  background: #FFD300;
+  border-radius: 50%;
+  color: #000000;
+  cursor: pointer;
+  height: 1.5em;
+  line-height: 1.5;
+  position: absolute;
+  right: .5em;
+  top: .5em;
+  width: 1.5em;
+}
+.modal__wrap h2,
+.modal__wrap p {
+  color: #FFD300;
+}
+.modal input:focus ~ label {
+  transform: scale(0.97);
+}
+.modal__overlay {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -100;
+}
+
+.modal input:checked ~ .modal__overlay {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+}
+#modal__trigger {
+	display: none;
+}
+.ad__trigger {
+	bottom: 0.7em;
+	position: absolute;
+	z-index: 10;
+	width: 13em;
+	margin: 0 1em;
+	background-color: white;
+	text-align: center;
+	align-items: center;
+	background-color: lightblue;
+	border: 3px ridge darkblue;
+}
+
+/* ========================================
+  Keyframes
+  ======================================== */
+
+@keyframes scroll_V_animation {
+	0%			{top: -600px;}
+	99.9999%	{top: 600px;}
+	100%		{top: -1200;}
+}
+@keyframes hristingur_animation {
+	0%	{left: 4.3em; bottom: 9.5em;}
+	25%	{left: 4.4em; bottom: 9.4em;}
+	50%	{left: 4.2em; bottom: 9.6em;}
+	75%	{left: 4.4em; bottom: 9.4em;}
+}
