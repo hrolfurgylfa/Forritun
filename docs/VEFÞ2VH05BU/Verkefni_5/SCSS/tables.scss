@@ -1,0 +1,58 @@
+
+/* =======================================
+   Tafla 1
+  ======================================== */
+.tafla_1 {
+    border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+}
+.tafla_1 thead tr th,
+.tafla_1 tbody tr td {
+    border: 1px solid black;
+    padding: 10px 15px;
+}
+.tafla_1 caption {
+    font-size: 20pt;
+    margin-bottom: 1em;
+}
+.tafla_1_einkunn,
+.tafla_1_bonnud_innan_18,
+.tafla_1_bonnud_innan_16,
+.tafla_1_bonnud_innan_12,
+.tafla_1_bonnud_innan_L {
+    text-align: center;
+}
+/* Lita bann */
+.tafla_1_bonnud_innan_18 {
+    background-color: red;
+}
+.tafla_1_bonnud_innan_16 {
+    background-color: red;
+}
+.tafla_1_bonnud_innan_12 {
+    background-color: yellow;
+}
+.tafla_1_bonnud_innan_L {
+    background-color: lightgreen;
+}
+@media screen and (max-width: 600px) {
+    .tafla_1 thead {
+        display: none;
+    }
+    .tafla_1 td {
+        display: block;
+    }
+    .tafla_1 tr {
+        display: block;
+        margin-bottom: .75em;
+    }
+    .tafla_1_einkunn,
+    .tafla_1_bonnud_innan_18,
+    .tafla_1_bonnud_innan_16,
+    .tafla_1_bonnud_innan_12,
+    .tafla_1_bonnud_innan_L,
+    .tafla_1 tr {
+        text-align: right;
+    }
+}
