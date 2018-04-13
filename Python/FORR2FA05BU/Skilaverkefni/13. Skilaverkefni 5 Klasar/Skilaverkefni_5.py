@@ -29,16 +29,16 @@ class Hnit():
     def hnitaPrentari(self):
         print("x hnitið er",self.x,"og y hnitið er",self.y)
     def hlutaPrentari(self):
-        if self.x > 0 and self.y > 0:
-            return 1
-        elif self.x < 0 and self.y > 0:
+        if x > 0 and y > 0:
             return 2
-        elif self.x < 0 and self.y < 0:
+        elif x < 0 and y > 0:
+            return 1
+        elif x < 0 and y < 0:
             return 3
-        elif self.x > 0 and self.y < 0:
+        elif x > 0 and y < 0:
             return 4
-        elif self.x == 0 or self.y == 0:
-            print("Annað hnitið er 0 svo að hnitið er ekki í neinum kassa")
+        elif x == 0 or y == 0:
+            return "0"
 
 valmynd = ""
 
@@ -69,7 +69,12 @@ while valmynd != "3":
         print("Seinni jafnan X = 3, Z = 9, Y =",Jofnur.jafna2(3,9))
 
     elif valmynd == "2":#Liður 2
-        Hnit.hnitaPrentari
+
+        x = 10
+        y = 10
+        h1 = Hnit(x,y)
+        h1.hnitaPrentari()
+        print("Þetta hnit er á reiti",h1.hlutaPrentari())
 
     elif valmynd == "3":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 3" þegar maður er að hætta í forritinu
         pass
