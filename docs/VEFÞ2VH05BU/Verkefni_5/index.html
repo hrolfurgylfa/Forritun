@@ -16,7 +16,9 @@
         	<li><a href="https://r.inna.is/innskraning">Inna</a></li>
         	<li><a href="../../VEFÞ1VG05AU">Haustönn 2017</a></li>
         	<li><a href="..">Vorönn 2018</a></li>
-        	<li><a href="../../index.html">Aðalvalmynd</a></li>
+					<li><a href="../../index.html">Aðalvalmynd</a></li>
+					<li><a href="#tafla_1">Tafla</a></li>
+					<li><a href="#form_1">Form</a></li>
         </ul>
     </nav>
 	<header>
@@ -44,7 +46,7 @@
 			</section>	
 			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod sodales lacus eu tempor. Maecenas eget felis vitae massa pharetra mattis non pellentesque dolor. Suspendisse potenti. Donec lorem risus, hendrerit id est id, efficitur elementum metus. Quisque hendrerit neque non ante interdum euismod. Proin ut nulla pretium, tempor sem at, gravida nisl. Suspendisse potenti. Donec lorem risus, hendrerit id est id, efficitur elementum metus. Quisque hendrerit neque non ante interdum euismod. Proin ut nulla pretium, tempor sem at, gravida nisl.
 			</p>
-			<table class="tafla_1">
+			<table class="tafla_1" id="tafla_1">
 				<caption>Bíómyndir</caption>
 				<thead>
 				  <tr>
@@ -80,7 +82,25 @@
 					<td data-label="Bönnuð innan" class="tafla_1_bonnud_innan_L">L</td>
 				  </tr>
 				</tbody>
-			  </table>
+			</table>
+			<form action="" method="post" class="form_1" id="form_1">
+				<h3 class="form_1_caption">Senda frían tölvupóst</h3>
+				<label for="username">Notendanafn</label><br>
+				<input type="text" name="username" placeholder="jon" required><br>
+				<label for="password">Aðgangsorð</label><br>
+				<input type="password" name="password" placeholder="12345" required><br>
+				<label for="nafn">Fullt nafn</label><br>
+				<input type="text" name="nafn" placeholder="Jón Jónsson" required><br>
+				<label for="tolvupostfang">Tölvupóstfang móttakenda</label><br>
+				<input type="email" name="tolvupostfang" placeholder="jon@jon.is" required><br>
+				<label for="tímasetning">Tímasetning sendingarinnar</label><br>
+				<input type="time" name="tímasetning"><br>
+				<label for="dagsetning">Dagsetning sendingarinnar</label><br>
+				<input type="date" name="dagsetning"><br>
+				<label for="skilaboð">skilaboð</label><br>
+				<textarea rows="10" name="skilaboð" placeholder="Hæ, hvað segirðu gott"></textarea><br>
+				<input type="submit" name="senda">
+			</form>
 		</article>
 		<aside class="vinstri">
 			<div id="auglysing"><!--Auglýsingin byrjar-->
