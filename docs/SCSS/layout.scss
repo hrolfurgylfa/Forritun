@@ -40,6 +40,10 @@ body {
 body {
   line-height: 1.5em;
 }
+main {
+  padding: 1em;
+  background-image: linear-gradient(to top,$Base-color,lighten($Base-color,10%),$Base-color);
+}
 .topnav {
   background-color: $Base-color; 
 }
@@ -215,13 +219,17 @@ figure {
   margin-bottom: 0em;
 }
 .selfie {
-  width: 20em;
+  margin: auto;
 }
 
 /*  ========================================
   Viðmið - breakpoints 30em = 480px + 
   ========================================*/
 @media screen and (min-width: 30em) {
+  .selfie {
+    width: 15em;
+    margin: 0;
+  }
 }
 /*  ========================================
   Viðmið - breakpoints 37.5em = 600px + 
