@@ -1,3 +1,4 @@
+/*
 INSERT INTO
 	Verkefni_6.kaupandi(kt,nafn_kaupanda)
 VALUES
@@ -15,16 +16,16 @@ VALUES
 INSERT INTO
 	Verkefni_6.seljandi(kt,nafn_seljanda)
 VALUES
-	("0506073000",""),
-    ("2212829139",""),
-    ("0303966459",""),
-    ("1301071870",""),
-    ("0809734549",""),
-    ("2003017110",""),
-    ("2006141970",""),
-    ("0803118990",""),
-    ("0510843159",""),
-    ("0602129500","");
+	("0506073000","Kristófer Óli"),
+    ("2212829139","Vilhjálmur"),
+    ("0303966459","Steinunn Þóra"),
+    ("1301071870","Halldór Ragnar"),
+    ("0809734549","Hildur"),
+    ("2003017110","Páll"),
+    ("2006141970","Guðmundur Sigurður"),
+    ("0803118990","Anna"),
+    ("0510843159","Kristín"),
+    ("0602129500","Björn Þorsteinn");
     
 INSERT INTO
 	Verkefni_6.solumadur(kt,nafn_solumanns)
@@ -67,9 +68,9 @@ VALUES
     ("HVO97","1611023440","0803118990",5.4,"1008818629"),
     ("UVS31","1011134220","0510843159",8.1,"1304799989"),
     ("UG856","1311463379","0602129500",9.6,"2701417759");
-
+*/
 #1.
-#SELECT tegund, fastanumer, litur FROM Verkefni_6.bill WHERE litur = "blár";
+#SELECT tegund, fastanumer FROM Verkefni_6.bill WHERE litur = "blár";
 
 #2.
 /*
@@ -92,3 +93,28 @@ FROM Verkefni_6.sala
 WHERE verd > .5;
 */
 #3.
+#SELECT * FROM seljandi WHERE kt LIKE "____84%" OR kt LIKE "____85%" AND kt LIKE "%9";
+
+#4
+#UPDATE bill SET litur = "Bleikur" WHERE fastanumer = "AB549";
+
+#5
+#UPDATE bill SET asett_verd_millj = 1.3 WHERE fastanumer = "AB549";
+
+#6
+/*
+SELECT nafn_solumanns AS "Nafn",
+	solumadur_kt AS "Kennitala",
+	bill.fastanumer AS "Bílnúmer",
+	tegund AS "Tegund"
+
+FROM Verkefni_6.sala
+	JOIN Verkefni_6.bill
+    ON bill.fastanumer = sala.fastanumer
+    JOIN Verkefni_6.kaupandi
+    ON sala.kaupandi_kt = kaupandi.kt
+    JOIN Verkefni_6.seljandi
+    ON sala.seljandi_kt = seljandi.kt
+    JOIN Verkefni_6.solumadur
+    ON sala.solumadur_kt = solumadur.kt
+*/

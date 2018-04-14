@@ -47,12 +47,12 @@ SELECT * FROM verk51.staff;
 -- D
 -- SELECT nafn,laun
 -- FROM verk51.staff
--- WHERE laun BETWEEN 250000 and 350000;
+-- WHERE laun BETWEEN 250000 AND 350000;
 
 -- E
 -- SELECT nafn,(laun * bonus / 100) AS 'Bónusgreiðslur'
 -- FROM verk51.staff
--- WHERE laun BETWEEN 250000 and 500000;
+-- WHERE laun BETWEEN 250000 AND 500000;
 
 -- F
 -- SELECT AVG(laun + (laun * bonus / 100)) AS 'Meðallaun með bónus'
