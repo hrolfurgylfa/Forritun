@@ -8,15 +8,7 @@ const int G_G_LED = 7;
 const int Btn_1 = 8;
 
 void setup(){
-  pinMode(0,OUTPUT);
-  pinMode(1,OUTPUT);
-  pinMode(2,OUTPUT);
-  pinMode(6,OUTPUT);
-  pinMode(7,OUTPUT);
-  pinMode(8,INPUT);
-
-  digitalWrite(B_Gr_LED,HIGH);
-  digitalWrite(G_R_LED,HIGH);
+  
 }
 
 void gongu_blikk(){
