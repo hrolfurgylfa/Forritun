@@ -1,11 +1,11 @@
-const int B_R_LED = 0;
-const int B_Gu_LED = 1;
-const int B_Gr_LED = 2;
+const int B_R_LED = 11;
+const int B_Gu_LED = 10;
+const int B_Gr_LED = 9;
 
-const int G_R_LED = 6;
-const int G_G_LED = 7;
+const int G_R_LED = 3;
+const int G_G_LED = 2;
 
-const int Btn_1 = 8;
+const int Btn_1 = 12;
 
 void setup(){
   pinMode(0,OUTPUT);
