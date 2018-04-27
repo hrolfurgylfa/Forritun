@@ -1,7 +1,6 @@
 '''
------Verkefni-----
+Skilaverkefni 6
 Hrólfur Gylfason
------Dagsetning-----
 
 Það er eitthver villa í þessu forriti sem gerir það að verkum að ef hermennirnir eru með jafn mikinn styrk festist forritið í
 lúppu þar sem hermennirnir hafa alltaf sama styrk og forritið klárast aldrei
