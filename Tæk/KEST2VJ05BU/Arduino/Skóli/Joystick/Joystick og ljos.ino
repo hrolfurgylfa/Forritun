@@ -15,7 +15,7 @@ void setup() {
   // initialize serial communications at 9600 bps:
   for (int x = 2; x < 11; x++){
     pinMode(x,OUTPUT);
-    }
+  }
   Serial.begin(9600); 
   
   pinMode(xPin, INPUT);
