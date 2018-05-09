@@ -1,5 +1,5 @@
 {
     "board": "arduino:avr:uno",
     "port": "/dev/ttyACM0",
-    "sketch": "Tæk/KEST2VJ05BU/Arduino/Skóli/Joystick/Joystick og ljos.ino_2.ino"
+    "sketch": "Tæk/KEST2VJ05BU/Arduino/Skóli/Lokaverkefni/servo.ino"
 }
