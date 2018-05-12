@@ -1,7 +1,6 @@
-#include <IRremote.h>
+#include <IRremote.h>//Það þarf library sem heitir IRRemote og er búið til af shirriff
 
 #define IR_PIN 4
-#define LEDpin 8
 
 IRrecv irrecv(IR_PIN);
 decode_results ircode;
