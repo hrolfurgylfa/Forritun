@@ -1,0 +1,12 @@
+Raða lægsta til hæsta:
+ORDER BY ***
+
+Raða hæsta til lægsta:
+ORDER BY *** DESC
+
+Fá bara ákveðið marga efstu:
+LIMIT *
+
+Flokka eftir hversu margir af eitthverju koma upp:
+SELECT Count(***) FROM +++ GROUP BY ***
+
