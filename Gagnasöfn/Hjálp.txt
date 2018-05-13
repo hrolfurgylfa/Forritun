@@ -10,3 +10,7 @@ LIMIT *
 Flokka eftir hversu margir af eitthverju koma upp:
 SELECT Count(***) FROM +++ GROUP BY ***
 
+Fá með eitthverjum ákveðnum stöfum/orðum:
+WHERE *** LIKE "%g_g"
+#"%" segir að finna þetta eitthverstaðar í breytuni, og "_" segir hvaða stafur sem er.
+
