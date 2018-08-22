@@ -1,10 +1,9 @@
 #include <Servo.h> // Sambærilegt og import í python
-#include <IRremote.h>//Það þarf library sem heitir IRRemote og er búið til af shirriff
 
-//IR
-#define IR_PIN 10
-IRrecv irrecv(IR_PIN);
-decode_results ircode;
+//Takkar
+int Btn1 = 13;
+int Btn2 = 12;
+int Btn3 = 11;
 
 //ultrasonic sensor
 const int TrigPin = 4;//Trig attach to pin2
@@ -16,6 +15,11 @@ Servo motor; // bý til tilvik af Servo klasanum
 int motor_pinni = 9; // pinninn sem ég nota til að stjórna mótornum
 int att_upp = 1;
 int motor_gradur = 0;
+int x = 0;
+int skila_strengur = 0;
+
+//LED
+int LED_1 = 7;
 
 void setup(){
     Serial.begin(9600); //Sets the data rate in bits per second (baud) for serial data transmission
@@ -23,11 +27,14 @@ void setup(){
     pinMode(TrigPin,OUTPUT);
     pinMode(EchoPin,INPUT);
     motor.attach(motor_pinni); // segi servo tilvikinu hvaða pinna á að nota
-    irrecv.enableIRIn();//Fyrir IR
+    //Fyrir takka
+    pinMode(Btn1,INPUT);
+    pinMode(Btn2,INPUT);
+    pinMode(Btn3,INPUT);
+    pinMode(LED_1,OUTPUT);
 }
 
-void fall_motor_vinstri(){
-    //Þetta les ultrasonic skynjaran og setir það í breytuna cm
+void lengdarskynjari(){
     digitalWrite(TrigPin,LOW);
     delayMicroseconds(2);
     digitalWrite(TrigPin,HIGH);
@@ -39,79 +46,72 @@ void fall_motor_vinstri(){
     if(cm < 0){
         cm = 0;
     }
-    //Serial.println(cm);
-
-    if (att_upp == 1){
-        if (cm < 20 and cm != 0){
-            while (cm < 20 and cm != 0){
-                digitalWrite(TrigPin,LOW);
-                delayMicroseconds(2);
-                digitalWrite(TrigPin,HIGH);
-                delayMicroseconds(10);
-                digitalWrite(TrigPin,LOW);
-            
-                cm = pulseIn(EchoPin,HIGH)/58.0;  
-                cm = (int(cm * 100.0))/100.0;
-                if(cm < 0){
-                    cm = 0;
-                }
-                Serial.println(cm);
-                Serial.println("delay");
-                delay(100);
-            }
-        }
-        motor_gradur = motor_gradur + 5;
-
-        motor.write(motor_gradur);
-
-        Serial.println(motor_gradur);
-
-        if (motor_gradur > 180){
-            att_upp == 0;
-            Serial.println("Snúa við");
-        }
-
-    }
 }
-void fall_motor_haegri(){
-    if (cm < 20 and cm != 0){
-        while (cm < 20 and cm != 0){
-            digitalWrite(TrigPin,LOW);
-            delayMicroseconds(2);
-            digitalWrite(TrigPin,HIGH);
-            delayMicroseconds(10);
-            digitalWrite(TrigPin,LOW);
-        
-            cm = pulseIn(EchoPin,HIGH)/58.0;  
-            cm = (int(cm * 100.0))/100.0;
-            if(cm < 0){
-                cm = 0;
-            }
-            Serial.println(cm);
-            Serial.println("delay");
+
+void bida(){
+    lengdarskynjari();
+    while (cm < 20 and cm != 0){
+        lengdarskynjari();
+        Serial.println(cm);
+        Serial.println("delay");
+        digitalWrite(LED_1,HIGH);
+        delay(100);
+    }
+    digitalWrite(LED_1,LOW);
+}
+
+void hreifa_motor(){
+    for (x = 0; x < 180; x = x + 15 ){
+        bida();
+        motor.write(x);
+        Serial.println(x);
+        if (digitalRead(Btn2) == HIGH){
             delay(100);
+            Serial.println("\tHætta");
+            skila_strengur = 1;
+            break;
         }
+        delay(50);
     }
-    motor_gradur = motor_gradur - 5;
-    motor.write(motor_gradur);
-
-    Serial.println(motor_gradur);
 }
 
-void IR_1(){
-    if (irrecv.decode(&ircode)){
-        Serial.println(ircode.value,HEX);
-        if (ircode.value == 0xFF629D){
-            Serial.println("virkar");
+void manual(){
+    while (analogRead(A0) != 9999999999999){
+        Serial.println(digitalRead(Btn1));
+        Serial.print("\t");
+        Serial.print(digitalRead(Btn2));
+        Serial.print("\t");
+        Serial.print(digitalRead(Btn3));
+        Serial.print("\n");
+        bida();
+        if (digitalRead(Btn1) == HIGH){
+            x = x + 15;
+            if (x > 0){
+                motor.write(x);
+            }
+            Serial.println(x);
         }
-        irrecv.resume();
+        else if (digitalRead(Btn3) == HIGH){
+            x = x - 15;
+            if (x < 180){
+                motor.write(x);
+            }
+            Serial.println(x);
+        }
+        if (digitalRead(Btn2) == HIGH){
+            break;
+        }
+        delay(100);
     }
 }
 
 void loop(){
-    for (int x = 0; x > 51;x++){
-        IR_1();
-        delay(5);
+    hreifa_motor();
+    Serial.println(skila_strengur);
+    if (skila_strengur == 1){
+        skila_strengur = 0;
+        manual();
     }
-    fall_motor_vinstri();
+    delay(50);
+    Serial.println("loop fall búið");
 }
