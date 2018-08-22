@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- þvingar farsíma vafra til að birta gögn 1:1 og þá virka viðmið (breakpoints) í stílsíðum -->
+	<meta charset="utf-8">
+	<title>Haustönn 2018</title>
+	<link rel="stylesheet" type="text/css" href="allstyles.css">
+</head> 
+<body> 
+    <nav class="topnav">
+    	<input type="checkbox" id="toggle">
+    	<label for="toggle">Efnisyfirlit &#9776;</label>
+        <ul class="topmenu">
+        	<li><a href="https://tskoli.is/">Vefsíða tækniskólans</a></li>
+        	<li><a href="https://r.inna.is/innskraning">Inna</a></li>
+        	<li><a href="../VEFÞ1VG05AU">Haustönn 2017</a></li>
+			<li><a href="../VEFÞ2VH05BU/">Vorönn 2018</a></li>
+			<li><a href="">Haustönn 2018</a></li>
+			<li><a href="../index.html">Aðalvalmynd</a></li>
+        </ul>
+    </nav>
+	<header>
+		
+		<h1><img class="linux-morges" src="Myndir/linux-morges.svg">Sveigjanleg vefhönnun - <i>Responsive Web Design</i></h1>
+		<picture>
+			<source srcset="Myndir/snowdrop_480.jpg" media="(max-width: 37.5em)">
+			<source srcset="Myndir/snowdrop_960.jpg" media="(max-width: 60em)">
+			<source srcset="Myndir/snowdrop_1600.jpg">
+			<img src="Myndir/snowdrop_960.jpg">
+		</picture>
+	</header>
+	<section class="content"> 
+		<article class="midja">
+			<a href="Verkefni_1/">Verkefni 1</a>
+		</article>
+		<aside class="vinstri">
+			<div id="auglysing"><!--Auglýsingin byrjar-->
+				<div class="modal"><!--Popup byrjar-->
+				    <input id="modal__trigger" type="checkbox">
+				    <label for="modal__trigger" class="ad__trigger">Kaupa ferð</label>
+				    <div class="modal__overlay" role="dialog" aria-labelledby="modal__title" aria-describedby="modal_desc">
+				        <div class="modal__wrap"><!--Dót inní popupinu-->
+				            <label for="modal__trigger">&#10006;</label>
+				            <h2 id="modal__title">KAUPTU FERÐ TIL GEIMSINS!!!</h2>
+				            <p id="modal__desc">Núna getur þú farið í tveggja vikna ferðalag til tunglsins fyrir aðeins 15.000kr á mann!!! Einungis 93% eldflauganna okkar hafa sprungið og drepið alla!!!</p>
+				        </div><!--Dót inní popupinu endar-->
+				    </div>
+				</div><!--Popup endar-->
+				<h2 id="auglysinga_texti_1">Hefur þér langað að fara í geimferð?</h3>
+				<h3 id="auglysinga_texti_2">Þú getur það núna fyrir aðeins 15.000kr á farþega!!!</h4>
+				<section id="dimmari"></section>
+				<div id="geimskip"><img src="Animation/Rocket.svg"></div>
+				<div id="eldur"><img src="Animation/Rocket_fire.svg"></div>
+				<ul id="geimur">
+					<li id="geimur_1"></li>
+					<li id="geimur_2"></li>
+					<li id="geimur_3"></li>
+				</ul>
+			</div><!--Auglýsingin endar-->
+		</aside>
+		<aside class="haegri">
+			
+		</aside>
+	</section>
+	<footer>
+		<div class="sMedia">
+			<a href="https://www.facebook.com/">
+				<div class="facebook">
+					<span class="icon-facebook"></span>
+				</div>
+			</a>
+			<a href="https://twitter.com/">
+				<div class="twitter">
+					<span class="icon-twitter"></span>
+				</div>
+			</a>
+			<a href="https://www.snapchat.com/">
+				<div class="snapchat">
+					<span class="icon-snapchat"></span>
+				</div>
+			</a>
+			<a href="https://allo.google.com/">
+				<div class="allo">
+					<span class="icon-googleallo"></span>
+				</div>
+			</a>
+		</div>
+	</footer>
+</body>
+</html>
