@@ -70,16 +70,13 @@ def listiUndir4500(listi):
 
 #11
 def eydaGangaUppiFimm(listi):
-    ruslatunna = []
+    listi2 = []
 
     for tala in listi:
-        if tala % 5 == 0:
-            ruslatunna.append(tala)
-    
-    for tala in ruslatunna:
-        listi.remove(tala)
+        if tala % 5 != 0:
+            listi2.append(tala)
 
-    return listi
+    return listi2
 
 #12
 def setja40iSerLista(listi):
@@ -88,7 +85,7 @@ def setja40iSerLista(listi):
     for tala in listi:
         if tala == 40:
             fjortiuListi.append(tala)
-    
+
     return fjortiuListi
 
 
@@ -117,22 +114,28 @@ print("\nListarallý")
 #6
 random_listi = buaTilListaMed100()
 print("6. ",random_listi)
+print("\n")
 
 #7
 print("7. ",radaLista(random_listi))
+print("\n")
 
 #8
 print("8. ",round(medaltalLista(random_listi),2))
+print("\n")
 
 #9
 print("9. ",end="")
 minnstaOgStaersta(random_listi)
+print("\n")
 
 #10
 print("10. ",listiUndir4500(random_listi))
+print("\n")
 
 #11
 print("11. ",eydaGangaUppiFimm(random_listi))
+print("\n")
 
 #12
 print("12. ",setja40iSerLista(random_listi))
