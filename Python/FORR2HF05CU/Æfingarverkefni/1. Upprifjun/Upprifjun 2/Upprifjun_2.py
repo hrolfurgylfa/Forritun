@@ -11,16 +11,24 @@ def prentaE(tempDict):
     print(tempDict["E"])
 
 def breytaH(tempDict):
-    tempDict2 = tempDict
+    tempDict2 = tempDict.copy()
     tempDict2["H"] = "Hrólfur"
 
     return tempDict2
 
-def prentaDictMedH(tempDict):
-    tempDict2 = breytaH(tempDict)
+def prentaDictS(tempDict):
+    for key in tempDict:
+        print(key+str(", ")+tempDict[key])
 
-    for key in tempDict2:
-        print(key+str(" er fyrir ")+tempDict2[key])
+def eydaC(tempDict):
+    dictEkkiC = {}
+
+    for key in tempDict:
+        if key != "C":
+            dictEkkiC[key] = tempDict[key]
+
+    return dictEkkiC
+
 
 #1
 dictionary = buaTilDict()
@@ -41,5 +49,13 @@ print(breytaH(dictionary))
 
 #5
 print("\n5.")
-prentaDictMedH(dictionary)
+prentaDictS(breytaH(dictionary))
+
+#6
+print("\n6.")
+print(eydaC(dictionary))
+
+#7
+print("\n7.")
+prentaDictS(eydaC(dictionary))
 
