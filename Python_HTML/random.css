@@ -1,3 +1,30 @@
-div.fusion-post-wrapper div.fusion-post-content-wrapper div.fusion-meta-info div.fusion-alignright a {
-    display: none;
+@media screen and (min-width: 550px) {
+    .google-calendar-small {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .google-calendar-medium {
+        display: none;
+    }
+}
+
+.google-calendar-small {
+    width: 100%;
+}
+
+.google-calendar-medium {
+position: relative;
+padding-bottom: 75%;
+height: 0;
+overflow: hidden;
+}
+    
+.google-calendar-medium { 
+position: absolute;
+top:0;
+left: 0;
+width: 100%;
+height: 100%;
 }
