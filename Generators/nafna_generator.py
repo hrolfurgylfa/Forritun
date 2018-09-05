@@ -9,5 +9,5 @@ print()
 if hversu_oft > 60:
     print("ERROR\tOf há tala")
 else:
-    for x in range(0,hversu_oft-1):
+    for x in range(0,hversu_oft):
         print(nofn[x])
