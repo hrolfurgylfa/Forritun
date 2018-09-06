@@ -30,9 +30,11 @@ def eydaAfDict(dict1, key):
             print()
             print(key,"hefur verið eytt")
         else:
-            key2 = dict1[key2]
+            dict2[key2] = dict1[key2]
 
     return dict2
+
+#def breytaValueADict
 
 
 valmynd = ""
@@ -100,6 +102,11 @@ while valmynd != "5":
                 nafn = input("Sláðu inn nafn\n--->").lower()
                 
                 simaskra = eydaAfDict(simaskra, nafn)
+
+            elif val1 == "4":
+                nafn = input("Sláðu inn nafn\n--->").lower()
+
+                
 
 
             print("----------------------------------------\n")
