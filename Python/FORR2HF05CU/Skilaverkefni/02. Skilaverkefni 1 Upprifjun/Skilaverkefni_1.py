@@ -34,7 +34,17 @@ def eydaAfDict(dict1, key):
 
     return dict2
 
-#def breytaValueADict
+def breytaValueADict(dict1, key, breytt_value, engu_breytt_texti, eitthverju_breytt_texti):
+    dict2 = dict1.copy()
+
+    for key2 in dict2:
+        if key2 == key:
+            dict2[key2] = breytt_value
+
+            print(eitthverju_breytt_texti)
+            return dict2
+    
+    print(engu_breytt_texti)
 
 
 valmynd = ""
@@ -58,7 +68,7 @@ while valmynd != "5":
     print()#Þetta er til þess að gera enter
 
     if valmynd == "1":#Liður 1
-        simaskra = {"inga": 6965964, "karl": 7913812, "guðný": 7484947, "sólveig": 6123435, "halldór": 8050842, "elín": 8475938, "kristján": 8909915, "daníel": 8596066, "jón": 6683621, "björn": 6889840}
+        simaskra = {"inga": "6965964", "karl": "7913812", "guðný": "7484947", "sólveig": "6123435", "halldór": "8050842", "elín": "8475938", "kristján": "8909915", "daníel": "8596066", "jón": "6683621", "björn": "6889840"}
         val1 = ""
 
         while val1 != "5":
@@ -105,9 +115,17 @@ while valmynd != "5":
 
             elif val1 == "4":
                 nafn = input("Sláðu inn nafn\n--->").lower()
+                print()
+                simanumer = input("Sláðu inn símanúmer\n--->")
 
-                
+                print()
+                breytaValueADict(simaskra, nafn, simanumer, "Þessi notandi var ekki fundinn", "Það hefur verið breytt símanúmeri tengiliðsins "+str(nafn)+" í "+str(simanumer))
 
+            elif val1 == "5":
+                pass
+            
+            else:
+                print("ERROR\tSláðu inn tölu á milli 1 og 5")
 
             print("----------------------------------------\n")
 
