@@ -46,6 +46,54 @@ def breytaValueADict(dict1, key, breytt_value, engu_breytt_texti, eitthverju_bre
     
     print(engu_breytt_texti)
 
+def buaTilHop(nafn_hops):
+    listi = []
+
+    fjoldi = int(input("Hversu margir eru skráðir í "+str(nafn_hops)+"?\n--->"))
+
+    for tel in range(fjoldi):
+        nemandi = input("\nSláðu inn nafn nemanda\n--->")
+        listi.append(nemandi)
+
+    return listi
+
+def prentaLista(listi, sort, fyrirsogn):
+    if sort == True:
+        listi.sort()
+    
+    print(fyrirsogn)
+    for hlutur in listi:
+        print(hlutur)
+
+def beraSamanLista(listi1, listi2):
+    i_badum = []
+
+    for hlutur1 in listi1:
+        for hlutur2 in listi2:
+            if hlutur1 == hlutur2:
+                i_badum.append(hlutur1)
+
+    return i_badum
+
+def hvorListiStaerri(listi1, listi2, nafn1, nafn2):
+    if len(listi1) == len(listi2):
+        return "J"#J er fyrir Jafn Stórir
+    
+    elif len(listi1) > len(listi2):
+        return nafn1
+    
+    elif len(listi1) < len(listi2):
+        return nafn2
+
+    else:
+        print("ERROR\tFallið hvorListiStaerri klikkaði")
+
+def faeraMilliLista(listi1, listi2, numer_fra_listi1):
+    listi2.append(listi1[numer_fra_listi1])
+    listi1.pop(numer_fra_listi1)
+
+    return [listi1,listi2]
+
 
 valmynd = ""
 
@@ -130,8 +178,41 @@ while valmynd != "5":
             print("----------------------------------------\n")
 
     elif valmynd == "2":#Liður 2
-        pass
+        # Búa til listana
+        hopur1 = buaTilHop("FOR1TÖ05CU")
+        print()
+        hopur2 = buaTilHop("GSÖ1TÖ05AU")
+
+        # Prenta út hóp
+        print()
+        prentaLista(hopur1, True, "Nemendur í FOR1TÖ05CU:")
+        print()
+        prentaLista(hopur2, True, "Nemendur í GSÖ1TÖ05AU:")
+        print()
+
+        #Bera saman lista
+        i_badum_hopum = beraSamanLista(hopur1, hopur2)
+
+        if i_badum_hopum:
+            prentaLista(i_badum_hopum, True, "Þessir nemendur eru í báðum hópunum:")
         
+        else:
+            print("Það eru engir nemendur í báðum hópunum")
+        
+        print()
+
+        #Hvor er stærri
+        hvor_er_staerri = hvorListiStaerri(hopur1, hopur2, "FOR1TÖ05CU", "GSÖ1TÖ05AU")
+        
+        if hvor_er_staerri == "J":
+            print("Bekkirnir eru jafn stórir")
+        else:
+            print(hvor_er_staerri,"er stærri bekkurinn")
+        
+        #Að færa tvo öftustu nemendurna
+        faeraMilliLista(hopur1, hopur2, -1)
+        faeraMilliLista(hopur1, hopur2, -1)
+
     elif valmynd == "3":#Liður 3
         pass
 
