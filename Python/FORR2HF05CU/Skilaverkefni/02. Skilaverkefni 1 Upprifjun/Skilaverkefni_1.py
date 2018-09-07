@@ -94,6 +94,9 @@ def faeraMilliLista(listi1, listi2, numer_fra_listi1):
 
     return [listi1,listi2]
 
+def vixlaStreng(strengur):
+    pass
+
 
 valmynd = ""
 
@@ -217,7 +220,8 @@ while valmynd != "5":
         pass
 
     elif valmynd == "4":#Liður 4
-        pass
+        strengur = input("Sláðu inn orð eða setningu\n--->")
+
 
     elif valmynd == "5":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 5" þegar maður er að hætta í forritinu
         pass
