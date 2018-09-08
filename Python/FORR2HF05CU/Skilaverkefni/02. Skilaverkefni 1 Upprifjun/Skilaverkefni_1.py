@@ -123,7 +123,32 @@ def vixlaStreng(strengur, lastafir):
     return loka_strengur
 
 def lesaLykilordaSkra(skraarnafn):
-    skra = open(skraarnafn)
+    dict1 = {}
+    skra = open(skraarnafn,"r")
+
+    for line in skra:
+        lina = line.split(";")
+        dict1[lina[0]] = lina[1][0:-1]
+
+    return dict1
+
+def finnaKeyOgValueIDict(key, value, dict1, key_fundinn_txt, baedi_fundin_txt, hvorugt_fundid_txt):
+    notandi_fundinn = False
+
+    for key1 in dict1:
+        if key1 == key:
+            if dict1[key1] == value:
+                print(baedi_fundin_txt)
+                notandi_fundinn = True
+                break
+                
+            else:
+                print(key_fundinn_txt)
+                notandi_fundinn = True
+                break
+    
+    if not notandi_fundinn:
+        print(hvorugt_fundid_txt)
 
 
 valmynd = ""
@@ -249,7 +274,9 @@ while valmynd != "5":
         print()
         lykilord = input("Sláðu inn lykilorð\n--->")
 
-        lesaLykilordaSkra("lykilord.txt")
+        password_dict = lesaLykilordaSkra("lykilord.txt")
+
+        finnaKeyOgValueIDict(notendanafn, lykilord, password_dict, "\nRangt lykilorð", "\nVelkomin/n", "\nÞessi notandi er ekki til")
 
     elif valmynd == "4":#Liður 4
         strengur = input("Sláðu inn orð eða setningu til þess að víxla\n--->")
