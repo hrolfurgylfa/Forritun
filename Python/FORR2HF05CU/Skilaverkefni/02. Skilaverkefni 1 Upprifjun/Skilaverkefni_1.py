@@ -94,8 +94,33 @@ def faeraMilliLista(listi1, listi2, numer_fra_listi1):
 
     return [listi1,listi2]
 
-def vixlaStreng(strengur):
-    pass
+def vixlaStreng(strengur, lastafir):
+    strengur2 = ""
+    sidasti_stafur = ""
+    loka_strengur = ""
+    listi = []
+
+    if len(strengur) % 2 != 0:
+        sidasti_stafur += strengur[-1]
+
+    for tel in range(1,len(strengur),2):
+        if lastafir:
+            strengur2 = strengur[tel].lower()
+            strengur2 += strengur[tel-1].lower()
+        else:
+            strengur2 = strengur[tel].upper()
+            strengur2 += strengur[tel-1].upper()
+
+        listi.append(strengur2)
+    
+    for tempStrengur in listi:
+        loka_strengur += tempStrengur
+    if lastafir:
+        loka_strengur += sidasti_stafur.lower()
+    else:
+        loka_strengur += sidasti_stafur.upper()
+
+    return loka_strengur
 
 
 valmynd = ""
@@ -220,8 +245,11 @@ while valmynd != "5":
         pass
 
     elif valmynd == "4":#Liður 4
-        strengur = input("Sláðu inn orð eða setningu\n--->")
+        strengur = input("Sláðu inn orð eða setningu til þess að víxla\n--->")
+        print("\n"+str(vixlaStreng(strengur, False)))
 
+        strengur = input("\nSláðu inn orð eða setningu til þess að laga víxl\n--->")
+        print("\n"+str(vixlaStreng(strengur, True)))
 
     elif valmynd == "5":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 5" þegar maður er að hætta í forritinu
         pass
