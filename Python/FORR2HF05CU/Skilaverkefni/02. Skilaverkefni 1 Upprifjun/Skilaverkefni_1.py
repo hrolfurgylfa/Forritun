@@ -122,6 +122,9 @@ def vixlaStreng(strengur, lastafir):
 
     return loka_strengur
 
+def lesaLykilordaSkra(skraarnafn):
+    skra = open(skraarnafn)
+
 
 valmynd = ""
 
@@ -242,7 +245,11 @@ while valmynd != "5":
         faeraMilliLista(hopur1, hopur2, -1)
 
     elif valmynd == "3":#Liður 3
-        pass
+        notendanafn = input("Sláðu inn notendanafnið þitt\n--->")
+        print()
+        lykilord = input("Sláðu inn lykilorð\n--->")
+
+        lesaLykilordaSkra("lykilord.txt")
 
     elif valmynd == "4":#Liður 4
         strengur = input("Sláðu inn orð eða setningu til þess að víxla\n--->")
