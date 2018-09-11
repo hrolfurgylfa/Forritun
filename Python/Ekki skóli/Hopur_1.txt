@@ -1,0 +1,6 @@
+Margrét,Ingibjörg,Erla
+Ingibjörg,Margrét,Guðný
+Erla,Guðný,Unnur
+Guðný,Halldór, Erla
+Halldór,Unnur,Erla
+Unnur,Erla,Guðný
