@@ -1,7 +1,7 @@
 '''
------Verkefni-----
+Æfingarverkefni 1 - Fallarallý
 Hrólfur Gylfason
------Dagsetning-----
+12/9/2018
 '''
 import math
 
@@ -77,7 +77,7 @@ while valmynd != "6":
     elif valmynd == "3":#Liður 3
         ummal = int(input("Sláðu inn ummál hrings\n--->"))
         print()
-        
+
         radius = radiusUrUmmali(ummal)
         flatarmal = flatarmalUrRadius(radius)
 
