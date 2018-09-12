@@ -3,6 +3,8 @@
 Hrólfur Gylfason
 -----Dagsetning-----
 '''
+import math
+
 def saeti(heiltala):
     if heiltala == 1:
         return "Gull, þú lentir í fyrsta sæti, til hamingju!!!"
@@ -23,6 +25,14 @@ def kynjaskinjari(kyn):
         print()
 
         return utskyring
+
+def radiusUrUmmali(ummal):
+    radius = ummal / (2 * math.pi)
+    return radius
+
+def flatarmalUrRadius(radius):
+    flatarmal = math.pi * (radius ** 2)
+    return flatarmal
 
 
 valmynd = ""
@@ -65,7 +75,13 @@ while valmynd != "6":
             print(kyn_notenda)
         
     elif valmynd == "3":#Liður 3
-        pass
+        ummal = int(input("Sláðu inn ummál hrings\n--->"))
+        print()
+        
+        radius = radiusUrUmmali(ummal)
+        flatarmal = flatarmalUrRadius(radius)
+
+        print("Flatarmál hringsins er",flatarmal)
 
     elif valmynd == "4":#Liður 4
         pass
