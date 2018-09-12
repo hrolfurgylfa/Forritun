@@ -4,6 +4,7 @@ Hrólfur Gylfason
 12/9/2018
 '''
 import math
+import random
 
 def saeti(heiltala):
     if heiltala == 1:
@@ -33,6 +34,15 @@ def radiusUrUmmali(ummal):
 def flatarmalUrRadius(radius):
     flatarmal = math.pi * (radius ** 2)
     return flatarmal
+
+def prentaLista(listi ,hveMargarILinu = 8):
+    tel = 0
+
+    for hlutur in listi:
+        if tel != hveMargarILinu:
+            print(hlutur,end=",\t")
+        else:
+            print(hlutur)
 
 
 valmynd = ""
@@ -84,7 +94,13 @@ while valmynd != "6":
         print("Flatarmál hringsins er",flatarmal)
 
     elif valmynd == "4":#Liður 4
-        pass
+        tolu_listi = []
+
+        for tel in range(80):
+            random_tala = random.randint(0,99)
+            tolu_listi.append(random_tala)
+    
+        prentaLista(tolu_listi)    
         
     elif valmynd == "5":#Liður 5
         pass
