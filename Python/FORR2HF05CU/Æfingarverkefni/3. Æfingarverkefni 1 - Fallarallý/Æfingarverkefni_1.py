@@ -11,6 +11,23 @@ def saeti(heiltala):
     elif heiltala == 3:
         return "Brons"
 
+def kynjaskinjari(kyn):
+    if kyn.lower() == "kk":
+        return "Þú ert karlmaður"
+    elif kyn.lower() == "kvk":
+        return "Þú ert kvennmaður"
+    else:
+        utskyring = input("Hvað þýðir "+str(kyn)+"?\n--->")
+        print()
+
+        return utskyring
+
+def utskyrari(ordTilAdUtskyra):
+    utskyring = input("Hvað þýðir "+str(ordTilAdUtskyra)+"?\n--->")
+    print()
+
+    return utskyring.upper()
+
 
 valmynd = ""
 
@@ -40,7 +57,16 @@ while valmynd != "6":
         print(saeti(tala))
 
     elif valmynd == "2":#Liður 2
-        pass
+        kyn = input("Sláðu inn kyn\n--->")
+        print()
+
+        kyn_notenda = kynjaskinjari(kyn)
+
+        if kyn_notenda != "Þú ert karlmaður" and kyn_notenda != "Þú ert kvennmaður":
+            print(kyn_notenda.upper())
+
+        else:
+            print(kyn_notenda)
         
     elif valmynd == "3":#Liður 3
         pass
