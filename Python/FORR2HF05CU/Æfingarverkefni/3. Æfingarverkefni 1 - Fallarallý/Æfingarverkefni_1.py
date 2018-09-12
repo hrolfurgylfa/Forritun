@@ -5,11 +5,13 @@ Hrólfur Gylfason
 '''
 def saeti(heiltala):
     if heiltala == 1:
-        return "Gull"
+        return "Gull, þú lentir í fyrsta sæti, til hamingju!!!"
     elif heiltala == 2:
-        return "Silfur"
+        return "Silfur, þú lentir í öðru sæti, til hamingju!!!"
     elif heiltala == 3:
-        return "Brons"
+        return "Brons, þú lentir í þriðja sæti, til hamingju!!!"
+    else:
+        return "Þú fékst hvorki gull, silfur né brons 😞"
 
 def kynjaskinjari(kyn):
     if kyn.lower() == "kk":
