@@ -22,12 +22,6 @@ def kynjaskinjari(kyn):
 
         return utskyring
 
-def utskyrari(ordTilAdUtskyra):
-    utskyring = input("Hvað þýðir "+str(ordTilAdUtskyra)+"?\n--->")
-    print()
-
-    return utskyring.upper()
-
 
 valmynd = ""
 
