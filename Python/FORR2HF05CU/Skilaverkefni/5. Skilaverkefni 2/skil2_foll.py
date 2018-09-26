@@ -1,5 +1,6 @@
 from math import sqrt as rot
 from math import pi
+from time import sleep
 
 def langhlid(a, b):
     a_i_odru = int(a) ** 2
@@ -33,3 +34,9 @@ def flatramal_hrings(radius):
     flatarmal = pi * radius ** 2
 
     return flatarmal
+
+def bank_bank(sekundur):
+    while sekundur > 0:
+        print("Bank")
+        sleep(.2)
+        sekundur -= .2

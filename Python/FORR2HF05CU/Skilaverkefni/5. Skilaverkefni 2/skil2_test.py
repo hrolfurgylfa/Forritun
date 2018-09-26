@@ -128,7 +128,17 @@ while valmynd != "7":
                 break
 
     elif valmynd == "6":#Liður 6
-        pass
+        while True:
+            print("\n---------------")
+            try:
+                sekundur = float(input("Sláðu inn sekúndur\n--->"))
+                break
+            except ValueError:
+                print("Vinsamlegast sláðu inn tölu")
+
+        bank_bank(sekundur)
+
+        print("Hver er þar?")
 
     elif valmynd == "7":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 7" þegar maður er að hætta í forritinu
         pass
