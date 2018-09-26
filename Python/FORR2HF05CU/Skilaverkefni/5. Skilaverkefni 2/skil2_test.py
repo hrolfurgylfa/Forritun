@@ -108,7 +108,24 @@ while valmynd != "7":
             print(tala,"er odda tala")
         
     elif valmynd == "5":#Liður 5
-        pass
+        print("Þetta forrit hjálpar við það að reikna flatarmál á hring")
+        print("Sláðu inn mínustölu til þess að hætta\n")
+        while True:
+            try:
+                print("----------")
+                radius = float(input("Sláðu inn radíus\n--->"))
+                if radius < 0:
+                    raise Exception("Bless")
+
+                flatarmal = flatramal_hrings(radius)
+                print("\nflatarmal =",round(flatarmal,2))
+            
+            except ValueError:
+                print("vinsamlegast sláðu inn tölu")
+
+            except Exception as error:
+                print(error)
+                break
 
     elif valmynd == "6":#Liður 6
         pass

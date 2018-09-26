@@ -1,8 +1,9 @@
 from math import sqrt as rot
+from math import pi
 
 def langhlid(a, b):
-    a_i_odru = int(a)**2
-    b_i_odru = int(b)**2
+    a_i_odru = int(a) ** 2
+    b_i_odru = int(b) ** 2
 
     a_plus_b = a_i_odru + b_i_odru
 
@@ -27,3 +28,8 @@ def er_slett_tala(tala1):
         return True
     else:
         return False
+
+def flatramal_hrings(radius):
+    flatarmal = pi * radius ** 2
+
+    return flatarmal
