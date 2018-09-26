@@ -3,8 +3,8 @@ Skilaverkefni 2
 Hrólfur Gylfason
 26/9/2018
 '''
-import sys
-from skil2_foll import *
+import sys #Þetta er til þess að það sé hægt að nota try/except
+from skil2_foll import * #Þetta er skjalið sem inniheldur föllin og hérna er ég að sækja öll föllin úr því
 
 valmynd = ""
 
@@ -32,10 +32,10 @@ while valmynd != "7":
         print("Þetta forrit hjálpar við það að reikna langhlið á rétthyrndum þríhyrningi")
         print("Sláðu inn mínustölu til þess að hætta\n")
         while True:
-            try:
+            try:#Til þess að forritið crashi ekki þegar það er sett eitthvað annað en tala
                 print("----------")
                 a = float(input("a = "))
-                if a < 0:
+                if a < 0:#Til þess að þegar talan sem er sett inn er lægri en núll þá hættir forritið
                     raise Exception("Bless")
                 b = float(input("b = "))
                 if a < 0:
@@ -44,10 +44,10 @@ while valmynd != "7":
                 c = langhlid(a, b)
                 print("\nc =",round(c,3))
             
-            except ValueError:
+            except ValueError:#Þetta gerist þegar maður slær ekki inn tölu
                 print("vinsamlegast sláðu inn tölu")
 
-            except Exception as error:
+            except Exception as error:#Þetta gerist þegar maður er að fara út úr forritinu
                 print(error)
                 break
 
@@ -55,10 +55,10 @@ while valmynd != "7":
         print("Þetta forrit finnur út hvort að tala 2 sé margfeldi af tölu 1")
         print("Sláðu inn 0 í tölu 1 til þess að hætta\n")
         while True:
-            try:
+            try:#Til þess að forritið crashi ekki þegar það er sett eitthvað annað en tala
                 print("----------")
                 tala1 = int(input("Tala 1 = "))
-                if tala1 == 0:
+                if tala1 == 0:#Til þess að þegar talan sem er sett inn er núll þá hættir forritið
                     raise Exception("Bless")
                 tala2 = int(input("Tala 2 = "))
                 if tala2 == 0:
@@ -66,25 +66,25 @@ while valmynd != "7":
 
                 svar = margfeldi_af(tala1, tala2)
                 print()
-                if svar is True:
+                if svar is True:#Þetta gerist ef svar sem kom úr fallinu margfeldi_af er satt(True)
                     print(tala2,"er margfeldi af",tala1)
                 else:
                     print(tala2,"er ekki margfeldi af",tala1)
             
-            except ValueError:
+            except ValueError:#Þetta gerist þegar maður slær ekki inn heiltölu
                 print("vinsamlegast sláðu inn heiltölu")
 
-            except Exception as error:
+            except Exception as error:#Þetta gerist þegar maður er að fara út úr forritinu
                 print(error)
                 break
         
     elif valmynd == "3":#Liður 3
         while True:
             print("\n---------------")
-            try:
+            try:#Til þess að forritið crashi ekki þegar það er sett eitthvað annað en tala
                 staerd_kassa = int(input("Sláðu inn stærð kassa\n--->"))
                 break
-            except ValueError:
+            except ValueError:#Þetta gerist þegar maður slær ekki inn heiltölu
                 print("Vinsamlegast sláðu inn heiltölu")
         ferningur_ur_stjornum(staerd_kassa)
 
@@ -93,15 +93,15 @@ while valmynd != "7":
         print("Sláðu inn 0 til þess að hætta\n")
         while True:
             print("\n---------------")
-            try:
+            try:#Til þess að forritið crashi ekki þegar það er sett eitthvað annað en tala
                 tala = int(input("Sláðu inn heiltölu\n--->"))
                 break
-            except ValueError:
+            except ValueError:#Þetta gerist þegar maður slær ekki inn heiltölu
                 print("Vinsamlegast sláðu inn heiltölu")
 
         svar = er_slett_tala(tala)
 
-        print()
+        print()#Þetta gerist ef svar sem kom úr fallinu er_slett_tala er satt(True)
         if svar is True:
             print(tala,"er slétt tala")
         else:
@@ -111,29 +111,29 @@ while valmynd != "7":
         print("Þetta forrit hjálpar við það að reikna flatarmál á hring")
         print("Sláðu inn mínustölu til þess að hætta\n")
         while True:
-            try:
+            try:#Til þess að forritið crashi ekki þegar það er sett eitthvað annað en tala
                 print("----------")
                 radius = float(input("Sláðu inn radíus\n--->"))
-                if radius < 0:
+                if radius < 0:#Til þess að þegar talan sem er sett inn er lægri en núll þá hættir forritið
                     raise Exception("Bless")
 
                 flatarmal = flatramal_hrings(radius)
                 print("\nflatarmal =",round(flatarmal,2))
             
-            except ValueError:
+            except ValueError:#Þetta gerist þegar maður slær ekki inn tölu
                 print("vinsamlegast sláðu inn tölu")
 
-            except Exception as error:
+            except Exception as error:#Þetta gerist þegar maður er að fara út úr forritinu
                 print(error)
                 break
 
     elif valmynd == "6":#Liður 6
         while True:
             print("\n---------------")
-            try:
+            try:#Til þess að forritið crashi ekki þegar það er sett eitthvað annað en tala
                 sekundur = float(input("Sláðu inn sekúndur\n--->"))
                 break
-            except ValueError:
+            except ValueError:#Þetta gerist þegar maður slær ekki inn tölu
                 print("Vinsamlegast sláðu inn tölu")
 
         bank_bank(sekundur)
