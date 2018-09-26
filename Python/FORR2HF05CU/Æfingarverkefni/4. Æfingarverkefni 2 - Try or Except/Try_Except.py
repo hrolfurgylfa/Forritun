@@ -121,7 +121,28 @@ while valmynd != "5":
             print(error)
 
     elif valmynd == "4":#Liður 4
-        pass
+        skra = open("skra.txt","r")
+        listi = []
+        tolu_listi = []
+
+        for line in skra:
+            lina = line.split(", ")
+            listi.append(lina)
+        
+        print(listi)
+
+        for hlutur in listi:
+            print("LOOP")
+            try:
+                tolu_listi.append(int(hlutur))
+            
+            except:
+                print("Óþekkt villa kom upp: ")
+        
+        print(tolu_listi)
+            
+        print("Summa talna:", sum(tolu_listi))
+        print("Meðaltal talna:", sum(tolu_listi)/len(tolu_listi))
 
     elif valmynd == "5":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 5" þegar maður er að hætta í forritinu
         pass
