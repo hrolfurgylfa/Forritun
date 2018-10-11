@@ -4,9 +4,9 @@
     VENDOR, PRODUCT, CUSTOMER, INVOICE, LINE
     and loads the default data rows                 */
 
-
-create database 2109013290_sale;			
-use 2109013290_sale;
+DROP DATABASE IF EXISTS 2109013290_saleTest;
+CREATE DATABASE 2109013290_saleTest;			
+USE 2109013290_saleTest;
 
 CREATE TABLE VENDOR ( 
 V_CODE 		INTEGER, 
@@ -149,3 +149,6 @@ INSERT INTO LINE VALUES(1008,3,'23109-HB',1,   9.95,   9.95);
 
 COMMIT;
 
+DELETE FROM 2109013290_saletest.LINE;
+
+DROP TABLE LINE;
