@@ -34,8 +34,7 @@ def nyrLagerhlutur(lagerhlutir, numer, tegund, fjoldi, verd):# bætir inn nýju 
 def eydaLagerhlut(lagerhlutir, numer):# eyðir tilviki(object,hluti)
     lagerhlutir2 = []
     for hlutur in lagerhlutir:
-        numer2 = hlutur.numer
-        if numer2 != numer:
+        if hlutur.numer != numer:
             lagerhlutir2.append(hlutur)
 
     return lagerhlutir2
@@ -60,14 +59,28 @@ def prentaLager(lagerhlutir):# skrifar á skjáinn allt sem er í skránni(innha
         print()
 
 def heildarverdHlutar(lagerhlutir):# skrifar á skjáinn heildarverð hverrar tegundar fyrir sig
-    print("Verð hluta:")
+    print("Heildarverð hluta:")
     for hlutur in lagerhlutir:
-        print(str(hlutur.tegund)+": "+str(hlutur.verd))
+        hoppa_yfir = False
+        try:
+            hlutur_fjoldi = int(hlutur.fjoldi)
+            hlutur_verd = int(hlutur.verd)
+        except:
+            print("Það verða að vera tölur í dálk þrjú og fjögur í lagerhlutir.csv")
+            hoppa_yfir = True
+
+        if hoppa_yfir is not True:
+            hlutur_HVH = hlutur_fjoldi * hlutur_verd
+            print(str(hlutur.tegund)+": "+str(hlutur_HVH))
 
 def heildarverdLager(lagerhlutir):# skrifar á skjáinn heildarverð allra hluta á lager
     allirHlutir = 0
     for hlutur in lagerhlutir:
-        hlutur.verd = int(hlutur.verd)
+        try:
+            hlutur.verd = int(hlutur.verd)
+        except ValueError:
+            print("Það verða að vera tölur í lagerhlutir.csv, fjórða dálk sem er verð")
+        
         allirHlutir += hlutur.verd
     
     print("Verð allra hluta á lager:",allirHlutir)
@@ -76,15 +89,17 @@ def vorurKeyptar(lagerhlutir, numer, magn_hluta_keyptir):#Þetta fall tekur inn 
     numer = str(numer)
     try:
         magn_hluta_keyptir = int(magn_hluta_keyptir)
-    except TypeError:
-        print("Magn hluta keyptir er ekki heiltala")
+    except ValueError:
+        print('"Magn hluta keyptir" er ekki heiltala\nABORTING')
+        return (lagerhlutir, False)
 
     for hlutur in lagerhlutir:
         if hlutur.numer == numer:
             try:
                 hlutur.fjoldi = int(hlutur.fjoldi)
-            except TypeError:
-                print("hlutur.fjoldi er ekki heiltala")
+            except ValueError:
+                print('í lagerhlutir.csv verður þriðji dálkur að vera heiltala\nABORTING')
+                break
 
             if hlutur.fjoldi >= magn_hluta_keyptir:
                 hlutur.fjoldi -= magn_hluta_keyptir
@@ -92,6 +107,7 @@ def vorurKeyptar(lagerhlutir, numer, magn_hluta_keyptir):#Þetta fall tekur inn 
                 haegt_ad_kaupa = hlutur.fjoldi
                 hlutur.fjoldi = 0
                 return (lagerhlutir, haegt_ad_kaupa)
+
     return (lagerhlutir, False)
 
 
@@ -111,7 +127,7 @@ while valmynd != "10":
     print("Ýttu á 4 til þess að eyða vöru á lager")
     print("Ýttu á 5 til þess að breyta vöru á lager")
     print("Ýttu á 6 til þess að prenta allar vörur á lager")
-    print("Ýttu á 7 til þess að prenta verð allra vara á lager")
+    print("Ýttu á 7 til þess að prenta heildarverð allra vara á lager")
     print("Ýttu á 8 til þess að prenta verð allra vara á lager lagt saman")
     print("Ýttu á 9 til þess að kaupa vörur")
     print("Ýttu á 10 til þess að hætta")
