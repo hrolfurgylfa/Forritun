@@ -21,23 +21,23 @@ INSERT INTO
 	EMPLOYEE(EMP_NUM, EMP_LNAME, EMP_FNAME, EMP_INITIAL, EMP_HIREDAT, JOB_CODE, EMP_YEAR)
 VALUES
 	(101, "News", "John", "G", "2000-11-08", 502, 4),
-    (102, "Senior", "David", "H", "1989-07-12", 502, 15),
-    (103, "Arbough", "June", "E", "1996-12-01", 502, 8),
-    (104, "Ramoras", "Anne", "K", "1987-11-15", 502, 17),
+    (102, "Senior", "David", "H", "1989-07-12", 501, 15),
+    (103, "Arbough", "June", "E", "1996-12-01", 503, 8),
+    (104, "Ramoras", "Anne", "K", "1987-11-15", 501, 17),
     (105, "Johnson", "Alice", "K", "1993-02-01", 502, 12),
-    (106, "Smithfield", "William", "", "2004-06-22", 502, 0),
-    (107, "Alonzo", "Maria", "D", "1993-10-10", 502, 11),
-    (108, "Washington", "Ralph", "B", "1991-08-22", 502, 13),
-    (109, "Smith", "Larry", "W", "1997-07-18", 502, 7),
-    (110, "Olenko", "Gerald", "A", "1995-12-11", 502, 9),
-    (111, "Wabash", "Geoff", "B", "1991-04-04", 502, 14),
-    (112, "Smithson", "Darlene", "M", "1994-10-23", 502, 10),
-    (113, "Joenbrood", "Dalbert", "K", "1996-11-15", 502, 8),
-    (114, "Jones", "Annelise", "", "1993-08-20", 502, 11),
-    (115, "Bawangi", "Travis", "B", "1992-01-25", 502, 13),
-    (116, "Pratt", "Gerald", "L", "1997-03-05", 502, 8),
-    (117, "Williamson", "Angie", "H", "1996-06-19", 502, 8),
-    (118, "Frommer", "James", "J", "2005-01-04", 502, 0);
+    (106, "Smithfield", "William", "", "2004-06-22", 500, 0),
+    (107, "Alonzo", "Maria", "D", "1993-10-10", 500, 11),
+    (108, "Washington", "Ralph", "B", "1991-08-22", 501, 13),
+    (109, "Smith", "Larry", "W", "1997-07-18", 501, 7),
+    (110, "Olenko", "Gerald", "A", "1995-12-11", 505, 9),
+    (111, "Wabash", "Geoff", "B", "1991-04-04", 506, 14),
+    (112, "Smithson", "Darlene", "M", "1994-10-23", 507, 10),
+    (113, "Joenbrood", "Dalbert", "K", "1996-11-15", 508, 8),
+    (114, "Jones", "Annelise", "", "1993-08-20", 508, 11),
+    (115, "Bawangi", "Travis", "B", "1992-01-25", 501, 13),
+    (116, "Pratt", "Gerald", "L", "1997-03-05", 510, 8),
+    (117, "Williamson", "Angie", "H", "1996-06-19", 509, 8),
+    (118, "Frommer", "James", "J", "2005-01-04", 510, 0);
 
 #PROJECT
 INSERT INTO
