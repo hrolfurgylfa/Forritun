@@ -3,7 +3,11 @@ Skilaverkefni 4 klasatré
 Hrólfur Gylfason
 24/10/2018
 '''
+from Skilaverkefni_4_klasar import *
+
+
 valmynd = ""
+nemar = []
 
 while valmynd != "14":
 
@@ -33,10 +37,32 @@ while valmynd != "14":
     print()#Þetta er til þess að gera enter
 
     if valmynd == "1":#Liður 1
-        pass
+        while True:
+            try:
+                magn = int(input("Sláðu inn hversu marga framhaldsskóla nema vilt þú búa til\n--->"))
+                break
+            except ValueError:
+                print("Vinsamlegast sláðu inn heiltölu\n")
+
+        for skipti in range(magn):
+            kt = input("Sláðu inn kennitölu ---> ")
+            nafn = input("Sláðu inn nafn ---> ")
+            kyn  = input("Sláðu inn kyn ---> ")
+            heimilisfang = input("Sláðu inn heimilisfang ---> ")
+            simanumer = input("Sláðu inn símanúmer ---> ")
+            tolvupostur = input("Sláðu inn tölvupóstfang ---> ")
+
+            s1 = Framhaldsskolanemi(kt, nafn, kyn, heimilisfang, simanumer, tolvupostur, 'Eðlisfræði')
+            nemar.append(s1)
 
     elif valmynd == "2":#Liður 2
-        pass
+        tel = 0
+        lengd_nemar = len(nemar)
+        for nemi in nemar:
+            print(nemi)
+            tel += 1
+            if tel != lengd_nemar:
+                print("--------------------")
         
     elif valmynd == "3":#Liður 3
         pass
@@ -76,13 +102,3 @@ while valmynd != "14":
 
     else:
         print("ERROR\tSláðu inn tölu á milli 1 og 14")
-
-
-
-
-
-
-Nemi
-Grunnskólanemi
-Framhaldsskólanemi
-Háskólanemi
