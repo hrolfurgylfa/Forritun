@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS 0107772679_northwind;
+DROP DATABASE IF EXISTS 2109013290_northwind;
 
-CREATE DATABASE IF NOT EXISTS 0107772679_northwind;
+CREATE DATABASE IF NOT EXISTS 2109013290_northwind;
 
-USE 0107772679_northwind;
+USE 2109013290_northwind;
 
 -- ---------------------------------------------------------------------- --
 -- Tables                                                                 --
