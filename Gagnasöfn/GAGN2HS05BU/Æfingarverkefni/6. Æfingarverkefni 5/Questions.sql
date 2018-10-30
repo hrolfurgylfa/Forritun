@@ -1,4 +1,5 @@
 SELECT * FROM Products;
+USE 2109013290_northwind;
 
 #1
 SELECT ProductName, QuantityPerUnit FROM Products;
@@ -23,9 +24,12 @@ SELECT ProductID, ProductName, UnitPrice FROM Products WHERE UnitPrice < 25 AND 
 SELECT ProductID, ProductName, UnitPrice FROM Products WHERE UnitPrice > (SELECT SUM(UnitPrice)/COUNT(UnitPrice) FROM Products);
 
 #8
-
+SELECT ProductID, ProductName, UnitPrice FROM Products ORDER BY UnitPrice DESC LIMIT 10;
 
 #9
-SELECT COUNT(SELECT ProductID, ProductName FROM Products WHERE Discontinued = 0), 
-		COUNT(SELECT ProductID, ProductName FROM Products WHERE Discontinued = 1)
-FROM Products;
+SELECT Discontinued, COUNT(Discontinued)
+FROM Products
+GROUP BY Discontinued;
+
+#10
+SELECT ProductName, UnitsOnOrder, UnitsInStock FROM Products WHERE UnitsOnOrder > UnitsInStock;
