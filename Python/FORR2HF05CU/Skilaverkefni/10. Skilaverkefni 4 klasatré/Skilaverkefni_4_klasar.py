@@ -10,6 +10,32 @@ class Nemi():
     def __str__(self):
         return "Kennitala: "+str(self.kt)+"\nNafn: "+str(self.nafn)+"\nKyn: "+str(self.kyn)+"\nHeimilisfang: "+str(self.heimilisfang)+"\nSímanúmer: "+str(self.simanumer)+"\nNetfang: "+str(self.netfang)
 
+    def netfang_getter(self):
+        netfang = self.netfang
+
+        rett_netfang = False
+        for stafur in netfang:
+            if stafur == "@":
+                if stafur == ".":
+                    rett_netfang = True
+        
+        if rett_netfang is not True:
+            return ""
+
+        return netfang
+
+    def netfang_setter(self, netfang):
+        rett_netfang = False
+        for stafur in netfang:
+            if stafur == "@":
+                if stafur == ".":
+                    rett_netfang = True
+        
+        if rett_netfang is not True:
+            return False
+
+        self.netfang = netfang
+
 class Grunnskolanemi(Nemi):
     def __init__(self, kt, nafn, kyn, heimilisfang, simanumer, netfang, forradamadur, nafnSkola):
         Nemi.__init__(self, kt, nafn, kyn, heimilisfang, simanumer, netfang)
