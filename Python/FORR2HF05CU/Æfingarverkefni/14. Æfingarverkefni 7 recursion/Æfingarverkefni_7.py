@@ -10,6 +10,15 @@ def finnaHeildarsummu(tala, summa = 0):
     else:
         return summa
 
+def finnaHeildarsummuOdda(tala, summa = 0):
+    if tala > 0 and tala % 2 == 1:
+        summa += tala
+        return finnaHeildarsummuOdda(tala-1, summa)
+    elif tala > 0 and tala % 2 == 0:
+        return finnaHeildarsummuOdda(tala-1, summa)
+    else:
+        return summa
+
 valmynd = ""
 
 while valmynd != "3":
@@ -32,7 +41,9 @@ while valmynd != "3":
         print("Úr return:",finnaHeildarsummu(7))
 
     elif valmynd == "2":#Liður 2
-        pass
+        tala = 24
+        heildarsumma = finnaHeildarsummuOdda(tala)
+        print("Heildarsumma oddatalna niður og með "+str(tala)+":",heildarsumma)
 
     elif valmynd == "3":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 3" þegar maður er að hætta í forritinu
         pass
