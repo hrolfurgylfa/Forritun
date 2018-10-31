@@ -3,9 +3,28 @@
 Hrólfur Gylfason
 31/10/2018
 '''
+def faHeiltolu(texti):
+    try:
+        heiltala = int(input(texti))
+    except ValueError:
+        print("Sláðu inn heiltölu")
+    return heiltala
+
+def teljarinn():
+    for tel in range(1,6):
+        texti = "Nú hefur verið náð í mig í "+str(tel)+". sinn."
+        print(texti)
+        yield texti
+
+def listaPrentun(listi):
+    for i in listi:
+        print(i)
+        yield i
+
+
 valmynd = ""
 
-while valmynd != "14":
+while valmynd != "4":
 
     for tel in range(50):#Þessi for lúppa gerir línu sem er auðvelt að stjórna stærðinni á
         print("-",end="")
@@ -14,17 +33,6 @@ while valmynd != "14":
     print("Ýttu á 1 til þess að fá dæmi 1")
     print("Ýttu á 2 til þess að fá dæmi 2")
     print("Ýttu á 3 til þess að fá dæmi 3")
-    print("Ýttu á 4 til þess að fá dæmi 4")
-    print("Ýttu á 5 til þess að fá dæmi 5")
-    print("Ýttu á 6 til þess að fá dæmi 6")
-    print("Ýttu á 7 til þess að fá dæmi 7")
-    print("Ýttu á 8 til þess að fá dæmi 8")
-    print("Ýttu á 9 til þess að fá dæmi 9")
-    print("Ýttu á 10 til þess að fá dæmi 10")
-    print("Ýttu á 11 til þess að fá dæmi 11")
-    print("Ýttu á 12 til þess að fá dæmi 12")
-    print("Ýttu á 13 til þess að fá dæmi 13")
-    print("Ýttu á 14 til þess að hætta")
     valmynd = input("-------------------->>> ")#Hérna velur notandinn hvaða lið hann ætlar að fara í
 
     print()#Þetta er til þess að gera enter
@@ -33,46 +41,23 @@ while valmynd != "14":
     print()#Þetta er til þess að gera enter
 
     if valmynd == "1":#Liður 1
-        pass
+        a = teljarinn()
+        hversu_oft = faHeiltolu("Hversu oft viltu keyra fallið teljarinn(max 5)\n--->")
+        for tel in range(hversu_oft):
+            next(a)
 
     elif valmynd == "2":#Liður 2
-        pass
+        listi = ["Banani","Epli","Appelsína","Mandarína","Kiwi"]
+        a = listaPrentun(listi)
+        for tel in range(4):
+            next(a)
         
     elif valmynd == "3":#Liður 3
-        pass
+        listi = [x for x in range(1,1001) if x % 2 == 1 and x % 5 == 0]
+        print(listi)
 
-    elif valmynd == "4":#Liður 4
-        pass
-        
-    elif valmynd == "5":#Liður 5
-        pass
-
-    elif valmynd == "6":#Liður 6
-        pass
-
-    elif valmynd == "7":#Liður 7
-        pass
-
-    elif valmynd == "8":#Liður 8
-        pass
-
-    elif valmynd == "9":#Liður 9
-        pass
-        
-    elif valmynd == "10":#Liður 10
-        pass
-
-    elif valmynd == "11":#Liður 11
-        pass
-        
-    elif valmynd == "12":#Liður 12
-        pass
-
-    elif valmynd == "13":#Liður 13
-        pass
-
-    elif valmynd == "14":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 14" þegar maður er að hætta í forritinu
+    elif valmynd == "4":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 4" þegar maður er að hætta í forritinu
         pass
 
     else:
-        print("ERROR\tSláðu inn tölu á milli 1 og 14")
+        print("ERROR\tSláðu inn tölu á milli 1 og 4")
