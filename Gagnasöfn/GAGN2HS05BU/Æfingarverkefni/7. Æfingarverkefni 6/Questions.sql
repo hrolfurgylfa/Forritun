@@ -43,18 +43,24 @@ WHERE CITY = "London";
 
 #4
 SELECT
-    employees.EMPLOYEE_ID,
-    employees.LAST_NAME,
-    managers.EMPLOYEE_ID,
-    managers.LAST_NAME
-FROM employees
-	INNER JOIN employees managers 
-	ON managers.MANAGER_ID = employees.MANAGER_ID;
+    e.EMPLOYEE_ID,
+    e.LAST_NAME,
+    m.EMPLOYEE_ID,
+    m.LAST_NAME
+FROM employees e
+	JOIN employees m
+	ON e.MANAGER_ID = m.EMPLOYEE_ID;
     
 #5
-SELECT * FROM employees WHERE employees.LAST_NAME = "Jones";
+SELECT 
+	e.FIRST_NAME,
+    e.LAST_NAME,
+    e.HIRE_DATE
+FROM employees e
+	JOIN employees j
+    ON e.HIRE_DATE > j.HIRE_DATE WHERE j.LAST_NAME = "Jones";
 
 #6
-SELECT departments.DEPARTMENT_ID, departments.DEPARTMENT_NAME, employees.*
+SELECT employees.EMPLOYEE_ID, employees.LAST_NAME, departments.DEPARTMENT_ID, departments.DEPARTMENT_NAME
 FROM employees
 	JOIN departments ON employees.DEPARTMENT_ID = departments.DEPARTMENT_ID;
