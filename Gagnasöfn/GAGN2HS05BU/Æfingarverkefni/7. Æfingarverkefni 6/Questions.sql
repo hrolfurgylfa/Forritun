@@ -42,3 +42,19 @@ FROM employees
 WHERE CITY = "London";
 
 #4
+SELECT
+    employees.EMPLOYEE_ID,
+    employees.LAST_NAME,
+    managers.EMPLOYEE_ID,
+    managers.LAST_NAME
+FROM employees
+	INNER JOIN employees managers 
+	ON managers.MANAGER_ID = employees.MANAGER_ID;
+    
+#5
+SELECT * FROM employees WHERE employees.LAST_NAME = "Jones";
+
+#6
+SELECT departments.DEPARTMENT_ID, departments.DEPARTMENT_NAME, employees.*
+FROM employees
+	JOIN departments ON employees.DEPARTMENT_ID = departments.DEPARTMENT_ID;
