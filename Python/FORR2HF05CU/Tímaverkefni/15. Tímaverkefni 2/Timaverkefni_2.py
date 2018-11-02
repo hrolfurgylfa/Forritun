@@ -30,6 +30,29 @@ class Tolur():
     def lamban(self, listi):
         return list(filter(lambda x: x>50 and x<90 and x%2==0, listi))
 
+class Geimvera():
+    def __init__(self):
+        self.frumnafn = "Geimvera"
+    
+    def HverErEg(self):
+        return "Ég er geimvera"
+class Venus(Geimvera):
+    def __init__(self, litur, tala):
+        self.nafn = "Venus"
+        self.litur = litur
+        self.tala = tala
+    
+    def HverErEg(self):
+        return "Ég er geimvera frá "+str(self.nafn)+", talan er "+str(self.tala)+" og liturinn er "+str(self.litur)
+class Mars(Geimvera):
+    def __init__(self, litur, tala):
+        self.nafn = "Mars"
+        self.litur = litur
+        self.tala = tala
+    
+    def HverErEg(self):
+        return "Ég er geimvera frá "+str(self.nafn)+", talan er "+str(self.tala)+" og liturinn er "+str(self.litur)
+
 def tolur(*args):
     return list(filter(lambda x: x % 5 == 0, args))
 
@@ -65,14 +88,23 @@ while valmynd != "5":
         
     elif valmynd == "3":#Liður 3
         tilvik1 = Tolur("Banani", "Epli", "Appelsína")
-        
+
         print(tilvik1.gera_lista(2, 18, 3))
         print(tilvik1.gera_dict([1,5,9]))
         print(tilvik1.summa(1,4,6,8,12,15,18,24,29,32,46,48))
         print(tilvik1.lamban([18,24,29,32,46,48, 53, 58, 62, 77, 82, 96, 104, 109, 128]))
     
     elif valmynd == "4":#Liður 4
-        pass
+        hlutur1 = Geimvera()
+        hlutur2 = Venus("gulur", "22")
+        hlutur3 = Mars("rauður", "136")
+
+        print(hlutur1.frumnafn)
+        print(hlutur1.HverErEg())
+        print(hlutur2.nafn)
+        print(hlutur2.HverErEg())
+        print(hlutur3.nafn)
+        print(hlutur3.HverErEg())
 
     elif valmynd == "5":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 5" þegar maður er að hætta í forritinu
         pass
