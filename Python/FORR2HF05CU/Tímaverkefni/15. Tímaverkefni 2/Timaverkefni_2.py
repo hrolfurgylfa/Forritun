@@ -5,12 +5,37 @@ Hrólfur Gylfason
 '''
 import random
 
+class Tolur():
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+    
+    def gera_lista(self, byrja, enda, haekkun):
+        return [x for x in range(byrja, enda, haekkun)]
+        
+    def gera_dict(self, listi):
+        dict1 = {}
+        tel = 0
+
+        for hlutur in [self.a, self.b, self.c]:
+            dict1[hlutur] = listi[tel]
+            tel += 1
+
+        return dict1
+    
+    def summa(self, *args):
+        return sum(args)
+    
+    def lamban(self, listi):
+        return list(filter(lambda x: x>50 and x<90 and x%2==0, listi))
+
 def tolur(*args):
     return list(filter(lambda x: x % 5 == 0, args))
 
 valmynd = ""
 
-while valmynd != "4":
+while valmynd != "5":
 
     for tel in range(50):#Þessi for lúppa gerir línu sem er auðvelt að stjórna stærðinni á
         print("-",end="")
@@ -19,7 +44,8 @@ while valmynd != "4":
     print("Ýttu á 1 til þess að fá dæmi 1")
     print("Ýttu á 2 til þess að fá dæmi 2")
     print("Ýttu á 3 til þess að fá dæmi 3")
-    print("Ýttu á 4 til þess að hætta")
+    print("Ýttu á 4 til þess að fá dæmi 4")
+    print("Ýttu á 5 til þess að hætta")
     valmynd = input("-------------------->>> ")#Hérna velur notandinn hvaða lið hann ætlar að fara í
 
     print()#Þetta er til þess að gera enter
@@ -38,10 +64,18 @@ while valmynd != "4":
         print(listi3)
         
     elif valmynd == "3":#Liður 3
+        tilvik1 = Tolur("Banani", "Epli", "Appelsína")
+        
+        print(tilvik1.gera_lista(2, 18, 3))
+        print(tilvik1.gera_dict([1,5,9]))
+        print(tilvik1.summa(1,4,6,8,12,15,18,24,29,32,46,48))
+        print(tilvik1.lamban([18,24,29,32,46,48, 53, 58, 62, 77, 82, 96, 104, 109, 128]))
+    
+    elif valmynd == "4":#Liður 4
         pass
 
-    elif valmynd == "4":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 4" þegar maður er að hætta í forritinu
+    elif valmynd == "5":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 5" þegar maður er að hætta í forritinu
         pass
 
     else:
-        print("ERROR\tSláðu inn tölu á milli 1 og 4")
+        print("ERROR\tSláðu inn tölu á milli 1 og 5")
