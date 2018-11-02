@@ -3,6 +3,11 @@ Tímaverkefni 2
 Hrólfur Gylfason
 2/11/2018
 '''
+import random
+
+def tolur(*args):
+    return list(filter(lambda x: x % 5 == 0, args))
+
 valmynd = ""
 
 while valmynd != "4":
@@ -23,10 +28,14 @@ while valmynd != "4":
     print()#Þetta er til þess að gera enter
 
     if valmynd == "1":#Liður 1
-        pass
+        print(tolur(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20))
 
     elif valmynd == "2":#Liður 2
-        pass
+        listi1 = ["Konni", "Sigga", "Snorri"]
+        listi2 = ["fótbolta", "handbolta", "blaki"]
+
+        listi3 = [nafn+" er í "+random.choice(listi2) for nafn in listi1]
+        print(listi3)
         
     elif valmynd == "3":#Liður 3
         pass
