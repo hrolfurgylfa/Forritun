@@ -7,7 +7,11 @@ from Skilaverkefni_4_klasar import *
 
 
 valmynd = ""
-nemar = []
+
+tilvik1 = Nemi(2109013290, "Hrólfur", "kk", "Holtagerði 7", 6155549, "hrolfurgylfa@protonmail.com")
+tilvik2 = Grunnskolanemi(2109013290, "Hrólfur", "kk", "Holtagerði 7", 6155549, "hrolfurgylfa@protonmail.com", "Gylfi", "Kársnesskóli")
+tilvik3 = Framhaldsskolanemi(2109013290, "Hrólfur", "kk", "Holtagerði 7", 6155549, "hrolfurgylfa@protonmail.com", "Forritun")
+tilvik4 = Haskolanemi(2109013290, "Hrólfur", "kk", "Holtagerði 7", 6155549, "hrolfurgylfa@protonmail.com", 3, 1450000)
 
 while valmynd != "14":
 
@@ -15,7 +19,7 @@ while valmynd != "14":
         print("-",end="")
     print("\n")#Þetta er til þess að gera tvö enter
 
-    print("Ýttu á 1 til þess að fá dæmi 1")
+    print("Ýttu á 1 til þess að fá __str__")
     print("Ýttu á 2 til þess að fá dæmi 2")
     print("Ýttu á 3 til þess að fá dæmi 3")
     print("Ýttu á 4 til þess að fá dæmi 4")
@@ -37,7 +41,20 @@ while valmynd != "14":
     print()#Þetta er til þess að gera enter
 
     if valmynd == "1":#Liður 1
-        pass
+        print("Nemi:")
+        print(tilvik1)
+        print()
+
+        print("Grunnskólanemi:")
+        print(tilvik2)
+        print()
+
+        print("Framhaldsskóli:")
+        print(tilvik3)
+        print()
+
+        print("Háskóli:")
+        print(tilvik4)
 
     elif valmynd == "2":#Liður 2
         pass

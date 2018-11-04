@@ -52,7 +52,7 @@ class Framhaldsskolanemi(Nemi):
         self.busetustyrkur = busetustyrkur
 
     def __str__(self):
-        if busetustyrkur is not False:
+        if self.busetustyrkur is not False:
             return "Kennitala: "+str(self.kt)+"\nNafn: "+str(self.nafn)+"\nKyn: "+str(self.kyn)+"\nHeimilisfang: "+str(self.heimilisfang)+"\nSímanúmer: "+str(self.simanumer)+"\nNetfang: "+str(self.netfang)+"\nbrautarheiti: "+str(self.brautarheiti)+"\nbusetustyrkur: "+str(self.busetustyrkur)+"kr."
         else:
             return "Kennitala: "+str(self.kt)+"\nNafn: "+str(self.nafn)+"\nKyn: "+str(self.kyn)+"\nHeimilisfang: "+str(self.heimilisfang)+"\nSímanúmer: "+str(self.simanumer)+"\nNetfang: "+str(self.netfang)+"\nbrautarheiti: "+str(self.brautarheiti)+"\nbusetustyrkur: Nei"
@@ -64,7 +64,7 @@ class Haskolanemi(Nemi):
         self.namslan = namslan
 
     def __str__(self):
-        if namslan is not False:
+        if self.namslan is not False:
             return "Kennitala: "+str(self.kt)+"\nNafn: "+str(self.nafn)+"\nKyn: "+str(self.kyn)+"\nHeimilisfang: "+str(self.heimilisfang)+"\nSímanúmer: "+str(self.simanumer)+"\nNetfang: "+str(self.netfang)+"\nstig náms: "+str(self.stigNams)+"\nnámslán: "+str(self.namslan)+"kr."
         else:
             return "Kennitala: "+str(self.kt)+"\nNafn: "+str(self.nafn)+"\nKyn: "+str(self.kyn)+"\nHeimilisfang: "+str(self.heimilisfang)+"\nSímanúmer: "+str(self.simanumer)+"\nNetfang: "+str(self.netfang)+"\nstig náms: "+str(self.stigNams)+"\nnámslán: Nei"
