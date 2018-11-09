@@ -93,7 +93,11 @@ while valmynd != "9":
                 print("----------------------------------------")
 
     elif valmynd == "2":#Liður 2
-        pass
+        random_tolur = randomTolur(100, 200, 600)
+        nyr_listi = list(filter(lambda x: if x % 2 == 0, random_tolur))
+
+        print(random_tolur)
+        print(nyr_listi)
         
     elif valmynd == "3":#Liður 3
         pass
