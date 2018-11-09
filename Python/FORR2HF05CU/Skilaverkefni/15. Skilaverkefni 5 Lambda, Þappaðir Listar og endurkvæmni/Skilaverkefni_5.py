@@ -3,9 +3,48 @@ Skilaverkefni 5 - Lambda, þappaðir listar og endurkvæmni
 Hrólfur Gylfason
 9/11/2018
 '''
+import random
+
+def faHeiltolu(magn, texti):
+    if magn < 1:
+        return []
+    else:
+        listi = []
+        for tel in range(magn):
+            while True:
+                try:
+                    tala = int(input(texti))
+                    listi.append(tala)
+                    break
+                except ValueError:
+                    print("Vinsamlegast sláðu inn heiltölu")
+        return listi
+
+#Liður 1
+def randomTolur(tala, byrja,enda):
+    listi = []
+    for tel in range(tala):
+        random_tala = random.randint(byrja, enda)
+        listi.append(random_tala)
+    return listi
+def finnaSummu(talaNot,listi):
+    summa = 0
+    for tala in listi:
+        if tala % talaNot == 0:
+            summa += tala
+    return summa
+def hverVann(summaNot, summaTol):
+    if summaNot > summaTol:
+        return "Þú vannst tölvuna!!! Til hamingju!!!"
+    if summaNot < summaTol:
+        return "Þú tapaðir \U0001F641"
+    else:
+        return "Jafntefli"
+
+
 valmynd = ""
 
-while valmynd != "14":
+while valmynd != "9":
 
     for tel in range(50):#Þessi for lúppa gerir línu sem er auðvelt að stjórna stærðinni á
         print("-",end="")
@@ -19,12 +58,7 @@ while valmynd != "14":
     print("Ýttu á 6 til þess að fá dæmi 6")
     print("Ýttu á 7 til þess að fá dæmi 7")
     print("Ýttu á 8 til þess að fá dæmi 8")
-    print("Ýttu á 9 til þess að fá dæmi 9")
-    print("Ýttu á 10 til þess að fá dæmi 10")
-    print("Ýttu á 11 til þess að fá dæmi 11")
-    print("Ýttu á 12 til þess að fá dæmi 12")
-    print("Ýttu á 13 til þess að fá dæmi 13")
-    print("Ýttu á 14 til þess að hætta")
+    print("Ýttu á 9 til þess að hætta")
     valmynd = input("-------------------->>> ")#Hérna velur notandinn hvaða lið hann ætlar að fara í
 
     print()#Þetta er til þess að gera enter
@@ -33,7 +67,30 @@ while valmynd != "14":
     print()#Þetta er til þess að gera enter
 
     if valmynd == "1":#Liður 1
-        pass
+        spilaAftur = "j"
+        while spilaAftur.lower() == "j":
+            random_tolur = randomTolur(20, 2, 100)
+
+            tala_notenda = 0
+            while tala_notenda > 10 or tala_notenda < 1:
+                tala_notenda = faHeiltolu(1, "Sláðu inn heiltölu á milli 1 og 10\n--->")
+                tala_notenda = tala_notenda[0]
+            tala_tolvu = random.randint(1,10)
+
+            summa_notanda = finnaSummu(tala_notenda, random_tolur)
+            summa_tolvu = finnaSummu(tala_tolvu, random_tolur)
+
+            print()
+            print(summa_notanda)
+            print(summa_tolvu)
+            print()
+
+            sigurtexti = hverVann(summa_notanda, summa_tolvu)
+            print(sigurtexti)
+
+            spilaAftur = input("\nViltu spila aftur? J/N\n--->")
+            if spilaAftur.lower() == "j":
+                print("----------------------------------------")
 
     elif valmynd == "2":#Liður 2
         pass
@@ -56,23 +113,8 @@ while valmynd != "14":
     elif valmynd == "8":#Liður 8
         pass
 
-    elif valmynd == "9":#Liður 9
-        pass
-        
-    elif valmynd == "10":#Liður 10
-        pass
-
-    elif valmynd == "11":#Liður 11
-        pass
-        
-    elif valmynd == "12":#Liður 12
-        pass
-
-    elif valmynd == "13":#Liður 13
-        pass
-
-    elif valmynd == "14":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 14" þegar maður er að hætta í forritinu
+    elif valmynd == "9":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 9" þegar maður er að hætta í forritinu
         pass
 
     else:
-        print("ERROR\tSláðu inn tölu á milli 1 og 14")
+        print("ERROR\tSláðu inn tölu á milli 1 og 9")
