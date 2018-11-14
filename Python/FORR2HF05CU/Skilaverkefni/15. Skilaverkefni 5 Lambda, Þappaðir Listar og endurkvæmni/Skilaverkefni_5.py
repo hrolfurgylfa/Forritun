@@ -53,6 +53,12 @@ def margfaldaListaSaman(listi, summa = 0, tel = 0):
         tel += 1
         return margfaldaListaSaman(listi, summa, tel)
 
+#Liður 8
+def skilaListaIBitum(listi):
+    for hlutur in listi:
+        print(hlutur)
+        yield hlutur
+
 
 valmynd = ""
 
@@ -143,7 +149,10 @@ while valmynd != "9":
         print(summa)
 
     elif valmynd == "8":#Liður 8
-        pass
+        random_tolur = randomTolur(100, 50, 150)
+        hlutur = skilaListaIBitum(random_tolur)
+        for tel in range(100):
+            next(hlutur)
 
     elif valmynd == "9":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 9" þegar maður er að hætta í forritinu
         pass
