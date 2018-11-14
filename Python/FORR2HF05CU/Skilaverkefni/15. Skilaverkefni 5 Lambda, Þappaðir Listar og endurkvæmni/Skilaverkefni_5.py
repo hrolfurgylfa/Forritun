@@ -111,7 +111,10 @@ while valmynd != "9":
         print(listi2)
         
     elif valmynd == "5":#Liður 5
-        pass
+        random_tolur = randomTolur(200, 1, 90)
+        undir_6 = [x**3 for x in random_tolur if x < 6]
+
+        print(undir_6)
 
     elif valmynd == "6":#Liður 6
         pass
