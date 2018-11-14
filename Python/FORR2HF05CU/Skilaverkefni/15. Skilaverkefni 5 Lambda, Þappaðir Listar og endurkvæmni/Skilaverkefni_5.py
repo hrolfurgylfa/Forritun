@@ -41,6 +41,18 @@ def hverVann(summaNot, summaTol):
     else:
         return "Jafntefli"
 
+#Liður 7
+def margfaldaListaSaman(listi, summa = 0, tel = 0):
+    if len(listi) == tel:
+        return summa
+    else:
+        if summa != 0:
+            summa *= listi[tel]
+        else:
+            summa += listi[tel]
+        tel += 1
+        return margfaldaListaSaman(listi, summa, tel)
+
 
 valmynd = ""
 
@@ -123,7 +135,12 @@ while valmynd != "9":
         print(endar_a_0)
 
     elif valmynd == "7":#Liður 7
-        pass
+        random_tolur = randomTolur(5, 1, 20)
+        print(random_tolur)
+        summa = margfaldaListaSaman(random_tolur)
+
+        print(random_tolur)
+        print(summa)
 
     elif valmynd == "8":#Liður 8
         pass
