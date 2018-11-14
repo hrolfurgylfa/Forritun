@@ -21,7 +21,7 @@ def faHeiltolu(magn, texti):
         return listi
 
 #Liður 1
-def randomTolur(tala, byrja,enda):
+def randomTolur(tala, byrja, enda):
     listi = []
     for tel in range(tala):
         random_tala = random.randint(byrja, enda)
@@ -99,10 +99,16 @@ while valmynd != "9":
         print(nyr_listi)
         
     elif valmynd == "3":#Liður 3
-        pass
+        random_tolur = randomTolur(20, 2, 100)
+        listi2 = list(filter(lambda x: x % 5 == 0 and x > 350, random_tolur))
+
+        print(listi2)
 
     elif valmynd == "4":#Liður 4
-        pass
+        random_tolur = randomTolur(200, 100, 900)
+        listi2 = list(map(lambda x: x - 2, random_tolur))
+
+        print(listi2)
         
     elif valmynd == "5":#Liður 5
         pass
