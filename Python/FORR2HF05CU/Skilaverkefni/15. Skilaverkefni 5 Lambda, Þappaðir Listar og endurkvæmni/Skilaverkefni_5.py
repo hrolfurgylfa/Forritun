@@ -5,7 +5,7 @@ Hrólfur Gylfason
 '''
 import random
 
-def faHeiltolu(magn, texti):
+def faHeiltolu(magn, texti):# Þetta fall tekur inn magn talna sem notandinn þarf að slá inn og textanum sem notandinn sér og fær notandann svo til þess að slá tölurnar inn og skilar þeim í lista
     if magn < 1:
         return []
     else:
@@ -21,19 +21,19 @@ def faHeiltolu(magn, texti):
         return listi
 
 #Liður 1
-def randomTolur(tala, byrja, enda):
+def randomTolur(tala, byrja, enda):# Þetta fall skilar lista með random tölur á bilinu byrja og enda og jafn mörgum og tala segir til um
     listi = []
     for tel in range(tala):
         random_tala = random.randint(byrja, enda)
         listi.append(random_tala)
     return listi
-def finnaSummu(talaNot,listi):
+def finnaSummu(talaNot,listi):# Þetta fall tékar hvort að talaNot gangi uppí tölurnar í listanum og bætir öllum tölunum sem talaNot gengur uppí við breytuna summa
     summa = 0
     for tala in listi:
         if tala % talaNot == 0:
             summa += tala
     return summa
-def hverVann(summaNot, summaTol):
+def hverVann(summaNot, summaTol):# Þetta tékkar hvor talan sé hærri og skilar texta sem passar við það
     if summaNot > summaTol:
         return "Þú vannst tölvuna!!! Til hamingju!!!"
     if summaNot < summaTol:
@@ -42,7 +42,7 @@ def hverVann(summaNot, summaTol):
         return "Jafntefli"
 
 #Liður 7
-def margfaldaListaSaman(listi, summa = 0, tel = 0):
+def margfaldaListaSaman(listi, summa = 0, tel = 0):# Þetta fall keyrir þangað til len() af listanum sem kom inn í byrjun er jafnt tel og þá eru öll stökin í listanum búin að fara í gegn um fallið og vera margfölduð með summa
     if len(listi) == tel:
         return summa
     else:
@@ -54,7 +54,7 @@ def margfaldaListaSaman(listi, summa = 0, tel = 0):
         return margfaldaListaSaman(listi, summa, tel)
 
 #Liður 8
-def skilaListaIBitum(listi):
+def skilaListaIBitum(listi):# Prentar út einn hlut úr listanum sem kom inn þegar það er notað next() á fallið
     for hlutur in listi:
         print(hlutur)
         yield hlutur
