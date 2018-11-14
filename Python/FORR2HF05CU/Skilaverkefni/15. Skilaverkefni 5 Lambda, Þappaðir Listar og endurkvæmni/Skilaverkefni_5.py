@@ -117,7 +117,10 @@ while valmynd != "9":
         print(undir_6)
 
     elif valmynd == "6":#Liður 6
-        pass
+        random_tolur = randomTolur(100, 1, 20)
+        endar_a_0 = [x for x in random_tolur if str(x)[-1] == "0"]
+
+        print(endar_a_0)
 
     elif valmynd == "7":#Liður 7
         pass
