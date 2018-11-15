@@ -1,13 +1,19 @@
-8.3.2.5
-8.4.1.3
+enable
+config
+----R1(config)#
+    hostname R1
+    enable secret subnet
+    banner motd #Adgangur bannadur!#
 
-8.5.1.3
-8.5.2.4
+    line vty 0 15:
+    ----R1(config-line)#
+        password ccna
+        login
+    
+    line con 0:
+    ----R1(config-line)#
+        password ccna
+        login
 
-R1(config)#int g0/x
-R1(config-if)#ip add x.x.x.x x.x.x.x
-R1(config-if)#nono shut
-R1(config-if)#end
-R1#show ip int brief
-R1#ping
-R1#show ip rute
+SAVE:
+R1#copy run star
