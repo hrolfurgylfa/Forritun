@@ -17,8 +17,12 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `2712576789_afangaskraning`
+-- Database: `2109013290_afangaskraning`
 --
+
+DROP DATABASE IF EXISTS 2109013290_afangaskraning;
+CREATE DATABASE 2109013290_afangaskraning;
+USE 2109013290_afangaskraning;
 
 -- --------------------------------------------------------
 
