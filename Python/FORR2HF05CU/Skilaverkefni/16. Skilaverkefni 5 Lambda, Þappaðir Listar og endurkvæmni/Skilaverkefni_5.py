@@ -86,13 +86,13 @@ while valmynd != "9":
 
     if valmynd == "1":#Liður 1
         spilaAftur = "j"
-        while spilaAftur.lower() == "j":
+        while spilaAftur.lower() == "j":#Þetta gerist á meðan maður segir j þegar maður er spurður hvort að hann vilji spila aftur
             random_tolur = randomTolur(20, 2, 100)
 
             tala_notenda = 0
-            while tala_notenda > 10 or tala_notenda < 1:
+            while tala_notenda > 10 or tala_notenda < 1:# Þetta er til þess að það sé spurt um tölu þangað til að það kemur tala sem virkar
                 tala_notenda = faHeiltolu(1, "Sláðu inn heiltölu á milli 1 og 10\n--->")
-                tala_notenda = tala_notenda[0]
+                tala_notenda = tala_notenda[0]#Þetta er vegna þess að fallið faHeiltolu skilar lista með tölunum
             tala_tolvu = random.randint(1,10)
 
             summa_notanda = finnaSummu(tala_notenda, random_tolur)
@@ -107,7 +107,7 @@ while valmynd != "9":
             print(sigurtexti)
 
             spilaAftur = input("\nViltu spila aftur? J/N\n--->")
-            if spilaAftur.lower() == "j":
+            if spilaAftur.lower() == "j":#Prentar bara línu til þess að skilja að skiptin sem er spilað
                 print("----------------------------------------")
 
     elif valmynd == "2":#Liður 2
