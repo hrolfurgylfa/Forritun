@@ -112,31 +112,31 @@ while valmynd != "9":
 
     elif valmynd == "2":#Liður 2
         random_tolur = randomTolur(100, 200, 600)
-        nyr_listi = list(filter(lambda x: x % 2 == 0, random_tolur))
+        nyr_listi = list(filter(lambda x: x % 2 == 0, random_tolur))#Hérna sendi ég random_tolur listann inn í filter fall með lambda svo að allt sem er ekki % 2 = 0 kemur ekki og svo færi ég það í lista með list()
 
         print(nyr_listi)
         
     elif valmynd == "3":#Liður 3
         random_tolur = randomTolur(20, 2, 100)
-        listi2 = list(filter(lambda x: x % 5 == 0 and x > 350, random_tolur))
+        listi2 = list(filter(lambda x: x % 5 == 0 and x > 350, random_tolur))#Þetta slilar bara tölunum sem eru % 5 = 0 og hærri en 350
 
         print(listi2)
 
     elif valmynd == "4":#Liður 4
         random_tolur = randomTolur(200, 100, 900)
-        listi2 = list(map(lambda x: x - 2, random_tolur))
+        listi2 = list(map(lambda x: x - 2, random_tolur))#Þetta lækkar allar tölurnar í listanum random_tolur um 2
 
         print(listi2)
         
     elif valmynd == "5":#Liður 5
         random_tolur = randomTolur(200, 1, 90)
-        undir_6 = [x**3 for x in random_tolur if x < 6]
+        undir_6 = [x**3 for x in random_tolur if x < 6]# Þetta býr til lista sem er með tölurnar úr random_tölur í þriðjaveldi ef þær eru undir 6
 
         print(undir_6)
 
     elif valmynd == "6":#Liður 6
         random_tolur = randomTolur(100, 1, 20)
-        endar_a_0 = [x for x in random_tolur if str(x)[-1] == "0"]
+        endar_a_0 = [x for x in random_tolur if str(x)[-1] == "0"]# Þetta býr til lista með öllum tölum í random_tolur sem enda á 0
 
         print(endar_a_0)
 
@@ -151,7 +151,7 @@ while valmynd != "9":
     elif valmynd == "8":#Liður 8
         random_tolur = randomTolur(100, 50, 150)
         hlutur = skilaListaIBitum(random_tolur)
-        for tel in range(100):
+        for tel in range(100):# Þetta gerir next() á hlutur til þess að klára yeild-ið í skilaListaIBitum
             next(hlutur)
 
     elif valmynd == "9":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 9" þegar maður er að hætta í forritinu
