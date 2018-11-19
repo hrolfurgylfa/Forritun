@@ -5,17 +5,17 @@ config
     enable secret subnet
     banner motd #Adgangur bannadur!#
 
-    line vty 0 15:
+    line vty 0 15
     ----SW2(config-line)#
         password ccna
         login
     
-    line con 0:
+    line con 0
     ----SW2(config-line)#
         password ccna
         login
 
-    int vlan1:
+    int vlan1
     ----SW2(config-if)#
         ip address 145.136.50.130 255.255.255.192
         no shut
