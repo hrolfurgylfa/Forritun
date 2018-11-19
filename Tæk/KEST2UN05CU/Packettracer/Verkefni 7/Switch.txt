@@ -1,4 +1,5 @@
 enable
+show ip interface brief
 config
 ----SW2(config)#
     hostname SW2
@@ -21,6 +22,7 @@ config
         no shut
 
     ip default-gateway 145.136.50.129
+    do show ip interface brief
 
 SAVE:
 SW2#copy run star
