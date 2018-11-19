@@ -8,7 +8,7 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "C:/Python34/python.exe"
+            "program": "C:\\Users\\Hrólfur\\AppData\\Local\\Programs\\Python\\Python37\\python.exe"
         },
         {
             "name": "Python: Attach",
