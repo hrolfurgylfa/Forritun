@@ -1,8 +1,8 @@
 {
     "python.linting.pylintEnabled": false,
-    "python.pythonPath": "C:\\Users\\Hrólfur\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
+    "python.pythonPath": "C:\\Users\\Hrólfur\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
     "files.associations": {
         "rope": "cpp"
     },
-    "window.zoomLevel": 3
+    "window.zoomLevel": 1
 }
