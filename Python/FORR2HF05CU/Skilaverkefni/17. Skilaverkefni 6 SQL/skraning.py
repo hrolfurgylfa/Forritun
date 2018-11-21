@@ -114,11 +114,9 @@ class Skraning:
     def skraning(self,nafn,afangi):
         s = Skraning()
         try:
-            sql="select notandi_id from notendur where nafn='"+nafn+"'"
-            sql="select namskeid_id from namskeid where afangaheiti='"+afangi+"'"
-            sql="insert into skradir(notandi_id,namskeid_id) VALUES("+str(notandi_id)+","+str(namskeid_id)+")"
+            notandi_id = s.executeSQL('SELECT notandi_id FROM notendur WHERE nafn="'+str(nafn)+'"')
+            namskeid_id = s.executeSQL('SELECT namskeid_id FROM namskeid WHERE afangaheiti="'+str(afangi)+'"')
+            s.executeSQL('INSERT INTO skradir(notandi_id,namskeid_id) VALUES('+str(notandi_id[0]["notandi_id"])+','+str(namskeid_id[0]["namskeid_id"])+')')
 
         except IndexError as e:
-            print("Viðkomandi ekki skráður notandi eða áfangaheiti rangt\n",e)
-
-
+            print("Viðkomandi ekki skráður, notandi eða áfangaheiti rangt\n",e)

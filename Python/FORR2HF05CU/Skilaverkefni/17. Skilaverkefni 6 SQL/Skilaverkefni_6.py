@@ -54,7 +54,7 @@ while valmynd != "14":
                 print(afangi[key])
         
     elif valmynd == "5":#Liður 5
-        pass
+        s.skraning("Konráð Guðmundsson", "HRÓL1HF05AU")
 
     elif valmynd == "6":#Liður 6
         pass
