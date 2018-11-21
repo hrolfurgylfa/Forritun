@@ -3,7 +3,7 @@ import sys
 
 class Skraning:
     def executeSQL(self, kodi):
-        try:
+        try:# Þetta reynir að tengjast gagnagrunninnum
             connection = pymysql.connect(host='tsuts.tskoli.is',
                                         user='2109013290',
                                         password='mypassword',
@@ -13,13 +13,13 @@ class Skraning:
                                         autocommit=True)
         except pymysql.err.OperationalError as error:
             host = ""
-            for stafur in str(error)[42::]:
+            for stafur in str(error)[42::]:# Þessi for slaufa byrjar á staf 42 og bætir stöfunum við strenginn host þangað til hún finnur aðra kommu (')
                 if stafur != "'":
                     host += stafur
                 else:
                     break
 
-            if str(error) == """(2003, "Can't connect to MySQL server on '"""+str(host)+"""' ([Errno -2] Name or service not known)")""" or str(error) == """(2003, "Can't connect to MySQL server on '"""+str(host)+"""' (timed out)")""":
+            if str(error) == """(2003, "Can't connect to MySQL server on '"""+str(host)+"""' ([Errno -2] Name or service not known)")""" or str(error) == """(2003, "Can't connect to MySQL server on '"""+str(host)+"""' (timed out)")""":# Þetta gerist bara ef það koma ákveðin error skilaboð
                 print("Náði ekki í "+str(host)+"\nHætti...")
                 sys.exit()
             else:
@@ -29,17 +29,17 @@ class Skraning:
 
         cursor = connection.cursor()
 
-        try:
+        try:# Þetta reynir að keyra kóðann sem kom inn sem breyta
             cursor.execute(kodi)
         except pymysql.err.ProgrammingError as error:
             sql_error_kodi = ""
             skilabod = ""
-            for stafur in str(error)[1::]:
+            for stafur in str(error)[1::]:# Þessi for slaufa byrjar á staf 1 og bætir stöfunum við strenginn sql_error_kodi þangað til hún finnur eitthvað annað en tölu
                 if stafur in "1234567890":
                     sql_error_kodi += stafur
                 else:
                     break
-            for stafur in str(error)[8::]:
+            for stafur in str(error)[8::]:# Þessi for slaufa byrjar á staf 8 og bætir stöfunum við strenginn host þangað til hún finnur aðra kommu ('). Þessi error skilaboð virka ekki alveg svo að forritið prentar alltaf líka fullu skilaboðin
                 if stafur != '"':
                     skilabod += stafur
                 else:
@@ -48,7 +48,7 @@ class Skraning:
             if sql_error_kodi == "1064":
                 fjoldi_komma_fundnar = 0
                 sql_error = ""
-                for stafur in str(error)[7::]:
+                for stafur in str(error)[7::]:# Þetta finnur akkurat hvað SQL 1064 errorskilaboðin voru að kvarta yfir
                     if stafur != "'" and fjoldi_komma_fundnar == 0:
                         pass
                     elif stafur != "'" and fjoldi_komma_fundnar == 1:
@@ -61,17 +61,19 @@ class Skraning:
                 print("SQL Stafsetningarvilla")
                 print("SQL error kóði:",sql_error_kodi)
                 print('Það er stafsetningarvilla nálægt "'+str(sql_error)+'".')
+                print("Full error skilaboð:",error)
                 print("Hætti...")
             else:
                 print("SQL villa")
                 print("SQL error kóði:",sql_error_kodi)
                 print("SQL error skilaboð:",skilabod)
+                print("Full error skilaboð:",error)
                 print("Hætti...")
             sys.exit()
 
         result = cursor.fetchall()
         connection.close()
-        return result
+        return result# Þetta skilar öllu sem kom, raðir eru í ysta listanum og svo inni í honum eru dictionary-s með nafn dálksins sem key og það sem er í dæalkinum sem value
 
     def nyr_medlimur(self, nafn):
         s = Skraning()
