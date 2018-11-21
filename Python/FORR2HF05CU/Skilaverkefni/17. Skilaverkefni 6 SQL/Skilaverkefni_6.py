@@ -8,7 +8,7 @@ from skraning import Skraning
 s = Skraning()
 valmynd = ""
 
-while valmynd != "14":
+while valmynd != "8":
 
     for tel in range(50):#Þessi for lúppa gerir línu sem er auðvelt að stjórna stærðinni á
         print("-",end="")
@@ -21,7 +21,7 @@ while valmynd != "14":
     print("Ýttu á 5 til þess að fá dæmi 5")
     print("Ýttu á 6 til þess að fá dæmi 6")
     print("Ýttu á 7 til þess að fá dæmi 7")
-    print("Ýttu á 14 til þess að hætta")
+    print("Ýttu á 8 til þess að hætta")
     valmynd = input("-------------------->>> ")#Hérna velur notandinn hvaða lið hann ætlar að fara í
 
     print()#Þetta er til þess að gera enter
@@ -62,8 +62,8 @@ while valmynd != "14":
     elif valmynd == "7":#Liður 7
         pass
         
-    elif valmynd == "14":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 14" þegar maður er að hætta í forritinu
+    elif valmynd == "8":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 8" þegar maður er að hætta í forritinu
         pass
 
     else:
-        print("ERROR\tSláðu inn tölu á milli 1 og 14")
+        print("ERROR\tSláðu inn tölu á milli 1 og 8")
