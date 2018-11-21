@@ -57,7 +57,7 @@ while valmynd != "8":
         s.skraning("Konráð Guðmundsson", "HRÓL1HF05AU")
 
     elif valmynd == "6":#Liður 6
-        pass
+        s.FaraUrAfanga("Konráð Guðmundsson", "HRÓL1HF05AU")
 
     elif valmynd == "7":#Liður 7
         pass

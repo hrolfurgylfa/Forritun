@@ -120,3 +120,13 @@ class Skraning:
 
         except IndexError as e:
             print("Viðkomandi ekki skráður, notandi eða áfangaheiti rangt\n",e)
+
+    def FaraUrAfanga(self, nafn, afangi):
+        s = Skraning()
+        try:
+            notandi_id = s.executeSQL('SELECT notandi_id FROM notendur WHERE nafn="'+str(nafn)+'"')
+            namskeid_id = s.executeSQL('SELECT namskeid_id FROM namskeid WHERE afangaheiti="'+str(afangi)+'"')
+            s.executeSQL('DELETE FROM skradir WHERE notandi_id = '+str(notandi_id[0]["notandi_id"])+' AND namskeid_id = '+str(namskeid_id[0]["namskeid_id"]))
+
+        except IndexError as e:
+            print("Viðkomandi ekki skráður, notandi eða áfangaheiti rangt\n",e)
