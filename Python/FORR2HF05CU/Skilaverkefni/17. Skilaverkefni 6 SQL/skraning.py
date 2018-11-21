@@ -2,7 +2,7 @@ import pymysql.cursors
 import sys
 
 class Skraning:
-    def executeSQL(self, kodi):
+    def executeSQL(self, kodi):# Keyrir SQL kóða og tengist gagnagrunni til þess að gera það
         try:# Þetta reynir að tengjast gagnagrunninnum
             connection = pymysql.connect(host='tsuts.tskoli.is',
                                         user='2109013290',
@@ -75,33 +75,33 @@ class Skraning:
         connection.close()
         return result# Þetta skilar öllu sem kom, raðir eru í ysta listanum og svo inni í honum eru dictionary-s með nafn dálksins sem key og það sem er í dæalkinum sem value
 
-    def nyr_medlimur(self, nafn):
+    def nyr_medlimur(self, nafn):# Bætir við notanda
         s = Skraning()
         s.executeSQL("INSERT INTO notendur(nafn) VALUES ('"+str(nafn)+"')")
 
-    def nyr_afangi(self, afangi):
+    def nyr_afangi(self, afangi):# Bætir við áfanga
         s = Skraning()
         s.executeSQL("INSERT INTO namskeid(afangaheiti) VALUES ('"+str(afangi)+"')")
 
-    def prenta(self, nafntoflu):
+    def prenta(self, nafntoflu):# Prentar út töflu
         s = Skraning()
         tafla = s.executeSQL("SELECT * FROM "+str(nafntoflu))
 
-        try:
+        try:# Þetta klikkar ef taflan er tóm og þá fer forritið útúr fallinu
             lyklar = list(tafla[0].keys())
         except IndexError:
             return ""
 
-        for lykill in lyklar:
+        for lykill in lyklar:# Þetta prentar út alla top dálkana
             print(lykill,end="\t|\t")
         print()
 
-        for rod in tafla:
-            for hlutur in rod:
+        for rod in tafla:# Þetta fer í gegnum hverja röð fyrir sig
+            for hlutur in rod:# Þetta fer í gegnum hvern hlut í hverri röð og prentar hann út með | fyrir aftan sig
                 print(rod[hlutur],end="\t|\t")
             print()
 
-    def skradurIafanga(self, nafn):
+    def skradurIafanga(self, nafn):# Skilar öllum áföngum sem ákveðinn notandi er skráður í
         s = Skraning()
         return s.executeSQL("""
         SELECT afangaheiti 
@@ -110,10 +110,9 @@ class Skraning:
                 ON namskeid.namskeid_id = skradir.namskeid_id
             JOIN notendur
                 ON notendur.notandi_id = skradir.notandi_id
-        WHERE notendur.nafn='"""+str(nafn)+"""'
-        """)
+        WHERE notendur.nafn='"""+str(nafn)+"""'""")# Þetta skilar öllu og svo getur lokaendinn sem kallaði á fallið ákveðið hvort að hann vilji prenta þetta út eða gera eitthvað annað með þetta
 
-    def skraning(self, nafn, afangi):
+    def skraning(self, nafn, afangi):# Bætir notanda í áfanga
         s = Skraning()
         try:
             notandi_id = s.executeSQL('SELECT notandi_id FROM notendur WHERE nafn="'+str(nafn)+'"')
@@ -123,7 +122,7 @@ class Skraning:
         except IndexError as e:
             print("Viðkomandi ekki skráður, notandi eða áfangaheiti rangt\n",e)
 
-    def FaraUrAfanga(self, nafn, afangi):
+    def FaraUrAfanga(self, nafn, afangi):# Tekur notanda úr áfanga
         s = Skraning()
         try:
             notandi_id = s.executeSQL('SELECT notandi_id FROM notendur WHERE nafn="'+str(nafn)+'"')
@@ -133,7 +132,7 @@ class Skraning:
         except IndexError as e:
             print("Viðkomandi ekki skráður, notandi eða áfangaheiti rangt\n",e)
 
-    def haetta(self, nafn):
+    def haetta(self, nafn):# Eyðir notanda og tekur hann úr öllum áföngum
         s = Skraning()
         s.executeSQL("""
         DELETE 
@@ -141,7 +140,7 @@ class Skraning:
         WHERE notandi_id = (
             SELECT notandi_id 
             FROM notendur 
-            WHERE nafn = '"""+str(nafn)+"""')""")
+            WHERE nafn = '"""+str(nafn)+"""')""")# Hérna nota ég svigann til þess að senda niðurstöðunna úr einni leit beint í aðra til þess að þurfa ekki að tengjast gagnagrunninnum tvisvar og til þess að taka minna pláss
 
         s.executeSQL("""
         DELETE
