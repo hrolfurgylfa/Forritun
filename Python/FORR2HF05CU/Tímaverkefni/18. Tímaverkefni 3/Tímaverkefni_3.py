@@ -14,6 +14,17 @@ def gangaUppI5(listi):
     skila_listi = list(filter(lambda x: x > 350 and x % 5 == 0, listi))
     return skila_listi
 
+def setjaI3Veldi(*tolur):
+    skila_listi = [x**3 for x in tolur]
+
+    tel = 0
+    for hlutur in skila_listi:
+        if tel + 1 != len(skila_listi):
+            print(hlutur,end=", ")
+            tel += 1
+        else:
+            print(hlutur)
+
 
 valmynd = ""
 
@@ -42,7 +53,7 @@ while valmynd != "4":
         print(gangaUppI5(listi))
         
     elif valmynd == "3":#Liður 3
-        pass
+        setjaI3Veldi(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
     elif valmynd == "4":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 4" þegar maður er að hætta í forritinu
         pass
