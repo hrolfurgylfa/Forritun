@@ -42,9 +42,9 @@ while valmynd != "8":
         afangar_nemanda = s.skradurIafanga("Konráð Guðmundsson")
 
         tel = 0
-        for afangi in afangar_nemanda:
+        for afangi in afangar_nemanda:# Þessi lúppa prentar út alla áfanganna með réttum kommum eða og-um
             tel += 1
-            for a in afangi:
+            for a in afangi:# Þetta er til þess að ná lyklinum úr dictionary-inu
                 key = a
             if tel <= len(afangar_nemanda) - 2:
                 print(afangi[key],end=", ")
