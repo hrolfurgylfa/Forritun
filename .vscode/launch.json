@@ -4,11 +4,12 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "C:\\Users\\Hrólfur\\AppData\\Local\\Programs\\Python\\Python37\\python.exe"
+            "program": "C:\\Users\\Hrólfur\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe"
         },
         {
             "name": "Python: Attach",
