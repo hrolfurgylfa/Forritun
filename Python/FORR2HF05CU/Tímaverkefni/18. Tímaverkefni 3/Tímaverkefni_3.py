@@ -3,6 +3,18 @@ Tímaverkefni 3
 Hrólfur Gylfason
 21/11/2018
 '''
+def sununingsSamlagning(tala1, tala2):
+    for tala in [tala1, tala2]:
+        tala = str(tala)
+        tala = int(tala[::-1])
+    summa = tala1 + tala2
+    return summa
+
+def gangaUppI5(listi):
+    skila_listi = list(filter(lambda x: x > 350 and x % 5 == 0, listi))
+    return skila_listi
+
+
 valmynd = ""
 
 while valmynd != "4":
@@ -23,10 +35,11 @@ while valmynd != "4":
     print()#Þetta er til þess að gera enter
 
     if valmynd == "1":#Liður 1
-        pass
+        print(sununingsSamlagning(12, 31))
 
     elif valmynd == "2":#Liður 2
-        pass
+        listi = [385, 230, 343, 580]
+        print(gangaUppI5(listi))
         
     elif valmynd == "3":#Liður 3
         pass
