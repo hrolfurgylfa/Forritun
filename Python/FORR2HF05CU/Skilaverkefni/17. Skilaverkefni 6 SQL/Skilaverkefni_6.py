@@ -31,11 +31,49 @@ def executeSQL(kodi):
             sys.exit()
 
     cursor = connection.cursor()
-    cursor.execute(kodi)
+
+    try:
+        cursor.execute(kodi)
+    except pymysql.err.ProgrammingError as error:
+        sql_error_kodi = ""
+        skilabod = ""
+        for stafur in str(error)[1::]:
+            if stafur in "1234567890":
+                sql_error_kodi += stafur
+            else:
+                break
+        for stafur in str(error)[8::]:
+            if stafur != '"':
+                skilabod += stafur
+            else:
+                break
+
+        if sql_error_kodi == "1064":
+            fjoldi_komma_fundnar = 0
+            sql_error = ""
+            for stafur in str(error)[7::]:
+                if stafur != "'" and fjoldi_komma_fundnar == 0:
+                    pass
+                elif stafur != "'" and fjoldi_komma_fundnar == 1:
+                    sql_error += stafur
+                elif stafur == "'" and fjoldi_komma_fundnar == 0:
+                    fjoldi_komma_fundnar += 1
+                else:
+                    break
+
+            print("SQL Stafsetningarvilla")
+            print("SQL error kóði:",sql_error_kodi)
+            print('Það er stafsetningarvilla nálægt "'+str(sql_error)+'".')
+            print("Hætti...")
+        else:
+            print("SQL villa")
+            print("SQL error kóði:",sql_error_kodi)
+            print("SQL error skilaboð:",skilabod)
+            print("Hætti...")
+        sys.exit()
+
     result = cursor.fetchall()
-
     connection.close()
-
     return result
 
 valmynd = ""
@@ -68,7 +106,7 @@ while valmynd != "14":
     print()#Þetta er til þess að gera enter
 
     if valmynd == "1":#Liður 1
-        print(executeSQL("SELEC * FROM namskeid;"))
+        print(executeSQL("SELECT * FROM namsked;"))
 
     elif valmynd == "2":#Liður 2
         pass
