@@ -73,15 +73,15 @@ class Skraning:
         connection.close()
         return result
 
-    def nyr_medlimur(self,nafn):
+    def nyr_medlimur(self, nafn):
         s = Skraning()
         s.executeSQL("INSERT INTO notendur(nafn) VALUES ('"+str(nafn)+"')")
 
-    def nyr_afangi(self,afangi):
+    def nyr_afangi(self, afangi):
         s = Skraning()
         s.executeSQL("INSERT INTO namskeid(afangaheiti) VALUES ('"+str(afangi)+"')")
 
-    def prenta(self,nafntoflu):
+    def prenta(self, nafntoflu):
         s = Skraning()
         tafla = s.executeSQL("SELECT * FROM "+str(nafntoflu))
 
@@ -99,7 +99,7 @@ class Skraning:
                 print(rod[hlutur],end="\t|\t")
             print()
 
-    def skradurIafanga(self,nafn):
+    def skradurIafanga(self, nafn):
         s = Skraning()
         return s.executeSQL("""
         SELECT afangaheiti 
@@ -111,7 +111,7 @@ class Skraning:
         WHERE notendur.nafn='"""+str(nafn)+"""'
         """)
 
-    def skraning(self,nafn,afangi):
+    def skraning(self, nafn, afangi):
         s = Skraning()
         try:
             notandi_id = s.executeSQL('SELECT notandi_id FROM notendur WHERE nafn="'+str(nafn)+'"')
