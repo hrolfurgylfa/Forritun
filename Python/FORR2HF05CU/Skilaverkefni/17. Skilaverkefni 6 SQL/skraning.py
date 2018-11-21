@@ -130,3 +130,18 @@ class Skraning:
 
         except IndexError as e:
             print("Viðkomandi ekki skráður, notandi eða áfangaheiti rangt\n",e)
+
+    def haetta(self, nafn):
+        s = Skraning()
+        s.executeSQL("""
+        DELETE 
+        FROM skradir 
+        WHERE notandi_id = (
+            SELECT notandi_id 
+            FROM notendur 
+            WHERE nafn = '"""+str(nafn)+"""')""")
+
+        s.executeSQL("""
+        DELETE
+        FROM notendur
+        WHERE nafn = '"""+str(nafn)+"""'""")

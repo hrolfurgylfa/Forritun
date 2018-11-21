@@ -60,7 +60,7 @@ while valmynd != "8":
         s.FaraUrAfanga("Konráð Guðmundsson", "HRÓL1HF05AU")
 
     elif valmynd == "7":#Liður 7
-        pass
+        s.haetta("prufu_notandi")
         
     elif valmynd == "8":#Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 8" þegar maður er að hætta í forritinu
         pass
