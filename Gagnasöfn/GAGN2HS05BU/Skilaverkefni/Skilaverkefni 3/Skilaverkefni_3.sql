@@ -77,24 +77,47 @@ DELIMITER //
 DROP PROCEDURE IF EXISTS updateAllSalaryCursor//
 CREATE PROCEDURE updateAllSalaryCursor ()
 BEGIN
-	DEClARE totalsalary_cursor CURSOR FOR 
-		SELECT totalsalary FROM deptsal;
-        
-	OPEN totalsalary_cursor;
-    REPEAT
-		FETCH totalsalary_cursor INTO tSalary;
-        SELECT * FROM tSalary;
-    
-    /*WHILE tel <= (SELECT COUNT(totalsalary) FROM deptsal) DO
-		UPDATE deptsal
-		SET deptsal.totalsalary = (SELECT SUM(salary) FROM employee WHERE dept_no = tel) 
-		WHERE dept_no = tel;
-        SET tel = tel + 1;
-	END WHILE;*/
-    UNTIL tel = (SELECT COUNT(totalsalary) FROM deptsal)
-    END REPEAT;
-END; //
+  DECLARE b INT;
+  DECLARE tel INT UNSIGNED DEFAULT 1;
+  DEClARE totalsalary_cursor CURSOR FOR 
+		SELECT dept_no FROM deptsal;
+  DECLARE CONTINUE HANDLER FOR NOT FOUND
+     SET b = 1;
+  OPEN totalsalary_cursor;
+  REPEAT
+     UPDATE deptsal
+     SET totalsalary = (SELECT SUM(salary) FROM employee WHERE dept_no = tel);
+     SET tel = tel + 1;
+     UNTIL b
+  END REPEAT;
+  CLOSE totalsalary_cursor;
+END;//
 
 DELIMITER ;
 
-CALL updateAllSalaryCursor();
+CALL updateAllSalary();
+
+#--------------- 5 ---------------
+DELIMITER //
+
+DROP PROCEDURE IF EXISTS updateSalery10p//
+CREATE PROCEDURE updateSalery10p ()
+BEGIN
+  DECLARE b INT;
+  DEClARE updateSalery10p_cursor CURSOR FOR 
+		SELECT emp_id FROM employee;
+  DECLARE CONTINUE HANDLER FOR NOT FOUND
+     SET b = 1;
+  OPEN updateSalery10p_cursor;
+  REPEAT
+     UPDATE employee
+     SET salary = (salary/100)*110;
+     UNTIL b
+  END REPEAT;
+  CLOSE updateSalery10p_cursor;
+END;//
+
+DELIMITER ;
+
+CALL updateSalery10p();
+
