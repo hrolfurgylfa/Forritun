@@ -23,6 +23,7 @@ config
 
     ip default-gateway 145.136.50.129
     do show ip interface brief
+    no shut # Kveikja á tengingu
 
 SAVE:
 SW2#copy run star
