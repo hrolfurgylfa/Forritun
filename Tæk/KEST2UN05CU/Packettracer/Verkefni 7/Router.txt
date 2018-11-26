@@ -4,6 +4,7 @@ config
     hostname R1
     enable secret subnet
     banner motd #Adgangur bannadur!#
+    service password-encryption
 
     line vty 0 15
     ----R1(config-line)#
@@ -20,6 +21,16 @@ config
         ip address 145.136.50.1 255.255.255.128
         no shut
         description LAN1
+
+config t
+----R1(config)#
+    ip domain-name networking.pka
+    crypto key generate rsa
+    username admin password 0 cisco123
+    line vty 0 15
+    ----R1(config-line)#
+        transport input ssh
+        login local
 
 SAVE:
 R1#copy run star
