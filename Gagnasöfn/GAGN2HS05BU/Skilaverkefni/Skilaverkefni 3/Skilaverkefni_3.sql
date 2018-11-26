@@ -2,7 +2,6 @@ USE 2109013290_COMPANY;
 
 SELECT * FROM dept;
 SELECT * FROM employee;
-SELECT * FROM deptsal;
 
 #2
 DROP TABLE IF EXISTS deptsal;
@@ -17,6 +16,8 @@ VALUES
     (2,0),
     (3,0),
     (4,0);
+    
+SELECT * FROM deptsal;
     
 #3 step 1
 DELIMITER //
@@ -97,7 +98,7 @@ DELIMITER ;
 
 CALL updateAllSalary();
 
-#--------------- 5 ---------------
+#--------------- 6 ---------------
 DELIMITER //
 
 DROP PROCEDURE IF EXISTS updateSalery10p//
@@ -120,4 +121,36 @@ END;//
 DELIMITER ;
 
 CALL updateSalery10p();
+
+#--------------- 7 ---------------
+DELIMITER //
+#-----A-----
+DROP TRIGGER IF EXISTS after_employee_insert//
+CREATE TRIGGER after_employee_insert 
+    AFTER INSERT ON employee
+    FOR EACH ROW 
+BEGIN
+    CALL updateAllSalary();
+END//
+
+#-----B-----
+DROP TRIGGER IF EXISTS after_employee_delete//
+CREATE TRIGGER after_employee_delete 
+    AFTER DELETE ON employee
+    FOR EACH ROW 
+BEGIN
+    CALL updateAllSalary();
+END//
+DELIMITER ;
+
+#A - test
+INSERT INTO
+	employee(emp_id, emp_name, dept_no, salary)
+VALUES
+	(9, "Hrólfur Gylfason", 2, 3);
+
+#B - test
+DELETE FROM employee WHERE emp_name = "Hrólfur Gylfason";
+
+
 
