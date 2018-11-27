@@ -1,1 +1,4 @@
-.vscode/settings.json
+.vscode/
+.idea/
+__pycache__/
+.~*.docx#
