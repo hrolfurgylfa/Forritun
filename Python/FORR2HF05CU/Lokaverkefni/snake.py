@@ -19,7 +19,7 @@ def byrjaPygame(glugga_stærð):
     pygame.display.set_caption('Snake')# Setir titil á gluggann
     window.fill(WHITE)
 
-    return pygame
+    return (pygame, window)
 
 window_size = 640, 480# Stærð glugga
 byrjaPygame(window_size)
@@ -36,11 +36,15 @@ while running:
         if event.type == pygame.KEYDOWN and event.key == pygame.K_f:# Ef ýtt er á F til þess að skipta a milli fullscreen og ekki fullscreen
             if fullscreen is False:
                 pygame.display.quit()
-                pygame = byrjaPygame("f")
+                pygame_tuple = byrjaPygame("f")
+                pygame = pygame_tuple[0]
+                window = pygame_tuple[1]
                 fullscreen = True
             elif fullscreen is True:
                 pygame.display.quit()
-                pygame = byrjaPygame(window_size)
+                pygame_tuple = byrjaPygame(window_size)
+                pygame = pygame_tuple[0]
+                window = pygame_tuple[1]
                 fullscreen = False
 
         pygame.display.update()
