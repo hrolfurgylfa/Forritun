@@ -27,11 +27,16 @@ pygame = pygame_tuple[0]
 window = pygame_tuple[1]
 fullscreen = False
 
+# Staðsetning
 snakur_x = 0
-snakur_y = 0
+snakur_y = 30
+
+# Velocity
+velocity_x = 1
+velocity_y = 0
 
 clock = pygame.time.Clock()
-clock_ticks = 20
+clock_ticks = 60
 
 running = True
 
@@ -55,11 +60,30 @@ while running:
                 window = pygame_tuple[1]
                 fullscreen = False
 
-    pygame.draw.rect(window, RED, pygame.Rect(snakur_x, 30, 20, 10))
+        # Hreyfa snákinn
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_w:
+            if velocity_x != 0:
+                velocity_x = 0
+                velocity_y = -1
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_s:
+            if velocity_x != 0:
+                velocity_x = 0
+                velocity_y = 1
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_a:
+            if velocity_y != 0:
+                velocity_x = -1
+                velocity_y = 0
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_d:
+            if velocity_y != 0:
+                velocity_x = 1
+                velocity_y = 0
+
+    pygame.draw.rect(window, RED, pygame.Rect(snakur_x, snakur_y, 15, 15))
     pygame.display.update()
     window.fill(WHITE)
 
-    snakur_x += 1
+    snakur_x += velocity_x * 5
+    snakur_y += velocity_y * 5
 
     clock.tick(clock_ticks)
 
