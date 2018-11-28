@@ -21,11 +21,16 @@ def byrjaPygame(glugga_stærð):
 
     return (pygame, window)
 
-window_size = 640, 480# Stærð glugga
+width = 640
+height = 480
+window_size = width, height# Stærð glugga
 pygame_tuple = byrjaPygame(window_size)
 pygame = pygame_tuple[0]
 window = pygame_tuple[1]
 fullscreen = False
+# Stærð snáks
+x_snakur = 15
+y_snakur = 15
 
 # Staðsetning
 snakur_x = 0
@@ -78,9 +83,16 @@ while running:
                 velocity_x = 1
                 velocity_y = 0
 
-    pygame.draw.rect(window, RED, pygame.Rect(snakur_x, snakur_y, 15, 15))
+    pygame.draw.rect(window, RED, pygame.Rect(snakur_x, snakur_y, x_snakur, y_snakur))
     pygame.display.update()
     window.fill(WHITE)
+
+    # Tékka hvort að snákurinn sé búinn að klessa á
+    if fullscreen is True:
+        pass
+    else:
+        if snakur_x < 0 or snakur_x > width - x_snakur or snakur_y < 0 or snakur_y > height - y_snakur:
+            running = False
 
     snakur_x += velocity_x * 5
     snakur_y += velocity_y * 5
