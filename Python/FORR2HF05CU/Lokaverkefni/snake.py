@@ -61,19 +61,19 @@ while running:
                 fullscreen = False
 
         # Hreyfa snákinn
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_w:
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_w or event.type == pygame.KEYDOWN and event.key == pygame.K_UP:
             if velocity_x != 0:
                 velocity_x = 0
                 velocity_y = -1
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_s:
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_s or event.type == pygame.KEYDOWN and event.key == pygame.K_DOWN:
             if velocity_x != 0:
                 velocity_x = 0
                 velocity_y = 1
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_a:
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_a or event.type == pygame.KEYDOWN and event.key == pygame.K_LEFT:
             if velocity_y != 0:
                 velocity_x = -1
                 velocity_y = 0
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_d:
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_d or event.type == pygame.KEYDOWN and event.key == pygame.K_RIGHT:
             if velocity_y != 0:
                 velocity_x = 1
                 velocity_y = 0
