@@ -11,26 +11,21 @@ pygame.init()# Byrjar pygame
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
-# Stærð glugga
-window_size = 640, 480
-# Býr til gluggann
-window = pygame.display.set_mode(window_size)
-# Segir til um hvort leikurinn sé í fullscreen
-fullscreen = False
-# Setir titil á gluggann
-pygame.display.set_caption('Snake')
 
-running = True  # loop control variable(for the game loop)
+window_size = 640, 480# Stærð glugga
+window = pygame.display.set_mode(window_size)# Býr til gluggann
+fullscreen = False# Segir til um hvort leikurinn sé í fullscreen
+pygame.display.set_caption('Snake')# Setir titil á gluggann
+
+running = True
 
 while running:
    for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-        # Ef ýtt er á Esc
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:# Ef ýtt er á Esc
             running = False
-        # Ef ýtt er á F til þess að skipta a milli fullscreen og ekki fullscreen
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_f:
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_f:# Ef ýtt er á F til þess að skipta a milli fullscreen og ekki fullscreen
             if fullscreen is False:
                 pygame.display.quit()
                 pygame.display.init()
