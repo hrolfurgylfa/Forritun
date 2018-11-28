@@ -4,6 +4,7 @@ Hrólfur Gylfason
 28/11/2018
 '''
 import pygame
+import random
 
 # Litir
 WHITE = (255, 255, 255)
@@ -32,9 +33,12 @@ fullscreen = False
 fullscreen_w = 0
 fullscreen_h = 0
 
+# Hraði
+hradi = 5
+
 # Stærð snáks
-x_snakur = 15
-y_snakur = 15
+w_snakur = 15
+h_snakur = 15
 
 # Staðsetning
 snakur_x = 0
@@ -91,23 +95,46 @@ while running:
                 velocity_x = 1
                 velocity_y = 0
 
-    if matur_a_bordi is False:
-        pass
+        # Debug
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_1:
+            hradi = .1
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_2:
+            hradi = 2
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_3:
+            hradi = 5
 
-    pygame.draw.rect(window, BLACK, pygame.Rect(snakur_x, snakur_y, x_snakur, y_snakur))
+    if matur_a_bordi is False:
+        if fullscreen is True:
+            matur_x = random.randint(0 + w_snakur, fullscreen_w - w_snakur)
+            matur_y = random.randint(0 + h_snakur, fullscreen_h - h_snakur)
+            matur_a_bordi = True
+        else:
+            matur_x = random.randint(0 + w_snakur, width - w_snakur)
+            matur_y = random.randint(0 + h_snakur, height - h_snakur)
+            matur_a_bordi = True
+
+    pygame.draw.circle(window, RED, (matur_x, matur_y), int(w_snakur / 2))
+    pygame.draw.rect(window, BLACK, pygame.Rect(snakur_x, snakur_y, w_snakur, h_snakur))
     pygame.display.update()
     window.fill(WHITE)
+    
+
+    # Tékka hvort að snákurinn sé búinn að ná mat
+    if snakur_x < matur_x + 30 / 2 and snakur_x > matur_x - 30 / 2:
+        print("Framhjá X")
+    if snakur_y < matur_y + 30 / 2 and snakur_y > matur_y - 30 / 2:
+        print("Framhjá Y")
 
     # Tékka hvort að snákurinn sé búinn að klessa á
     if fullscreen is True:
-        if snakur_x < 0 or snakur_x > fullscreen_w - x_snakur or snakur_y < 0 or snakur_y > fullscreen_h - y_snakur:
+        if snakur_x < 0 or snakur_x > fullscreen_w - w_snakur or snakur_y < 0 or snakur_y > fullscreen_h - h_snakur:
             running = False
     else:
-        if snakur_x < 0 or snakur_x > width - x_snakur or snakur_y < 0 or snakur_y > height - y_snakur:
+        if snakur_x < 0 or snakur_x > width - w_snakur or snakur_y < 0 or snakur_y > height - h_snakur:
             running = False
 
-    snakur_x += velocity_x * 4
-    snakur_y += velocity_y * 4
+    snakur_x += velocity_x * hradi
+    snakur_y += velocity_y * hradi
 
     clock.tick(clock_ticks)
 
