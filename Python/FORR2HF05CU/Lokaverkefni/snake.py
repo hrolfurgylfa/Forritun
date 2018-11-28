@@ -21,24 +21,27 @@ def byrjaPygame(glugga_stærð):
 
     return (pygame, window)
 
-width = 640
-height = 480
+width = 1024
+height = 576
 window_size = width, height# Stærð glugga
 pygame_tuple = byrjaPygame(window_size)
 pygame = pygame_tuple[0]
 window = pygame_tuple[1]
 fullscreen = False
+
 # Stærð snáks
-x_snakur = 15
-y_snakur = 15
+x_snakur = 15 / 1024 * 576
+y_snakur = 15 / 1024 * 576
 
 # Staðsetning
-snakur_x = 0
-snakur_y = 30
+snakur_x = 0 / 1024 * 576
+snakur_y = 30 / 1024 * 576
 
 # Velocity
-velocity_x = 1
-velocity_y = 0
+velocity_x = 1 / 1024 * 576
+velocity_y = 0 / 1024 * 576
+
+matur_a_bordi = False
 
 clock = pygame.time.Clock()
 clock_ticks = 60
@@ -83,7 +86,10 @@ while running:
                 velocity_x = 1
                 velocity_y = 0
 
-    pygame.draw.rect(window, RED, pygame.Rect(snakur_x, snakur_y, x_snakur, y_snakur))
+    if matur_a_bordi is False:
+        pass
+
+    pygame.draw.rect(window, BLACK, pygame.Rect(snakur_x, snakur_y, x_snakur, y_snakur))
     pygame.display.update()
     window.fill(WHITE)
 
