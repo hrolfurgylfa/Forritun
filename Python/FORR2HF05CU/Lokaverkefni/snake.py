@@ -7,6 +7,10 @@ import pygame
 
 pygame.init()# Byrjar pygame
 
+# Litir
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+
 # Stærð glugga
 window_size = 640, 480
 # Býr til gluggann
@@ -39,5 +43,6 @@ while running:
                 screen = pygame.display.set_mode(window_size)
                 fullscreen = False
 
+        pygame.display.update()
 # Slekkur á pygame
 pygame.quit()
