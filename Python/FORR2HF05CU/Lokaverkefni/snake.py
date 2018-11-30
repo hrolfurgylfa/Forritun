@@ -30,6 +30,9 @@ pygame = pygame_tuple[0]
 window = pygame_tuple[1]
 fullscreen = False
 
+# Vegalengd snáks farin frá síðustu begju
+vegalengd_fra_begju = 0
+
 # Lengd snáks
 lengd = 3
 
@@ -46,13 +49,16 @@ snakur_y = [30, 30, 30]
 velocity_x = 1
 velocity_y = 0
 
+# Hraði leiksins
+hradi = 5
+
 tel = -1
 meiri_lengd = False
 
 matur_a_bordi = False
 
 clock = pygame.time.Clock()
-clock_ticks = 60
+clock_ticks = 5
 
 running = True
 
@@ -78,21 +84,25 @@ while running:
 
         # Hreyfa snákinn
         if event.type == pygame.KEYDOWN and event.key == pygame.K_w or event.type == pygame.KEYDOWN and event.key == pygame.K_UP:
-            if velocity_x != 0:
+            if velocity_x != 0 and vegalengd_fra_begju > 10:
                 velocity_x = 0
                 velocity_y = -1
+                vegalengd_fra_begju = 0
         if event.type == pygame.KEYDOWN and event.key == pygame.K_s or event.type == pygame.KEYDOWN and event.key == pygame.K_DOWN:
             if velocity_x != 0:
                 velocity_x = 0
                 velocity_y = 1
+                vegalengd_fra_begju = 0
         if event.type == pygame.KEYDOWN and event.key == pygame.K_a or event.type == pygame.KEYDOWN and event.key == pygame.K_LEFT:
             if velocity_y != 0:
                 velocity_x = -1
                 velocity_y = 0
+                vegalengd_fra_begju = 0
         if event.type == pygame.KEYDOWN and event.key == pygame.K_d or event.type == pygame.KEYDOWN and event.key == pygame.K_RIGHT:
             if velocity_y != 0:
                 velocity_x = 1
                 velocity_y = 0
+                vegalengd_fra_begju = 0
 
         if event.type == pygame.KEYDOWN and event.key == pygame.K_z:
             meiri_lengd = True
@@ -115,8 +125,8 @@ while running:
     if snakur_x[-1] < 0 or snakur_x[-1] > width - snakur_w or snakur_y[-1] < 0 or snakur_y[-1] > height - snakur_h:
             running = False
 
-    snakur_x.append(snakur_x[-1] + velocity_x * 5)
-    snakur_y.append(snakur_y[-1] + velocity_y * 5)
+    snakur_x.append(int(snakur_x[-1] + velocity_x * hradi))
+    snakur_y.append(int(snakur_y[-1] + velocity_y * hradi))
 
     if meiri_lengd is True:
         lengd += 1
@@ -126,6 +136,9 @@ while running:
         snakur_x.pop(0)
     while len(snakur_y) > lengd:
         snakur_y.pop(0)
+
+    vegalengd_fra_begju += hradi
+    print(vegalengd_fra_begju)
 
     clock.tick(clock_ticks)
 
