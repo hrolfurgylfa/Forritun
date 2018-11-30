@@ -121,7 +121,7 @@ while running:
     window.fill(WHITE)
 
     # Tékka hvort að snákurinn sé búinn að klessa á vegg
-    if snakur_x[-1] < 0 or snakur_x[-1] > width - snakur_w or snakur_y[-1] < 0 or snakur_y[-1] > height - snakur_h:
+    if snakur_x[-1] < 0 + snakur_w or snakur_x[-1] > width - snakur_w or snakur_y[-1] < 0 + snakur_h or snakur_y[-1] > height - snakur_h:
             running = False
 
     snakur_x.append(int(snakur_x[-1] + velocity_x * hradi))
