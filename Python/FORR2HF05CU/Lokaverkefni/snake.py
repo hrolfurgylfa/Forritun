@@ -58,7 +58,7 @@ meiri_lengd = False
 matur_a_bordi = False
 
 clock = pygame.time.Clock()
-clock_ticks = 5
+clock_ticks = 60
 
 running = True
 
@@ -138,7 +138,6 @@ while running:
         snakur_y.pop(0)
 
     vegalengd_fra_begju += hradi
-    print(vegalengd_fra_begju)
 
     clock.tick(clock_ticks)
 
