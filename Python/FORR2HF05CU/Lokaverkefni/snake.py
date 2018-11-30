@@ -37,7 +37,7 @@ baeta_a_snakinn = 0
 vegalengd_fra_begju = 0
 
 # Lengd snáks
-lengd = 3
+lengd = 10
 
 # Stærð snáks
 snakur_w = 15
@@ -45,8 +45,8 @@ snakur_h = 15
 snakur_r = 10
 
 # Staðsetning
-snakur_x = [0, 10, 20]
-snakur_y = [30, 30, 30]
+snakur_x = [x*10 for x in range(lengd)]
+snakur_y = [30 for x in range(lengd)]
 
 # Velocity
 velocity_x = 1
