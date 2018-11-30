@@ -123,7 +123,7 @@ while running:
 
     # Teikna snákinn
     for tel in range(lengd):
-        pygame.draw.circle(window, RED, (snakur_x[tel], snakur_y[tel]), snakur_r)
+        pygame.draw.circle(window, BLACK, (snakur_x[tel], snakur_y[tel]), snakur_r)
         # pygame.draw.rect(window, BLACK, pygame.Rect(snakur_x, snakur_y, snakur_w, snakur_h))
         # pygame.draw.rect(window, RED, pygame.Rect(snakur_x, snakur_y, 5, 5))
     pygame.display.update()
