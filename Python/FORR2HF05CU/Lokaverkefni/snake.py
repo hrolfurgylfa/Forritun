@@ -52,7 +52,6 @@ velocity_y = 0
 # Hraði leiksins
 hradi = 5
 
-tel = -1
 meiri_lengd = False
 
 matur_a_bordi = False
