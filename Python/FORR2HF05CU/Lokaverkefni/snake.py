@@ -4,6 +4,7 @@ Hrólfur Gylfason
 28/11/2018
 '''
 import pygame
+import random
 
 # Litir
 WHITE = (255, 255, 255)
@@ -21,25 +22,32 @@ def byrjaPygame(glugga_stærð):
 
     return (pygame, window)
 
-width = 1024
-height = 576
+width = 640
+height = 480
 window_size = width, height# Stærð glugga
 pygame_tuple = byrjaPygame(window_size)
 pygame = pygame_tuple[0]
 window = pygame_tuple[1]
 fullscreen = False
 
+# Lengd snáks
+lengd = 3
+
 # Stærð snáks
-x_snakur = 15 / 1024 * 576
-y_snakur = 15 / 1024 * 576
+snakur_w = 15
+snakur_h = 15
+snakur_r = 10
 
 # Staðsetning
-snakur_x = 0 / 1024 * 576
-snakur_y = 30 / 1024 * 576
+snakur_x = [0, 10, 20]
+snakur_y = [30, 30, 30]
 
 # Velocity
-velocity_x = 1 / 1024 * 576
-velocity_y = 0 / 1024 * 576
+velocity_x = 1
+velocity_y = 0
+
+tel = -1
+meiri_lengd = False
 
 matur_a_bordi = False
 
@@ -54,7 +62,7 @@ while running:
             running = False
         if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:# Ef ýtt er á Esc
             running = False
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_f:# Ef ýtt er á F til þess að skipta a milli fullscreen og ekki fullscreen
+        # if event.type == pygame.KEYDOWN and event.key == pygame.K_f:# Ef ýtt er á F til þess að skipta a milli fullscreen og ekki fullscreen
             if fullscreen is False:
                 pygame.display.quit()
                 pygame_tuple = byrjaPygame("f")
@@ -86,22 +94,38 @@ while running:
                 velocity_x = 1
                 velocity_y = 0
 
-    if matur_a_bordi is False:
-        pass
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_z:
+            meiri_lengd = True
 
-    pygame.draw.rect(window, BLACK, pygame.Rect(snakur_x, snakur_y, x_snakur, y_snakur))
+    # if matur_a_bordi is False:
+    #     matur_x = random.randint(int(0 + snakur_w / 2), int(width - snakur_w / 2))
+    #     matur_y = random.randint(int(0 + snakur_h / 2), int(height - snakur_h / 2))
+    #     matur_a_bordi = True
+
+    # pygame.draw.circle(window, RED, (matur_x, matur_y), snakur_w / 2)
+    
+    for tel in range(lengd):
+        pygame.draw.circle(window, RED, (snakur_x[tel], snakur_y[tel]), snakur_r)
+        # pygame.draw.rect(window, BLACK, pygame.Rect(snakur_x, snakur_y, snakur_w, snakur_h))
+        # pygame.draw.rect(window, RED, pygame.Rect(snakur_x, snakur_y, 5, 5))
     pygame.display.update()
     window.fill(WHITE)
 
-    # Tékka hvort að snákurinn sé búinn að klessa á
-    if fullscreen is True:
-        pass
-    else:
-        if snakur_x < 0 or snakur_x > width - x_snakur or snakur_y < 0 or snakur_y > height - y_snakur:
+    # Tékka hvort að snákurinn sé búinn að klessa á vegg
+    if snakur_x[-1] < 0 or snakur_x[-1] > width - snakur_w or snakur_y[-1] < 0 or snakur_y[-1] > height - snakur_h:
             running = False
 
-    snakur_x += velocity_x * 5
-    snakur_y += velocity_y * 5
+    snakur_x.append(snakur_x[-1] + velocity_x * 5)
+    snakur_y.append(snakur_y[-1] + velocity_y * 5)
+
+    if meiri_lengd is True:
+        lengd += 1
+        meiri_lengd = False
+
+    while len(snakur_x) > lengd:
+        snakur_x.pop(0)
+    while len(snakur_y) > lengd:
+        snakur_y.pop(0)
 
     clock.tick(clock_ticks)
 
