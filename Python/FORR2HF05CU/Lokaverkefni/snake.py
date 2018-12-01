@@ -6,11 +6,6 @@ Hrólfur Gylfason
 import pygame
 import random
 
-# Litir
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-RED = (255, 0, 0)
-
 def byrjaPygame(glugga_stærð):
     pygame.init()# Byrjar pygame
 
@@ -22,6 +17,7 @@ def byrjaPygame(glugga_stærð):
 
     return (pygame, window)
 
+# Byrja glugga
 width = 640
 height = 480
 window_size = width, height# Stærð glugga
@@ -29,6 +25,14 @@ pygame_tuple = byrjaPygame(window_size)
 pygame = pygame_tuple[0]
 window = pygame_tuple[1]
 fullscreen = False
+
+# Litir
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+
+# Stig
+stig = 0
 
 # Hversu miklu á eftir að bæta á snákinn
 baeta_a_snakinn = 0
@@ -117,6 +121,10 @@ while running:
             hradi = 5
         if event.type == pygame.KEYDOWN and event.key == pygame.K_z:
             meiri_lengd = True
+        try:
+            x_mouse, y_mouse = event.pos
+        except AttributeError:
+            x_mouse, y_mouse = -500, -500
 
     # Bæta við mat fyrir snákinn ef hann er búinn að borða síðasta mat
     if matur_a_bordi is False:
@@ -136,9 +144,15 @@ while running:
     pygame.draw.circle(window, RED, (matur_x, matur_y), snakur_r)
 
     # Tékka hvort að snákurinn sé búinn að ná mat
-    if snakur_x[-1] < matur_x + 30 / 2 and snakur_x[-1] > matur_x - 30 / 2 and snakur_y[-1] < matur_y + 30 / 2 and snakur_y[-1] > matur_y - 30 / 2:
+    if snakur_x[-1] < matur_x + snakur_r*2 and snakur_x[-1] > matur_x - snakur_r*2 and snakur_y[-1] < matur_y + snakur_r*2 and snakur_y[-1] > matur_y - snakur_r*2:
+            matur_a_bordi = False
+            meiri_lengd = True
+            stig += 1
+    
+    # Debug
+    if x_mouse < matur_x + snakur_r*2 and x_mouse > matur_x - snakur_r*2 and y_mouse < matur_y + snakur_r*2 and y_mouse > matur_y - snakur_r*2:
         matur_a_bordi = False
-        meiri_lengd = True
+        print("Namm")
 
     # Tékka hvort að snákurinn sé búinn að klessa á vegg
     if snakur_x[-1] < 0 + snakur_w or snakur_x[-1] > width - snakur_w or snakur_y[-1] < 0 + snakur_h or snakur_y[-1] > height - snakur_h:
@@ -163,6 +177,9 @@ while running:
     vegalengd_fra_begju += hradi
 
     clock.tick(clock_ticks)
+
+# Segir hversu mörgum stigum var náð
+print("Þú fékst",stig,"stig")
 
 # Slekkur á pygame
 pygame.quit()
