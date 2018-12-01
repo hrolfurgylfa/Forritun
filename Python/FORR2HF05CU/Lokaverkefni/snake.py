@@ -136,14 +136,13 @@ while running:
     pygame.draw.circle(window, RED, (matur_x, matur_y), snakur_r)
 
     # Tékka hvort að snákurinn sé búinn að ná mat
-    if snakur_x[0] < matur_x + 30 / 2 and snakur_x[0] > matur_x - 30 / 2:
-        print("Framhjá X")
-    if snakur_y[0] < matur_y + 30 / 2 and snakur_y[0] > matur_y - 30 / 2:
-        print("Framhjá Y")
+    if snakur_x[-1] < matur_x + 30 / 2 and snakur_x[-1] > matur_x - 30 / 2 and snakur_y[-1] < matur_y + 30 / 2 and snakur_y[-1] > matur_y - 30 / 2:
+        matur_a_bordi = False
+        meiri_lengd = True
 
     # Tékka hvort að snákurinn sé búinn að klessa á vegg
     if snakur_x[-1] < 0 + snakur_w or snakur_x[-1] > width - snakur_w or snakur_y[-1] < 0 + snakur_h or snakur_y[-1] > height - snakur_h:
-            running = False
+        running = False
 
     snakur_x.append(int(snakur_x[-1] + velocity_x * hradi))
     snakur_y.append(int(snakur_y[-1] + velocity_y * hradi))
