@@ -30,11 +30,14 @@ pygame = pygame_tuple[0]
 window = pygame_tuple[1]
 fullscreen = False
 
+# Hversu miklu á eftir að bæta á snákinn
+baeta_a_snakinn = 0
+
 # Vegalengd snáks farin frá síðustu begju
 vegalengd_fra_begju = 0
 
 # Lengd snáks
-lengd = 3
+lengd = 10
 
 # Stærð snáks
 snakur_w = 15
@@ -42,8 +45,8 @@ snakur_h = 15
 snakur_r = 10
 
 # Staðsetning
-snakur_x = [0, 10, 20]
-snakur_y = [30, 30, 30]
+snakur_x = [x*10 for x in range(lengd)]
+snakur_y = [30 for x in range(lengd)]
 
 # Velocity
 velocity_x = 1
@@ -146,8 +149,12 @@ while running:
     snakur_y.append(int(snakur_y[-1] + velocity_y * hradi))
 
     if meiri_lengd is True:
-        lengd += 1
+        baeta_a_snakinn += 10
         meiri_lengd = False
+
+    if baeta_a_snakinn > 0:
+        baeta_a_snakinn -= 1
+        lengd += 1
 
     while len(snakur_x) > lengd:
         snakur_x.pop(0)
