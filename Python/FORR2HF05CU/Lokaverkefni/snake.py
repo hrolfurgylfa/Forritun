@@ -158,6 +158,7 @@ while running:
     if snakur_x[-1] < 0 + snakur_w or snakur_x[-1] > width - snakur_w or snakur_y[-1] < 0 + snakur_h or snakur_y[-1] > height - snakur_h:
         running = False
 
+    # Þetta færir snákinn áfram
     snakur_x.append(int(snakur_x[-1] + velocity_x * hradi))
     snakur_y.append(int(snakur_y[-1] + velocity_y * hradi))
 
@@ -169,6 +170,7 @@ while running:
         baeta_a_snakinn -= 1
         lengd += 1
 
+    # Þetta tekur aftasta partinn af snáknum svo að hann hreifist
     while len(snakur_x) > lengd:
         snakur_x.pop(0)
     while len(snakur_y) > lengd:
