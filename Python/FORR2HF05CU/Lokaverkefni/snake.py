@@ -64,7 +64,7 @@ meiri_lengd = False
 matur_a_bordi = False
 
 clock = pygame.time.Clock()
-clock_ticks = 60
+clock_ticks = 30
 
 running = True
 
@@ -157,6 +157,12 @@ while running:
     # Tékka hvort að snákurinn sé búinn að klessa á vegg
     if snakur_x[-1] < 0 + snakur_w or snakur_x[-1] > width - snakur_w or snakur_y[-1] < 0 + snakur_h or snakur_y[-1] > height - snakur_h:
         running = False
+    
+    # Tékka hvort að snákurinn sé búinn að bíta í sig
+    for i in range(0, lengd - 10):
+        if snakur_x[i] < snakur_x[-1] + snakur_r and snakur_x[i] > snakur_x[-1] - snakur_r:
+            if snakur_y[i] < snakur_y[-1] + snakur_r and snakur_y[i] > snakur_y[-1] - snakur_r:
+                running = False
 
     # Þetta færir snákinn áfram
     snakur_x.append(int(snakur_x[-1] + velocity_x * hradi))
