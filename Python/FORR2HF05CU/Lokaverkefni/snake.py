@@ -59,6 +59,11 @@ velocity_y = 0
 # Hraði leiksins
 hradi = 5
 
+# Að gera texta
+pygame.font.init()
+myfont = pygame.font.SysFont('Comic Sans MS', 80)
+leturstaerd_stiga = (snakur_r/2,snakur_r/2)
+
 meiri_lengd = False
 
 matur_a_bordi = False
@@ -137,6 +142,12 @@ while running:
         pygame.draw.circle(window, BLACK, (snakur_x[tel], snakur_y[tel]), snakur_r)
         # pygame.draw.rect(window, BLACK, pygame.Rect(snakur_x, snakur_y, snakur_w, snakur_h))
         # pygame.draw.rect(window, RED, pygame.Rect(snakur_x, snakur_y, 5, 5))
+    
+    # Teikna textann
+    textsurface = myfont.render(str(stig), False, (0, 0, 0))
+    window.blit(textsurface,leturstaerd_stiga)
+
+    # Updata skjáinn
     pygame.display.update()
     window.fill(WHITE)
 
