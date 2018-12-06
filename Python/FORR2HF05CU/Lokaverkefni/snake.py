@@ -59,6 +59,11 @@ velocity_y = 0
 # Hraði leiksins
 hradi = 5
 
+# Að gera texta
+pygame.font.init()
+myfont = pygame.font.SysFont('Comic Sans MS', 80)
+leturstaerd_stiga = (snakur_r/2,snakur_r/2)
+
 meiri_lengd = False
 
 matur_a_bordi = False
@@ -108,6 +113,12 @@ while running:
         pygame.draw.circle(window, BLACK, (snakur_x[tel], snakur_y[tel]), snakur_r)
         # pygame.draw.rect(window, BLACK, pygame.Rect(snakur_x, snakur_y, snakur_w, snakur_h))
         # pygame.draw.rect(window, RED, pygame.Rect(snakur_x, snakur_y, 5, 5))
+    
+    # Teikna textann
+    textsurface = myfont.render(str(stig), False, (0, 0, 0))
+    window.blit(textsurface,leturstaerd_stiga)
+
+    # Updata skjáinn
     pygame.display.update()
     window.fill(WHITE)
 
@@ -123,7 +134,14 @@ while running:
     # Tékka hvort að snákurinn sé búinn að klessa á vegg
     if snakur_x[-1] < 0 + snakur_w or snakur_x[-1] > width - snakur_w or snakur_y[-1] < 0 + snakur_h or snakur_y[-1] > height - snakur_h:
         running = False
+    
+    # Tékka hvort að snákurinn sé búinn að bíta í sig
+    for i in range(0, lengd - 10):
+        if snakur_x[i] < snakur_x[-1] + snakur_r * 2 and snakur_x[i] > snakur_x[-1] - snakur_r * 2:
+            if snakur_y[i] < snakur_y[-1] + snakur_r * 2 and snakur_y[i] > snakur_y[-1] - snakur_r * 2:
+                running = False
 
+    # Þetta færir snákinn áfram
     snakur_x.append(int(snakur_x[-1] + velocity_x * hradi))
     snakur_y.append(int(snakur_y[-1] + velocity_y * hradi))
 
@@ -135,6 +153,7 @@ while running:
         baeta_a_snakinn -= 1
         lengd += 1
 
+    # Þetta tekur aftasta partinn af snáknum svo að hann hreifist
     while len(snakur_x) > lengd:
         snakur_x.pop(0)
     while len(snakur_y) > lengd:
