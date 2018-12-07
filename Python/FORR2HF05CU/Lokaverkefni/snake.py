@@ -18,7 +18,7 @@ def byrjaPygame(glugga_stærð):
 
     return (pygame, window)
 
-def skrifaISkra(oll_skra):
+def skrifaIStigaSkra(oll_skra):
     skra = open("stig.txt", "w")
     for lina in oll_skra:
         skra.write(str(lina[0])+";"+str(lina[1])+";\n")
@@ -99,7 +99,7 @@ while valmynd != "3":
         # Að gera texta fyrir byrjunartexta
         skilabod = "Ýttu á enter til þess að byrja"
         byrjunarskilabod_letur = pygame.font.SysFont('Cursive', 40)
-        textsurface_byrjunarskilabod = byrjunarskilabod_letur.render(skilabod, False, (255, 0, 0))
+        textsurface_byrjunarskilabod = byrjunarskilabod_letur.render(skilabod, False, RED)
         text_width, text_height = byrjunarskilabod_letur.size(skilabod)
         byrjunartexta_stadsetning = ((width/2)-(text_width/2), (height/2)-(text_height/2))
 
@@ -235,14 +235,17 @@ while valmynd != "3":
             else: print("\nNafnið þarf að vera undir 16 stafir")
 
         if nafn != "":# Þetta er til þess að ef maður ýtir bara á enter þá er ekki sett neitt nafn í skránna
-            skra = open("stig.txt", "r")
             oll_nofn = []
             oll_skra = []
-            for line in skra:# Þessi for lúppa setir öll nöfnin í stig.txt í listann oll_nofn og nöfnin og stigin í listann oll_skra
-                lina = line.split(";")
-                oll_nofn.append(lina[0])# lina[0] er nafnið í skránni
-                oll_skra.append(lina[0:2])# lina[0:2] eru nafnið og stigin
-            skra.close()
+            try:
+                skra = open("stig.txt", "r")
+                for line in skra:# Þessi for lúppa setir öll nöfnin í stig.txt í listann oll_nofn og nöfnin og stigin í listann oll_skra
+                    lina = line.split(";")
+                    oll_nofn.append(lina[0])# lina[0] er nafnið í skránni
+                    oll_skra.append(lina[0:2])# lina[0:2] eru nafnið og stigin
+                skra.close()
+            except FileNotFoundError:
+                pass
 
             if nafn not in oll_nofn:
                 skra = open("stig.txt", "a")
@@ -254,7 +257,7 @@ while valmynd != "3":
                         break
                     elif lina[0] == nafn and int(lina[1]) < stig:
                         lina[1] = stig
-                        skrifaISkra(oll_skra)
+                        skrifaIStigaSkra(oll_skra)
 
 
     elif valmynd == "2":# Leaderboards
