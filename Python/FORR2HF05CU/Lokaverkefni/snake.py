@@ -5,6 +5,7 @@ Hrólfur Gylfason
 '''
 import pygame
 import random
+import sys
 
 def byrjaPygame(glugga_stærð):
     pygame.init()# Byrjar pygame
@@ -22,6 +23,10 @@ def skrifaISkra(oll_skra):
     for lina in oll_skra:
         skra.write(str(lina[0])+";"+str(lina[1])+";\n")
     skra.close()
+
+def haetta():
+    pygame.quit()
+    sys.exit()
 
 
 valmynd = ""
@@ -86,11 +91,19 @@ while valmynd != "3":
         # Hraði leiksins
         hradi = 5
 
-        # Að gera texta
+        # Að gera texta fyrir stigateljara
         pygame.font.init()
-        myfont = pygame.font.SysFont('Comic Sans MS', 80)
+        stigateljari_letur = pygame.font.SysFont('Cursive', 80)
         leturstaerd_stiga = (snakur_r/2,snakur_r/2)
 
+        # Að gera texta fyrir byrjunartexta
+        skilabod = "Ýttu á enter til þess að byrja"
+        byrjunarskilabod_letur = pygame.font.SysFont('Cursive', 40)
+        textsurface_byrjunarskilabod = byrjunarskilabod_letur.render(skilabod, False, (255, 0, 0))
+        text_width, text_height = byrjunarskilabod_letur.size(skilabod)
+        byrjunartexta_stadsetning = ((width/2)-(text_width/2), (height/2)-(text_height/2))
+
+        # Eftir að commenta
         meiri_lengd = False
 
         matur_a_bordi = False
@@ -98,12 +111,32 @@ while valmynd != "3":
         clock = pygame.time.Clock()
         clock_ticks = 60
 
+        waiting = True
+
+        while waiting:
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_RETURN:
+                    waiting = False
+                if event.type == pygame.QUIT:
+                    haetta()
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                    haetta()
+
+            # Teikna byrjunartextann
+            window.blit(textsurface_byrjunarskilabod,byrjunartexta_stadsetning)
+
+            # Updata skjáinn
+            pygame.display.update()
+            window.fill(WHITE)
+
+            clock.tick(10)
+
         running = True
 
-        while running:
+        while running:# Þar sem leikurinn sjálfur keyrir
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    running = False
+                    haetta()
                 if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:# Ef ýtt er á Esc
                     running = False
 
@@ -140,7 +173,7 @@ while valmynd != "3":
                 pygame.draw.circle(window, BLACK, (snakur_x[tel], snakur_y[tel]), snakur_r)
             
             # Teikna textann
-            textsurface = myfont.render(str(stig), False, (255, 0, 0))
+            textsurface = stigateljari_letur.render(str(stig), False, (255, 0, 0))
             window.blit(textsurface,leturstaerd_stiga)
 
             # Updata skjáinn
@@ -201,7 +234,7 @@ while valmynd != "3":
             if len(nafn) <= 15: break
             else: print("\nNafnið þarf að vera undir 16 stafir")
 
-        if nafn != "":
+        if nafn != "":# Þetta er til þess að ef maður ýtir bara á enter þá er ekki sett neitt nafn í skránna
             skra = open("stig.txt", "r")
             oll_nofn = []
             oll_skra = []
