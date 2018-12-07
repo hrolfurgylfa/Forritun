@@ -7,17 +7,6 @@ import pygame
 import random
 import sys
 
-def byrjaPygame(glugga_stærð):
-    pygame.init()# Byrjar pygame
-
-    if glugga_stærð != "f":
-        window = pygame.display.set_mode(glugga_stærð)# Býr til gluggann
-    else:
-        window = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
-    pygame.display.set_caption('Snake')# Setir titil á gluggann
-
-    return (pygame, window)
-
 def skrifaIStigaSkra(oll_skra):
     skra = open("stig.txt", "w")
     for lina in oll_skra:
@@ -27,6 +16,20 @@ def skrifaIStigaSkra(oll_skra):
 def haetta():
     pygame.quit()
     sys.exit()
+
+def faStigaSkra():
+    allt = []
+
+    try:
+        skra = open("stig.txt", "r")
+        for line in skra:
+            lina = line.split(";")
+            allt.append(lina[0:2])
+        skra.close()
+    except FileNotFoundError:
+        pass
+    
+    return allt
 
 
 valmynd = ""
@@ -53,15 +56,16 @@ while valmynd != "3":
         width = 640
         height = 480
         window_size = width, height# Stærð glugga
-        pygame_tuple = byrjaPygame(window_size)
-        pygame = pygame_tuple[0]
-        window = pygame_tuple[1]
-        fullscreen = False
+        pygame.init()# Byrjar pygame
+        window = pygame.display.set_mode(window_size)# Býr til gluggann
+        pygame.display.set_caption('Snake')# Setir titil á gluggann
 
         # Litir
-        WHITE = (255, 255, 255)
-        BLACK = (0, 0, 0)
-        RED = (255, 0, 0)
+        bakgrunnslitur = (255, 255, 255)
+        litur_snaks = (0, 0, 0)
+        litur_mats = (255, 0, 0)
+        litur_byrjunartexta = (0, 0, 0)
+        litur_stigatexta = (0, 0, 255)
 
         # Stig
         stig = 0
@@ -99,7 +103,7 @@ while valmynd != "3":
         # Að gera texta fyrir byrjunartexta
         skilabod = "Ýttu á enter til þess að byrja"
         byrjunarskilabod_letur = pygame.font.SysFont('Cursive', 40)
-        textsurface_byrjunarskilabod = byrjunarskilabod_letur.render(skilabod, False, RED)
+        textsurface_byrjunarskilabod = byrjunarskilabod_letur.render(skilabod, False, litur_byrjunartexta)
         text_width, text_height = byrjunarskilabod_letur.size(skilabod)
         byrjunartexta_stadsetning = ((width/2)-(text_width/2), (height/2)-(text_height/2))
 
@@ -127,7 +131,7 @@ while valmynd != "3":
 
             # Updata skjáinn
             pygame.display.update()
-            window.fill(WHITE)
+            window.fill(bakgrunnslitur)
 
             clock.tick(10)
 
@@ -170,18 +174,18 @@ while valmynd != "3":
 
             # Teikna snákinn
             for tel in range(lengd):
-                pygame.draw.circle(window, BLACK, (snakur_x[tel], snakur_y[tel]), snakur_r)
+                pygame.draw.circle(window, litur_snaks, (snakur_x[tel], snakur_y[tel]), snakur_r)
             
             # Teikna textann
-            textsurface = stigateljari_letur.render(str(stig), False, (255, 0, 0))
+            textsurface = stigateljari_letur.render(str(stig), False, litur_stigatexta)
             window.blit(textsurface,leturstaerd_stiga)
 
             # Updata skjáinn
             pygame.display.update()
-            window.fill(WHITE)
+            window.fill(bakgrunnslitur)
 
             # Teikna matinn
-            pygame.draw.circle(window, RED, (matur_x, matur_y), snakur_r)
+            pygame.draw.circle(window, litur_mats, (matur_x, matur_y), snakur_r)
 
             # Tékka hvort að snákurinn sé búinn að ná mat
             if snakur_x[-1] < matur_x + snakur_r*2 and snakur_x[-1] > matur_x - snakur_r*2 and snakur_y[-1] < matur_y + snakur_r*2 and snakur_y[-1] > matur_y - snakur_r*2:
@@ -230,8 +234,8 @@ while valmynd != "3":
         # Hérna fer notandinn aftur í texta forritið
         # Hérna slær notandinn inn nafnið sitt
         while True:
-            nafn = input("Sláðu inn nafn til þess að vista með metinu þínu og er undir 16 stafir eða ekki skrifa neitt til þess að vista þetta ekki\n--->")
-            if len(nafn) <= 15: break
+            nafn = input("Sláðu inn nafn til þess að vista með metinu þínu og er undir 12 stafir eða ekki skrifa neitt til þess að vista þetta ekki\n--->")
+            if len(nafn) < 12: break
             else: print("\nNafnið þarf að vera undir 16 stafir")
 
         if nafn != "":# Þetta er til þess að ef maður ýtir bara á enter þá er ekki sett neitt nafn í skránna
@@ -261,13 +265,18 @@ while valmynd != "3":
 
 
     elif valmynd == "2":# Leaderboards
-        try:
-            skra = open("stig.txt", "r")
-        except FileNotFoundError:
-            skra = []
-        for line in skra:
-            lina = line.split(";")
-            lina = lina[0:2]
-            print(lina)
+        stiga_listi = faStigaSkra()
+        print("Nafn\t\tStig")
+        for met in stiga_listi:
+            if len(str(met[0])) < 4:
+                print(str(met[0])+"\t\t\t"+str(met[1]))
 
+            elif len(str(met[0])) < 8:
+                print(str(met[0])+"\t\t"+str(met[1]))
+
+            elif len(str(met[0])) < 12:
+                print(str(met[0])+"\t"+str(met[1]))
+
+            else:
+                print(str(met[0])+" "+str(met[1]))
 
