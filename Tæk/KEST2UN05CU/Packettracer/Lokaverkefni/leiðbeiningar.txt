@@ -24,3 +24,11 @@ password: Lokad123!
 5G Net:
 SSID: Vodafone2_5G
 password: Lokad123!
+
+2.4G Gestanet;
+SSID: Vodafone2_gestir
+password: Gestir123!
+
+5G Gestanet;
+SSID: Vodafone2_5G_gestir
+password: Gestir123!
