@@ -307,7 +307,7 @@ while valmynd != "3":
             oll_nofn = []
             oll_skra = []
             try:# Þetta er til þess að þegar skráin er ekki til þá býr forritið til nýja skrá
-                skra = open("stig.txt", "r")
+                skra = open(skraarnafn, "r")
                 for line in skra:# Þessi for lúppa setir öll nöfnin í stig.txt í listann oll_nofn og nöfnin og stigin í listann oll_skra
                     lina = line.split(";")
                     oll_nofn.append(lina[0])# lina[0] er nafnið í skránni
@@ -317,7 +317,7 @@ while valmynd != "3":
                 pass
 
             if nafn not in oll_nofn:# Þetta gerist ef þessi notandi hefur ekki spilað núþegar og bætir honum þá við í skránna
-                skra = open("stig.txt", "a")
+                skra = open(skraarnafn, "a")
                 skra.write(nafn+";"+str(stig)+";\n")
                 skra.close()
             else:# Þetta gerist ef notandinn hefur núþegar spilað og þá tékkar tölvan hvort að stigin sem notandinn var að fá núna séu hærri en þau sem voru þar áður og ef þau eru hærri skiptir hann þeim út, annars gerist ekki neitt
