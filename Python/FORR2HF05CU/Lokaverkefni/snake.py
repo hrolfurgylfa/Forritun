@@ -318,10 +318,7 @@ while valmynd != "3":
         stiga_listi = faStigaSkra()
         print("Nafn\t\tStig")
         for met in stiga_listi:
-            if len(str(met[0])) < 4:
-                print(str(met[0])+"\t\t\t"+str(met[1]))
-
-            elif len(str(met[0])) < 8:
+            if len(str(met[0])) < 8:
                 print(str(met[0])+"\t\t"+str(met[1]))
 
             elif len(str(met[0])) < 12:
