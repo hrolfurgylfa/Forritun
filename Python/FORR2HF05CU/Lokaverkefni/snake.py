@@ -31,6 +31,22 @@ def faStigaSkra():
     
     return allt
 
+def faBestuSpilara():# Þetta fall skilar núverandi notanda með hæstu stigin eða notendum með hæstu stigin ef nokkrir eru jafnir
+    stiga_listi = faStigaSkra()# Sækir stiga listann úr fallinu faStigaSkra
+
+    haestu_stig_listi = []
+    haestu_stig = -1
+
+    for met in stiga_listi:# Fer yfir öll metin í listanum stiga_listi
+        if int(met[1]) > haestu_stig:# Þetta gerist ef forritið finnur nýjan meistara
+            haestu_stig_listi = []# Hreinsar listann
+            haestu_stig_listi.append(met)# Bætir metinu sem for lúppan er á núna í hreinsaða listann
+            haestu_stig = int(met[1])# Breitir tölunni sem segir hvað hæstu stigin eru í hæsta stig metsins sem for lúppan er á núna
+
+        elif int(met[1]) == haestu_stig:# Þetta gerist ef það jafnar eitthver núverandi meistara
+            haestu_stig_listi.append(met)# Bætir núverandi meti í listann
+
+    return haestu_stig_listi
 
 valmynd = ""
 
@@ -38,7 +54,41 @@ while valmynd != "3":
 
     for tel in range(50):#Þessi for lúppa gerir línu sem er auðvelt að stjórna stærðinni á
         print("-",end="")
-    print("\n")#Þetta er til þess að gera tvö enter
+    print()#Þetta er til þess að gera enter
+
+    # Þetta sýnir notandann með hæstu stigin
+    haestu_spilarar = faBestuSpilara()
+    
+    if len(haestu_spilarar) == 1:
+        nafn = str(haestu_spilarar[0][0])
+        stig = str(haestu_spilarar[0][1])
+
+        print(nafn+" er með metið og er með "+stig+" stig")
+
+    elif len(haestu_spilarar) == 2:
+        nafn = str(haestu_spilarar[0][0])
+        nafn2 = str(haestu_spilarar[1][0])
+        stig = str(haestu_spilarar[0][1])
+
+        print(nafn+" og "+nafn2+" eru með metið og eru með "+stig+" stig")
+
+    elif len(haestu_spilarar) >= 3:
+        n_listi = []# n stendur fyrir nafna
+        stig = str(haestu_spilarar[0][1])
+
+        for i in haestu_spilarar:
+            nafn = str(i[0])
+            n_listi.append(nafn)
+        
+        print(n_listi[0],end="")
+
+        for i in range(1, len(n_listi) -1):
+            print(", "+n_listi[i],end="")
+        
+        print(" og "+n_listi[-1]+" eru með metið og eru með "+stig+" stig")
+
+    print()#Þetta er til þess að gera enter
+        
 
     print("Ýttu á 1 til þess að spila")
     print("Ýttu á 2 til þess að skoða hæstu stigin")
