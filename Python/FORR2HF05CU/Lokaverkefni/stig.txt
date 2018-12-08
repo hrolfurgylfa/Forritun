@@ -1,5 +1,4 @@
 Hrói;38;
 Hrólfur;8;
 Gylfi;17;
-1;24;
 Högni;18;
