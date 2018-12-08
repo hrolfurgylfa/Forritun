@@ -7,8 +7,11 @@ import pygame
 import random
 import sys
 
+skraarnafn = "gameFiles/stig.txt"
+nafn_fonts = "gameFiles/Ubuntu-R.ttf"
+
 def skrifaIStigaSkra(oll_skra):
-    skra = open("stig.txt", "w")
+    skra = open(skraarnafn, "w")
     for lina in oll_skra:
         skra.write(str(lina[0])+";"+str(lina[1])+";\n")
     skra.close()
@@ -21,7 +24,7 @@ def faStigaSkra():
     allt = []
 
     try:
-        skra = open("stig.txt", "r")
+        skra = open(skraarnafn, "r")
         for line in skra:
             lina = line.split(";")
             allt.append(lina[0:2])
@@ -101,7 +104,7 @@ while valmynd != "3":
     print()#Þetta er til þess að gera enter
 
     if valmynd == "1":# Snake leikurinn sjálfur
-
+        
         # Byrja glugga
         width = 640
         height = 480
@@ -147,23 +150,23 @@ while valmynd != "3":
 
         # Að gera texta fyrir stigateljara
         pygame.font.init()
-        stigateljari_letur = pygame.font.SysFont('Cursive', 80)
+        stigateljari_letur = pygame.font.Font(nafn_fonts, 60)
         leturstaerd_stiga = (snakur_r/2,snakur_r/2)
 
         # Að gera texta fyrir byrjunartexta
         skilabod = "Ýttu á enter til þess að byrja"
-        byrjunarskilabod_letur = pygame.font.SysFont('Cursive', 40)
+        byrjunarskilabod_letur = pygame.font.Font(nafn_fonts, 40)
         textsurface_byrjunarskilabod = byrjunarskilabod_letur.render(skilabod, False, litur_byrjunartexta)
         text_width, text_height = byrjunarskilabod_letur.size(skilabod)
         byrjunartexta_stadsetning = ((width/2)-(text_width/2), (height/2)-(text_height/2))
 
         # Eftir að commenta
-        meiri_lengd = False
+        meiri_lengd = False# Þetta verður true einu sinni til þess að stækka við snákinn
 
-        matur_a_bordi = False
+        matur_a_bordi = False# Þetta er True þegar það er matur á borðinu en svo þegar snákurinn borðar mat þá verður þetta False og þá kemur matur inná völlinn á næsta ramma
 
-        clock = pygame.time.Clock()
-        clock_ticks = 60
+        clock = pygame.time.Clock()# Þetta kveikir á klukkunni
+        clock_ticks = 60# Þetta eru rammarnir sem koma á sekúntu
 
         waiting = True
 
@@ -278,34 +281,39 @@ while valmynd != "3":
         # Segir hversu mörgum stigum var náð
         print("Þú fékst",stig,"stig\n")
 
+        # LAUSN FUNDIN VIÐ Segmentation fault (core dumped) Crasi!!!!!!!
+        # Að hreinsa letrið, þetta hreinsar letrið sem ég nota og þetta gerir það að verkum að forritið crashar ekki vegna þess að það má ekki snerta við þessu (hvorki reassigna né hreinsa) eftir að það er búið að loka pygame-ið sem þetta var opnað í en það er hægt að hreinsa þetta á meðan það er ekki býið að loka pygame
+        stigateljari_letur = None
+        byrjunarskilabod_letur = None
+        
         # Slekkur á pygame
         pygame.quit()
 
         # Hérna fer notandinn aftur í texta forritið
         # Hérna slær notandinn inn nafnið sitt
-        while True:
+        while True:# Þetta fær nafn síðasta spilara
             nafn = input("Sláðu inn nafn til þess að vista með metinu þínu og er undir 12 stafir eða ekki skrifa neitt til þess að vista þetta ekki\n--->")
-            if len(nafn) < 12: break
+            if len(nafn) < 12: break # Þetta heldur áfram ef það sem var slegið inn var undir 12
             else: print("\nNafnið þarf að vera undir 16 stafir")
 
         if nafn != "":# Þetta er til þess að ef maður ýtir bara á enter þá er ekki sett neitt nafn í skránna
             oll_nofn = []
             oll_skra = []
-            try:
+            try:# Þetta er til þess að þegar skráin er ekki til þá býr forritið til nýja skrá
                 skra = open("stig.txt", "r")
                 for line in skra:# Þessi for lúppa setir öll nöfnin í stig.txt í listann oll_nofn og nöfnin og stigin í listann oll_skra
                     lina = line.split(";")
                     oll_nofn.append(lina[0])# lina[0] er nafnið í skránni
                     oll_skra.append(lina[0:2])# lina[0:2] eru nafnið og stigin
                 skra.close()
-            except FileNotFoundError:
+            except FileNotFoundError:# Þetta gerist ef skráin er ekki til núþegar
                 pass
 
-            if nafn not in oll_nofn:
+            if nafn not in oll_nofn:# Þetta gerist ef þessi notandi hefur ekki spilað núþegar og bætir honum þá við í skránna
                 skra = open("stig.txt", "a")
                 skra.write(nafn+";"+str(stig)+";\n")
                 skra.close()
-            else:
+            else:# Þetta gerist ef notandinn hefur núþegar spilað og þá tékkar tölvan hvort að stigin sem notandinn var að fá núna séu hærri en þau sem voru þar áður og ef þau eru hærri skiptir hann þeim út, annars gerist ekki neitt
                 for lina in oll_skra:
                     if lina[0] == nafn and int(lina[1]) > stig or lina[0] == nafn and int(lina[1]) == stig:
                         break
@@ -315,9 +323,9 @@ while valmynd != "3":
 
 
     elif valmynd == "2":# Leaderboards
-        stiga_listi = faStigaSkra()
-        print("Nafn\t\tStig")
-        for met in stiga_listi:
+        stiga_listi = faStigaSkra()# Þetta sækir öll stigin
+        print("Nafn\t\tStig")# Þetta prentar fyrirsögnina
+        for met in stiga_listi:# Þetta tékkar á hverju meti hversu langt nafnið sé og setir paslega mörg tab met til þess að stigin séu alltaf í sama dálk
             if len(str(met[0])) < 8:
                 print(str(met[0])+"\t\t"+str(met[1]))
 
