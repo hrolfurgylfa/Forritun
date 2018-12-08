@@ -10,17 +10,17 @@ import sys
 skraarnafn = "gameFiles/stig.txt"
 nafn_fonts = "gameFiles/Ubuntu-R.ttf"
 
-def skrifaIStigaSkra(oll_skra):
+def skrifaIStigaSkra(oll_skra):# Þetta fall skrifar lista í stiga skránna
     skra = open(skraarnafn, "w")
     for lina in oll_skra:
         skra.write(str(lina[0])+";"+str(lina[1])+";\n")
     skra.close()
 
-def haetta():
+def haetta():# Þetta slekkur á forritinu
     pygame.quit()
     sys.exit()
 
-def faStigaSkra():
+def faStigaSkra():# Þetta sækir stigaskránna og skilar henni í lista
     allt = []
 
     try:
@@ -62,20 +62,20 @@ while valmynd != "3":
     # Þetta sýnir notandann með hæstu stigin
     haestu_spilarar = faBestuSpilara()
     
-    if len(haestu_spilarar) == 1:
+    if len(haestu_spilarar) == 1:# Þetta gerist ef það er einn notandi með metið
         nafn = str(haestu_spilarar[0][0])
         stig = str(haestu_spilarar[0][1])
 
         print(nafn+" er með metið og er með "+stig+" stig")
 
-    elif len(haestu_spilarar) == 2:
+    elif len(haestu_spilarar) == 2:# Þetta gerist ef það eru tveir notendur með metið
         nafn = str(haestu_spilarar[0][0])
         nafn2 = str(haestu_spilarar[1][0])
         stig = str(haestu_spilarar[0][1])
 
         print(nafn+" og "+nafn2+" eru með metið og eru með "+stig+" stig")
 
-    elif len(haestu_spilarar) >= 3:
+    elif len(haestu_spilarar) >= 3:# Þetta gerist ef það eru þrír eða fleiri notendur með metið
         n_listi = []# n stendur fyrir nafna
         stig = str(haestu_spilarar[0][1])
 
@@ -105,10 +105,12 @@ while valmynd != "3":
 
     if valmynd == "1":# Snake leikurinn sjálfur
         
-        # Byrja glugga
+        # Setja breytur til þess að geta byrjað glugann
         width = 640
         height = 480
         window_size = width, height# Stærð glugga
+
+        # Byrja glugga
         pygame.init()# Byrjar pygame
         window = pygame.display.set_mode(window_size)# Býr til gluggann
         pygame.display.set_caption('Snake')# Setir titil á gluggann
@@ -148,17 +150,19 @@ while valmynd != "3":
         # Hraði leiksins
         hradi = 5
 
-        # Að gera texta fyrir stigateljara
+        # Initializa letrið
         pygame.font.init()
-        stigateljari_letur = pygame.font.Font(nafn_fonts, 60)
-        leturstaerd_stiga = (snakur_r/2,snakur_r/2)
+
+        # Að gera texta fyrir stigateljara
+        stigateljari_letur = pygame.font.Font(nafn_fonts, 60)# Leturgerð fyrir stigateljarann gerð
+        leturstaerd_stiga = (snakur_r/2,snakur_r/2)# Leturstærð stiga reiknað
 
         # Að gera texta fyrir byrjunartexta
-        skilabod = "Ýttu á enter til þess að byrja"
-        byrjunarskilabod_letur = pygame.font.Font(nafn_fonts, 40)
-        textsurface_byrjunarskilabod = byrjunarskilabod_letur.render(skilabod, False, litur_byrjunartexta)
-        text_width, text_height = byrjunarskilabod_letur.size(skilabod)
-        byrjunartexta_stadsetning = ((width/2)-(text_width/2), (height/2)-(text_height/2))
+        skilabod = "Ýttu á enter til þess að byrja"# Texti byrjunarskilaboða búinn til til þess að ég geti mælt hann og renderað hann án þess að skrifa hann tvisvar
+        byrjunarskilabod_letur = pygame.font.Font(nafn_fonts, 40)# Leturgerð fyrir byrjunartextann gerð
+        textsurface_byrjunarskilabod = byrjunarskilabod_letur.render(skilabod, False, litur_byrjunartexta)# Byrjunarskilaboð renderuð
+        text_width, text_height = byrjunarskilabod_letur.size(skilabod)# Náð stærð byrjunarskilaboða
+        byrjunartexta_stadsetning = ((width/2)-(text_width/2), (height/2)-(text_height/2))# Staðsetning byrjunarskilaboða reiknuð
 
         # Eftir að commenta
         meiri_lengd = False# Þetta verður true einu sinni til þess að stækka við snákinn
@@ -260,10 +264,12 @@ while valmynd != "3":
             snakur_x.append(int(snakur_x[-1] + velocity_x * hradi))
             snakur_y.append(int(snakur_y[-1] + velocity_y * hradi))
 
+            # Þetta bætir 10 við breytuna baeta_a_snakinn
             if meiri_lengd is True:
                 baeta_a_snakinn += 10
                 meiri_lengd = False
 
+            # Þetta bætir rólega við á snákinn (einn hring í einu) og lækkar baeta_a_snakin um einn með
             if baeta_a_snakinn > 0:
                 baeta_a_snakinn -= 1
                 lengd += 1
@@ -274,6 +280,7 @@ while valmynd != "3":
             while len(snakur_y) > lengd:
                 snakur_y.pop(0)
 
+            # Þetta er til þess að snákurinn geti ekki bitið í sig
             vegalengd_fra_begju += hradi
 
             clock.tick(clock_ticks)
