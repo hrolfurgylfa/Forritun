@@ -1,0 +1,26 @@
+Heimanet:
+2.4G Net:
+SSID: Vodafone1
+password: Lokad123!
+
+5G Net:
+SSID: Vodafone1_5G
+password: Lokad123!
+
+2.4G Gestanet;
+SSID: Vodafone1_gestir
+password: Gestir123!
+
+5G Gestanet;
+SSID: Vodafone1_5G_gestir
+password: Gestir123!
+
+
+Fyrirtækjanet:
+2.4G Net:
+SSID: Vodafone2
+password: Lokad123!
+
+5G Net:
+SSID: Vodafone2_5G
+password: Lokad123!
