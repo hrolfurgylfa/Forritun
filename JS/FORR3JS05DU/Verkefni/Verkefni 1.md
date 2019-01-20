@@ -1,6 +1,6 @@
 # Spurningar
 
-1. k
+1. Null og undefinded eru bæði til þess að geyma breytu fyrir notkun seinna og eru svipaðar að flestu leiti nema það að þegar maður býr til breytu án þess að seta gildi þá verður hún undefinded en maður þarf að gera breitu að null
 2. Use strict gerir það að verkum að javascript interpreterinn hjálpar ekki með stafsetninguna heldur ef þú skrifar villu þá hættir hann í staðin fyrir að reyna að laga villuna, eins og ef maður gleimir semíkommu.
 3. k
 4. ```javascript
@@ -29,7 +29,7 @@
    (// Þetta opnar sviga sen verður svo notaður til þess að keyra nafnlausa fallið
       function() {// Þetta býr til nafnlaust fall
          alert('Hello World');// Þetta setir glugga á skjáinn sem segir Hello World
-      } 
+      }
    )
    ();// Þetta keyrir fallið inni í sviganum sem kom á undan og endar svo statement-ið
    ```
@@ -45,7 +45,7 @@
    console.log(a);// a prentað út og það er enþá 1 hérna
    ```
 8. k
-9.  k
+9. k
 10. ```javascript
     function a(){
        a();
