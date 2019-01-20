@@ -2,7 +2,7 @@
 
 1. Null og undefinded eru bæði til þess að geyma breytu fyrir notkun seinna og eru svipaðar að flestu leiti nema það að þegar maður býr til breytu án þess að seta gildi þá verður hún undefinded en maður þarf að gera breitu að null
 2. Use strict gerir það að verkum að javascript interpreterinn hjálpar ekki með stafsetninguna heldur ef þú skrifar villu þá hættir hann í staðin fyrir að reyna að laga villuna, eins og ef maður gleimir semíkommu.
-3. k
+3. const geymir eitthvað sem er ekki hægt að breyta, let geymir breitu sem hægt er að breyta en ef maður skilgreinir hana inni í if eða for þá er bara hægt að nota breytuna þar og var er gamalt út ES5 og virkar eins og let nema það að það spáir ekki í því hvort að það sé búið til inni í if eða for eða ekki. 
 4. ```javascript
    for (let x = 9; x >= 1; x -= 1) {
       console.log("hello " + x)
