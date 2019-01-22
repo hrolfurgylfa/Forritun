@@ -1,5 +1,3 @@
-def crash(a):
-    print(a)
-    crash(a+1)
+utkoma = 5 % 2
 
-crash(0)
+print(utkoma)
