@@ -1,0 +1,1 @@
+document.body.addEventListener("click", function(){document.write('<h1 style="text-align:center">Bye!</h1>');});
