@@ -1,4 +1,4 @@
-# Spurningar
+# Verkefni 1
 
 1. Null og undefinded eru bæði til þess að geyma breytu fyrir notkun seinna og eru svipaðar að flestu leiti nema það að þegar maður býr til breytu án þess að seta gildi þá verður hún undefinded en maður þarf að gera breitu að null.
 2. Use strict gerir það að verkum að javascript interpreterinn hjálpar ekki með stafsetninguna heldur ef þú skrifar villu þá hættir hann í staðin fyrir að reyna að laga villuna, eins og ef maður gleimir semíkommu.
