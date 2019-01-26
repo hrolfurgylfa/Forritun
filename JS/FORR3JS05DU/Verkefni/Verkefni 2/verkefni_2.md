@@ -28,4 +28,7 @@
         }
     };
     ```
+4.  ```javascript
+    console.log(family.parents.fathers[1].name);
+    ```
 
