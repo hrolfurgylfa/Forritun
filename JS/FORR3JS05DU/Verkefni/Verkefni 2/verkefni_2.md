@@ -4,7 +4,7 @@
     let manneskja = {
         nafn: "Jón Jónsson",
         kennitala: 2505004790,
-        heimilisfang: " 1",
+        heimilisfang: "Bæjargata 22",
         heimasími: 5550357,
         farsími: 7385023
     };
@@ -19,7 +19,7 @@
         nafn: "Jón Jónsson",
         aldur: 18,// Það var enginn aldur í lið 1 svo að ég bætti honum bara við hérna svo að ég gæti kallað í hann
         kennitala: 2505004790,
-        heimilisfang: " 1",
+        heimilisfang: "Bæjargata 22",
         heimasími: 5550357,
         farsími: 7385023,
         nafnOgAldur: function() {
@@ -31,4 +31,15 @@
 4.  ```javascript
     console.log(family.parents.fathers[1].name);
     ```
+5.  ```javascript
 
+    ```
+6.  ```javascript
+
+    ```
+7.  ```javascript
+
+    ```
+8. 
+9. Fyrst er object-ið `{name:"John"}`, svo er breytan `user` búin til og svo er breytan `user` látin vísa á object-ið. Í næstu línu þá er breytan `admin` búin til og látin vísa á það sama og breytan `user` er að vísa á og þá vísa báðar breyturnar á sama object-ið og þess vegna þegar maður breytir einu þá breytist hitt líka.
+10. 
