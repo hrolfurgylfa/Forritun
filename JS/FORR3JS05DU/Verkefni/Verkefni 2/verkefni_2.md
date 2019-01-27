@@ -32,7 +32,11 @@
     console.log(family.parents.fathers[1].name);
     ```
 5.  ```javascript
-
+    let breakfast = {
+        name: "The Lumberjack",
+        price: 9.95,
+        ingredients: ["eggs", "sausage", "toast", "hashbrowns", "pancakes"]
+    };
     ```
 6.  ```javascript
 
