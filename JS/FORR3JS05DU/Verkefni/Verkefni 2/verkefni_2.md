@@ -68,7 +68,9 @@
     console.log(savingsAccount.printAccountSummary());
     ```
 7.  ```javascript
-
+    donuts.forEach(kleinuhringur => {
+        console.log(kleinuhringur.type+" donuts cost $"+kleinuhringur.cost+" each");
+    });
     ```
 8. 
 9. Fyrst er object-ið `{name:"John"}`, svo er breytan `user` búin til og svo er breytan `user` látin vísa á object-ið. Í næstu línu þá er breytan `admin` búin til og látin vísa á það sama og breytan `user` er að vísa á og þá vísa báðar breyturnar á sama object-ið og þess vegna þegar maður breytir einu þá breytist hitt líka.
