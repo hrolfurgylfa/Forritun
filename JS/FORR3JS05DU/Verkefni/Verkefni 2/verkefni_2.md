@@ -72,6 +72,6 @@
         console.log(kleinuhringur.type+" donuts cost $"+kleinuhringur.cost+" each");
     });
     ```
-8. 
+8. Ég fann ekkert um þetta sama hversu mikið ég leitaði.
 9. Fyrst er object-ið `{name:"John"}`, svo er breytan `user` búin til og svo er breytan `user` látin vísa á object-ið. Í næstu línu þá er breytan `admin` búin til og látin vísa á það sama og breytan `user` er að vísa á og þá vísa báðar breyturnar á sama object-ið og þess vegna þegar maður breytir einu þá breytist hitt líka.
 10. Þetta virkar vegna þess að const gerir breytuna óbreytanlega en þegar það er bætt við `user.age` þá er verið að breyta object-i sem breytan vísar á og breytan er allveg eins og hún var, það eina sem breyttist var object-ið sem breytan vísar á.
