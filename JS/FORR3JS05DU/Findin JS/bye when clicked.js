@@ -4,7 +4,5 @@ document.body.addEventListener("click", function(){
     const gamla_document_title = document.title;
     console.log("S: "+gamla_document_title);
     document.title = "Bye!";
-    document.body.addEventListener("click", function(){
-        document.close()
-    });
+    document.body.style.backgroundColor = "blue";
 });
