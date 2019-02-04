@@ -40,3 +40,5 @@
             this.life += 1;
         }
         ```
+4.  
+5.  Það er enginn munur á `class` og `prototype` nema bara útlit, javascript compilerinn breytir `class` í `prototype` þegar hann compilar kóðann en það er samt mun betra að horfa á `class`.
