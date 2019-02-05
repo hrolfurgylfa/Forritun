@@ -1,6 +1,6 @@
 # Verkefni 3
 
-1.  Objectar eru tengdir saman með prototype og ef það finnst ekki eitthvað í objecti sem maður leitar að þá fer forritið að leita í objectinum fyrir ofan.
+1.  Objectar eru tengdir saman með `__proto__` og ef það finnst ekki eitthvað í objecti sem maður leitar að þá fer forritið að leita í næsta objecti í `__proto__` keðjuni.
 2.  ```javascript
     function Book(isbn) {// Hérna er fall sem verður notað sem constructorinn fyrir objecta
         this.isbn = isbn;// Þetta setir breytu í nýju objectana sem heitir isbn og er sama gildi og breytan sem kom inn með fallinu
