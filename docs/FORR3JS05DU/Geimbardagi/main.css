@@ -1,0 +1,27 @@
+.titill {
+    text-align: center;
+}
+.takki {
+    all: none;
+    display: block;
+    margin: 0 auto .5em auto;
+    border-radius: .3em;
+    font-size: 1.2em;
+    background-color: lightblue;
+    border: 3px ridge rgb(18, 18, 197);
+    padding: .3em .7em;
+}
+.takki:hover {
+    background-color: blue;
+    border-color: darkblue;
+    color: white;
+}
+.leikur {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px ridge blue;
+}
+.leikur:hover {
+    cursor: none;
+}
