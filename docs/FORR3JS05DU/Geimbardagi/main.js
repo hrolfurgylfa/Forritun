@@ -5,7 +5,7 @@ Array.prototype.randomElement = () => {
     return this[Math.floor(Math.random() * this.length)]
 }
 // Þetta skilar random tölu á milli talnana sem fara inn
-let getRandomInt = (min, max) => {
+let FaRandomTolu = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
@@ -42,8 +42,8 @@ class Skot {
 }
 class Ovinir {
     constructor() {
-        this.x = 0;
-        this.y = 0;
+        this.x = FaRandomTolu(15,575);
+        this.y = FaRandomTolu(15,200);
     }
 }
 
