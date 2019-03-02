@@ -1,7 +1,7 @@
 "use strict";
 
 // Þetta gerir mér kleift að fá random hlut úr öllum arreyum
-Array.prototype.randomElement = () => {
+Array.prototype.randomElement = function() {
     return this[Math.floor(Math.random() * this.length)]
 }
 // Þetta skilar random tölu á milli talnana sem fara inn
@@ -35,9 +35,11 @@ class Spilari {
     }
 }
 class Skot {
-    constructor() {
-        this.x = Spilari.x;
-        this.y = Spilari.y - 15;
+    constructor(x, y, att, litur) {
+        this.x = x;
+        this.y = y;
+        this.att = att;
+        this.litur = litur
     }
 }
 class Ovinir {
@@ -52,11 +54,39 @@ class Ovinir {
 let faeraSkot = () => {
     let i = 0;
     while (true) {
-        if (ollSkot[i].y < -35) {// Eyða skoti ef það er farið út af skjánum
-            ollSkot.splice(i, 1);
-            i--;
-        } else {
-            ollSkot[i].y -= skotaHradi;// Færa skotið
+        switch (ollSkot[i].att) {
+            case "n":
+                if (ollSkot[i].y < -35) {// Eyða skoti ef það er farið út af skjánum
+                    ollSkot.splice(i, 1);
+                    i--;
+                } else {
+                    ollSkot[i].y -= skotaHradi;// Færa skotið
+                }
+                break;
+            case "s":
+                if (ollSkot[i].y > 635) {// Eyða skoti ef það er farið út af skjánum
+                    ollSkot.splice(i, 1);
+                    i--;
+                } else {
+                    ollSkot[i].y += skotaHradi;// Færa skotið
+                }
+                break;
+            case "v":
+                if (ollSkot[i].x < -35) {// Eyða skoti ef það er farið út af skjánum
+                    ollSkot.splice(i, 1);
+                    i--;
+                } else {
+                    ollSkot[i].x -= skotaHradi;// Færa skotið
+                }
+                break;
+            case "a":
+                if (ollSkot[i].x > 635) {// Eyða skoti ef það er farið út af skjánum
+                    ollSkot.splice(i, 1);
+                    i--;
+                } else {
+                    ollSkot[i].x += skotaHradi;// Færa skotið
+                }
+                break;
         }
         if (ollSkot.length - 1 === i) {// Þetta lokar lúpunni ef listinn er búinn
             break;
@@ -65,11 +95,28 @@ let faeraSkot = () => {
     }
 }
 let ovinaStjorn = () => {
-    
+    allirOvinir.forEach(ovinur => {
+        let leyfdarHreyfingarOvina = [];
+        if (ovinur.x > 20) {leyfdarHreyfingarOvina.push("v");}
+        if (ovinur.x < 580) {leyfdarHreyfingarOvina.push("a");}
+        if (ovinur.y > 20) {leyfdarHreyfingarOvina.push("n");}
+        if (ovinur.y < 180) {leyfdarHreyfingarOvina.push("s");}
+        let hreyfing = leyfdarHreyfingarOvina.randomElement();
+        if (hreyfing === "n") {ovinur.y -= 10;}
+        else if (hreyfing === "s") {ovinur.y += 10;}
+        else if (hreyfing === "v") {ovinur.x -= 10;}
+        else if (hreyfing === "a") {ovinur.x += 10;}  
+    });
 }
 let buaTilOvin = () => {
     allirOvinir.push(new Ovinir());
-    console.log("ovinur");
+}
+let ovinirSkjota = () => {
+    allirOvinir.forEach(ovinur => {
+        ["n","s","a","v"].forEach(att => {
+            ollSkot.push(new Skot(ovinur.x, ovinur.y, att, "blue"));
+        }); 
+    });
 }
 
 // Teikni föll
@@ -83,11 +130,24 @@ let teiknaSpilara = (x, y) => {
 }
 let teiknaSkot = () => {
     ctx.lineWidth = 10;
-    ctx.strokeStyle = "#FF0000";
     ollSkot.forEach((skot) => {
+        ctx.strokeStyle = skot.litur;
         ctx.beginPath();
         ctx.moveTo(skot.x, skot.y)
-        ctx.lineTo(skot.x, skot.y + 30);
+        switch (skot.att) {
+            case "n":
+                ctx.lineTo(skot.x, skot.y + 30);
+                break;
+            case "s":
+                ctx.lineTo(skot.x, skot.y - 30);
+                break;
+            case "v":
+                ctx.lineTo(skot.x + 30, skot.y);
+                break;
+            case "a":
+                ctx.lineTo(skot.x - 30, skot.y);
+                break;
+        }
         ctx.stroke();
     });
 }
@@ -103,7 +163,7 @@ let teiknaOvini = () => {
 
 // Aðalfall
 let adalLoop = () => {
-    // Physics
+    // Hreyfingar
     if (ollSkot.length > 0) {faeraSkot();}// Færa öll skot spilara ef það eru eitthver skot á skjánum
     if (ovinaSpawnHradi <= ovinaSpawnTeljari) {
         buaTilOvin();
@@ -111,6 +171,9 @@ let adalLoop = () => {
     } else {
         ovinaSpawnTeljari++;
     }
+    if (allirOvinir.length > 0) {ovinaStjorn();}// Færa alla óvini ef það eru eitthverjir óvinir á skjánum
+
+    // Collition detection
 
     //Teikna
     ctx.clearRect(0, 0, canvas.width, canvas.height);// Hreinsa
@@ -128,13 +191,13 @@ canvas.addEventListener("mousemove", (evt) => {
 });
 // Búa til skot þegar spilarinn ýtir á músina
 canvas.addEventListener("click", () => {
-    ollSkot.push(new Skot());
-    // console.log(ollSkot);
+    ollSkot.push(new Skot(Spilari.x, Spilari.y - 15, "n", "red"));
 });
 
 // ----- Byrjun -----
 //byrjaTakki.addEventListener("click",function() {
     if (canvas.getContext) {
         setInterval(adalLoop,10);
+        setInterval(ovinirSkjota,1000);
     }
 //});
