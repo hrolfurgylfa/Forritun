@@ -22,6 +22,18 @@
     margin-right: auto;
     border: 2px ridge blue;
 }
-.leikur:hover {
+.fela_mus:hover {
     cursor: none;
+}
+.allurLeikur {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+.fela {
+    display: none;
+}
+.teljarar {
+    text-align: right;
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
