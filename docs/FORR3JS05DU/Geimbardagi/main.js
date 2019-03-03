@@ -223,7 +223,7 @@ let teiknaOvini = () => {
 }
 
 // Aðalfall
-let adalLoop = () => {
+let adalLoop = () => {// Aðal fallið
     // Hreyfingar
     if (ollSkot.length > 0) {faeraSkot();}// Færa öll skot spilara ef það eru eitthver skot á skjánum
     if (ovinaSpawnHradi <= ovinaSpawnTeljari) {
@@ -276,9 +276,9 @@ canvas.addEventListener("click", () => {
 // ----- Byrjun -----
 byrjaTakki.addEventListener("click",function() {
     if (canvas.getContext) {
-        reset();
-        byrjaTakki.classList.add("fela");
-        canvas.classList.add("fela_mus");
+        reset();// Þetta endurræsir allar breytur
+        byrjaTakki.classList.add("fela");// Þetta felur spila takkann
+        canvas.classList.add("fela_mus");// Þetta felur búsina þegar hún er yfir canvas
         adalLoopID = setInterval(adalLoop,10);
         ovinirSkjotaID = setInterval(ovinirSkjota,1000);
         erfidaraID = setInterval(() => {ovinaSpawnHradi = ovinaSpawnHradi/1.5},2000);// Þetta gerir fleiri óvini yfir tíma
