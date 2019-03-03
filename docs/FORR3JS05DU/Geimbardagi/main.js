@@ -27,12 +27,17 @@ let lif = lifStilling;
 // Auto breytur
 let ovinaSpawnTeljari = ovinaSpawnHradi;
 let spilaraHitbox = staerdSpilara/1.5;
-let adalLoopID;
-let ovinirSkjotaID;
 let ollSkot = [];
 let allirOvinir = [];
 let buid = false;
 let ovinirDrepnir = 0;
+
+//Breytur fyrir setInterval
+let adalLoopID;
+let ovinirSkjotaID;
+let erfidaraID;
+
+// Teljarar
 let lifaTexti = document.getElementById("lifaTexti");// Þetta fær elementinn fyrir lífa teljarann svo að það þurfi ekki að gera það oft 
 let ovinirDrepnirTexti = document.getElementById("ovinirDrepnirTexti");// Þetta fær elementinn fyrir óvinir drepnir teljarann svo að það þurfi ekki að gera það oft
 
@@ -242,6 +247,7 @@ let adalLoop = () => {
     if (buid === true) {
         clearInterval(adalLoopID);// Þetta stoppar setInterval sem kom í byrjun
         clearInterval(ovinirSkjotaID);// Þetta stoppar setInterval sem kom í byrjun
+        clearInterval(erfidaraID);// Þetta stoppar setInterval sem kom í byrjun
         ctx.clearRect(0, 0, canvas.width, canvas.height);// Hreinsa
         byrjaTakki.classList.remove("fela");
         byrjaTakki.textContent = "Spila aftur";
@@ -275,5 +281,6 @@ byrjaTakki.addEventListener("click",function() {
         canvas.classList.add("fela_mus");
         adalLoopID = setInterval(adalLoop,10);
         ovinirSkjotaID = setInterval(ovinirSkjota,1000);
+        erfidaraID = setInterval(() => {ovinaSpawnHradi = ovinaSpawnHradi/1.5},2000);// Þetta gerir fleiri óvini yfir tíma
     }
 });
