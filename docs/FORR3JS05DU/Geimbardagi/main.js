@@ -182,7 +182,7 @@ let collitionDetection = () => {
 
 // Teikni föll
 let teiknaSpilara = (x, y) => {
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "yellow";
     ctx.beginPath();
     ctx.moveTo(x, y - staerdSpilara);
     ctx.lineTo(x + staerdSpilara, y + staerdSpilara);

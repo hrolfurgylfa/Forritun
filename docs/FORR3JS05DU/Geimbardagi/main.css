@@ -21,6 +21,7 @@
     margin-left: auto;
     margin-right: auto;
     border: 2px ridge blue;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Hubble_ultra_deep_field_high_rez_edit1.jpg/1200px-Hubble_ultra_deep_field_high_rez_edit1.jpg');
 }
 .fela_mus:hover {
     cursor: none;
