@@ -67,6 +67,11 @@ class Ovinir {
         this.x = FaRandomTolu(15,575);
         this.y = FaRandomTolu(15,200);
     }
+    skjota() {
+        ["n","s","a","v"].forEach(att => {
+            ollSkot.push(new Skot(this.x, this.y, att, "blue", true));
+        });
+    }
 }
 
 // ----- Föll -----
@@ -127,13 +132,6 @@ let ovinaStjorn = () => {
 }
 let buaTilOvin = () => {
     allirOvinir.push(new Ovinir());
-}
-let ovinirSkjota = () => {
-    allirOvinir.forEach(ovinur => {
-        ["n","s","a","v"].forEach(att => {
-            ollSkot.push(new Skot(ovinur.x, ovinur.y, att, "blue", true));
-        }); 
-    });
 }
 let reset = () => {// Þetta fall endurræsir allar nauðsinlegar breytur til þess að það sé hægt að spila aftur
     staerdSpilara = staerdSpilaraStilling;
@@ -280,7 +278,7 @@ byrjaTakki.addEventListener("click",function() {
         byrjaTakki.classList.add("fela");// Þetta felur spila takkann
         canvas.classList.add("fela_mus");// Þetta felur búsina þegar hún er yfir canvas
         adalLoopID = setInterval(adalLoop,10);
-        ovinirSkjotaID = setInterval(ovinirSkjota,1000);
+        ovinirSkjotaID = setInterval(() => {allirOvinir.forEach(ovinur => {ovinur.skjota();});},1000);
         erfidaraID = setInterval(() => {ovinaSpawnHradi = ovinaSpawnHradi/1.5},2000);// Þetta gerir fleiri óvini yfir tíma
     }
 });
