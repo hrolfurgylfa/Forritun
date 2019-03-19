@@ -1,0 +1,70 @@
+/*================================
+    Grid Template Areas
+  ================================ */
+
+.timi {
+    grid-area: "timi";
+}
+.spurning {
+    grid-area: "spurning";
+}
+.stig {
+    grid-area: "stig";
+}
+
+.adalEfni {
+    display: grid;
+    grid-template-areas:
+    "timi spurning stig";
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+/*================================
+    Padding/Margin
+  ================================ */
+
+body {
+    padding: 0;
+    margin: 0;
+}
+.titill {
+    margin: 0;
+    padding: 1em;
+}
+
+/*================================
+    Text align
+  ================================ */
+
+.adalEfni,
+.titill {
+    text-align: center;
+}
+.timi,
+.stig {
+    margin: auto 0;
+}
+
+/*================================
+    Border
+  ================================ */
+
+.titill,
+.adalEfni,
+.spurning {
+    border: 1px ridge black;
+}
+
+/*================================
+    Color
+  ================================ */
+
+
+
+/*================================
+    Annað
+  ================================ */
+
+.adalEfni {
+    min-height: 20em;
+}

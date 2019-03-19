@@ -1,0 +1,33 @@
+[
+    {
+        "Spurning": "Hvað er radíus Tunglsins?",
+        "Eining": "km",
+        "Svör": [
+            "3",
+            "1737,5",
+            "2464,3",
+            "4392,8"
+        ],
+        "svar": "2"
+    },
+    {
+        "Spurning": "Er tunglið úr osti?",
+        "Eining": "",
+        "Svör": [
+            "Já",
+            "Nei"
+        ],
+        "svar": "2"
+    },
+    {
+        "Spurning": "Hvað er radíus Jarðarinnar?",
+        "Eining": "km",
+        "Svör": [
+            "5",
+            "3734",
+            "6371",
+            "12532"
+        ],
+        "svar": "3"
+    }
+]
