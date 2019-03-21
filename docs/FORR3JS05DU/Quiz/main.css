@@ -11,12 +11,31 @@
 .stig {
     grid-area: "stig";
 }
+/*Svör*/
+.svar1 {
+    grid-area: "svar1";
+}
+.svar2 {
+    grid-area: "svar2";
+}
+.svar3 {
+    grid-area: "svar3";
+}
+.svar4 {
+    grid-area: "svar4";
+}
 
 .adalEfni {
     display: grid;
     grid-template-areas:
     "timi spurning stig";
     grid-template-columns: 1fr 4fr 1fr;
+}
+.svor {
+    display: grid;
+    grid-template-areas:
+    "svar1 svar2"
+    "svar3 svar4";
 }
 
 /*================================
@@ -31,17 +50,22 @@ body {
     margin: 0;
     padding: 1em;
 }
+.svor div {
+    padding: 1em 0;
+}
 
 /*================================
     Text align
   ================================ */
 
 .adalEfni,
-.titill {
+.titill,
+.svor div {
     text-align: center;
 }
 .timi,
-.stig {
+.stig,
+.svor div {
     margin: auto 0;
 }
 
@@ -51,7 +75,8 @@ body {
 
 .titill,
 .adalEfni,
-.spurning {
+.spurning,
+.svor div {
     border: 1px ridge black;
 }
 
@@ -67,4 +92,7 @@ body {
 
 .adalEfni {
     min-height: 20em;
+}
+.svor div:hover {
+    cursor: pointer;
 }
