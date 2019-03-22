@@ -60,12 +60,14 @@ body {
 
 .adalEfni,
 .titill,
-.svor div {
+.svor div,
+.spila_aftur {
     text-align: center;
 }
 .timi,
 .stig,
-.svor div {
+.svor div,
+.spila_aftur {
     margin: auto 0;
 }
 
@@ -93,6 +95,13 @@ body {
 .adalEfni {
     min-height: 20em;
 }
-.svor div:hover {
+.svor div:hover,
+.spila_aftur_mynd:hover {
     cursor: pointer;
+}
+.spila_aftur_mynd {
+    width: 10em;
+}
+.falid {
+    display: none;
 }
