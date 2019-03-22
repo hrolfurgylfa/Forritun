@@ -1,7 +1,7 @@
 "use strict";
 
 // ----- Viðbætt föll á algenga objects -----
-Array.prototype.shuffle = function() {// Þetta bætir .shuffle() við alla lista og ef það er keyrt þá er ruglað listanum
+Array.prototype.shuffle = function() {// Þetta bætir .shuffle() við alla lista og ef það er keyrt þá er ruglað listanum. Ég fékk þennan kóða af netinu en ég bætti honum við Arrey.prototype sjálfur
     for (let i = this.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [this[i], this[j]] = [this[j], this[i]];
