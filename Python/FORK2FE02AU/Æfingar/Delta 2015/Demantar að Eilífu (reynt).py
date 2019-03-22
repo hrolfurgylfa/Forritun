@@ -14,7 +14,5 @@ for x in range(1, fjoldi + 1):
     else: print(" ",end="")
     v -= 1
     h += 1
-    print("v:",v)
-    print("h:",h)
 
 print()
