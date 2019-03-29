@@ -1,69 +1,92 @@
 (function() {
 
-  // STORE EACH PERSON AS AN OBJECT IN AN ARRAY
-  var people = [
-    {                                              // Each person is an object
-      name: 'Casey',                               // It holds name and rate
-      rate: 60
-    },
-    {
-      name: 'Camille',
-      rate: 80
-    },
-    {
-      name: 'Gordon',
-      rate: 75
-    },
-    {
-      name: 'Nigel',
-      rate: 120
-    }
-  ];
+	// Sækja krækjur í HTML
+	const $slider = $("#slider")//document.getElementById("slider");
+	const table = document.getElementById("rates");
+	const $min = $('#value-min');
+	const $max = $('#value-max');
 
-  var rows = [],                        // rows array
-      $min = $('#value-min'),           // Minimum text input
-      $max = $('#value-max'),           // Maximum text input
-      $table = $('#rates');             // The table that shows results
+	// STORE EACH PERSON AS AN OBJECT IN AN ARRAY
+	let people = [
+		{                                              // Each person is an object
+			name: 'Casey',                               // It holds name and rate
+			rate: 60
+		},
+		{
+			name: 'Camille',
+			rate: 80
+		},
+		{
+			name: 'Gordon',
+			rate: 75
+		},
+		{
+			name: 'Nigel',
+			rate: 120
+		}
+	];
 
-  function makeRows() {                 // Create table rows and the array
-    people.forEach(function(person) {   // For each person object in people
-      var $row = $('<tr></tr>');        // Create a row for them
-      $row.append( $('<td></td>').text(person.name) ); // Add their name
-      $row.append( $('<td></td>').text(person.rate) ); // Add their rate
-      rows.push({ // Create rows array which links people objects to table rows
-        person: person,                 // Reference to the person object
-        $element: $row                  // Reference to row as jQuery selection
-      });
-    });
-  }
+	let rows = [];
+	function makeRows() {
+		people.forEach(person => {
+			let row = buaTilElement("tr");
+			buaTilElement("td", person.name, row);
+			buaTilElement("td", person.rate, row);
+			rows.push({
+				person: person,
+				element: row
+			});
+		});
+	}
 
-  function appendRows() {               // Adds rows to the table
-    var $tbody = $('<tbody></tbody>');  // Create <tbody> element
-    rows.forEach(function(row) {        // For each object in the rows array
-      $tbody.append(row.$element);      // Add the HTML for the row
-    });
-    $table.append($tbody);              // Add the rows to the table
-  }
+	function appendRows() {
+		let tbody = buaTilElement("tbody");
+		rows.forEach(row => {
+			tbody.appendChild(row.element);
+		});
+		table.appendChild(tbody);
+	}
 
-  function update(min, max) {           // Update the table content
-    rows.forEach(function(row) {        // For each row in the rows array
-      if (row.person.rate >= min && row.person.rate <= max) { // If in range
-        row.$element.show();            // Show the row
-      } else {                          // Otherwise
-        row.$element.hide();            // Hide the row
-      }
-    });
-  }
+	function update(min, max) {
+		rows.forEach(row => {
+			if (row.person.rate >= min && row.person.rate <= max) {
+				row.element.hidden = false;
+			} else {
+				row.element.hidden = true;
+			}
+		});
+	}
 
-  function init() {                     // Tasks when script first runs
-    $('#slider').noUiSlider({           // Set up the slide control
-      range: [0, 150], start: [65, 90], handles: 2, margin: 20, connect: true,
-      serialization: {to: [$min, $max],resolution: 1}
-    }).change(function() { update($min.val(), $max.val()); });
-    makeRows();                           // Create table rows and rows array
-    appendRows();                         // Add the rows to the table
-    update($min.val(), $max.val());     // Update table to show matches
-  }
+	let buaTilElement = (element, texti = false, foreldri = false) => {
+		let item = document.createElement(element);
+		
+		if (texti !== false) {
+			let texta_element = document.createTextNode(texti);
+			item.appendChild(texta_element);
+		}
+		if (foreldri !== false) {
+			foreldri.appendChild(item);
+		} else {
+			return item;
+		}
+	}
 
-  $(init);                              // Call init() when DOM is ready
+	function init() {
+		$slider.noUiSlider({
+			range: [0, 150],
+			start: [65, 90],
+			handles: 2,
+			margin: 20,
+			connect: false,
+			serialization: {
+				to: [$min, $max],
+				resolution: 1
+			}
+		}).change(() => { update($min.val(), $max.val()); });
+		makeRows();
+		appendRows();
+		update($min.val(), $max.val());
+	}
+
+	init();
 }());

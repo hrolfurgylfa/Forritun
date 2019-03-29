@@ -1,22 +1,59 @@
 <!DOCTYPE html>
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>JavaScript &amp; jQuery - Chapter 12: Filtering, Searching, and Sorting</title>
-    <link rel="stylesheet" href="JSBook_Filter_files/c12.css">
+    <link rel="stylesheet" href="JSBook_Filter_files/c12.css" type="text/css">
     <link rel="stylesheet" href="JSBook_Filter_files/jquery.css" type="text/css">
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <h1>CreativeFolk</h1>
+        <h1>CreativeFolk</h1>
     </header>
     <div id="price-range">
-      Min: <input type="number" id="value-min" value="65">
-      Max: <input type="number" id="value-max" value="90">
-      <div id="slider" class="noUi-target noUi-ltr noUi-horizontal noUi-background"><div class="noUi-base"><div class="noUi-origin noUi-connect" data-style="left" style="left: 43.3333%;"><div class="noUi-handle noUi-handle-lower"></div></div><div class="noUi-origin noUi-background" data-style="left" style="left: 60%;"><div class="noUi-handle noUi-handle-upper"></div></div></div></div>
-      <table id="rates"><thead><tr><th>Name</th><th>Hourly rate ($)</th></tr></thead><tbody><tr style="display: none;"><td>Casey</td><td>60</td></tr><tr><td>Camille</td><td>80</td></tr><tr><td>Gordon</td><td>75</td></tr><tr style="display: none;"><td>Nigel</td><td>120</td></tr></tbody></table>
+        Min: <input type="number" id="value-min" value="65"> Max: <input type="number" id="value-max" value="90">
+        <div id="slider" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
+            <div class="noUi-base">
+                <div class="noUi-origin noUi-connect" data-style="left" style="left: 43.3333%;">
+                    <div class="noUi-handle noUi-handle-lower"></div>
+                </div>
+                <div class="noUi-origin noUi-background" data-style="left" style="left: 60%;">
+                    <div class="noUi-handle noUi-handle-upper"></div>
+                </div>
+            </div>
+        </div>
+        <table id="rates">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Hourly rate ($)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="display: none;">
+                    <td>Casey</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>Camille</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>Gordon</td>
+                    <td>75</td>
+                </tr>
+                <tr style="display: none;">
+                    <td>Nigel</td>
+                    <td>120</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <script src="JSBook_Filter_files/jquery.js"></script>
     <script src="JSBook_Filter_files/jquery_002.js"></script>
     <script src="JSBook_Filter_files/dynamic-filter.js"></script>
-  
-</body></html>
+</body>
+
+</html>
