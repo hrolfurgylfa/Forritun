@@ -12,7 +12,6 @@ Array.prototype.shuffle = function() {// Þetta bætir .shuffle() við alla list
 const nafnJSON = 'spurningar.json';
 let spurningar = [];
 let timi = 0;
-let stig = 0;
 let spurningarNumer = 1;
 let rettSvor = 0;
 let rongSvor = 0;
