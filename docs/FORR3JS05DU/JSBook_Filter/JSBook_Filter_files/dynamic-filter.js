@@ -23,6 +23,22 @@
 		{
 			name: 'Nigel',
 			rate: 120
+		},
+		{
+			name: 'Casey',
+			rate: 10
+		},
+		{
+			name: 'Camille',
+			rate: 35
+		},
+		{
+			name: 'Gordon',
+			rate: 95
+		},
+		{
+			name: 'Nigel',
+			rate: 145
 		}
 	];
 
@@ -77,7 +93,7 @@
 			start: [65, 90],
 			handles: 2,
 			margin: 20,
-			connect: false,
+			connect: true,
 			serialization: {
 				to: [$min, $max],
 				resolution: 1
