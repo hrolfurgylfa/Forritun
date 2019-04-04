@@ -1,0 +1,9 @@
+nav {
+    text-align: center;
+}
+nav span:hover {
+    cursor: pointer;
+}
+img {
+    margin: 10px;
+}
