@@ -44,51 +44,51 @@
 
 	let rows = [];// Þetta geymir allar raðirnar fyrir töfluna sem er stýrt af sliderinum 
 	function makeRows() {// Þetta fall býr til raðir fyrir alla í arrayinum people (alla)
-		people.forEach(person => {
+		people.forEach(person => {// Þetta keyrir einu sinni fyrir hvern í arrayinum people
 			let row = buaTilElement("tr");
 			buaTilElement("td", person.name, row);
 			buaTilElement("td", person.rate, row);
-			rows.push({
+			rows.push({// Þetta bætir objectinum sem er verið að búa til í arrayin rows
 				person: person,
 				element: row
 			});
 		});
 	}
 
-	function appendRows() {
+	function appendRows() {// Þetta fall bætir röðunum sem er búið að búa til í makeRows í töflu og setir töfluna á skjáinn
 		let tbody = buaTilElement("tbody");
-		rows.forEach(row => {
-			tbody.appendChild(row.element);
+		rows.forEach(row => {// Þetta keyrir einu sinni fyrir hvern hlut í rows
+			tbody.appendChild(row.element);// Þetta bætir hlutunum sem voru búnir til í makeRows við tbody
 		});
-		table.appendChild(tbody);
+		table.appendChild(tbody);// Þetta bætir tbody við töfluna table
 	}
 
-	function update(min, max) {
-		rows.forEach(row => {
-			if (row.person.rate >= min && row.person.rate <= max) {
-				row.element.hidden = false;
+	function update(min, max) {// Þetta tékkar á hverja röð og ef hún er ekki á milli talnana min og max þá er hún falin, annars er hún birt
+		rows.forEach(row => {// Þetta keyrir einu sinni fyrir hvern hlut í rows
+			if (row.person.rate >= min && row.person.rate <= max) {// Þetta keyrir ef röðin er á milli min og max
+				row.element.hidden = false;// Þetta sýnir röðina sem er verið að fara í gegnum
 			} else {
-				row.element.hidden = true;
+				row.element.hidden = true;// Þetta felur röðina sem er verið að fara í gegnum
 			}
 		});
 	}
 
-	let buaTilElement = (element, texti = false, foreldri = false) => {
-		let item = document.createElement(element);
+	let buaTilElement = (element, texti = false, foreldri = false) => {// Þetta fall býr til element en það þarf ekki endilega að senda inn neitt nema hvernig hlut þér langar í
+		let item = document.createElement(element);// hérna er hluturinn búinn til
 		
-		if (texti !== false) {
-			let texta_element = document.createTextNode(texti);
-			item.appendChild(texta_element);
+		if (texti !== false) {// Þetta keyrir ef það var sendur texti með
+			let texta_element = document.createTextNode(texti);// Hérna er textinn búin til
+			item.appendChild(texta_element);// Hérna er bætt textanum undir hlutin sem er verið að búa til
 		}
-		if (foreldri !== false) {
-			foreldri.appendChild(item);
+		if (foreldri !== false) {// Þetta keyrir ef það var sent foreldri með
+			foreldri.appendChild(item);// Hérna er bætt hlutnum við foreldrið sem var sent inn
 		} else {
-			return item;
+			return item;// Hérna er skilað hlutnum ef það var ekki send neitt foreldri með
 		}
 	}
 
 	function init() {
-		$slider.noUiSlider({
+		$slider.noUiSlider({// Hérna er sliderinn búin til með JQuery
 			range: [0, 150],
 			start: [65, 90],
 			handles: 2,
@@ -98,7 +98,7 @@
 				to: [$min, $max],
 				resolution: 1
 			}
-		}).change(() => { update($min.val(), $max.val()); });
+		}).change(() => { update($min.val(), $max.val()); });// Þetta keyrir fallið update með gildunum á $min og $max breytunum
 		makeRows();
 		appendRows();
 		update($min.val(), $max.val());
