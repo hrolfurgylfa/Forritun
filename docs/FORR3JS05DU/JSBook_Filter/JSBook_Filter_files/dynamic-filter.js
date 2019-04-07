@@ -2,9 +2,9 @@
 
 	// Sækja krækjur í HTML
 	const $slider = $("#slider")//document.getElementById("slider");
-	const table = document.getElementById("rates");
-	const $min = $('#value-min');
-	const $max = $('#value-max');
+	const table = document.getElementById("rates");// hérna sæki ég staðsetningu töflunar í HTML-inu
+	const $min = $('#value-min');// Hérna sæki ég min staðsetninguna og það þarf að vera jQery breyta vegna þess að hún ver í gegnum listenerinn sem breytir henni þegar sliderinn hreyfist
+	const $max = $('#value-max');// Hérna sæki ég max staðsetninguna og það þarf að vera jQery breyta vegna þess að hún ver í gegnum listenerinn sem breytir henni þegar sliderinn hreyfist
 
 	// STORE EACH PERSON AS AN OBJECT IN AN ARRAY
 	let people = [
@@ -42,8 +42,8 @@
 		}
 	];
 
-	let rows = [];
-	function makeRows() {
+	let rows = [];// Þetta geymir allar raðirnar fyrir töfluna sem er stýrt af sliderinum 
+	function makeRows() {// Þetta fall býr til raðir fyrir alla í arrayinum people (alla)
 		people.forEach(person => {
 			let row = buaTilElement("tr");
 			buaTilElement("td", person.name, row);
