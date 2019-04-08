@@ -5,6 +5,9 @@
 	const table = document.getElementById("rates");// hérna sæki ég staðsetningu töflunar í HTML-inu
 	const $min = $('#value-min');// Hérna sæki ég min staðsetninguna og það þarf að vera jQery breyta vegna þess að hún ver í gegnum listenerinn sem breytir henni þegar sliderinn hreyfist
 	const $max = $('#value-max');// Hérna sæki ég max staðsetninguna og það þarf að vera jQery breyta vegna þess að hún ver í gegnum listenerinn sem breytir henni þegar sliderinn hreyfist
+	// Ég þarf líka að gera hreina javascript króka til þess að geta gert .onchange svo að ef það er breytt sliderinum skriflega er líka uppfært persónurnar
+	const min = document.getElementById("value-min");
+	const max = document.getElementById("value-max");
 
 	// STORE EACH PERSON AS AN OBJECT IN AN ARRAY
 	let people = [
@@ -102,6 +105,10 @@
 		makeRows();
 		appendRows();
 		update($min.val(), $max.val());
+
+		// Þetta uppfærir persónulistann þegar það er skrifað inn í textaboxið í staðin fyrir að nota sliderinn
+		min.onchange = () => { update($min.val(), $max.val()); };
+		max.onchange = () => { update($min.val(), $max.val()); };
 	}
 
 	init();
