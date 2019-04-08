@@ -101,14 +101,14 @@
 				to: [$min, $max],
 				resolution: 1
 			}
-		}).change(() => { update($min.val(), $max.val()); });// Þetta keyrir fallið update með gildunum á $min og $max breytunum
+		}).change(() => update( $min.val(), $max.val() ));// Þetta keyrir fallið update með gildunum á $min og $max breytunum
 		makeRows();
 		appendRows();
 		update($min.val(), $max.val());
 
 		// Þetta uppfærir persónulistann þegar það er skrifað inn í textaboxið í staðin fyrir að nota sliderinn
-		min.onchange = () => { update($min.val(), $max.val()); };
-		max.onchange = () => { update($min.val(), $max.val()); };
+		min.onchange = () => update( $min.val(), $max.val() );
+		max.onchange = () => update( $min.val(), $max.val() );
 	}
 
 	init();
