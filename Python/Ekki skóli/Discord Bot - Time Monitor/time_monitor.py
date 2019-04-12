@@ -23,6 +23,7 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     message_content_lower = message.content.lower()
+    print(message_content_lower)
     if message_content_lower.startswith("?who"):
 
         allar_channels.send("Return")
@@ -40,6 +41,5 @@ async def hello():
     """This commands makes the bot respond with hello when you say hello"""
     await bot.say('Hello!')
 
-
-
 bot.run(token)
+
