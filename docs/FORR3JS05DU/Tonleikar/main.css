@@ -1,0 +1,17 @@
+#tonleikar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.mynd {
+    margin: .3em auto;
+}
+.imageContainer {
+    position: relative;
+}
+.imageContainer .texti {
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
+}
