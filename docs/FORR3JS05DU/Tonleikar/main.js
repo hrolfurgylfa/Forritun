@@ -2,6 +2,7 @@
 
 // ----- Breytur -----
 const nafnJSON = 'https://apis.is/concerts';
+moment.locale("is");// Þetta breytir moment.js í íslensku
 
 //Sækja tengla úr HTML og ég nota const vegna þess að þetta er eitthvað sem verður aldrei breytt
 const geymslaAllraTonleikaMynda = document.getElementById("tonleikar");
@@ -34,6 +35,11 @@ let geraTonleika = tonleikar => {
     let fyrirsongn_texti = document.createTextNode(tonleikar.eventDateName);
     fyrirsongn.appendChild(fyrirsongn_texti);
     texti.appendChild(fyrirsongn);
+
+    let timi = document.createElement("p");
+    let timi_texti = document.createTextNode(moment(tonleikar.dateOfShow, "YYYY-MM-DDTHH:mm:ss").fromNow())
+    timi.appendChild(timi_texti);
+    texti.append(timi);
 
     geymslaAllraTonleikaMynda.appendChild(myndacontainer);
 }
