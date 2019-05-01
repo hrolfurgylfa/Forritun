@@ -16,8 +16,6 @@ let geraTonleika = tonleikar => {
     // Búa til myndacontainerinn
     let myndacontainer = document.createElement("div");
     myndacontainer.classList.add("imageContainer");
-    myndacontainer.addEventListener("pointerenter", synaTexta, false);
-    myndacontainer.addEventListener("pointerleave", felaTexta, false);
     
     // Búa til myndina
     let mynd = document.createElement("img");
@@ -37,19 +35,7 @@ let geraTonleika = tonleikar => {
     fyrirsongn.appendChild(fyrirsongn_texti);
     texti.appendChild(fyrirsongn);
 
-
     geymslaAllraTonleikaMynda.appendChild(myndacontainer);
-}
-let synaTexta = evt => {
-    if (evt.pointerType == "mouse") {
-        console.log(evt);
-        
-    }
-}
-let felaTexta = evt => {
-    if (evt.pointerType == "mouse") {
-        console.log(evt);
-    }
 }
 
 // ----- Sækja JSON skránna -----

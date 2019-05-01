@@ -1,17 +1,29 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
 #tonleikar {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.mynd {
-    margin: .3em auto;
-}
 .imageContainer {
     position: relative;
+    margin: .3em auto;
+    background: black;
 }
 .imageContainer .texti {
     display: none;
     position: absolute;
-    top: 200px;
-    left: 0;
+    top: 0;
+    text-align: center;
     width: 100%;
+    color: white;
+}
+.texti h3 {
+    margin-top: 5px;
+}
+.imageContainer:hover .mynd {
+    opacity: 0.25;
+}
+.imageContainer:hover .texti {
+    display: block;
 }
