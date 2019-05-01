@@ -26,22 +26,34 @@ let geraTonleika = tonleikar => {
     myndacontainer.appendChild(mynd);
 
     // Búa til texta containerinn
-    let texti = document.createElement("div");
+    let texti = buaTilElement("div");
     texti.classList.add("texti");
     myndacontainer.appendChild(texti);
-
-    // Búa til fyrirsognina
-    let fyrirsongn = document.createElement("h3");
-    let fyrirsongn_texti = document.createTextNode(tonleikar.eventDateName);
-    fyrirsongn.appendChild(fyrirsongn_texti);
-    texti.appendChild(fyrirsongn);
-
-    let timi = document.createElement("p");
-    let timi_texti = document.createTextNode(moment(tonleikar.dateOfShow, "YYYY-MM-DDTHH:mm:ss").fromNow())
-    timi.appendChild(timi_texti);
-    texti.append(timi);
+    
+    // Búa til allann textan yfir myndunum
+    buaTilElement("h3", tonleikar.eventDateName, texti, ["eventDateName"]);// Búa til fyrirsognina
+    buaTilElement("h4", tonleikar.name, texti, ["name"]);// Búa til undirfyrirsongnina
+    buaTilElement("p", tonleikar.eventHallName, texti, ["eventHallName"]);// Búa til staðsetninguna
+    buaTilElement("p", moment(tonleikar.dateOfShow, "YYYY-MM-DDTHH:mm:ss").fromNow(), texti, ["timeUntilShow"]);// Búa til tímann
+    buaTilElement("p", tonleikar.dateOfShow, texti, ["dateOfShow"]);// Búa til tímann
 
     geymslaAllraTonleikaMynda.appendChild(myndacontainer);
+}
+let buaTilElement = (element, texti = false, foreldri = false, classList = false) => {// Þetta fall býr til element en það þarf ekki endilega að senda inn neitt nema hvernig hlut þér langar í
+    let item = document.createElement(element);// hérna er hluturinn búinn til
+
+    if (texti !== false) {// Þetta keyrir ef það var sendur texti með
+        let texta_element = document.createTextNode(texti);// Hérna er textinn búin til
+        item.appendChild(texta_element);// Hérna er bætt textanum undir hlutin sem er verið að búa til
+    }
+    if (classList !== false) {// Þetta bætir við öllum klösunum í arrayingum classlist (ef hann er sendur inn)
+        classList.forEach(className => item.classList.add(className));
+    }
+    if (foreldri !== false) {// Þetta keyrir ef það var sent foreldri með
+        foreldri.appendChild(item);// Hérna er bætt hlutnum við foreldrið sem var sent inn
+    } else {
+        return item;// Hérna er skilað hlutnum ef það var ekki send neitt foreldri með
+    }
 }
 
 // ----- Sækja JSON skránna -----

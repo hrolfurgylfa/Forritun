@@ -19,7 +19,17 @@ body {
     color: white;
 }
 .texti h3 {
-    margin-top: 5px;
+    margin: 5px;
+}
+.texti h4 {
+    margin: 5px;
+}
+.texti p.eventHallName {
+    margin-bottom: 5px;
+}
+.texti p.timeUntilShow,
+.texti p.dateOfShow {
+    margin: 5px 0;
 }
 .imageContainer:hover .mynd {
     opacity: 0.25;
