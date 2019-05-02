@@ -6,12 +6,18 @@ moment.locale("is");// Þetta breytir moment.js í íslensku
 
 //Sækja tengla úr HTML og ég nota const vegna þess að þetta er eitthvað sem verður aldrei breytt
 const geymslaAllraTonleikaMynda = document.getElementById("tonleikar");
+const hladaTexti = document.getElementById("hladaTexti");
+const searchBtn = document.getElementById("searchBtn");
 
 // ----- Föll -----
 let eftirJSONSótt = AllirTonleikar => {
-    AllirTonleikar.forEach( tonleikar => {
+    hladaTexti.remove();
+
+    AllirTonleikar.forEach(tonleikar => {
         geraTonleika(tonleikar);
     });
+
+    searchBtn.addEventListener("click", evt => search(evt, AllirTonleikar), false);
 }
 let geraTonleika = tonleikar => {
     // Búa til myndacontainerinn
@@ -20,9 +26,10 @@ let geraTonleika = tonleikar => {
     
     // Búa til myndina
     let mynd = document.createElement("img");
-    mynd.src = tonleikar.imageSource
-    mynd.alt = "Mynd af tónleikunum "+tonleikar.eventDateName
+    mynd.src = tonleikar.imageSource;
+    mynd.alt = "Mynd af tónleikunum "+tonleikar.eventDateName;
     mynd.classList.add("mynd");
+    mynd.onload = function() { myndacontainer.classList.add("svartur_bakgrunnur"); }
     myndacontainer.appendChild(mynd);
 
     // Búa til texta containerinn
@@ -54,6 +61,23 @@ let buaTilElement = (element, texti = false, foreldri = false, classList = false
     } else {
         return item;// Hérna er skilað hlutnum ef það var ekki send neitt foreldri með
     }
+}
+let search = (evt, AllirTonleikar) => {
+    while (geymslaAllraTonleikaMynda.firstChild) {// Þetta keyrir þangað til það eru engin börn
+        geymslaAllraTonleikaMynda.firstChild.remove();// Þetta eyðir fyrsta barninu
+    }
+
+    let searchString = evt.target.previousElementSibling.textContent;
+    console.log(searchString);
+
+    AllirTonleikar.forEach(tonleikar => {
+        console.log(searchString.search(tonleikar.eventDateName));
+
+        if (searchString.search(tonleikar.eventDateName) != -1) {
+            console.log("Found");
+            geraTonleika(tonleikar);
+        }
+    });
 }
 
 // ----- Sækja JSON skránna -----
