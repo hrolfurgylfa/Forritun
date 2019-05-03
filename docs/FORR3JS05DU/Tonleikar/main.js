@@ -8,6 +8,8 @@ moment.locale("is");// Þetta breytir moment.js í íslensku
 const geymslaAllraTonleikaMynda = document.getElementById("tonleikar");
 const hladaTexti = document.getElementById("hladaTexti");
 const searchBtn = document.getElementById("searchBtn");
+const eftirDagsetningu  = document.getElementById("eftirDagsetningu");
+const fyrirDagsetningu = document.getElementById("fyrirDagsetningu");
 
 // ----- Föll -----
 let eftirJSONSótt = AllirTonleikar => {
@@ -17,7 +19,10 @@ let eftirJSONSótt = AllirTonleikar => {
         geraTonleika(tonleikar);
     });
 
-    searchBtn.addEventListener("click", evt => search(evt, AllirTonleikar), false);
+    searchBtn.addEventListener("click", evt => search(evt.target.previousElementSibling.value.toLowerCase(), AllirTonleikar), false);
+    searchBtn.previousElementSibling.addEventListener("change", evt => search(evt.target.value.toLowerCase(), AllirTonleikar), false);
+    eftirDagsetningu.addEventListener("change", tímaLeit, false);
+    fyrirDagsetningu.addEventListener("change", tímaLeit, false);
 }
 let geraTonleika = tonleikar => {
     // Búa til myndacontainerinn
@@ -62,22 +67,37 @@ let buaTilElement = (element, texti = false, foreldri = false, classList = false
         return item;// Hérna er skilað hlutnum ef það var ekki send neitt foreldri með
     }
 }
-let search = (evt, AllirTonleikar) => {
-    while (geymslaAllraTonleikaMynda.firstChild) {// Þetta keyrir þangað til það eru engin börn
-        geymslaAllraTonleikaMynda.firstChild.remove();// Þetta eyðir fyrsta barninu
-    }
-
-    let searchString = evt.target.previousElementSibling.textContent;
-    console.log(searchString);
+let search = (searchString, AllirTonleikar) => {
+    eyðaÖllumBörnum(geymslaAllraTonleikaMynda);
 
     AllirTonleikar.forEach(tonleikar => {
-        console.log(searchString.search(tonleikar.eventDateName));
-
-        if (searchString.search(tonleikar.eventDateName) != -1) {
-            console.log("Found");
+        if (tonleikar.eventDateName.toLowerCase().includes(searchString) || tonleikar.name.toLowerCase().includes(searchString) || tonleikar.userGroupName.toLowerCase().includes(searchString) || tonleikar.eventHallName.toLowerCase().includes(searchString)) {
             geraTonleika(tonleikar);
         }
     });
+}
+let tímaLeit = evt => {
+    eyðaÖllumBörnum(geymslaAllraTonleikaMynda);
+
+    console.log("Eftir: "+eftirDagsetningu.value+"\nFyrir: "+fyrirDagsetningu.value);
+
+    if (eftirDagsetningu.value != "" && fyrirDagsetningu.value != "") {
+        // Finna tónleika á milli dagsetninga
+        console.log("Milli dagsetninga");
+
+    } else if (eftirDagsetningu.value != "" && fyrirDagsetningu.value === "") {
+        // Finna tónleika eftir dagsetningu
+        console.log("Eftir dagsetningu");
+
+    } else if (eftirDagsetningu.value === "" && fyrirDagsetningu.value != "") {
+        // Finna tónleika fyrir dagsetningu
+        console.log("Fyrir dagsetningu");
+    }
+}
+let eyðaÖllumBörnum = foreldri => {
+    while (foreldri.firstChild) {// Þetta keyrir þangað til það eru engin börn
+        foreldri.firstChild.remove();// Þetta eyðir fyrsta barninu
+    }
 }
 
 // ----- Sækja JSON skránna -----

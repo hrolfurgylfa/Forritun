@@ -14,14 +14,20 @@
 </head>
 <body>
     <header>
-        <h1>Tónleikar</h1>
+        <h1><a class="titill" href="">Tónleikar</a></h1>
         <hr>
     </header>
     <main>
         <nav class="Stillingar">
             <section class="search_bar">
-                <input class="search_input" type="text" placeholder="Search...">
+                <input class="search_input" type="text" placeholder="Leita">
                 <span class="fa fa-search" id="searchBtn"></span>
+            </section>
+            <section class="calendar_selector">
+                <h3>Eftir:</h3>
+                <h3>Fyrir:</h3>
+                <input id="eftirDagsetningu" type="date">
+                <input id="fyrirDagsetningu" type="date">
             </section>
         </nav>
         <p id="hladaTexti">Hleður...</p>
