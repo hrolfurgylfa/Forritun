@@ -46,8 +46,9 @@ let geraTonleika = tonleikar => {
     buaTilElement("h3", tonleikar.eventDateName, texti, ["eventDateName"]);// Búa til fyrirsognina
     buaTilElement("h4", tonleikar.name, texti, ["name"]);// Búa til undirfyrirsongnina
     buaTilElement("p", tonleikar.eventHallName, texti, ["eventHallName"]);// Búa til staðsetninguna
-    buaTilElement("p", moment(tonleikar.dateOfShow, "YYYY-MM-DDTHH:mm:ss").fromNow(), texti, ["timeUntilShow"]);// Búa til tímann
-    buaTilElement("p", tonleikar.dateOfShow, texti, ["dateOfShow"]);// Búa til tímann
+    buaTilElement("p", moment(tonleikar.dateOfShow, "YYYY-MM-DDTHH:mm:ss").fromNow(), texti, ["timeUntilShow"]);// Búa til countdown
+    let timeStamp = tonleikar.dateOfShow.slice(8,10)+"."+tonleikar.dateOfShow.slice(5,7)+"."+tonleikar.dateOfShow.slice(0,4)+" "+tonleikar.dateOfShow.slice(11,13)+":"+tonleikar.dateOfShow.slice(14,16);
+    buaTilElement("p", timeStamp, texti, ["dateOfShow"]);// Búa til nákvæma dagsetningu
 
     geymslaAllraTonleikaMynda.appendChild(myndacontainer);
 }
