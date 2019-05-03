@@ -1,9 +1,13 @@
 body {
     font-family: 'Ubuntu', sans-serif;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
 }
 #tonleikar {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 .imageContainer {
     position: relative;
@@ -36,4 +40,55 @@ body {
 }
 .imageContainer:hover .texti {
     display: block;
+}
+
+/*  ========================================
+  Viðmið - breakpoints 37.5em = 600px + 
+  ========================================*/
+@media screen and (min-width: 37.5em) {
+    body {
+        max-width: 38.5em;
+    }
+    #tonleikar {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* ========================================
+  Viðmið - breakpoints 48em = 760px +
+  ======================================== */
+@media screen and (min-width: 48em) {
+
+}
+/* ========================================
+  Viðmið - breakpoints 60em = 960px +
+  ======================================== */
+@media screen and (min-width: 60em) {
+    body {
+        max-width: 61em;
+    }
+    #tonleikar {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+/* ========================================
+  Viðmið - breakpoints 80em = 1600px +
+  ======================================== */
+@media screen and (min-width: 80em) {
+    body {
+        max-width: 81em;
+    }
+    #tonleikar {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+/* ========================================
+  Viðmið - breakpoints 100em = 2000px +
+  ======================================== */
+@media screen and (min-width: 100em) {
+    body {
+        max-width: 101em;
+    }
+    #tonleikar {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
 }
