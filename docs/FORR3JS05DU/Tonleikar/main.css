@@ -51,13 +51,16 @@ h1 {
 .imageContainer:hover .texti {
     display: block;
 }
+
 /* Hleðslutexti */
 #hladaTexti {
     text-align: center;
     font-size: 3em;
 }
 
-/* Dagatal */
+/* ========================================
+  Dagatal
+  ======================================== */
 .calendar_selector {
     display: grid;
     grid-template-columns: 1fr 1fr;
