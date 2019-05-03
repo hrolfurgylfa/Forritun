@@ -12,7 +12,7 @@ h1 {
 .imageContainer {
     position: relative;
     margin: .3em auto;
-    background: black;
+    height: 190px;
 }
 .imageContainer .texti {
     display: none;
@@ -21,6 +21,9 @@ h1 {
     text-align: center;
     width: 100%;
     color: white;
+}
+.svartur_bakgrunnur {
+    background: black;
 }
 .texti h3 {
     margin: 5px;
@@ -91,4 +94,30 @@ h1 {
     #tonleikar {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
+}
+#hladaTexti {
+    text-align: center;
+    font-size: 3em;
+}
+/* ========================================
+  Serch bar
+  ======================================== */
+* {box-sizing: border-box;}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.search_bar {
+    margin: .5em auto;
+    text-align: center;
+}
+.search_bar span {
+    font-size: 2em;
+    cursor: pointer;
+}
+.search_input {
+    border: 1px ridge black;
+    padding: .3em;
+    width: 40%;
+    font-size: 1.5em;
 }
