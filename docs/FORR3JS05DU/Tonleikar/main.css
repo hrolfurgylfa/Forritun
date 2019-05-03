@@ -63,11 +63,11 @@ h1 {
   ======================================== */
 .calendar_selector {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     text-align: center;
 }
 .calendar_selector input {
-    width: 40%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -85,7 +85,7 @@ h1 {
 .search_input {
     border: 1px ridge black;
     padding: .3em;
-    width: 40%;
+    width: 80%;
     font-size: 1.5em;
 }
 /*  ========================================
@@ -96,6 +96,9 @@ h1 {
         max-width: 38.5em;
     }
     #tonleikar {
+        grid-template-columns: 1fr 1fr;
+    }
+    .calendar_selector {
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -115,6 +118,12 @@ h1 {
     #tonleikar {
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .calendar_selector input {
+        width: 55%;
+    }
+    .search_input {
+        width: 55%;
+    }
 }
 /* ========================================
   Viðmið - breakpoints 80em = 1600px +
@@ -125,6 +134,12 @@ h1 {
     }
     #tonleikar {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .calendar_selector input {
+        width: 40%;
+    }
+    .search_input {
+        width: 40%;
     }
 }
 /* ========================================
