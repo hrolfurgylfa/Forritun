@@ -1,3 +1,4 @@
+* {box-sizing: border-box;}
 body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0 auto;
@@ -70,11 +71,6 @@ h1 {
 /* ========================================
   Serch bar
   ======================================== */
-* {box-sizing: border-box;}
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
 .search_bar {
     margin: .5em auto;
     text-align: center;
