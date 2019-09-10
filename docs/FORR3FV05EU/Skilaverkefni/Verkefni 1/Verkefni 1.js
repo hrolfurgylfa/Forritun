@@ -18,15 +18,15 @@ let enableImageClick = () => {// Þetta fall keyrir eftir ákveðinn tíma og þ
         
         anime({// Þetta er animation þar sem fremri partur örvarinnar dettur af
             targets: [arrow_front],// Þetta er það sem animationin hefur áhrif á
-            translateX: [
+            translateX: [// Þetta færir X, það eru tveir hlutir vegna þess að þetta eru tveir keyframes
                 { value: "+=150", duration: 1500, delay: 0 },
                 { value: "+=0", duration: 1500, delay: 0 }
-            ],
+            ],// Þetta færir Y
             translateY: [
                 { value: "-=100", duration: 1500, delay: 0 },
                 { value: arrow_travel_distance, duration: 1500, delay: 0 }
             ],
-            rotate: [
+            rotate: [// Þetta snýr
                 { value: "+=60", duration: 1500, delay: 0 }
             ]
         });
