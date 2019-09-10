@@ -1,10 +1,10 @@
-import cv2
+import cv2 # pip3 install opencv-python
 import sys
 import logging as log
 import datetime as dt
 from time import sleep
-from gtts import gTTS
-from playsound import playsound
+from gtts import gTTS # pip3 install gTTS
+from playsound import playsound # pip3 install playsound 
 import os
 import threading
 
@@ -67,9 +67,9 @@ while True:
     # Display the resulting frame
     cv2.imshow('Video', frame)
 
-    if 
-        t1 = threading.Thread(target = hve_margir_inni, args = [len(faces)])
-        t1.start()
+    # if 
+    #     t1 = threading.Thread(target = hve_margir_inni, args = [len(faces)])
+    #     t1.start()
 
     tel += 1
 
