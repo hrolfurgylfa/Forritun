@@ -8,18 +8,21 @@ config
 
     line vty 0 15
     ----SW2(config-line)#
-        password ccna
-        login
+        password ccna -> setja aðgangsorð á línu
+        login -> Kveikja á innskráningu
     
     line con 0
     ----SW2(config-line)#
-        password ccna
-        login
+        password ccna -> setja aðgangsorð á línu
+        login -> Kveikja á innskráningu
 
-    int vlan1
+    int vlan1 / int s0/0/1
     ----SW2(config-if)#
-        ip address 145.136.50.130 255.255.255.192
-        no shut
+        ip address 145.136.50.130 255.255.255.192 -> Setja ipv4 ip tölu
+        ipv6 address ::::/64 -> Setja ipv6 ip tölu
+        ipv6 address FE80::2 l
+        description LAN1
+        no shut -> Kveikja á tengingu
 
     ip default-gateway 145.136.50.129
     do show ip interface brief

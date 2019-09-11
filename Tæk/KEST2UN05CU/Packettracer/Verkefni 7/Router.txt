@@ -8,13 +8,13 @@ config
 
     line vty 0 15
     ----R1(config-line)#
-        password ccna
-        login
+        password ccna -> setja aðgangsorð á línu
+        login -> Kveikja á innskráningu
     
     line con 0
     ----R1(config-line)#
-        password ccna
-        login
+        password ccna -> setja aðgangsorð á línu
+        login -> Kveikja á innskráningu
 
     int Fa0/0
     ----R1(config-if)#
@@ -24,6 +24,7 @@ config
 
 config t
 ----R1(config)#
+    ipv6 unicast-routing -> Kveikja á ipv6 routing
     ip domain-name networking.pka
     crypto key generate rsa
     username admin password 0 cisco123
