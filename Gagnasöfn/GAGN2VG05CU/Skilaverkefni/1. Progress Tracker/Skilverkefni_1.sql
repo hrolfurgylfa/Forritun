@@ -175,24 +175,24 @@ end $$
 delimiter ;
 SELECT IsLeapyear(2011);
 
+
 -- 11:
 -- Fallið reiknar út og skilar aldri ákveðins nemanda
 delimiter $$
 drop function if exists StudentAge $$
-    
+
 create function StudentAge(nemandaID INT)
-returns int
-no sql
-begin
+RETURNS LONGTEXT
+NO SQL
+BEGIN
+	DECLARE dob DATE DEFAULT (SELECT dob FROM Students WHERE studentID = nemandaID);
 	RETURN(
-		YEAR(CURRENT_DATE) - YEAR((SELECT dob FROM Students WHERE studentID = nemandaID))
-    );
-end $$
+		(YEAR(CURRENT_DATE) - YEAR(dob)) - (RIGHT(CURRENT_DATE, 5) < RIGHT(dob, 5))
+	);
+END $$
 delimiter ;
-SELECT StudentAge(5);
-SELECT * FROM Students;
-SELECT dob FROM Students WHERE studentID = 2;
-SELECT CURRENT_DATE - (SELECT dob FROM Students WHERE studentID = 2);
+SELECT StudentAge(6);
+
 
 -- 12:
 -- Fallið skilar fjölda þeirra eininga sem nemandinn hefur tekið(lokið)
