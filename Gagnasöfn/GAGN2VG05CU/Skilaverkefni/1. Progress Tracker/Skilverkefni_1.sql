@@ -258,6 +258,20 @@ drop procedure if exists RestrictorList $$
 
 create procedure RestrictorList()
 begin
-	-- kóði hér...
+	SELECT R.restrictorID,
+        C2.courseName AS "restrictorName",
+        R.restrictorType,
+        C.courseNumber,
+		C.courseName
+	FROM Courses C
+		RIGHT JOIN Restrictors R
+			ON C.courseNumber = R.courseNumber
+		LEFT JOIN Courses C2
+			ON R.restrictorID = C2.courseNumber;
 end $$
 delimiter ;
+CALL RestrictorList();
+
+-- 1. Undanfari
+-- 2. Samfari, má taka með öðrum
+-- 3. Samfari, þarf að taka með öðrum
