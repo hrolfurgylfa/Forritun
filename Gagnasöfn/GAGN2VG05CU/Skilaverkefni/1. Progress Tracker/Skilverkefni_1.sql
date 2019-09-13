@@ -199,12 +199,22 @@ SELECT StudentAge(6);
 delimiter $$
 drop function if exists StudentCredits $$
     
-create function StudentCredits()
-returns int
+create function StudentCredits(nemendaID INT)
+RETURNS INT
+NO SQL
 begin
-	-- kóði hér...
+	RETURN(
+		SELECT SUM(courseCredits)
+		FROM Registration R
+			JOIN Students S
+				ON R.studentID = S.studentID
+			JOIN Courses C
+				ON R.courseNumber = C.courseNumber
+		WHERE R.passed = true AND R.studentID = nemendaID
+    );
 end $$
 delimiter ;
+SELECT StudentCredits(2);
 
 
 -- 14:
@@ -215,9 +225,29 @@ drop procedure if exists CourseRestrictorList $$
 
 create procedure CourseRestrictorList()
 begin
-	-- kóði hér...
+	SELECT C.courseNumber,
+		C.courseName,
+        R.restrictorID,
+        C2.courseName AS "restrictorName",
+        R.restrictorType
+	FROM Courses C
+		RIGHT JOIN Restrictors R
+			ON C.courseNumber = R.courseNumber
+		LEFT JOIN Courses C2
+			ON R.restrictorID = C2.courseNumber
+	UNION ALL
+	SELECT C.courseNumber,
+		C.courseName,
+        R.restrictorID,
+        NULL AS "restrictorName",
+        R.restrictorType
+	FROM Courses C
+		LEFT JOIN Restrictors R
+			ON C.courseNumber = R.courseNumber
+	WHERE R.courseNumber IS NULL;
 end $$
 delimiter ;
+CALL CourseRestrictorList();
 
 
 -- 15:
