@@ -7,23 +7,30 @@ const gl = WebGL_Canvas.getContext("webgl");
 
 // ============================= Shaders =============================
 const fragmentShaderSource = `
-    void main() {
-        gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+    varying lowp vec4 vColor;
+
+    void main(void) {
+        gl_FragColor = vColor;
     }
 `;
 const vertexShaderSource = `
     attribute vec4 aVertexPosition;
+    attribute vec4 aVertexColor;
 
     uniform mat4 uModelViewMatrix;
     uniform mat4 uProjectionMatrix;
 
-    void main() {
+    varying lowp vec4 vColor;
+
+    void main(void) {
         gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
+        vColor = aVertexColor;
     }
 `;
 
 
 // <-><-><-><-><-><-><-><-><-><-> Föll <-><-><-><-><-><-><-><-><-><->
+
 // Þetta fall býr til shader
 let hladaShader = (gl, gerd, source) => {
 
@@ -86,24 +93,30 @@ let gera2DForm = (gl, stadsetningar) => {
         gl.STATIC_DRAW
     );
 
-    // Hérna er liturinn gerður
-
-        
     // Hérna ákvað ég að senda lengt líka með vegna þess að þetta var núþegar object og þá þarf ég ekki stöðugt að uppfæra hversu margar verticies ég er með.
     return { position: stadsetningarBuffer, length: stadsetningar.length / 2 };
 }
 // Þeta setir einn lit yfir allt formið
 let geraFlatLit = (gl, buffers, color) => {
+    
+
     const colorBuffer = gl.createBuffer();
+
+    console.log("color:\n",color);
+    let colorFinal = [];
+    for(let i = 0; i < buffers.length; i++) {
+        colorFinal = colorFinal.concat(color);
+        console.log("i: ",i);
+    }
+    console.log("colorFinal:\n",colorFinal);
+    
     gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(color), gl.STATIC_DRAW);
 
     buffers.color = colorBuffer;
-
-    return buffers;
 }
 // Þetta teiknar allt
-let drawScene = (gl, programInfo, buffers) => {
+let drawScene = (gl, programInfo, buffers, snuningur = 0.0) => {
 
     gl.clearColor(0.0, 0.0, 0.0, 1.0);  // Clear to black, fully opaque
     gl.clearDepth(1.0);                 // Clear everything
@@ -129,13 +142,11 @@ let drawScene = (gl, programInfo, buffers) => {
 
     // note: glmatrix.js always has the first argument
     // as the destination to receive the result.
-    mat4.perspective(
-        projectionMatrix,
-        fieldOfView,
-        aspect,
-        zNear,
-        zFar
-    );
+    mat4.perspective(projectionMatrix,
+                    fieldOfView,
+                    aspect,
+                    zNear,
+                    zFar);
 
     // Set the drawing position to the "identity" point, which is
     // the center of the scene.
@@ -144,21 +155,25 @@ let drawScene = (gl, programInfo, buffers) => {
     // Now move the drawing position a bit to where we want to
     // start drawing the square.
 
-    mat4.translate(
-        modelViewMatrix,     // destination matrix
-        modelViewMatrix,     // matrix to translate
-        [-0.0, 0.0, -6.0]    // amount to translate
-    );
-
+    mat4.translate(modelViewMatrix,     // destination matrix
+                    modelViewMatrix,     // matrix to translate
+                    [-0.0, 0.0, -6.0]);  // amount to translate
+    
+    // Þetta snýr hlutnum
+    mat4.rotate(modelViewMatrix,  // destination matrix
+        modelViewMatrix,  // matrix to rotate
+        snuningur,   // amount to rotate in radians
+        [0, 0, 1]);       // axis to rotate around
+    
+    
     // Tell WebGL how to pull out the positions from the position
-    // buffer into the vertexPosition attribute.
+    // buffer into the vertexPosition attribute
     {
-        const numComponents = 2;  // pull out 2 values per iteration
-        const type = gl.FLOAT;    // the data in the buffer is 32bit floats
-        const normalize = false;  // don't normalize
-        const stride = 0;         // how many bytes to get from one set of values to the next
-                                // 0 = use type and numComponents above
-        const offset = 0;         // how many bytes inside the buffer to start from
+        const numComponents = 2;
+        const type = gl.FLOAT;
+        const normalize = false;
+        const stride = 0;
+        const offset = 0;
         gl.bindBuffer(gl.ARRAY_BUFFER, buffers.position);
         gl.vertexAttribPointer(
             programInfo.attribLocations.vertexPosition,
@@ -168,6 +183,26 @@ let drawScene = (gl, programInfo, buffers) => {
             stride,
             offset);
         gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
+    }
+
+    // Tell WebGL how to pull out the colors from the color buffer
+    // into the vertexColor attribute.    
+    {
+        const numComponents = 4;
+        const type = gl.FLOAT;
+        const normalize = false;
+        const stride = 0;
+        const offset = 0;
+        gl.bindBuffer(gl.ARRAY_BUFFER, buffers.color);
+        gl.vertexAttribPointer(
+            programInfo.attribLocations.vertexColor,
+            numComponents,
+            type,
+            normalize,
+            stride,
+            offset);
+        gl.enableVertexAttribArray(
+            programInfo.attribLocations.vertexColor);
     }
 
     // Tell WebGL to use our program when drawing
@@ -187,8 +222,7 @@ let drawScene = (gl, programInfo, buffers) => {
 
     {
         const offset = 0;
-        const vertexCount = buffers.length;
-        gl.drawArrays(gl.TRIANGLE_STRIP, offset, vertexCount);
+        gl.drawArrays(gl.TRIANGLE_STRIP, offset, buffers.length);
     }
 }
 
@@ -209,6 +243,7 @@ const shaderForritaUpplysingar = {
     program: shaderForrit,
     attribLocations: {
         vertexPosition: gl.getAttribLocation(shaderForrit, 'aVertexPosition'),
+        vertexColor: gl.getAttribLocation(shaderForrit, 'aVertexColor'),
     },
     uniformLocations: {
         projectionMatrix: gl.getUniformLocation(shaderForrit, 'uProjectionMatrix'),
@@ -224,14 +259,42 @@ let buffers = gera2DForm(gl, [
     -1.0, -1.0
 ]);
 
-buffers = geraFlatLit(gl, buffers, [
+// let buffers = gera2DForm(gl, [
+//     -1.0, -1.0,
+//     -1.0,  1.0,
+//     1.0,   1.0, 
+//     1.0,  -1.0,
+//     -1.0, -1.0
+// ]);
+
+geraFlatLit(gl, buffers, [
     1.0,  0.0,  0.0,  1.0
 ]);
 
-// let buffers2 = gera2DForm(gl, [
-//     1.7, 1.7,
-//     1.7, -1.7,
-//     1.0, 1.0
-// ]);
+console.log(buffers);
 
-drawScene(gl, shaderForritaUpplysingar, buffers);
+// Þetta geymir snúning hlutsins sem er verið að rendera.
+let snuningur = 0.0;
+
+// Þessi breyta geymir hvenær síðasti rammi var renderaður og er notað til þess að reikna Delta Time.
+let then = 0;
+
+// Þetta teiknar senuna aftur og after, hvern einasta ramma
+let render = now => {
+
+    now *= 0.001;  // Breyta í sekúndur
+    
+    // Reika Delta Time
+    const deltaTime = now - then;
+    then = now;
+
+    // Hérna bæti ég delta time við snúninginn til þess að snúningurinn sé alltaf jafn haraður, sama hversu mikinn tíma tað tekur að teikna rammann.
+    snuningur += deltaTime;
+
+    // Þetta teiknar senuna
+    drawScene(gl, shaderForritaUpplysingar, buffers, snuningur);
+
+    // Þetta segir vafranum að keyra fallið sem er sent inn í þetta fall þegar það er renderað næsta ramma.
+    requestAnimationFrame(render);
+}
+requestAnimationFrame(render);
