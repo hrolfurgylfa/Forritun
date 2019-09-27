@@ -5,10 +5,38 @@
 	því að kasta villu og birta villuboð.
 	Dæmi um insert sem triggerinn á að stoppa: insert into Restrictors values('GSF2B3U','GSF2B3U',1);
 */
+DELIMITER $$
+DROP TRIGGER IF EXISTS BEFORE_INSERT_Restrictors$$
+CREATE TRIGGER BEFORE_INSERT_Restrictors
+    BEFORE INSERT
+    ON Restrictors FOR EACH ROW
+BEGIN
+    IF (NEW.restrictorID = NEW.courseNumber) THEN
+		signal sqlstate '45000' set message_text = "courseNumber má ekki vera það sama og restrictorID";
+	END IF;
+END$$
+DELIMITER ;
+
+insert into Restrictors(courseNumber,restrictorID,restrictorType)values('GSF2B3U','GSF2B3U',1);
 
 
 -- 2:
 -- Skrifið samskonar trigger fyrir update Restrictors skipunina.
+DELIMITER $$
+DROP TRIGGER IF EXISTS BEFORE_UPDATE_Restrictors$$
+CREATE TRIGGER BEFORE_UPDATE_Restrictors
+    BEFORE UPDATE
+    ON Restrictors FOR EACH ROW
+BEGIN
+    IF (NEW.restrictorID = NEW.courseNumber) THEN
+		signal sqlstate '45000' set message_text = "courseNumber má ekki vera það sama og restrictorID";
+	END IF;
+END$$
+DELIMITER ;
+
+UPDATE Restrictors
+SET restrictorID = 'GSF2B3U'
+WHERE courseNumber = 'GSF2B3U';
 
 
 /*
