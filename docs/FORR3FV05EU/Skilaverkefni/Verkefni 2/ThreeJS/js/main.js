@@ -12,10 +12,10 @@ let scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 var loader = new THREE.GLTFLoader();
-loader.load('models/api.obj', gltf => {
+loader.load('/models/api.obj', gltf => {
 	scene.add( gltf.scene );
 }, undefined, error => {
-	console.error( error );
+	console.error( "Villa við að hlaða inn módeli: ",error );
 });
 
 let renderer = new THREE.WebGLRenderer();

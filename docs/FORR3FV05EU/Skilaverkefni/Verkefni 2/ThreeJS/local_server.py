@@ -13,24 +13,11 @@ from bottle import *
 
 @route("/")
 def main():
-    return """
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>ThreeJS</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!-- Scripts -->
-        <script src="js/three.js"></script>
-        <script src="js/GLTFLoader.js"></script>
-        <script src="js/main.js"></script>
-    </body>
-    </html>
-    """
+
+    with open('index.html', 'r') as content_file:
+        content = content_file.read()
+
+    return content
 
 #  ========================================
 #  Annað
@@ -44,14 +31,10 @@ def static_models(slod):
 def static_js(slod):
     return static_file(slod, root="js")
 
-@route("/main.css")
-def static_css():
-    return static_file("/main.css", root="/")
-
 #404 ERROR síða----------404 ERROR síða----------404 ERROR síða----------404 ERROR síða----------404 ERROR síða
 @error(404)
 def notFound(error):
     return '<h2 style="color:red;text-align: center;">Þessi síða finnst ekki</h2>'
 
 
-bottle.run(host="localhost", port=8080, reloader=True)
+bottle.run(host="localhost", port=8080, reloader=True, debug=True)
