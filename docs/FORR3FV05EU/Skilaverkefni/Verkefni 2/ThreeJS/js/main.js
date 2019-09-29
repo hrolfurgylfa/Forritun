@@ -1,33 +1,37 @@
-// <-><-><-><-><-><-><-><-><-><-> Föll <-><-><-><-><-><-><-><-><-><->
-let animate = () => {
-    requestAnimationFrame( animate );
-    
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-    
-	renderer.render( scene, camera );
-}
+var scene = new THREE.Scene();
 
-let scene = new THREE.Scene();
-let camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+camera.position.z = 3;
 
-var loader = new THREE.GLTFLoader();
-loader.load('/models/api.obj', gltf => {
-	scene.add( gltf.scene );
-}, undefined, error => {
-	console.error( "Villa við að hlaða inn módeli: ",error );
-});
-
-let renderer = new THREE.WebGLRenderer();
+var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
-// Kassi
-var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-var cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
+var light = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
+light.position.set(-100, 0, 100);
 
-camera.position.z = 5;
+// var fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
+// fillLight.position.set(100, 0, 100);
+
+// var backLight = new THREE.DirectionalLight(0xffffff, 1.0);
+// backLight.position.set(100, 0, -100).normalize();
+
+scene.add(light);
+// scene.add(fillLight);
+// scene.add(backLight);
+
+var objLoader = new THREE.OBJLoader();
+objLoader.setPath('models/');
+objLoader.load('api.obj', object => {
+
+    scene.add(object);
+    object.position.y = 0;
+
+});
+
+var animate = () => {
+	requestAnimationFrame( animate );
+	renderer.render(scene, camera);
+};
 
 animate();
