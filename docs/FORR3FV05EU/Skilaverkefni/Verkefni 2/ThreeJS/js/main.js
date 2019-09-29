@@ -1,13 +1,14 @@
 // Ná í hleður textann til þess að sé hægt að eyða honum þegar það er búið að hlaða.
 const hledur_texti = document.getElementById("hledur_texti");
 // Ná í body sem verður sett onClickListiner á
-const body = document.getElementsByName("body")[0];
+const body = document.getElementById("body");
+console.log(body);
 
 // Byrja senuna
 let scene = new THREE.Scene();
 
 // Setja upp myndavélina
-let camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+let camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 500 );
 camera.position.z = 3;
 
 // Setja upp rendererinn
@@ -72,8 +73,38 @@ objLoader.load('api.obj', api => {
     }
     requestAnimationFrame(render);
 
-});
+    // Þetta keyrir ef það er ýtt á apann
+    body.addEventListener("click", evt => {
 
-body.addEventListener("click", evt => {
-    
+        let myndavela_stadsetning = camera.position.z;
+        
+        let fljuga_i_burtu = () => {
+
+            // Hérna bæti ég aðeins við myndavéla staðsetninguna
+            myndavela_stadsetning *= 1.05;
+            console.log(myndavela_stadsetning);
+            
+            // Færa myndavélina
+            camera.position.z = myndavela_stadsetning;
+
+            // Þetta segir vafranum að keyra fallið sem er sent inn í þetta fall þegar það er renderað næsta ramma ef apinn er ekki búinn að snúast í 1 hring.
+            if (myndavela_stadsetning < 500){
+                requestAnimationFrame(fljuga_i_burtu);
+            } else {
+                camera.position.z = -5;
+                requestAnimationFrame(fljuga_til_baka);
+            }
+        }
+        let fljuga_til_baka = () => {
+
+            camera.position.z += 0.1;
+            console.log(camera.position.z);
+
+            // Þetta segir vafranum að keyra fallið sem er sent inn í þetta fall þegar það er renderað næsta ramma ef apinn er ekki búinn að snúast í 1 hring.
+            if (camera.position.z < 5){
+                requestAnimationFrame(fljuga_til_baka);
+            }
+        }
+        requestAnimationFrame(fljuga_i_burtu);
+    });
 });
