@@ -9,3 +9,9 @@
 * ip add 0.0.0.0 255.255.255.0 -> bæta við ip tölu
 * ipv6 add ::::/64
 
+## Port Security
+
+Enable port security:
+S1(config-if)#switchport port-security
+
+
