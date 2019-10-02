@@ -5,6 +5,7 @@ config
     hostname SW2
     enable secret subnet
     banner motd #Adgangur bannadur!#
+    service password-encryption
 
     line vty 0 15
     ----SW2(config-line)#
@@ -27,6 +28,29 @@ config
     ip default-gateway 145.136.50.129
     do show ip interface brief
     no shut # Kveikja á tengingu
+
+
+    // Enable SSH
+
+    ip domain-name cisco.com
+    ip ssh version 2
+    crypto key generate rsa
+    username admin secret ccna
+
+    line vty 0 15
+    ----SW2(config-line)#
+        login local
+        transport input ssh
+    
+
+    // Port security on switches
+
+    switchport mode access
+    switchport port-security
+    switchport port-security maximum 2 // maximum 2 ef það er limit
+    switchport port-security mac-address sticky
+    switchport port-security violation shutdownc
+
 
 SAVE:
 SW2#copy run star
