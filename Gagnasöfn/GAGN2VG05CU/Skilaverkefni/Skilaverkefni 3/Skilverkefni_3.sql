@@ -16,8 +16,26 @@
 		  {"first_name": "Jasmín Rós", "last_name": "Stefánsdóttir", "date_of_birth": "1996-02-29"}
 	]
 */
+SELECT GROUP_CONCAT(
+    SEPARATOR ", "
+)
+FROM Students;
 
+SELECT 
+    GROUP_CONCAT(
+		DISTINCT (
+			SELECT 
+				GROUP_CONCAT(DISTINCT (studentID, firstName, lastName, dob)
+					ORDER BY studentID ASC
+					SEPARATOR '"}{"')
+			FROM Students;
+		)
+        ORDER BY studentID ASC
+        SEPARATOR '"}{"'
+	)
+FROM Students;
 
+SELECT (SELECT first_name FROM Students WHERE StudentID = 1) FROM Students WHERE StudentID = 2;
 /*
 	2:
 	Skrifið nú SingleStudentJSon()þannig að nemandinn innihaldi nú lista af þeim áföngum sem hann hefur tekið.
