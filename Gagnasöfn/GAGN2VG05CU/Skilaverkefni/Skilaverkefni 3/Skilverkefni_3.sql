@@ -16,26 +16,31 @@
 		  {"first_name": "Jasmín Rós", "last_name": "Stefánsdóttir", "date_of_birth": "1996-02-29"}
 	]
 */
-SELECT GROUP_CONCAT(
-    SEPARATOR ", "
-)
-FROM Students;
+delimiter $$
+drop procedure if exists JSONStudents $$
 
-SELECT 
-    GROUP_CONCAT(
-		DISTINCT (
-			SELECT 
-				GROUP_CONCAT(DISTINCT (studentID, firstName, lastName, dob)
-					ORDER BY studentID ASC
-					SEPARATOR '"}{"')
-			FROM Students;
+create procedure JSONStudents()
+begin
+	SELECT 
+		CONCAT(
+			'[{"',
+			GROUP_CONCAT(
+				CONCAT_WS(
+					'", "', 
+					CONCAT('first_name": "',firstName), 
+					CONCAT('last_name": "',lastName), 
+					CONCAT('dob": "',dob)
+				)
+				SEPARATOR '"},{"'
+			),
+			'"}]'
 		)
-        ORDER BY studentID ASC
-        SEPARATOR '"}{"'
-	)
-FROM Students;
+		AS "Student JSON"
+	FROM
+		Students;
+end $$
+delimiter ;
 
-SELECT (SELECT first_name FROM Students WHERE StudentID = 1) FROM Students WHERE StudentID = 2;
 /*
 	2:
 	Skrifið nú SingleStudentJSon()þannig að nemandinn innihaldi nú lista af þeim áföngum sem hann hefur tekið.
