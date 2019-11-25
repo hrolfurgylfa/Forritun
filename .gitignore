@@ -5,3 +5,4 @@ __pycache__/
 .~*.ods#
 .jshintrc
 token.txt
+SQLPassword.json
