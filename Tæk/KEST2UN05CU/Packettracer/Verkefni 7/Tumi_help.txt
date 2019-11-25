@@ -1,0 +1,55 @@
+VLAN 10                        | fa0/1-fa0/5   |
+   name Students               |               |
+   VLAN 20                     | fa0/6-fa0/10  |
+   name Faculty                |               | ---> S2+S3
+   VLAN 30                     | fa0/11-fa0/15 |
+   name Guests                 |               |
+   VLAN 88                     | fa0/16-fa0/20 |
+   name Management             |               |
+   VLAN 99                     |  G0/1-G0/2    |
+   name Native
+
+   "S2+S3"
+      int r fa0/1-5
+         sw m a
+         sw a v 10
+      int r fa0/6-10
+         sw m a
+         sw a v 20
+      int r fa0/11-15
+         sw m a
+         sw a v 30
+      int r fa0/16-20
+         sw m a
+         sw a v 88
+
+   "S1+S2+S3"
+      int r G0/1-2
+         sw m +
+         sw t n v 99
+         sw t a v 10,20,30,88,99
+
+   "S1"
+      int fa0/24
+      sw m t
+         sw t n v 99
+         sw t a v 10,20,30,88,99
+
+
+   "R1"
+      int G0/0.10
+      enc d 10
+      ip add A.B.C.D  +mask
+      int G0/0.20
+      enc d 20
+      ip add -||-
+      int G0/0.30
+      enc d 30
+      ip add -||-
+      int G0/0.88
+      enc d 88
+      ip add -||-
+      int G0/0.99
+      enc d 99 n
+      ip add -||-
+      
