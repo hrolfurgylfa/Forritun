@@ -45,7 +45,19 @@ WHERE courseNumber = 'GSF2B3U';
     Birta skal fullt nafn nemanda, heiti námsbrautar og fjölda lokinna eininga(
 	Aðeins skal velja staðinn áfanga. passed = true
 */
+delimiter $$
+drop procedure if exists KlaradarEiningar $$
 
+create procedure KlaradarEiningar(IN nemendaID INT)
+begin
+	SELECT SUM(courseCredits)
+	FROM Registration r
+		JOIN Courses c
+		ON r.courseNumber = c.courseNumber
+	WHERE r.StudentID = nemendaID AND r.passed = 1;
+end $$
+delimiter ;
+CALL KlaradarEiningar(4);
 
 /*
 	4:
@@ -56,4 +68,12 @@ WHERE courseNumber = 'GSF2B3U';
     skylduáfanga á nemandann.
     Að endingu skrifið þið stored procedure-inn StudentRegistration() sem nota skal við sjálfstæða skráningu áfanga nemandans.
 */
+delimiter $$
+drop procedure if exists AddStudent $$
 
+create procedure AddStudent(IN nemendaID INT)
+begin
+	
+end $$
+delimiter ;
+CALL KlaradarEiningar(4);
