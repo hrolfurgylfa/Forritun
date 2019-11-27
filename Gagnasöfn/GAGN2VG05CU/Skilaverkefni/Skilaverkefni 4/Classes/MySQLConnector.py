@@ -20,7 +20,7 @@ class MySQLConnector():
         print("Shutting down")
         exit()
 
-    def runSQL(self, sql):
+    def run(self, sql):
 
         try:
             cursor = self.connection.cursor()

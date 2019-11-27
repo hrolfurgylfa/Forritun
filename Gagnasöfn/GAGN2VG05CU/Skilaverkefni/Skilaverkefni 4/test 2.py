@@ -1,7 +1,7 @@
 ######################
 #       Import       #
 ######################
-from Classes.MySQLConnector import MySQLConnector
+from Classes.SchoolManager import SchoolManager
 import json
 
 
@@ -23,15 +23,4 @@ def getJsonFile(file_name):
 ######################
 #        Kóði        #
 ######################
-# Sækja aðgangsorðið
-passwordFile = getJsonFile("GAGN2VG05CU\\Skilaverkefni\\Skilaverkefni 4\\SQLPassword.json")
-if passwordFile is None:
-    print("Það vantar password file sem geymir DataBase passwordið")
-    exit()
-else: password = passwordFile["password"]
-
-# Tengja við gagnagrunninn
-SQL = MySQLConnector("127.0.0.1", "root", password, "progresstracker")
-
-# Keyra commands
-print(SQL.run("SELECT * FROM Students"))
+School = SchoolManager()

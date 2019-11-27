@@ -68,12 +68,31 @@ CALL KlaradarEiningar(4);
     skylduáfanga á nemandann.
     Að endingu skrifið þið stored procedure-inn StudentRegistration() sem nota skal við sjálfstæða skráningu áfanga nemandans.
 */
-delimiter $$
-drop procedure if exists AddStudent $$
+DELIMITER $$
+DROP PROCEDURE IF EXISTS AddStudent $$
 
-create procedure AddStudent(IN nemendaID INT)
-begin
+CREATE PROCEDURE AddStudent(IN firstName_IN VARCHAR(55), lastName_IN VARCHAR(55), dob_IN DATE, startSemester_IN INT)
+BEGIN
+	INSERT INTO Students
+		(firstName,lastName,dob,startSemester)
+	VALUES
+		(firstName_IN, lastName_IN, dob_IN, startSemester_IN);
 	
-end $$
-delimiter ;
-CALL KlaradarEiningar(4);
+	CALL AddMandatoryCourses(LAST_INSERT_ID());
+END $$
+DELIMITER ;
+
+DELIMITER $$
+DROP PROCEDURE IF EXISTS AddMandatoryCourses $$
+
+CREATE PROCEDURE AddMandatoryCourses(IN StudentID INT)
+BEGIN
+	INSERT INTO Students
+		(firstName,lastName,dob,startSemester)
+	VALUES
+		(firstName_IN, lastName_IN, dob_IN, startSemester_IN);
+END $$
+DELIMITER ;
+
+
+CALL AddStudent("Kalli", "Klikkaði", "2019-11-21", 9);
