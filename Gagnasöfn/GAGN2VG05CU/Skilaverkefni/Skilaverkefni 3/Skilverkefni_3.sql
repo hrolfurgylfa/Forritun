@@ -41,6 +41,9 @@ begin
 end $$
 delimiter ;
 
+CALL JSONStudents();
+
+
 /*
 	2:
 	Skrifið nú SingleStudentJSon()þannig að nemandinn innihaldi nú lista af þeim áföngum sem hann hefur tekið.
@@ -67,6 +70,77 @@ delimiter ;
 		]
 	}
 */
+delimiter $$
+drop procedure if exists SingleStudentJSon $$
+
+create procedure SingleStudentJSon(IN NemendaID INT)
+begin
+	DECLARE AllirAfangarNemanda LONGTEXT DEFAULT "[";
+    DECLARE FjoldiAfanga INT DEFAULT (SELECT COUNT(*) FROM Registration WHERE StudentID = NemendaID);
+    DECLARE courseObject TEXT;
+    DECLARE i INT DEFAULT 0;
+    DECLARE JsonOut LONGTEXT;
+    
+    -- Þetta keyrir í gegnum alla áfangana sem nemandinn er í og setir þá í JSON Array
+    WHILE i < FjoldiAfanga
+    DO
+		SELECT
+			JSON_UNQUOTE(JSON_OBJECT(
+				"course_number", r.courseNumber,
+                "course_credits", c.courseCredits,
+                "status", CASE WHEN r.passed = 1 THEN "pass" ELSE "fail" END
+			))
+		FROM Registration r
+		JOIN Courses c
+			ON r.CourseNumber = c.courseNumber
+		WHERE r.StudentID = NemendaID
+        LIMIT i, 1
+		INTO courseObject;
+        
+		SET AllirAfangarNemanda = CONCAT(AllirAfangarNemanda, courseObject, ",");
+        SET i = i + 1;
+    END WHILE;
+    
+    -- Þetta skiptir síðustu kommuni fyrir kassasviga til þess að loka arrayinum
+	SET AllirAfangarNemanda = SUBSTRING(AllirAfangarNemanda, 1, CHAR_LENGTH(AllirAfangarNemanda)-1);
+    SET AllirAfangarNemanda = CONCAT(AllirAfangarNemanda, "]");
+    
+    -- Þetta býr til JSONið, fyrir utan courses sem ég geri á eftir
+    SELECT
+		JSON_OBJECT(
+			"student_id", StudentID,
+			"first_name", firstName,
+			"last_name", lastName,
+			"date_of_birth", dob
+		) AS "JSON Output"
+    FROM Students 
+    WHERE StudentID = NemendaID
+    INTO JsonOut;
+    
+    -- Eyða síðasta stafnum, setja arreyinn þar inn og loka objectinum svo aftur
+    SET JsonOut = SUBSTRING(JsonOut, 1, CHAR_LENGTH(JsonOut)-1);
+    SET JsonOut = CONCAT(
+		JsonOut,
+			',"courses": ', AllirAfangarNemanda, 
+        "}"
+	);
+    
+    -- Skila JSONinu
+    SELECT JsonOut;
+end $$
+delimiter ;
+
+CALL SingleStudentJSon(2);
+
+SELECT * FROM Registration;
+SELECT * 
+FROM Registration r
+JOIN Courses c
+	ON r.CourseNumber = c.courseNumber;
+SELECT * FROM Students;
+
+SELECT COUNT(*) FROM Registration WHERE StudentID = 3;
+
 
 /*
 	3:
