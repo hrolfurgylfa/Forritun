@@ -132,15 +132,6 @@ delimiter ;
 
 CALL SingleStudentJSon(2);
 
-SELECT * FROM Registration;
-SELECT * 
-FROM Registration r
-JOIN Courses c
-	ON r.CourseNumber = c.courseNumber;
-SELECT * FROM Students;
-
-SELECT COUNT(*) FROM Registration WHERE StudentID = 3;
-
 
 /*
 	3:
@@ -156,6 +147,63 @@ SELECT COUNT(*) FROM Registration WHERE StudentID = 3;
 		{"student_id": "6", "first_name": "Hadríra Gná", "last_name": "Schmidt", "courses_taken": "2"}
 	]
 */
+
+delimiter $$
+drop procedure if exists SemesterInfoJSon $$
+
+create procedure SemesterInfoJSon(IN AnnarNumer INT)
+begin
+	DECLARE finished BOOL DEFAULT False;
+    DECLARE JsonOut LONGTEXT DEFAULT "[";
+    DECLARE nemendaID INT;
+	DECLARE fyrstaNafn VARCHAR(55);
+    DECLARE eftirNafn VARCHAR(55);
+    DECLARE afangarTeknir INT;
+ 
+    DEClARE curSemester
+        CURSOR FOR
+            SELECT s.studentID, s.firstName, s.lastName, COUNT(*) AS "CoursesTaken"
+			FROM Students s
+			JOIN Registration r
+				ON s.StudentID = r.StudentID
+			WHERE r.semesterID = AnnarNumer
+			GROUP BY s.StudentID;
+
+    DECLARE CONTINUE HANDLER
+        FOR NOT FOUND SET finished = True;
+        
+	OPEN curSemester;
+    getSemester: LOOP
+        FETCH curSemester INTO nemendaID, fyrstaNafn, eftirNafn, afangarTeknir;
+        IF finished = True THEN
+            LEAVE getSemester;
+        END IF;
+        
+        -- Lúppu kóði fer hér
+        SET JsonOut = CONCAT(
+			JsonOut,
+            JSON_OBJECT(
+				"student_id", nemendaID,
+                "first_name", fyrstaNafn,
+                "last_name", eftirNafn,
+                "courses_taken", afangarTeknir
+            ),","
+		);
+        
+    END LOOP getSemester;
+    CLOSE curSemester;
+    
+    -- Skipta út síðustu extra kommuni fyrir kassa sviga
+   -- Eyða síðasta stafnum, setja arreyinn þar inn og loka objectinum svo aftur
+    SET JsonOut = SUBSTRING(JsonOut, 1, CHAR_LENGTH(JsonOut)-1);
+    SET JsonOut = CONCAT(JsonOut, "]");
+    
+    -- Skila JSON gögnunum
+    SELECT JsonOut;
+end $$
+delimiter ;
+
+CALL SemesterInfoJSon(9);
 
 
 -- ACHTUNG:  2 og 3 nota líka cursor!
