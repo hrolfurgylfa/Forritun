@@ -2,6 +2,108 @@
 -- Skrifið Stored Procedure ElectedCourses
 -- Kalla skal á ElectedCourses með nemendanúmeri og hann skilar til baka vali fyrir næstu önn.
 
+delimiter $$
+drop procedure if exists ElectedCourses $$
+
+create procedure ElectedCourses(IN NemendaID INT)
+begin
+    DECLARE n INT DEFAULT (SELECT COUNT(*) FROM Courses);
+    DECLARE i INT DEFAULT 0;
+    DECLARE JsonOut LONGTEXT;
+    DECLARE brautarNumer CHAR(10);
+    
+    DECLARE n2 INT;
+	DECLARE i2 INT DEFAULT 0;
+	DECLARE courseDone BOOL DEFAULT False;
+    
+    
+    DROP TABLE IF EXISTS PossibleCourses;
+    CREATE TEMPORARY TABLE PossibleCourses LIKE Courses;
+    INSERT INTO PossibleCourses SELECT * FROM Courses;
+    
+    DROP TABLE IF EXISTS Print;
+    CREATE TEMPORARY TABLE Print
+    (
+		course VARCHAR(10),
+        msg LONGTEXT
+    );
+
+    
+    WHILE i < n
+    DO
+		-- Kóði sem keyrir í lúppunni kemur hérna fyrir neðan
+        
+        SET brautarNumer = (SELECT courseNumber FROM Courses LIMIT i, 1);
+        INSERT INTO Print (course, msg) VALUES (brautarNumer, "Ég er að keyra í gegnum áfanga.");
+        
+        
+        -- Þetta keyrir í gegnum alla Registrationirnar sem nemandinn hefur fyrir þennan áfanga og tékka hvort að þessi áfangi sé búinn
+        SET courseDone = False;
+        SET i2 = 0;
+        SET n2 = (SELECT COUNT(*) FROM Registration WHERE StudentID = NemendaID AND courseNumber = brautarNumer);
+        WHILE i2 < n2
+        DO
+			IF
+				(SELECT passed FROM Registration WHERE StudentID = NemendaID AND courseNumber = brautarNumer LIMIT i2, 1) = True OR 
+                (SELECT semesterID FROM Registration WHERE StudentID = NemendaID AND courseNumber = brautarNumer LIMIT i2, 1) = CurrentSemester()
+			THEN
+				SET courseDone = True;
+            END IF;
+            SET i2 = i2 + 1;
+        END WHILE;
+        -- Eyða brautinni úr PossibleCourses ef hún er búin í Registration töfluni af nemendanum sem ég er að fara í gegnum
+        IF courseDone = True THEN
+			DELETE FROM PossibleCourses WHERE courseNumber = brautarNumer;
+		END IF;
+        
+        
+        -- Finna áfanga sem nemandinn kemst ekki í vegna þess að það er restrictor á honum
+        
+        
+        -- Hækka teljarann til þess að skoða næstu braut
+		SET i = i + 1;
+    END WHILE;
+    
+    SELECT * FROM Print;
+    SELECT * FROM PossibleCourses ORDER BY RAND() LIMIT 5;
+end $$
+delimiter ;
+
+CALL ElectedCourses(2);
+
+SELECT * FROM AllCoursesForStudent;
+SELECT * FROM Registration;
+SELECT * FROM Registration WHERE StudentID = 2;
+
+
+DROP TABLE IF EXISTS AllCoursesForStudent;
+CREATE TEMPORARY TABLE AllCoursesForStudent
+SELECT *
+FROM Students s
+	LEFT JOIN Registration r
+		ON s.StudentID = r.StudentID AND s.StudentID = 1
+	RIGHT JOIN Courses c
+		ON r.courseNumber = c.courseNumber;
+
+SELECT *
+FROM Students s
+	LEFT JOIN Registration r
+		ON s.StudentID = r.StudentID AND s.StudentID = 1
+	RIGHT JOIN Courses c
+		ON r.courseNumber = c.courseNumber;
+
+SELECT *
+FROM Registration r
+	JOIN Courses c
+		ON r.courseNumber = c.courseNumber
+WHERE studentID = 1;
+
+INSERT INTO Courses
+	(courseNumber, courseName, courseCredits)
+VALUES
+	("TES103", "Inngangur að testing", 5);
+
+
 -- ATHUGIÐ:
 -- Það má alveg takmarka fjölda áfanga sem kerfið velur við t.d. 5 eða einhvern fjölda sem hentar ykkar hönnun.
 
