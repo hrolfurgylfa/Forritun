@@ -76,33 +76,6 @@ SELECT * FROM Registration;
 SELECT * FROM Registration WHERE StudentID = 2;
 
 
-DROP TABLE IF EXISTS AllCoursesForStudent;
-CREATE TEMPORARY TABLE AllCoursesForStudent
-SELECT *
-FROM Students s
-	LEFT JOIN Registration r
-		ON s.StudentID = r.StudentID AND s.StudentID = 1
-	RIGHT JOIN Courses c
-		ON r.courseNumber = c.courseNumber;
-
-SELECT *
-FROM Students s
-	LEFT JOIN Registration r
-		ON s.StudentID = r.StudentID AND s.StudentID = 1
-	RIGHT JOIN Courses c
-		ON r.courseNumber = c.courseNumber;
-
-SELECT *
-FROM Registration r
-	JOIN Courses c
-		ON r.courseNumber = c.courseNumber
-WHERE studentID = 1;
-
-INSERT INTO Courses
-	(courseNumber, courseName, courseCredits)
-VALUES
-	("TES103", "Inngangur að testing", 5);
-
 
 -- ATHUGIÐ:
 -- Það má alveg takmarka fjölda áfanga sem kerfið velur við t.d. 5 eða einhvern fjölda sem hentar ykkar hönnun.
