@@ -32,3 +32,20 @@ class MySQLConnector():
             result = None
 
         return result
+
+    def run_stored_procedure(self, stored_procedure, *args):
+
+        statement = "CALL " + str(stored_procedure) + "(" 
+
+        for argument in args:
+            try:
+                int(argument)
+                statement += str(argument) + ", "
+            except ValueError:
+                statement += '"' + str(argument) + '"' + ", "
+        
+        statement = statement[0:-2]
+        statement += ");"
+        print(statement)
+
+        return self.run(statement)
