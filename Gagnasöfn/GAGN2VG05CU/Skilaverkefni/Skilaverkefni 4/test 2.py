@@ -23,4 +23,6 @@ def getJsonFile(file_name):
 ######################
 #        Kóði        #
 ######################
-School = SchoolManager("GAGN2VG05CU\\Skilaverkefni\\Skilaverkefni 4\\SQLPassword.json")
+SchoolDB = SchoolManager("GAGN2VG05CU\\Skilaverkefni\\Skilaverkefni 4\\SQLPassword.json")
+
+print(SchoolDB.new_student("Bjarni", "Ben", "2018-3-5", 9))
