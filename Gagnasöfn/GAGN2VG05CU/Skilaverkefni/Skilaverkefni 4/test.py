@@ -34,4 +34,4 @@ else: password = passwordFile["password"]
 SQL = MySQLConnector("127.0.0.1", "root", password, "progresstracker")
 
 # Keyra commands
-print()
+print(SQL.run_stored_procedure("Test"))

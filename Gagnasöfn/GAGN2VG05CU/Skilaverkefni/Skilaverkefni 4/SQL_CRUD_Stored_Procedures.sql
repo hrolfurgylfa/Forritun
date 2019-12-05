@@ -20,6 +20,7 @@ create procedure CreateCourse(IN brautarNumer CHAR(10), brautarNafn VARCHAR(75),
 begin
 	INSERT INTO Courses(courseNumber, courseName, courseCredits)
     VALUES (brautarNumer, brautarNafn, einingar);
+    SELECT LAST_INSERT_ID() AS "ID";
 end $$
 delimiter ;
 CALL CreateCourse("EÐL603", "Enþá meiri Eðlisfræði!!!", 5);
@@ -72,6 +73,7 @@ create procedure CreateStudent(IN fyrstanafn VARCHAR(55), eftirnafn VARCHAR(55),
 begin
 	INSERT INTO Students(firstName, lastName, dob, startSemester)
     VALUES (fyrstanafn, eftirnafn, faedingardagur, byrjunarOnn);
+    SELECT LAST_INSERT_ID() AS "ID";
 end $$
 delimiter ;
 CALL CreateStudent("Kanína", "Gulrótardóttir", "2019-4-8", 11);
@@ -103,7 +105,7 @@ CALL RemoveStudent(11);
 
 
 -- ##########################
--- #     Students  CRUD     #
+-- #     School  CRUD       #
 -- #                        #
 -- ##########################
 delimiter $$
@@ -124,6 +126,7 @@ create procedure CreateSchool(IN skolaNafn VARCHAR(75))
 begin
 	INSERT INTO Schools(schoolName)
     VALUES (skolaNafn);
+    SELECT LAST_INSERT_ID() AS "ID";
 end $$
 delimiter ;
 CALL CreateSchool("Menntaskólinn í Kópavogi");

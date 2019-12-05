@@ -44,8 +44,9 @@ class MySQLConnector():
             except ValueError:
                 statement += '"' + str(argument) + '"' + ", "
         
-        statement = statement[0:-2]
+        if len(args) != 0:
+            statement = statement[0:-2]
+
         statement += ");"
-        print(statement)
 
         return self.run(statement)

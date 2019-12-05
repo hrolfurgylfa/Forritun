@@ -1,8 +1,7 @@
 drop database if exists ProgressTracker;
 
 create database ProgressTracker
-	default character set utf8
-	default collate utf8_general_ci;
+	default character set UTF8MB4;
 
 set default_storage_engine = innodb;
 set sql_mode = 'STRICT_ALL_TABLES';
