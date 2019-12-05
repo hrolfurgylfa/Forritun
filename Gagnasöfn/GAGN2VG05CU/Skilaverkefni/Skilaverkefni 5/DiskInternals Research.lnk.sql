@@ -97,3 +97,5 @@ SELECT * FROM Registration WHERE StudentID = 2;
 -- 2:
 -- Bætið við eða aðlagið klasasafnið ykkar(library) úr verkefni 4 þannig að þig getið prófað þessa virkni úr forriti
 -- í viðbót við að testa þetta í grunninum sjálfum!
+
+-- Þetta er núna í Verkefni 4/Classes/SchoolManager.py

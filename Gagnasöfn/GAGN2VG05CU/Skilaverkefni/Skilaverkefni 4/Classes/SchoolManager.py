@@ -57,3 +57,10 @@ class SchoolManager():
         return self.SQL.run_stored_procedure("ChangeSchool", id, brautar_nafn)
     def remove_school(self, id):
         return self.SQL.run_stored_procedure("RemoveSchool", id)
+
+
+    def get_next_courses(self, student_id):
+        try:
+            return self.SQL.run_stored_procedure("ElectedCourses", student_id)[0]
+        except IndexError:
+            return None
