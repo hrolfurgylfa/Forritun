@@ -1,22 +1,70 @@
 #include <iostream>
+#include <string>
 
 // using namespace std;
+
+bool erBokstafur(char stafur) {
+    return  (stafur >= 'a' && stafur <= 'z') ||
+            (stafur >= 'A' && stafur <= 'Z');
+}
 
 std::string iHastafi(std::string strengur) {
 
     std::string nyrStrengur;
     char currentStafur;
+    char haStafaMaski = 0b11011111; // Nota and til þess að fá hástafi
 
     for (size_t i = 0; i < strengur.length(); i++)
     {
-        if (strengur[i] >= 97 && strengur[i] <= 122) {
-            currentStafur = strengur[i] - 32;
-            nyrStrengur += currentStafur;
-        } else nyrStrengur += strengur[i];
+        // Stilla currentStaf til þess að vera stafurinn sem er verið að lúppa í gegnum
+        currentStafur = strengur[i];
+
+        // Breyta currentStafur í hástaf ef stafurinn er bókstafur
+        if (erBokstafur(currentStafur))
+            currentStafur &= haStafaMaski;
+
+        nyrStrengur += currentStafur;
     }
 
+    // Bæta breytta eða óbreytta stafnum við í nýja strenginn
     return nyrStrengur;
 }
+
+std::string iLagstafi(std::string strengur) {
+
+    std::string nyrStrengur;
+    char currentStafur;
+    char lagStafaMaski = 0b00100000; // Nota and til þess að fá hástafi
+
+    for (size_t i = 0; i < strengur.length(); i++)
+    {
+        // Stilla currentStaf til þess að vera stafurinn sem er verið að lúppa í gegnum
+        currentStafur = strengur[i];
+
+        // Breyta currentStafur í hástaf ef stafurinn er bókstafur
+        if (erBokstafur(currentStafur))
+            currentStafur |= lagStafaMaski;
+
+        nyrStrengur += currentStafur;
+    }
+
+    // Bæta breytta eða óbreytta stafnum við í nýja strenginn
+    return nyrStrengur;
+}
+
+int ipToInt(int* ipListi) {
+    int skila = 0;
+    int moveValue = 32;
+
+    for (size_t i = 0; i < 4; i++)
+    {
+        moveValue -= 8;
+        skila |= (ipListi[i] << moveValue);
+    }
+
+    return skila;
+}
+
 
 int main() {
     int menu_item = 0;
@@ -39,27 +87,81 @@ int main() {
         // stærðinni á strikinu sem kemur fyrir og eftir valmyndinna
         for (int i = 0; i < 50; i++) std::cout << "-";
         std::cout << "\n\n";//Þetta er til þess að gera tvö enter
+        
+        
+        // ================================
+        //  Breytur fyrir switch statement
+        // ================================
 
+        // Internal valmynd
+        int val2 = 0;
+        
+        // Liður 1
+        unsigned short int val;
+        bool ispalindrome;
+
+        // Liður 2
         std::string input_strengur;
+
 
         switch (menu_item)
         {
             case 1:// Liður 1
-                /* code */
-                break;
+                std::cout << "Ýttu á 1 til þess að fá lið 1\n";
+                std::cout << "Ýttu á 2 til þess að fá lið 2\n";
+                std::cout << "Ýttu á 3 til þess að fá lið 3\n";
+                std::cout << "-------------------->>> ";
+                std::cin >> val2;
+                switch (val2)
+                {
+                case 1:
+                    /* code */
+                    break;
+                case 2:
+                    /* code */
+                    break;
+                case 3:
+                    std::cout << "value = ";
+                    std::cin >> val;
+
+                    // Insert your code here
+                    std::cout << "Stærð: " << sizeof(val) << "\n";
+                    for (int i = 0; i < sizeof(val); i++) {
+                        
+                    }
+                    
+                    if(ispalindrome)
+                        std::cout << val << " is a bitwise palindrome\n";
+                    else
+                        std::cout << val << " is not a bitwise palindrome\n";
+                    
+                    break;
+                
+                default:
+                    break;
+                }
             
             case 2:// Liður 2
-
                 std::cout << "Sláðu inn streng\n--->";
-                // getline(std::cin, input_strengur);
-                std::cin >> input_strengur;
+                // cin.ignore() passar að C++ hoppi ekki bara yfir getline, þarf að vera fyrir fyrir
+                // framan getline ef það er notað cin eitthverstaðar fyrir framan í forritinu.
+                std::cin.ignore(); 
+                std::getline(std::cin, input_strengur);
+                // std::cin >> input_strengur;
 
                 std::cout << iHastafi(input_strengur) << "\n";
+                std::cout << iLagstafi(input_strengur) << "\n";
 
                 break;
             
             case 3:// Liður 3
-                /* code */
+                
+                int ipListi[4];
+
+                std::cout << "Sláðu inn ip tölu með bilum á milli:\n";
+                std::cin >> ipListi[0] >> ipListi[1] >> ipListi[2] >> ipListi[3];
+                std::cout << "IP Adresses: ";
+
                 break;
             
             case 4:// Þetta er til þess að það komi ekki "ERROR Sláðu inn tölu á milli 1 og 4" þegar maður er að hætta í forritinu
