@@ -34,7 +34,7 @@ std::string iLagstafi(std::string strengur) {
 
     std::string nyrStrengur;
     char currentStafur;
-    char lagStafaMaski = 0b00100000; // Nota and til þess að fá hástafi
+    char lagStafaMaski = 0b00100000; // Nota and til þess að fá lágstafi
 
     for (size_t i = 0; i < strengur.length(); i++)
     {
@@ -52,14 +52,37 @@ std::string iLagstafi(std::string strengur) {
     return nyrStrengur;
 }
 
+std::string vixlaStafasetur(std::string strengur) {
+
+    std::string nyrStrengur;
+    char currentStafur;
+    char switchMaski = 0b00100000; // Nota and til þess að skipta um hág/lágstafi
+
+    for (size_t i = 0; i < strengur.length(); i++)
+    {
+        // Stilla currentStaf til þess að vera stafurinn sem er verið að lúppa í gegnum
+        currentStafur = strengur[i];
+
+        // Breyta currentStafur í hástaf ef stafurinn er bókstafur
+        if (erBokstafur(currentStafur))
+            currentStafur ^= switchMaski;
+
+        nyrStrengur += currentStafur;
+    }
+
+    // Bæta breytta eða óbreytta stafnum við í nýja strenginn
+    return nyrStrengur;
+}
+
 int ipToInt(int* ipListi) {
-    int skila = 0;
+    unsigned long long int skila = 0;
     int moveValue = 32;
 
     for (size_t i = 0; i < 4; i++)
     {
+        skila |= (*ipListi+i << moveValue);
+        std::cout << "Skila value: " << skila << "\n" << std::flush;
         moveValue -= 8;
-        skila |= (ipListi[i] << moveValue);
     }
 
     return skila;
@@ -103,6 +126,12 @@ int main() {
         // Liður 2
         std::string input_strengur;
 
+        // Liður 3
+        int ipListi[4];
+
+        int* ipListiPtr = &ipListi[0];
+        int ip;
+
 
         switch (menu_item)
         {
@@ -126,7 +155,7 @@ int main() {
 
                     // Insert your code here
                     std::cout << "Stærð: " << sizeof(val) << "\n";
-                    for (int i = 0; i < sizeof(val); i++) {
+                    for (long unsigned int i = 0; i < sizeof(val); i++) {
                         
                     }
                     
@@ -151,16 +180,18 @@ int main() {
 
                 std::cout << iHastafi(input_strengur) << "\n";
                 std::cout << iLagstafi(input_strengur) << "\n";
+                std::cout << vixlaStafasetur(input_strengur) << "\n";
 
                 break;
             
             case 3:// Liður 3
                 
-                int ipListi[4];
-
                 std::cout << "Sláðu inn ip tölu með bilum á milli:\n";
                 std::cin >> ipListi[0] >> ipListi[1] >> ipListi[2] >> ipListi[3];
-                std::cout << "IP Adresses: ";
+
+                ip = ipToInt(ipListi);
+
+                std::cout << "IP Adresses: " << ip << "\n";
 
                 break;
             
