@@ -6,6 +6,10 @@ __pycache__/
 .jshintrc
 token.txt
 SQLPassword.json
-.Rproj.user
 
+# Ignore extra R stuff
+.Rproj.user
+.Rhistory
+
+# Ignore data for data science
 science_data/
