@@ -6,3 +6,6 @@ __pycache__/
 .jshintrc
 token.txt
 SQLPassword.json
+.Rproj.user
+
+science_data/
