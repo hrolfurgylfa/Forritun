@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+/* .yellow,
+.red,
+.green,
+.blue {
+    padding: 0 12.5vw;
+} */
+
+.yellow {
+    background-color: yellow;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
