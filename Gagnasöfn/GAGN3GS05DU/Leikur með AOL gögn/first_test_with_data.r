@@ -1,15 +1,26 @@
+# Til þess að finna packages sem er erfitt að finna:
+# sos::findFn("Dict")
+
+# Run this before if you haven't installed these packages yet
+# install.packages("stringr")
+# install.packages("collections")
+
+
 ####################
 # Imports
 ####################
 
-require(stringr)
+require(stringr)# Þetta er fyrir 
+require(collections)
 
 
 ####################
 # Global Variables
 ####################
 
-file_name = "science_data/user-ct-test-collection-%n.csv"
+file_name <- "science_data/user-ct-test-collection-%n.csv"
+test_file_name <- "science_data/first-few-users-test.csv"
+all_words <- dict()
 
 
 ####################
@@ -36,7 +47,7 @@ process_files <- function(file_name, number_of_files, function_to_run) {
     
     # Get the file
     print(paste("Fetching file: ", replaced_file_name, ". This might take a while...", sep=""))
-    data <- read.csv(replaced_file_name, header = TRUE)
+    data <- read.csv(replaced_file_name, header = TRUE, sep=",")
 
     # Run the function
     function_to_run(data)
@@ -54,7 +65,9 @@ process_files <- function(file_name, number_of_files, function_to_run) {
 ####################
 
 # Keyra í gegnum allar CSV skrárnar og kannar þær.
-process_files(file_name, 10, function(data) {print(data)})
+process_files(test_file_name, 1, function(data) {
+  print("data[3]")
+})
 
 
 ####################
