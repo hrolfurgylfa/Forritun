@@ -30,7 +30,7 @@ all_words <- dict()
 # This function loops through CSV files, reads them one at a time and passes
 # them into a specified function one at a time to save on memory.
 process_files <- function(file_name, number_of_files, function_to_run) {
-  
+  print("Before loop")
   # Loop through all the files passed in
   for (file_num in c(1:number_of_files)) {
     
@@ -65,11 +65,9 @@ process_files <- function(file_name, number_of_files, function_to_run) {
 ####################
 
 # Keyra í gegnum allar CSV skrárnar og kannar þær.
-process_files(test_file_name, 1, function(data) {
-  print("data[3]")
-})
+process_files(test_file_name, 10, function(data) {print("data[3]")})
 
-
+print("Test")
 ####################
 # Temporary tests
 ####################
