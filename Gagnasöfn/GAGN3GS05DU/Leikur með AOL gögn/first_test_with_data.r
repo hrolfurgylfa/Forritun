@@ -1,5 +1,5 @@
 # Til þess að finna packages sem er erfitt að finna:
-# sos::findFn("Dict")
+# sos::findFn("collections")
 
 # Run this before if you haven't installed these packages yet
 # install.packages("stringr")
@@ -65,9 +65,11 @@ process_files <- function(file_name, number_of_files, function_to_run) {
 ####################
 
 # Keyra í gegnum allar CSV skrárnar og kannar þær.
-process_files(test_file_name, 10, function(data) {print("data[3]")})
+process_files(test_file_name, 1, function(data) {
+  print(data[1])
+})
 
-print("Test")
+
 ####################
 # Temporary tests
 ####################
