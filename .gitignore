@@ -13,3 +13,6 @@ SQLPassword.json
 
 # Ignore data for data science
 science_data/
+
+# Igmore the compiled binaries
+binaries/
