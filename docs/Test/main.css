@@ -4,10 +4,9 @@ body {
 
     display: grid;
     grid-template-areas:
-    "header"
-    "nav"
-    "main"
-    "footer";
+    "header header header nav"
+    "main   main   main   main"
+    "footer footer footer footer";
 }
 
 .header {
@@ -19,12 +18,16 @@ body {
     grid-area: nav;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    text-align: center;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    text-align: left;
+
+    padding: 0;
+    margin: 0;
 }
 .nav p {
     background-color: lightblue;
-    margin: 0 .5em;
+    margin: 0;
+    padding-left: 1em;
 }
 .footer {
     grid-area: footer;
