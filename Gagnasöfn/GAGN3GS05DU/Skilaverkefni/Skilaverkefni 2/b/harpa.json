@@ -1,0 +1,2874 @@
+[
+    {
+        "Svæði": "Salur",
+        "Raðir": [
+            {
+                "Raðar_númer": 1,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 2,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 3,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    },
+                    {
+                        "Sætis_númer": 27
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 4,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 5,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 6,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    },
+                    {
+                        "Sætis_númer": 27
+                    },
+                    {
+                        "Sætis_númer": 28
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 7,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    },
+                    {
+                        "Sætis_númer": 27
+                    },
+                    {
+                        "Sætis_númer": 28
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 8,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    },
+                    {
+                        "Sætis_númer": 27
+                    },
+                    {
+                        "Sætis_númer": 28
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 9,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 10,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 11,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 12,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 13,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 14,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 15,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 16,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 17,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 18,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 19,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 20,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 21,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 22,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 23,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 24,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 25,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 26,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 27,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    },
+                    {
+                        "Sætis_númer": 21
+                    },
+                    {
+                        "Sætis_númer": 22
+                    },
+                    {
+                        "Sætis_númer": 23
+                    },
+                    {
+                        "Sætis_númer": 24
+                    },
+                    {
+                        "Sætis_númer": 25
+                    },
+                    {
+                        "Sætis_númer": 26
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 28,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    },
+                    {
+                        "Sætis_númer": 12
+                    },
+                    {
+                        "Sætis_númer": 13
+                    },
+                    {
+                        "Sætis_númer": 14
+                    },
+                    {
+                        "Sætis_númer": 15
+                    },
+                    {
+                        "Sætis_númer": 16
+                    },
+                    {
+                        "Sætis_númer": 17
+                    },
+                    {
+                        "Sætis_númer": 18
+                    },
+                    {
+                        "Sætis_númer": 19
+                    },
+                    {
+                        "Sætis_númer": 20
+                    }
+                ]
+            }
+        ],
+        "Hliðar_raðir": [
+            {
+                "Raðar_stafur": "A1",
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    }
+                ]
+            },
+            {
+                "Raðar_stafur": "A2",
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    }
+                ]
+            },
+            {
+                "Raðar_stafur": "B1",
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    }
+                ]
+            },
+            {
+                "Raðar_stafur": "B2",
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    }
+                ]
+            },
+            {
+                "Raðar_stafur": "C1",
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    }
+                ]
+            },
+            {
+                "Raðar_stafur": "C2",
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    }
+                ]
+            },
+            {
+                "Raðar_stafur": "D1",
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    },
+                    {
+                        "Sætis_númer": 10
+                    },
+                    {
+                        "Sætis_númer": 11
+                    }
+                ]
+            },
+            {
+                "Raðar_stafur": "D2",
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Svæði": "Svalir 1",
+        "Raðir": [
+            {
+                "Raðar_númer": 1,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 2,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 3,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 4,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    }
+                ]
+            }
+        ],
+        "Hliðar_raðir": [
+            {
+                "Raðar_stafur": "A1",
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Svæði": "Svalir 2",
+        "Raðir": [
+            {
+                "Raðar_númer": 1,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 2,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 3,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 4,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    }
+                ]
+            }
+        ],
+        "Hliðar_raðir": [
+            {
+                "Raðar_stafur": "A1",
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Svæði": "Svalir 3",
+        "Raðir": [
+            {
+                "Raðar_númer": 1,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 2,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 3,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    }
+                ]
+            },
+            {
+                "Raðar_númer": 4,
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    }
+                ]
+            }
+        ],
+        "Hliðar_raðir": [
+            {
+                "Raðar_stafur": "A1",
+                "Sæti": [
+                    {
+                        "Sætis_númer": 1
+                    },
+                    {
+                        "Sætis_númer": 2
+                    },
+                    {
+                        "Sætis_númer": 3
+                    },
+                    {
+                        "Sætis_númer": 4
+                    },
+                    {
+                        "Sætis_númer": 5
+                    },
+                    {
+                        "Sætis_númer": 6
+                    },
+                    {
+                        "Sætis_númer": 7
+                    },
+                    {
+                        "Sætis_númer": 8
+                    },
+                    {
+                        "Sætis_númer": 9
+                    }
+                ]
+            }
+        ]
+    }
+]
