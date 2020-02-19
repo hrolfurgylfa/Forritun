@@ -10,8 +10,7 @@
 # Imports
 ####################
 
-require(stringr)# Þetta er fyrir 
-require(collections)
+
 
 
 ####################
