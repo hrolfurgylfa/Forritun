@@ -5,6 +5,7 @@
 #include "Class_Functions/Constructors_FlightBooking.hpp"
 #include "Class_Functions/Functions_FlightBooking.hpp"
 #include "Class_Functions/Getters_setters_FlightBooking.hpp"
+#include "Class_Functions/Overloads_FlightBooking.hpp"
 
 // Other functions
 #include "individual_functions_FlightBooking.hpp"
@@ -190,6 +191,15 @@ int main(){
 
             // Sýna niðurstöðuna
             flug.print_status();
+
+        
+        } else if (skipun == "test") {
+
+            FlightBooking a(1, 80, 30);
+            FlightBooking b(1, 50, 20);
+
+            if (b < a) std::cout << "Works!" << "\n" << std::flush;
+            std::cout << a << "\n" << b << "\n\n";
 
 
         } else if (skipun == "exit") {

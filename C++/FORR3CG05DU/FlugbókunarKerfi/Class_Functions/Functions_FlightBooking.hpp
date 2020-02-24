@@ -2,11 +2,11 @@
 #include <iostream>
 
 
-void FlightBooking::print_status(){
-    std::cout
-    << "Flight " << this->id << ": " << this->reserved << "/" << this->capacity
-    << " (" << get_booked_percentage() << "%) seats reserved"
-    << "\n\n" << std::flush;
+void FlightBooking::print_status(){ std::cout << get_status() << "\n\n" << std::flush; }
+
+std::string FlightBooking::get_status(){
+    return "Flight " + std::to_string(this->id) + ": " + std::to_string(this->reserved) + "/"
+    + std::to_string(this->capacity) + " (" + std::to_string(get_booked_percentage()) + "%) seats reserved";
 }
 
 int FlightBooking::get_booked_percentage(){
@@ -36,3 +36,4 @@ void FlightBooking::setup(int id, int capacity){
     this->capacity = capacity;
     this->reserved = 0;
 }
+
