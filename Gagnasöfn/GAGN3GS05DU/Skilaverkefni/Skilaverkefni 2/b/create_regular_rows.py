@@ -10,10 +10,32 @@ def er_tala(strengur):
     except ValueError:
         return False
 
+def first(iterable, condition = lambda x: True):
+    """
+    Returns the first item in the `iterable` that
+    satisfies the `condition`.
+
+    If the condition is not given, returns the first item of
+    the iterable.
+
+    Raises `StopIteration` if no item satysfing the condition is found.
+
+    >>> first( (1,2,3), condition=lambda x: x % 2 == 0)
+    2
+    >>> first(range(3, 100))
+    3
+    >>> first( () )
+    Traceback (most recent call last):
+    ...
+    StopIteration
+    """
+
+    return next(x for x in iterable if condition(x))
+
 
 harpan_json = []
 
-# Síðasta talan í listunum er alltaf hversu mörg sæti eru alls
+# Síðasta talan í listunum er alltaf hversu margar sætisraðir eru
 allar_haedir = {
     "Salur": {
         "Raðir": [25, 26, 27, 26, 25, 28, 28, 28, 26, 26, 26, 26, 26, 26, 26, 26, 25, 25, 23, 26, 26, 26, 26, 26, 26, 26, 26, 20, 28],
@@ -27,36 +49,50 @@ allar_haedir = {
             "D1": 11,
             "D2": 9
         },
-        "ErHjolastola": [
-            "B1 10 11", "B2 8 9", "D1 10 11", "D2 8 9",
-            "4 1 2", "14 1 2", "15 1 2"
-        ],
-        "ErSoundMixerFratekid": [
-            "19 9 10 11 12 13 14 15",
-            "18 10 11 12 13 14 15 16",
-            "17 10 11 12 13 14 15 16"
-        ],
-        "ErSviðaExtention": ["1", "2", "3"]
+        "Frátekin sæti": {
+            "ErHjolastola": [
+                "B1 10 11", "B2 8 9", "D1 10 11", "D2 8 9",
+                "4 1 2", "14 1 2", "15 1 2"
+            ],
+            "ErSoundMixerFratekid": [
+                "19 9 10 11 12 13 14 15",
+                "18 10 11 1 2 13 14 15 16",
+                "17 10 11 12 13 14 15 16"
+            ],
+            "ErSviðaExtention": ["1", "2", "3"]
+        }
     },
     "Svalir 1":{
-        "Raðir": [4, 2, 3, 1, 4],
+        "Raðir": [16, 33, 34, 35, 36, 35, 6],
         "Hliðar_raðir": {
-            "A1": 9
-        }
+            "F": 9,
+            "G": 11,
+            "I": 9,
+            "J": 11
+        },
+        "Frátekin sæti": { "ErHjolastola": [ "G 11", "J 11" ] }
     },
     "Svalir 2": {
-        "Raðir": [4, 2, 3, 1, 4],
+        "Raðir": [16, 36, 35, 34, 33, 32, 6],
         "Hliðar_raðir": {
-            "A1": 9
-        }
+            "M": 4,
+            "N": 15,
+            "P": 4,
+            "R": 15
+        },
+        "Frátekin sæti": { "ErHjolastola": [ "N 15", "R 15" ] }
     },
     "Svalir 3": {
-        "Raðir": [4, 2, 3, 1, 4],
+        "Raðir": [24, 40, 37, 34, 33, 30, 27, 22, 8],
         "Hliðar_raðir": {
-            "A1": 9
+            "S": 9,
+            "T": 13,
+            "U": 9,
+            "V": 13
         }
     }
 }
+
 
 for haed in allar_haedir.keys():
 
@@ -107,9 +143,43 @@ for haed in allar_haedir.keys():
             })
 
         hlidar_radir.append({
-            "Raðar_stafur": hlidar_rod,
+            "Raðar_númer": hlidar_rod,
             "Sæti": oll_saeti
         })
+
+
+    # Setja sérstöku sætin
+    try:
+        fratekin_saeti = allar_haedir[haed]["Frátekin sæti"]
+        er_med_fratekin_saeti = True
+    except KeyError:
+        er_med_fratekin_saeti = False
+
+    if er_med_fratekin_saeti:
+        print("Frátekin sæti:",fratekin_saeti)
+        for fratekin_gerd in fratekin_saeti.keys():
+            for stadsetning in fratekin_saeti[fratekin_gerd]:
+
+                stadsetning_split = stadsetning.split()
+                print("stadsetning_split:",stadsetning_split)
+
+                # Finna réttu röðina
+                if er_tala(stadsetning_split[0]):
+                    rod = next(filter( lambda x: x["Raðar_númer"] == int(stadsetning_split[0]), saetis_radir ))
+                    radar_gerd = "Raðir"
+                else:
+                    rod = next(filter( lambda x: x["Raðar_númer"] == stadsetning_split[0], hlidar_radir ))
+                    radar_gerd = "Hliðar_raðir"
+                print("Rod:",rod)
+
+                for saeti in rod["Sæti"]:
+                    if len(stadsetning_split) == 1:
+                        # Bæta sérstaka hlutnum við sætið
+                        saeti[fratekin_gerd] = True
+                    if len(stadsetning_split) > 1:
+                        if str(saeti["Sætis_númer"]) in stadsetning_split[1::]:
+                            # Bæta sérstaka hlutnum við sætið
+                            saeti[fratekin_gerd] = True
 
 
     harpan_json.append({
