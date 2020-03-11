@@ -21,11 +21,16 @@ public:
 
 
     // Functions
-    std::string baeta_vid_afanga(int id, std::string nafn);
-    std::string baeta_vid_afanga(int id, std::string nafn, float einkunn);
+    void baeta_vid_afanga(int id, std::string nafn);
+    void baeta_vid_afanga(int id, std::string nafn, float einkunn);
 
-    std::string fara_ur_afanga(int id);
-    std::string fara_ur_afanga(std::string nafn);
+    void fara_ur_afanga(int id);
+    void fara_ur_afanga(std::string nafn);
+    
+    float medaleinkunn();
+    void prenta();
+    void prenta_afanga(int id);
+    void prenta_alla_afanga();
 
 
     // Overloads
@@ -36,12 +41,12 @@ private:
     int id;
     std::string nafn;
 
-    Afangi** afanga_listi;
+    Afangi* afanga_listi;
     int afanga_listi_lengd;
 
     void staekka_afanga_lista();
     Afangi* finna_afanga(int id);
-    void baeta_vid_afanga(Afangi* afangi);
+    void baeta_vid_afanga(Afangi afangi);
 };
 
 std::ostream& operator<<(std::ostream& ostr, Nemandi& flight);

@@ -12,6 +12,12 @@ Afangi::Afangi(){
     this->einkunn = 0;
 }
 
+Afangi::Afangi(int id, std::string nafn){ 
+    this->id = id;
+    this->nafn = nafn;
+    this->einkunn = 0;
+}
+
 Afangi::Afangi(int id, std::string nafn, float einkunn){
     this->id = id;
     this->nafn = nafn;
@@ -39,7 +45,7 @@ void Afangi::set_einkunn(float einkunn){ this->einkunn = einkunn; }
 
 std::ostream& operator<<(std::ostream& ostr, Afangi& afangi){
     return ostr
-    << "ID: " << afangi.get_id()
+    << "Afanga ID: " << afangi.get_id()
     << " Áfangi: " << afangi.get_nafn()
     << " Einkunn: " << afangi.get_einkunn();
 }

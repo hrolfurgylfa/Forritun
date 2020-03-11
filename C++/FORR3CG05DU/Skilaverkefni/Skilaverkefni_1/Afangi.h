@@ -7,6 +7,7 @@ class Afangi {
 public:
     //Constructors
     Afangi();
+    Afangi(int id, std::string nafn);
     Afangi(int id, std::string nafn, float einkunn);
 
 
