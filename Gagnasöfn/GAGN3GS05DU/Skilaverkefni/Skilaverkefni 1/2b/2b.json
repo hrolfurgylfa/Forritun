@@ -1,0 +1,20 @@
+{
+    "nafn": "Kársnes",
+    "postnumer": 200,
+    "landshluti": "Höfuðsborgarsvæðið",
+    "ibuafjoldi": 3000,
+    "veitingastadir": [
+        {
+            "nafn": "Nings",
+            "opnunar_timi": "10-16"
+        },
+        {
+            "nafn": "Krambúðin",
+            "opnunar_timi": "10-18"
+        }
+    ],
+    "ahugavert": [
+        "Kársnesskóli",
+        "Bryggja"
+    ]
+}
