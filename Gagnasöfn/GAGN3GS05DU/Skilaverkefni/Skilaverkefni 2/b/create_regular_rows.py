@@ -50,16 +50,16 @@ allar_haedir = {
             "D2": 9
         },
         "Frátekin sæti": {
-            "ErHjolastola": [
+            "HjolastolaFratekid": [
                 "B1 10 11", "B2 8 9", "D1 10 11", "D2 8 9",
                 "4 1 2", "14 1 2", "15 1 2"
             ],
-            "ErSoundMixerFratekid": [
+            "SoundMixerFratekid": [
                 "19 9 10 11 12 13 14 15",
                 "18 10 11 1 2 13 14 15 16",
                 "17 10 11 12 13 14 15 16"
             ],
-            "ErSviðaExtention": ["1", "2", "3"]
+            "SviðaExtention": ["1", "2", "3"]
         }
     },
     "Svalir 1":{
@@ -151,11 +151,6 @@ for haed in allar_haedir.keys():
     # Setja sérstöku sætin
     try:
         fratekin_saeti = allar_haedir[haed]["Frátekin sæti"]
-        er_med_fratekin_saeti = True
-    except KeyError:
-        er_med_fratekin_saeti = False
-
-    if er_med_fratekin_saeti:
         print("Frátekin sæti:",fratekin_saeti)
         for fratekin_gerd in fratekin_saeti.keys():
             for stadsetning in fratekin_saeti[fratekin_gerd]:
@@ -180,6 +175,7 @@ for haed in allar_haedir.keys():
                         if str(saeti["Sætis_númer"]) in stadsetning_split[1::]:
                             # Bæta sérstaka hlutnum við sætið
                             saeti[fratekin_gerd] = True
+    except KeyError: pass
 
 
     harpan_json.append({
