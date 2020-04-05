@@ -41,5 +41,5 @@ std::ostream& operator<<(std::ostream& ostr, Verkefni& Verkefni){
 
     return ostr << "Mikilvægi: " << Verkefni.get_mikilvaegi() << "\n"
     << skola_strengur << "\n"
-    << "Verkefna lýsing: " << Verkefni.get_lysing() << "\n\n" << std::flush;
+    << "Verkefna lýsing: " << Verkefni.get_lysing() << "\n" << std::flush;
 }
