@@ -13,17 +13,15 @@ class Gogn {
         Gogn(int id, int numer);
 
         int getID();
-        int getGogn();
         void prentaGogn();
 
-        // Overloads
-        bool operator>(Gogn& other);
+        int getNumer();
         bool operator<(Gogn& other);
-        bool operator>=(Gogn& other);
+        bool operator>(Gogn& other);
         bool operator<=(Gogn& other);
+        bool operator>=(Gogn& other);
 
         bool operator==(Gogn& other);
         bool operator!=(Gogn& other);
 };
 
-std::ostream& operator<<(std::ostream& ostr, Gogn& flight);
