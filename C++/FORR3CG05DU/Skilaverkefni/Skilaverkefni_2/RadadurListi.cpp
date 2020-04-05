@@ -2,6 +2,17 @@
 #include "VerkefnaNode.h"
 
 RadadurListi::RadadurListi() { this->start = nullptr; }
+RadadurListi::~RadadurListi() {
+    if (this->start == nullptr) return;
+
+    VerkefnaNode* current_node = this->start;
+    while (current_node != nullptr)
+    {
+        VerkefnaNode* old_node = current_node;
+        current_node = current_node->next;
+        delete old_node;
+    }
+}
 
 void RadadurListi::append(Verkefni verkefni) {
     if(this->contains(verkefni.get_lysing())) return;
@@ -26,7 +37,6 @@ void RadadurListi::append(Verkefni verkefni) {
         }
     }
 }
-
 void RadadurListi::remove(std::string lysing) {
     if(this->start->data.get_lysing() == lysing) {
         VerkefnaNode* new_start = this->start->next;
@@ -49,7 +59,6 @@ void RadadurListi::remove(std::string lysing) {
         delete old_child;
     }
 }
-
 VerkefnaNode* RadadurListi::find_parent(std::string lysing) {
     if (this->start == nullptr) return nullptr;
 
@@ -65,11 +74,17 @@ VerkefnaNode* RadadurListi::find_parent(std::string lysing) {
 
     return nullptr;
 }
-
 bool RadadurListi::contains(std::string lysing) {
     VerkefnaNode* fundid_node = this->find_parent(lysing);
     if (fundid_node) return true;
     else return false;
+}
+Verkefni RadadurListi::fetch_next() {
+    if (!this->start) return Verkefni();
+
+    Verkefni return_verkefni = Verkefni(this->start->data);
+    this->remove(return_verkefni.get_lysing());
+    return return_verkefni;
 }
 
 void RadadurListi::print() {
@@ -85,7 +100,17 @@ void RadadurListi::print() {
         current_node = current_node->next;
     }
 }
+void RadadurListi::print_school(bool only_school) {
+    if (this->start == nullptr) {
+        std::cout << "Þú hefur klárað öll verkin þín, eigðu góðan dag.\n" << std::flush;
+        return;
+    }
 
-RadadurListi::~RadadurListi() {
-    // TODO
+    VerkefnaNode* current_node = this->start;
+    while (current_node != nullptr)
+    {
+        if (current_node->data.get_er_skola() == only_school)
+            current_node->data.prenta_verkefni();
+        current_node = current_node->next;
+    }
 }

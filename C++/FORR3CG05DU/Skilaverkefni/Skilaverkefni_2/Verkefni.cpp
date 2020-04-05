@@ -5,6 +5,11 @@ Verkefni::Verkefni() {
     this->er_skola = false;
     this->mikilvaegi = 1;
 }
+Verkefni::Verkefni(Verkefni* verkefni){
+    this->lysing = verkefni->lysing;
+    this->er_skola = verkefni->er_skola;
+    this->mikilvaegi = verkefni->mikilvaegi;
+}
 Verkefni::Verkefni(std::string lysing, bool er_skola, int mikilvaegi) {
     this->lysing = lysing;
     this->er_skola = er_skola;

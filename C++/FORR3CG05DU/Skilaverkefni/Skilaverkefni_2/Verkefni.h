@@ -12,6 +12,7 @@ class Verkefni {
 
     public:
         Verkefni();
+        Verkefni(Verkefni* verkefni);
         Verkefni(std::string lysing, bool er_skola, int mikilvaegi);
 
         // Getters og setters
