@@ -35,7 +35,11 @@ bool Verkefni::operator==(Verkefni& other){ return this->lysing == other.lysing;
 bool Verkefni::operator!=(Verkefni& other){ return !(*this == other); }
 
 std::ostream& operator<<(std::ostream& ostr, Verkefni& Verkefni){
+    std::string skola_strengur;
+    if (Verkefni.get_er_skola()) skola_strengur = "Þetta er skóla verkefni";
+    else skola_strengur = "Þetta er ekki skóla verkefni";
+
     return ostr << "Mikilvægi: " << Verkefni.get_mikilvaegi() << "\n"
-    << "Þetta er skólaverkefni: " << Verkefni.get_er_skola() << "\n"
-    << "Verkefna lýsing:" << Verkefni.get_lysing() << "\n\n" << std::flush;
+    << skola_strengur << "\n"
+    << "Verkefna lýsing: " << Verkefni.get_lysing() << "\n\n" << std::flush;
 }
