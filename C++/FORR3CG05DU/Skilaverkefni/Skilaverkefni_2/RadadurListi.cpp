@@ -28,7 +28,7 @@ void RadadurListi::append(Verkefni verkefni) {
             // std::cout << "Going to loop!!!";
             VerkefnaNode* current = this->start;
             VerkefnaNode* prev = this->start;
-            while(current && current->data.get_uniqe_mikilvaegi() > verkefni.get_uniqe_mikilvaegi()) {
+            while(current && current->data.get_uniqe_mikilvaegi() >= verkefni.get_uniqe_mikilvaegi()) {
                 prev = current;
                 current = current->next;
             }

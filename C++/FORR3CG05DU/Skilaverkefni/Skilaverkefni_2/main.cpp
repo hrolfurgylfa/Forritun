@@ -12,7 +12,7 @@ int main() {
     std::cout << "Öll tasks:" << "\n" << std::flush;
     listi.append(Verkefni("Vinna á Udon LPD Station", false, 2));
     listi.append(Verkefni("Klára Skilaverkefni 2 C++", true, 5));
-    listi.append(Verkefni("Klára Skilaverkefni 3 C++", true, 2));
+    listi.append(Verkefni("Klára Skilaverkefni 3 C++", true, 5));
     listi.append(Verkefni("Vinna á Dev Team Applications", false, 4));
     listi.print();
     std::cout << "\n" << std::flush;
