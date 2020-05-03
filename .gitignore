@@ -14,5 +14,8 @@ SQLPassword.json
 # Ignore data for data science
 science_data/
 
-# Igmore the compiled binaries
+# Ignore the compiled binaries
 binaries/
+
+# Ignore excel meda files
+~$*.xlsx
