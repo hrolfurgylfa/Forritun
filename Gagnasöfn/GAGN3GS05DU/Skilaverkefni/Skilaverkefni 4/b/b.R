@@ -44,7 +44,7 @@ axis(
 
 # Correct plot with a bad but working date display
 par(mar=c(5.1, 3.1, 3.1, 2.1))
-plot.ts(covid19_df[2], xaxt = "n", xlab='Covid 19')
+plot.ts(covid19_df[2], xaxt = "n", xlab='Covid 19 Total Confirmed')
 for (i in c(1:101)) {
   axis(
     1,
@@ -68,3 +68,30 @@ axis(
 # Liður 2
 ###############
 
+# Í excel skjali sem heitir Lidur_2.xlsx
+
+
+###############
+# Liður 3
+###############
+
+# Correct plot with working date display
+par(mar=c(5.1, 3.1, 3.1, 2.1))
+plot.ts(covid19_df[3], xaxt = "n", xlab='Covid 19 Total Deaths')
+axis(
+  1,
+  at=1:101,
+  labels=covid19_labels
+)
+
+# Correct plot with working date display
+par(mar=c(5.1, 3.1, 3.1, 2.1))
+plot.ts(covid19_df[4], xaxt = "n", xlab='Covid 19 Total Recovered')
+axis(
+  1,
+  at=1:101,
+  labels=covid19_labels
+)
+
+# Plottin eru í möppunni og eru 
+# kölluð plot_3_1.png og plot_3_2.png
