@@ -28,7 +28,7 @@ for (i in c(1:101)) {
 
 # Correct plot with working date display
 par(mar=c(5.1, 3.1, 3.1, 2.1))
-plot.ts(covid19_df[2], xaxt = "n", xlab='Covid 19')
+plot.ts(covid19_df[2], xaxt = "n", xlab='Covid 19 Total Confirmed')
 axis(
   1,
   at=1:101,
